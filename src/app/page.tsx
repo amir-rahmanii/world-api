@@ -24,7 +24,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div>
-      <p>سلام</p>
       <p className="font-bold">سلام</p>
       <p className="font-medium">سلام</p>
       <p className="font-extrabold">سلام</p>

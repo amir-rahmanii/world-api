@@ -35,9 +35,9 @@ export default function RootLayout({
   return (
     <html dir="rtl" lang="fa">
       <body
-        className={`font-medium ${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
+        className={`${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
       >
-        <div className="container">{children}</div>
+        <div className="container font-medium">{children}</div>
       </body>
     </html>
   );
