@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
+import localFont from "next/font/local";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const yekanMedium = localFont({
+  src: "../../src/fonts/iranyekanwebmediumfanum.woff",
+  variable: "--font-medium",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const yekanBold = localFont({
+  src: "../../src/fonts/iranyekanwebboldfanum.woff",
+  variable: "--font-bold",
+  display: "swap",
+});
+
+const yekanExtraBold = localFont({
+  src: "../../src/fonts/iranyekanwebextraboldfanum.woff",
+  variable: "--font-extrabold",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html dir="rtl" lang="fa">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`font-medium ${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
       >
-        {children}
+        <div className="container">{children}</div>
       </body>
     </html>
   );
