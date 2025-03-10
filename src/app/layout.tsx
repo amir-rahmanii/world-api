@@ -5,6 +5,7 @@ import Header from "@/components/parts/Header/Header";
 import "./globals.css";
 
 import { ThemeProvider } from "@/store/theme-provider";
+import { SupabaseProvider } from "@/supabase/SupabaseProvider";
 import localFont from "next/font/local";
 
 const yekanMedium = localFont({
@@ -70,10 +71,12 @@ export default function RootLayout({
       <body
         className={`${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
       >
-        <ThemeProvider enableSystem attribute="class" defaultTheme="system">
-          <Header />
-          <div className="container">{children}</div>
-        </ThemeProvider>
+        <SupabaseProvider>
+          <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+            <Header />
+            <div className="container">{children}</div>
+          </ThemeProvider>
+        </SupabaseProvider>
       </body>
     </html>
   );

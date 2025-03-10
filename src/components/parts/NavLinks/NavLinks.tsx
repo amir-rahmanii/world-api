@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-import World from "../../icons/world.svg";
+import WorldIcon from "../../icons/world.svg";
 
 interface Nav {
   title: string;
@@ -25,7 +25,7 @@ export default function NavLinks() {
     <ul className="flex items-center gap-6">
       <li>
         <Link href="/">
-          <World className="size-12 hover:text-primary transition-all duration-200" />
+          <WorldIcon className="size-12 hover:text-primary transition-all duration-200" />
         </Link>
       </li>
       {Navs.map((nav) => (

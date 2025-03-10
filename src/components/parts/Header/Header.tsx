@@ -1,8 +1,8 @@
 import React from "react";
 
+import { GithubProfile } from "../GithubProfile/GithubProfile";
 import NavLinks from "../NavLinks/NavLinks";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
-import GithubAuth from "../GithubAuth/GithubAuth";
 
 export default function Header() {
   return (
@@ -11,7 +11,7 @@ export default function Header() {
         <NavLinks />
         <div className="flex items-center gap-6">
           <ThemeSwitcher />
-          <GithubAuth />
+          <GithubProfile />
         </div>
       </nav>
     </header>
