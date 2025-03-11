@@ -63,6 +63,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log(children);
+  
   return (
     <html dir="rtl" lang="fa">
       <head>
