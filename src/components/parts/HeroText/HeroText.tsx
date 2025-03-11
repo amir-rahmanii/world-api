@@ -9,23 +9,10 @@ export default function HeroText() {
   return (
     <div className="flex flex-col gap-8 justify-center  items-center h-[calc(100vh-90px)]">
       <DotPatternWrapper />
-      <h1 className="text-5xl text-center">
-        وب سرویس رایگان اطلاعات{" "}
-        <AuroraText
-          speed={2}
-          colors={[
-            "#DE704D",
-            "#C9573E",
-            "#FFA07A",
-            "#F2B885",
-            "#E86A92",
-            "#D64550",
-          ]}
-        >
-          کشورها
-        </AuroraText>{" "}
+      <h1 className="text-5xl text-center font-extrabold">
+        وب سرویس رایگان اطلاعات <span className="text-primary">کشورها</span>
       </h1>
-      <p className="text-xl text-center">
+      <p className="text-xl text-center font-bold">
         دسترسی سریع به نام کشور، پرچم و کدهای ISO (ISO2, ISO3) با استفاده از
         کلید API برای برنامه نویسان
       </p>

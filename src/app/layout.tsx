@@ -7,6 +7,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/store/theme-provider";
 import { SupabaseProvider } from "@/supabase/SupabaseProvider";
 import localFont from "next/font/local";
+import Footer from "@/components/parts/Footer/Footer";
 
 const yekanMedium = localFont({
   src: "../../src/fonts/iranyekanwebmediumfanum.woff",
@@ -71,12 +72,13 @@ export default function RootLayout({
         <link href="/logo.svg" rel="icon" type="image/svg+xml" />
       </head>
       <body
-        className={`${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
+        className={`flex flex-col justify-between ${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
       >
         <SupabaseProvider>
           <ThemeProvider enableSystem attribute="class" defaultTheme="system">
             <Header />
             <div className="container">{children}</div>
+            <Footer />
           </ThemeProvider>
         </SupabaseProvider>
       </body>
