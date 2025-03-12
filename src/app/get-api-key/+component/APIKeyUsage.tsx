@@ -1,4 +1,4 @@
-import CodeBlock from "@/components/modules/CodeBlock";
+import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
 export default function APIKeyUsage() {
@@ -40,16 +40,18 @@ export default function APIKeyUsage() {
       </p>
 
       <CodeBlock
-        code={`fetch("https://api.example.com/data", {
-  method: "GET",
-  headers: {
-    "X-API-Key": "your-api-key",  // 🔴 کلید را اینجا جایگزین کنید
-    "Content-Type": "application/json"
-  }
+        code={`
+fetch("https://api.example.com/data", {
+method: "GET",
+headers: {
+  "X-API-Key": "your-api-key",  // 🔴 کلید را اینجا جایگزین کنید
+  "Content-Type": "application/json"
+}
 })
 .then(response => response.json())
 .then(data => console.log(data))
-.catch(error => console.error("Error:", error));`}
+.catch(error => console.error("Error:", error));
+`}
       />
 
       <h4 className="text-xl font-bold mt-4 pb-2">

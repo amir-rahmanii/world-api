@@ -1,4 +1,4 @@
-import CodeBlock from "@/components/modules/CodeBlock";
+import { CodeBlock } from "@/components/modules/CodeBlock";
 import GithubLoginButton from "@/components/parts/GithubProfile/GithubLoginButton";
 import { getUserApiKey } from "@/supabase/getUserApiKey";
 import React from "react";
@@ -7,7 +7,7 @@ export async function ApiKeyDisplay() {
   const userApiKey = await getUserApiKey();
 
   if (userApiKey) {
-    return <CodeBlock code={userApiKey.api_key} />;
+    return <CodeBlock lang="tex" code={userApiKey.api_key} />;
   }
 
   return (

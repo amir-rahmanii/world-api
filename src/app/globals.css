@@ -128,7 +128,7 @@
     @apply bg-background text-foreground font-medium;
   }
   strong {
-    @apply text-primary
+    @apply text-primary;
   }
 }
 
@@ -151,3 +151,9 @@
   background: var(--primary);
   color: var(--foreground);
 }
+
+.shiki {
+  @apply rounded-md p-6;
+}
+
+

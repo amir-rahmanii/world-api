@@ -38,6 +38,7 @@
     "eslint-config-next": "15.2.1",
     "husky": "^9.1.7",
     "prettier": "^3.5.3",
+    "shiki": "^3.2.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

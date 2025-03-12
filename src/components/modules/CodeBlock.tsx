@@ -1,14 +1,30 @@
+import type { BundledLanguage, BundledTheme } from "shiki";
+
 import React from "react";
+import { codeToHtml } from "shiki";
 
 import { CopyButton } from "./CopyButton";
 
-export default function CodeBlock({ code }: { code: string }) {
+interface CodeBlockProps {
+  code: string;
+  lang?: BundledLanguage;
+  theme?: BundledTheme;
+}
+
+export async function CodeBlock({
+  code,
+  lang = "javascript",
+  theme = "catppuccin-mocha",
+}: CodeBlockProps) {
+  const html = await codeToHtml(code, {
+    lang,
+    theme,
+  });
+
   return (
-    <div className="relative bg-accent p-4 rounded-lg my-10">
-      <CopyButton className="absolute top-3 right-3" text={code} />
-      <pre dir="ltr" className="text-start overflow-auto whitespace-pre-wrap">
-        {code}
-      </pre>
+    <div className="relative py-4 rounded-lg overflow-hidden border-accent">
+      <CopyButton className="absolute top-auto right-auto" text={code} />
+      <div dir="ltr" dangerouslySetInnerHTML={{ __html: html }}></div>
     </div>
   );
 }
