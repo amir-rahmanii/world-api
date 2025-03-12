@@ -64,7 +64,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(children);
   
   return (
     <html dir="rtl" lang="fa">
@@ -72,12 +71,12 @@ export default function RootLayout({
         <link href="/logo.svg" rel="icon" type="image/svg+xml" />
       </head>
       <body
-        className={`flex flex-col justify-between ${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
+        className={`flex flex-col min-h-dvh justify-between text-base/loose ${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
       >
         <SupabaseProvider>
           <ThemeProvider enableSystem attribute="class" defaultTheme="system">
             <Header />
-            <div className="container">{children}</div>
+            <div className="my-16 container">{children}</div>
             <Footer />
           </ThemeProvider>
         </SupabaseProvider>

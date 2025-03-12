@@ -127,6 +127,9 @@
   body {
     @apply bg-background text-foreground font-medium;
   }
+  strong {
+    @apply text-primary
+  }
 }
 
 * {

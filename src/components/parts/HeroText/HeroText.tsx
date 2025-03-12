@@ -3,11 +3,10 @@ import Link from "next/link";
 import React from "react";
 
 import DotPatternWrapper from "../DotPatternWrapper/DotPatternWrapper";
-import { AuroraText } from "@/components/ui/aurora-text";
 
 export default function HeroText() {
   return (
-    <div className="flex flex-col gap-8 justify-center  items-center h-[calc(100vh-90px)]">
+    <div className="flex flex-col gap-8 justify-center  items-center h-[calc(100vh-180px)]">
       <DotPatternWrapper />
       <h1 className="text-5xl text-center font-extrabold">
         وب سرویس رایگان اطلاعات <span className="text-primary">کشورها</span>

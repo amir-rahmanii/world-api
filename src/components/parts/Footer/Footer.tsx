@@ -30,7 +30,7 @@ const SocialMediaLinks: SocialMedia[] = [
 
 export default function Footer() {
   return (
-    <footer className="pt-32">
+    <footer className="pt-26 mt-auto">
       <div className="flex flex-col gap-5 pb-5">
         <h3 className="text-xl font-bold text-center">
           لینک شبکه های اجتماعی{" "}
@@ -41,7 +41,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="border-t border-accent p-8">
+      <div className="border-t border-accent p-6">
         <p className="text-center text-lg font-bold">
           طراحی شده با ❤️ توسط امیررضا رحمانی
         </p>

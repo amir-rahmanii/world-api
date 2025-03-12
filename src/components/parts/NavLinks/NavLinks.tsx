@@ -15,7 +15,7 @@ interface Nav {
 const Navs: Nav[] = [
   { title: "خانه", path: "/" },
   { title: "مستندات", path: "/documentation" },
-  { title: "دریافت کلید API", path: "/get-api-key" },
+  { title: "دریافت API Key", path: "/get-api-key" },
 ];
 
 export default function NavLinks() {
