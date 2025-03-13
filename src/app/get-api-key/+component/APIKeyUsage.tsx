@@ -41,11 +41,10 @@ export default function APIKeyUsage() {
 
       <CodeBlock
         code={`
-fetch("https://api.example.com/data", {
+fetch("http://localhost:3000/api/v1/fa/countries", {
 method: "GET",
 headers: {
   "X-API-Key": "your-api-key",  // 🔴 کلید را اینجا جایگزین کنید
-  "Content-Type": "application/json"
 }
 })
 .then(response => response.json())

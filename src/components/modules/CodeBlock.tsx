@@ -22,7 +22,7 @@ export async function CodeBlock({
   });
 
   return (
-    <div className="relative py-4 rounded-lg overflow-hidden border-accent">
+    <div className="relative my-10">
       <CopyButton className="absolute top-auto right-auto" text={code} />
       <div dir="ltr" dangerouslySetInnerHTML={{ __html: html }}></div>
     </div>
