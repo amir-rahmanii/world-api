@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
-import Header from "@/components/parts/Header/Header";
+import Footer from "@/components/parts/Footer/Footer";
 
 import "./globals.css";
 
+import Header from "@/components/parts/Header/Header";
 import { ThemeProvider } from "@/store/theme-provider";
 import { SupabaseProvider } from "@/supabase/SupabaseProvider";
 import localFont from "next/font/local";
-import Footer from "@/components/parts/Footer/Footer";
 
 const yekanMedium = localFont({
   src: "../../src/fonts/iranyekanwebmediumfanum.woff",
@@ -64,7 +64,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <html dir="rtl" lang="fa">
       <head>

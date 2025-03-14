@@ -1,26 +1,30 @@
+import type { Locale } from "@/utils/getCountriesByLocale";
 import type { NextRequest } from "next/server";
 
-import { createServerSupabaseClient } from "@/supabase/SupabaseServer";
+import { getApiKeyFromDatabase } from "@/supabase/getApiKeyFromDatabase";
+import { filterCountries } from "@/utils/filterCountries";
+import { getCountriesByLocale } from "@/utils/getCountriesByLocale";
+import { getSearchParams } from "@/utils/getSearchParams";
 
-import CountriesEn from "../../../../../../public/Countries-nationalities-en.json";
-import CountriesFa from "../../../../../../public/Countries-nationalities-fa.json";
-import { filterCountries } from "@/lib/filterCountries";
-
-enum Locale {
-  FA = "fa",
-  EN = "en",
+export interface Countries {
+  id: number;
+  iso2: string;
+  iso3: string;
+  name: string;
+  flag: string;
+  capital: string;
+  calling_code?: string;
 }
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ locale: string }> }
+  { params }: { params: Promise<{ locale: Locale }> }
 ) {
   try {
-    const supabase = await createServerSupabaseClient();
     const { locale } = await params;
-    const searchParams = request.nextUrl.searchParams;
-    const id = searchParams.get("id");
     const apiKey: string | null = request.headers.get("X-API-Key");
+    const searchParams = request.nextUrl.searchParams;
+    const AllSearchParams = getSearchParams(searchParams);
 
     if (!apiKey?.trim()) {
       return new Response(
@@ -32,13 +36,9 @@ export async function GET(
       );
     }
 
-    const { data: userApiKey } = await supabase
-      .from("Api_keys")
-      .select("api_key")
-      .eq("api_key", apiKey)
-      .single();
+    const userApiKey = await getApiKeyFromDatabase(apiKey);
 
-    if (apiKey !== userApiKey?.api_key) {
+    if (apiKey !== userApiKey) {
       return new Response(
         JSON.stringify({
           error: "Invalid API key. Please check your API key and try again.",
@@ -47,28 +47,21 @@ export async function GET(
       );
     }
 
-    if (!Object.values(Locale).includes(locale as Locale)) {
-      return new Response(
-        JSON.stringify({
-          error: "Invalid locale. Locale must be 'fa' or 'en'.",
-        }),
-        { status: 400 }
-      );
-    }
+    const Countries: Countries[] = getCountriesByLocale(locale);
 
-    const Countries = locale === "en" ? CountriesEn : CountriesFa;
-    const filteredData = filterCountries(Countries, id);
+    const filteredData = filterCountries(Countries, AllSearchParams);
 
     return new Response(JSON.stringify(filteredData, null, 2), {
       status: 200,
     });
   } catch (err) {
-    console.log(err);
     return new Response(
       JSON.stringify({
-        error: "An unexpected error occurred. Please try again later.",
+        error:
+          (err as Error).message ||
+          "Something went wrong. Please try again later.",
       }),
-      { status: 500 }
+      { status: 400 }
     );
   }
 }
