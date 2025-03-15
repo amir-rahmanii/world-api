@@ -174,7 +174,7 @@
     "id": 64,
     "iso2": "bt",
     "iso3": "btn",
-    "name": "بوتان (کشور)",
+    "name": "بوتان",
     "flag": "http://localhost:3000/v1/countries/flag/BT.svg",
     "capital": "تیمفو",
     "calling_code": "975"

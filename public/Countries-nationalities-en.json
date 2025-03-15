@@ -6,7 +6,8 @@
     "name": "Afghanistan",
     "flag": "http://localhost:3000/v1/countries/flag/AF.svg",
     "capital": "Kabul",
-    "calling_code": "93"
+    "calling_code": "93",
+    "continent": "Asia"
   },
   {
     "id": 8,
@@ -15,7 +16,8 @@
     "name": "Albania",
     "flag": "http://localhost:3000/v1/countries/flag/AL.svg",
     "capital": "Tirana",
-    "calling_code": "355"
+    "calling_code": "355",
+    "continent": "Europe"
   },
   {
     "id": 12,
@@ -24,7 +26,8 @@
     "name": "Algeria",
     "flag": "http://localhost:3000/v1/countries/flag/DZ.svg",
     "capital": "Algiers",
-    "calling_code": "213"
+    "calling_code": "213",
+    "continent": "Africa"
   },
   {
     "id": 20,
@@ -33,7 +36,8 @@
     "name": "Andorra",
     "flag": "http://localhost:3000/v1/countries/flag/AD.svg",
     "capital": "Andorra la Vella",
-    "calling_code": "376"
+    "calling_code": "376",
+    "continent": "Europe"
   },
   {
     "id": 24,
@@ -42,7 +46,8 @@
     "name": "Angola",
     "flag": "http://localhost:3000/v1/countries/flag/AO.svg",
     "capital": "Luanda",
-    "calling_code": "244"
+    "calling_code": "244",
+    "continent": "Africa"
   },
   {
     "id": 28,
@@ -51,7 +56,8 @@
     "name": "Antigua and Barbuda",
     "flag": "http://localhost:3000/v1/countries/flag/AG.svg",
     "capital": "Saint John's",
-    "calling_code": "1-268"
+    "calling_code": "1-268",
+    "continent": "North America"
   },
   {
     "id": 32,
@@ -60,7 +66,8 @@
     "name": "Argentina",
     "flag": "http://localhost:3000/v1/countries/flag/AR.svg",
     "capital": "Buenos Aires",
-    "calling_code": "54"
+    "calling_code": "54",
+    "continent": "South America"
   },
   {
     "id": 51,
@@ -69,7 +76,8 @@
     "name": "Armenia",
     "flag": "http://localhost:3000/v1/countries/flag/AM.svg",
     "capital": "Yerevan",
-    "calling_code": "374"
+    "calling_code": "374",
+    "continent": "Asia"
   },
   {
     "id": 36,
@@ -78,7 +86,8 @@
     "name": "Australia",
     "flag": "http://localhost:3000/v1/countries/flag/AU.svg",
     "capital": "Canberra",
-    "calling_code": "61"
+    "calling_code": "61",
+    "continent": "Australia"
   },
   {
     "id": 40,
@@ -87,7 +96,8 @@
     "name": "Austria",
     "flag": "http://localhost:3000/v1/countries/flag/AT.svg",
     "capital": "Vienna",
-    "calling_code": "43"
+    "calling_code": "43",
+    "continent": "Europe"
   },
   {
     "id": 31,
@@ -96,7 +106,8 @@
     "name": "Azerbaijan",
     "flag": "http://localhost:3000/v1/countries/flag/AZ.svg",
     "capital": "Baku",
-    "calling_code": "994"
+    "calling_code": "994",
+    "continent": "Asia"
   },
   {
     "id": 44,
@@ -105,7 +116,8 @@
     "name": "Bahamas",
     "flag": "http://localhost:3000/v1/countries/flag/BS.svg",
     "capital": "Nassau",
-    "calling_code": "1-242"
+    "calling_code": "1-242",
+    "continent": "North America"
   },
   {
     "id": 48,
@@ -114,7 +126,8 @@
     "name": "Bahrain",
     "flag": "http://localhost:3000/v1/countries/flag/BH.svg",
     "capital": "Manama",
-    "calling_code": "973"
+    "calling_code": "973",
+    "continent": "Asia"
   },
   {
     "id": 50,
@@ -123,7 +136,8 @@
     "name": "Bangladesh",
     "flag": "http://localhost:3000/v1/countries/flag/BD.svg",
     "capital": "Dhaka",
-    "calling_code": "880"
+    "calling_code": "880",
+    "continent": "Asia"
   },
   {
     "id": 52,
@@ -132,7 +146,8 @@
     "name": "Barbados",
     "flag": "http://localhost:3000/v1/countries/flag/BB.svg",
     "capital": "Bridgetown",
-    "calling_code": "1-246"
+    "calling_code": "1-246",
+    "continent": "North America"
   },
   {
     "id": 112,
@@ -141,7 +156,8 @@
     "name": "Belarus",
     "flag": "http://localhost:3000/v1/countries/flag/BY.svg",
     "capital": "Minsk",
-    "calling_code": "375"
+    "calling_code": "375",
+    "continent": "Europe"
   },
   {
     "id": 56,
@@ -150,7 +166,8 @@
     "name": "Belgium",
     "flag": "http://localhost:3000/v1/countries/flag/BE.svg",
     "capital": "Brussels",
-    "calling_code": "32"
+    "calling_code": "32",
+    "continent": "Europe"
   },
   {
     "id": 84,
@@ -159,7 +176,8 @@
     "name": "Belize",
     "flag": "http://localhost:3000/v1/countries/flag/BZ.svg",
     "capital": "Belmopan",
-    "calling_code": "501"
+    "calling_code": "501",
+    "continent": "North America"
   },
   {
     "id": 204,
@@ -168,7 +186,8 @@
     "name": "Benin",
     "flag": "http://localhost:3000/v1/countries/flag/BJ.svg",
     "capital": "Porto-Novo",
-    "calling_code": "229"
+    "calling_code": "229",
+    "continent": "Africa"
   },
   {
     "id": 64,
@@ -177,16 +196,18 @@
     "name": "Bhutan",
     "flag": "http://localhost:3000/v1/countries/flag/BT.svg",
     "capital": "Thimphu",
-    "calling_code": "975"
+    "calling_code": "975",
+    "continent": "Asia"
   },
   {
     "id": 68,
     "iso2": "bo",
     "iso3": "bol",
-    "name": "Bolivia, Plurinational State of",
+    "name": "Bolivia",
     "flag": "http://localhost:3000/v1/countries/flag/BO.svg",
     "capital": "Sucre",
-    "calling_code": "591"
+    "calling_code": "591",
+    "continent": "South America"
   },
   {
     "id": 70,
@@ -195,7 +216,8 @@
     "name": "Bosnia and Herzegovina",
     "flag": "http://localhost:3000/v1/countries/flag/BA.svg",
     "capital": "Sarajevo",
-    "calling_code": "387"
+    "calling_code": "387",
+    "continent": "Europe"
   },
   {
     "id": 72,
@@ -204,7 +226,8 @@
     "name": "Botswana",
     "flag": "http://localhost:3000/v1/countries/flag/BW.svg",
     "capital": "Gaborone",
-    "calling_code": "267"
+    "calling_code": "267",
+    "continent": "Africa"
   },
   {
     "id": 76,
@@ -213,7 +236,8 @@
     "name": "Brazil",
     "flag": "http://localhost:3000/v1/countries/flag/BR.svg",
     "capital": "Brasília",
-    "calling_code": "55"
+    "calling_code": "55",
+    "continent": "South America"
   },
   {
     "id": 96,
@@ -222,7 +246,8 @@
     "name": "Brunei Darussalam",
     "flag": "http://localhost:3000/v1/countries/flag/BN.svg",
     "capital": "Bandar Seri Begawan",
-    "calling_code": "673"
+    "calling_code": "673",
+    "continent": "Asia"
   },
   {
     "id": 100,
@@ -231,7 +256,8 @@
     "name": "Bulgaria",
     "flag": "http://localhost:3000/v1/countries/flag/BG.svg",
     "capital": "Sofia",
-    "calling_code": "359"
+    "calling_code": "359",
+    "continent": "Europe"
   },
   {
     "id": 854,
@@ -240,7 +266,8 @@
     "name": "Burkina Faso",
     "flag": "http://localhost:3000/v1/countries/flag/BF.svg",
     "capital": "Ouagadougou",
-    "calling_code": "226"
+    "calling_code": "226",
+    "continent": "Africa"
   },
   {
     "id": 108,
@@ -249,7 +276,8 @@
     "name": "Burundi",
     "flag": "http://localhost:3000/v1/countries/flag/BI.svg",
     "capital": "Gitega",
-    "calling_code": "257"
+    "calling_code": "257",
+    "continent": "Africa"
   },
   {
     "id": 132,
@@ -258,7 +286,8 @@
     "name": "Cabo Verde",
     "flag": "http://localhost:3000/v1/countries/flag/CV.svg",
     "capital": "Praia",
-    "calling_code": "238"
+    "calling_code": "238",
+    "continent": "Africa"
   },
   {
     "id": 116,
@@ -267,7 +296,8 @@
     "name": "Cambodia",
     "flag": "http://localhost:3000/v1/countries/flag/KH.svg",
     "capital": "Phnom Penh",
-    "calling_code": "855"
+    "calling_code": "855",
+    "continent": "Asia"
   },
   {
     "id": 120,
@@ -276,7 +306,8 @@
     "name": "Cameroon",
     "flag": "http://localhost:3000/v1/countries/flag/CM.svg",
     "capital": "Yaoundé",
-    "calling_code": "237"
+    "calling_code": "237",
+    "continent": "Africa"
   },
   {
     "id": 124,
@@ -285,7 +316,8 @@
     "name": "Canada",
     "flag": "http://localhost:3000/v1/countries/flag/CA.svg",
     "capital": "Ottawa",
-    "calling_code": "1"
+    "calling_code": "1",
+    "continent": "North America"
   },
   {
     "id": 140,
@@ -294,7 +326,8 @@
     "name": "Central African Republic",
     "flag": "http://localhost:3000/v1/countries/flag/CF.svg",
     "capital": "Bangui",
-    "calling_code": "236"
+    "calling_code": "236",
+    "continent": "Africa"
   },
   {
     "id": 148,
@@ -303,7 +336,8 @@
     "name": "Chad",
     "flag": "http://localhost:3000/v1/countries/flag/TD.svg",
     "capital": "N'Djamena",
-    "calling_code": "235"
+    "calling_code": "235",
+    "continent": "Africa"
   },
   {
     "id": 152,
@@ -312,7 +346,8 @@
     "name": "Chile",
     "flag": "http://localhost:3000/v1/countries/flag/CL.svg",
     "capital": "Santiago",
-    "calling_code": "56"
+    "calling_code": "56",
+    "continent": "South America"
   },
   {
     "id": 156,
@@ -321,7 +356,8 @@
     "name": "China",
     "flag": "http://localhost:3000/v1/countries/flag/CN.svg",
     "capital": "Beijing",
-    "calling_code": "86"
+    "calling_code": "86",
+    "continent": "Asia"
   },
   {
     "id": 170,
@@ -330,7 +366,8 @@
     "name": "Colombia",
     "flag": "http://localhost:3000/v1/countries/flag/CO.svg",
     "capital": "Bogotá",
-    "calling_code": "57"
+    "calling_code": "57",
+    "continent": "South America"
   },
   {
     "id": 174,
@@ -339,7 +376,8 @@
     "name": "Comoros",
     "flag": "http://localhost:3000/v1/countries/flag/KM.svg",
     "capital": "Moroni",
-    "calling_code": "269"
+    "calling_code": "269",
+    "continent": "Africa"
   },
   {
     "id": 178,
@@ -348,16 +386,18 @@
     "name": "Congo",
     "flag": "http://localhost:3000/v1/countries/flag/CG.svg",
     "capital": "Brazzaville",
-    "calling_code": "242"
+    "calling_code": "242",
+    "continent": "Africa"
   },
   {
     "id": 180,
     "iso2": "cd",
     "iso3": "cod",
-    "name": "Congo, Democratic Republic of the",
+    "name": "Democratic Republic of the Congo",
     "flag": "http://localhost:3000/v1/countries/flag/CD.svg",
     "capital": "Kinshasa",
-    "calling_code": "243"
+    "calling_code": "243",
+    "continent": "Africa"
   },
   {
     "id": 188,
@@ -366,7 +406,8 @@
     "name": "Costa Rica",
     "flag": "http://localhost:3000/v1/countries/flag/CR.svg",
     "capital": "San José",
-    "calling_code": "506"
+    "calling_code": "506",
+    "continent": "North America"
   },
   {
     "id": 384,
@@ -375,7 +416,8 @@
     "name": "Côte d'Ivoire",
     "flag": "http://localhost:3000/v1/countries/flag/CI.svg",
     "capital": "Yamoussoukro",
-    "calling_code": "225"
+    "calling_code": "225",
+    "continent": "Africa"
   },
   {
     "id": 191,
@@ -384,7 +426,8 @@
     "name": "Croatia",
     "flag": "http://localhost:3000/v1/countries/flag/HR.svg",
     "capital": "Zagreb",
-    "calling_code": "385"
+    "calling_code": "385",
+    "continent": "Europe"
   },
   {
     "id": 192,
@@ -393,7 +436,8 @@
     "name": "Cuba",
     "flag": "http://localhost:3000/v1/countries/flag/CU.svg",
     "capital": "Havana",
-    "calling_code": "53"
+    "calling_code": "53",
+    "continent": "North America"
   },
   {
     "id": 196,
@@ -402,7 +446,8 @@
     "name": "Cyprus",
     "flag": "http://localhost:3000/v1/countries/flag/CY.svg",
     "capital": "Nicosia",
-    "calling_code": "357"
+    "calling_code": "357",
+    "continent": "Asia"
   },
   {
     "id": 203,
@@ -411,7 +456,8 @@
     "name": "Czechia",
     "flag": "http://localhost:3000/v1/countries/flag/CZ.svg",
     "capital": "Prague",
-    "calling_code": "420"
+    "calling_code": "420",
+    "continent": "Europe"
   },
   {
     "id": 208,
@@ -420,7 +466,8 @@
     "name": "Denmark",
     "flag": "http://localhost:3000/v1/countries/flag/DK.svg",
     "capital": "Copenhagen",
-    "calling_code": "45"
+    "calling_code": "45",
+    "continent": "Europe"
   },
   {
     "id": 262,
@@ -429,7 +476,8 @@
     "name": "Djibouti",
     "flag": "http://localhost:3000/v1/countries/flag/DJ.svg",
     "capital": "Djibouti",
-    "calling_code": "253"
+    "calling_code": "253",
+    "continent": "Africa"
   },
   {
     "id": 212,
@@ -438,7 +486,8 @@
     "name": "Dominica",
     "flag": "http://localhost:3000/v1/countries/flag/DM.svg",
     "capital": "Roseau",
-    "calling_code": "1-767"
+    "calling_code": "1-767",
+    "continent": "North America"
   },
   {
     "id": 214,
@@ -447,7 +496,8 @@
     "name": "Dominican Republic",
     "flag": "http://localhost:3000/v1/countries/flag/DO.svg",
     "capital": "Santo Domingo",
-    "calling_code": "1-809"
+    "calling_code": "1-809",
+    "continent": "North America"
   },
   {
     "id": 218,
@@ -456,7 +506,8 @@
     "name": "Ecuador",
     "flag": "http://localhost:3000/v1/countries/flag/EC.svg",
     "capital": "Quito",
-    "calling_code": "593"
+    "calling_code": "593",
+    "continent": "South America"
   },
   {
     "id": 818,
@@ -465,7 +516,8 @@
     "name": "Egypt",
     "flag": "http://localhost:3000/v1/countries/flag/EG.svg",
     "capital": "Cairo",
-    "calling_code": "20"
+    "calling_code": "20",
+    "continent": "Africa"
   },
   {
     "id": 222,
@@ -474,7 +526,8 @@
     "name": "El Salvador",
     "flag": "http://localhost:3000/v1/countries/flag/SV.svg",
     "capital": "San Salvador",
-    "calling_code": "503"
+    "calling_code": "503",
+    "continent": "North America"
   },
   {
     "id": 226,
@@ -483,7 +536,8 @@
     "name": "Equatorial Guinea",
     "flag": "http://localhost:3000/v1/countries/flag/GQ.svg",
     "capital": "Malabo",
-    "calling_code": "240"
+    "calling_code": "240",
+    "continent": "Africa"
   },
   {
     "id": 232,
@@ -492,7 +546,8 @@
     "name": "Eritrea",
     "flag": "http://localhost:3000/v1/countries/flag/ER.svg",
     "capital": "Asmara",
-    "calling_code": "291"
+    "calling_code": "291",
+    "continent": "Africa"
   },
   {
     "id": 233,
@@ -501,7 +556,8 @@
     "name": "Estonia",
     "flag": "http://localhost:3000/v1/countries/flag/EE.svg",
     "capital": "Tallinn",
-    "calling_code": "372"
+    "calling_code": "372",
+    "continent": "Europe"
   },
   {
     "id": 748,
@@ -510,7 +566,8 @@
     "name": "Eswatini",
     "flag": "http://localhost:3000/v1/countries/flag/SZ.svg",
     "capital": "Mbabane",
-    "calling_code": "268"
+    "calling_code": "268",
+    "continent": "Africa"
   },
   {
     "id": 231,
@@ -519,7 +576,8 @@
     "name": "Ethiopia",
     "flag": "http://localhost:3000/v1/countries/flag/ET.svg",
     "capital": "Addis Ababa",
-    "calling_code": "251"
+    "calling_code": "251",
+    "continent": "Africa"
   },
   {
     "id": 242,
@@ -528,7 +586,8 @@
     "name": "Fiji",
     "flag": "http://localhost:3000/v1/countries/flag/FJ.svg",
     "capital": "Suva",
-    "calling_code": "679"
+    "calling_code": "679",
+    "continent": "Australia"
   },
   {
     "id": 246,
@@ -537,7 +596,8 @@
     "name": "Finland",
     "flag": "http://localhost:3000/v1/countries/flag/FI.svg",
     "capital": "Helsinki",
-    "calling_code": "358"
+    "calling_code": "358",
+    "continent": "Europe"
   },
   {
     "id": 250,
@@ -546,7 +606,8 @@
     "name": "France",
     "flag": "http://localhost:3000/v1/countries/flag/FR.svg",
     "capital": "Paris",
-    "calling_code": "33"
+    "calling_code": "33",
+    "continent": "Europe"
   },
   {
     "id": 266,
@@ -555,7 +616,8 @@
     "name": "Gabon",
     "flag": "http://localhost:3000/v1/countries/flag/GA.svg",
     "capital": "Libreville",
-    "calling_code": "241"
+    "calling_code": "241",
+    "continent": "Africa"
   },
   {
     "id": 270,
@@ -564,7 +626,8 @@
     "name": "Gambia",
     "flag": "http://localhost:3000/v1/countries/flag/GM.svg",
     "capital": "Banjul",
-    "calling_code": "220"
+    "calling_code": "220",
+    "continent": "Africa"
   },
   {
     "id": 268,
@@ -573,7 +636,8 @@
     "name": "Georgia",
     "flag": "http://localhost:3000/v1/countries/flag/GE.svg",
     "capital": "Tbilisi",
-    "calling_code": "995"
+    "calling_code": "995",
+    "continent": "Asia"
   },
   {
     "id": 276,
@@ -582,7 +646,8 @@
     "name": "Germany",
     "flag": "http://localhost:3000/v1/countries/flag/DE.svg",
     "capital": "Berlin",
-    "calling_code": "49"
+    "calling_code": "49",
+    "continent": "Europe"
   },
   {
     "id": 288,
@@ -591,7 +656,8 @@
     "name": "Ghana",
     "flag": "http://localhost:3000/v1/countries/flag/GH.svg",
     "capital": "Accra",
-    "calling_code": "233"
+    "calling_code": "233",
+    "continent": "Africa"
   },
   {
     "id": 300,
@@ -600,7 +666,8 @@
     "name": "Greece",
     "flag": "http://localhost:3000/v1/countries/flag/GR.svg",
     "capital": "Athens",
-    "calling_code": "30"
+    "calling_code": "30",
+    "continent": "Europe"
   },
   {
     "id": 308,
@@ -609,7 +676,8 @@
     "name": "Grenada",
     "flag": "http://localhost:3000/v1/countries/flag/GD.svg",
     "capital": "Saint George's",
-    "calling_code": "1-473"
+    "calling_code": "1-473",
+    "continent": "North America"
   },
   {
     "id": 320,
@@ -618,7 +686,8 @@
     "name": "Guatemala",
     "flag": "http://localhost:3000/v1/countries/flag/GT.svg",
     "capital": "Guatemala City",
-    "calling_code": "502"
+    "calling_code": "502",
+    "continent": "North America"
   },
   {
     "id": 324,
@@ -627,7 +696,8 @@
     "name": "Guinea",
     "flag": "http://localhost:3000/v1/countries/flag/GN.svg",
     "capital": "Conakry",
-    "calling_code": "224"
+    "calling_code": "224",
+    "continent": "Africa"
   },
   {
     "id": 624,
@@ -636,7 +706,8 @@
     "name": "Guinea-Bissau",
     "flag": "http://localhost:3000/v1/countries/flag/GW.svg",
     "capital": "Bissau",
-    "calling_code": "245"
+    "calling_code": "245",
+    "continent": "Africa"
   },
   {
     "id": 328,
@@ -645,7 +716,8 @@
     "name": "Guyana",
     "flag": "http://localhost:3000/v1/countries/flag/GY.svg",
     "capital": "Georgetown",
-    "calling_code": "592"
+    "calling_code": "592",
+    "continent": "South America"
   },
   {
     "id": 332,
@@ -654,7 +726,8 @@
     "name": "Haiti",
     "flag": "http://localhost:3000/v1/countries/flag/HT.svg",
     "capital": "Port-au-Prince",
-    "calling_code": "509"
+    "calling_code": "509",
+    "continent": "North America"
   },
   {
     "id": 340,
@@ -663,7 +736,8 @@
     "name": "Honduras",
     "flag": "http://localhost:3000/v1/countries/flag/HN.svg",
     "capital": "Tegucigalpa",
-    "calling_code": "504"
+    "calling_code": "504",
+    "continent": "North America"
   },
   {
     "id": 348,
@@ -672,7 +746,8 @@
     "name": "Hungary",
     "flag": "http://localhost:3000/v1/countries/flag/HU.svg",
     "capital": "Budapest",
-    "calling_code": "36"
+    "calling_code": "36",
+    "continent": "Europe"
   },
   {
     "id": 352,
@@ -681,7 +756,8 @@
     "name": "Iceland",
     "flag": "http://localhost:3000/v1/countries/flag/IS.svg",
     "capital": "Reykjavik",
-    "calling_code": "354"
+    "calling_code": "354",
+    "continent": "Europe"
   },
   {
     "id": 356,
@@ -690,7 +766,8 @@
     "name": "India",
     "flag": "http://localhost:3000/v1/countries/flag/IN.svg",
     "capital": "New Delhi",
-    "calling_code": "91"
+    "calling_code": "91",
+    "continent": "Asia"
   },
   {
     "id": 360,
@@ -699,7 +776,8 @@
     "name": "Indonesia",
     "flag": "http://localhost:3000/v1/countries/flag/ID.svg",
     "capital": "Jakarta",
-    "calling_code": "62"
+    "calling_code": "62",
+    "continent": "Asia"
   },
   {
     "id": 364,
@@ -708,7 +786,8 @@
     "name": "Iran",
     "flag": "http://localhost:3000/v1/countries/flag/IR.svg",
     "capital": "Tehran",
-    "calling_code": "98"
+    "calling_code": "98",
+    "continent": "Asia"
   },
   {
     "id": 368,
@@ -717,7 +796,8 @@
     "name": "Iraq",
     "flag": "http://localhost:3000/v1/countries/flag/IQ.svg",
     "capital": "Baghdad",
-    "calling_code": "964"
+    "calling_code": "964",
+    "continent": "Asia"
   },
   {
     "id": 372,
@@ -726,7 +806,8 @@
     "name": "Ireland",
     "flag": "http://localhost:3000/v1/countries/flag/IE.svg",
     "capital": "Dublin",
-    "calling_code": "353"
+    "calling_code": "353",
+    "continent": "Europe"
   },
   {
     "id": 376,
@@ -735,7 +816,8 @@
     "name": "Israel",
     "flag": "http://localhost:3000/v1/countries/flag/IL.svg",
     "capital": "Jerusalem",
-    "calling_code": "972"
+    "calling_code": "972",
+    "continent": "Asia"
   },
   {
     "id": 380,
@@ -744,7 +826,8 @@
     "name": "Italy",
     "flag": "http://localhost:3000/v1/countries/flag/IT.svg",
     "capital": "Rome",
-    "calling_code": "39"
+    "calling_code": "39",
+    "continent": "Europe"
   },
   {
     "id": 388,
@@ -753,7 +836,8 @@
     "name": "Jamaica",
     "flag": "http://localhost:3000/v1/countries/flag/JM.svg",
     "capital": "Kingston",
-    "calling_code": "1-876"
+    "calling_code": "1-876",
+    "continent": "North America"
   },
   {
     "id": 392,
@@ -762,7 +846,8 @@
     "name": "Japan",
     "flag": "http://localhost:3000/v1/countries/flag/JP.svg",
     "capital": "Tokyo",
-    "calling_code": "81"
+    "calling_code": "81",
+    "continent": "Asia"
   },
   {
     "id": 400,
@@ -771,7 +856,8 @@
     "name": "Jordan",
     "flag": "http://localhost:3000/v1/countries/flag/JO.svg",
     "capital": "Amman",
-    "calling_code": "962"
+    "calling_code": "962",
+    "continent": "Asia"
   },
   {
     "id": 398,
@@ -780,7 +866,8 @@
     "name": "Kazakhstan",
     "flag": "http://localhost:3000/v1/countries/flag/KZ.svg",
     "capital": "Nur-Sultan",
-    "calling_code": "7"
+    "calling_code": "7",
+    "continent": "Asia"
   },
   {
     "id": 404,
@@ -789,7 +876,8 @@
     "name": "Kenya",
     "flag": "http://localhost:3000/v1/countries/flag/KE.svg",
     "capital": "Nairobi",
-    "calling_code": "254"
+    "calling_code": "254",
+    "continent": "Africa"
   },
   {
     "id": 296,
@@ -798,7 +886,8 @@
     "name": "Kiribati",
     "flag": "http://localhost:3000/v1/countries/flag/KI.svg",
     "capital": "South Tarawa",
-    "calling_code": "686"
+    "calling_code": "686",
+    "continent": "Australia"
   },
   {
     "id": 408,
@@ -807,7 +896,8 @@
     "name": "Korea, Democratic People's Republic of",
     "flag": "http://localhost:3000/v1/countries/flag/KP.svg",
     "capital": "Pyongyang",
-    "calling_code": "850"
+    "calling_code": "850",
+    "continent": "Asia"
   },
   {
     "id": 410,
@@ -816,7 +906,8 @@
     "name": "Korea, Republic of",
     "flag": "http://localhost:3000/v1/countries/flag/KR.svg",
     "capital": "Seoul",
-    "calling_code": "82"
+    "calling_code": "82",
+    "continent": "Asia"
   },
   {
     "id": 414,
@@ -825,7 +916,8 @@
     "name": "Kuwait",
     "flag": "http://localhost:3000/v1/countries/flag/KW.svg",
     "capital": "Kuwait City",
-    "calling_code": "965"
+    "calling_code": "965",
+    "continent": "Asia"
   },
   {
     "id": 417,
@@ -834,7 +926,8 @@
     "name": "Kyrgyzstan",
     "flag": "http://localhost:3000/v1/countries/flag/KG.svg",
     "capital": "Bishkek",
-    "calling_code": "996"
+    "calling_code": "996",
+    "continent": "Asia"
   },
   {
     "id": 418,
@@ -843,7 +936,8 @@
     "name": "Lao People's Democratic Republic",
     "flag": "http://localhost:3000/v1/countries/flag/LA.svg",
     "capital": "Vientiane",
-    "calling_code": "856"
+    "calling_code": "856",
+    "continent": "Asia"
   },
   {
     "id": 428,
@@ -852,7 +946,8 @@
     "name": "Latvia",
     "flag": "http://localhost:3000/v1/countries/flag/LV.svg",
     "capital": "Riga",
-    "calling_code": "371"
+    "calling_code": "371",
+    "continent": "Europe"
   },
   {
     "id": 422,
@@ -861,7 +956,8 @@
     "name": "Lebanon",
     "flag": "http://localhost:3000/v1/countries/flag/LB.svg",
     "capital": "Beirut",
-    "calling_code": "961"
+    "calling_code": "961",
+    "continent": "Asia"
   },
   {
     "id": 426,
@@ -870,7 +966,8 @@
     "name": "Lesotho",
     "flag": "http://localhost:3000/v1/countries/flag/LS.svg",
     "capital": "Maseru",
-    "calling_code": "266"
+    "calling_code": "266",
+    "continent": "Africa"
   },
   {
     "id": 430,
@@ -879,7 +976,8 @@
     "name": "Liberia",
     "flag": "http://localhost:3000/v1/countries/flag/LR.svg",
     "capital": "Monrovia",
-    "calling_code": "231"
+    "calling_code": "231",
+    "continent": "Africa"
   },
   {
     "id": 434,
@@ -888,7 +986,8 @@
     "name": "Libya",
     "flag": "http://localhost:3000/v1/countries/flag/LY.svg",
     "capital": "Tripoli",
-    "calling_code": "218"
+    "calling_code": "218",
+    "continent": "Africa"
   },
   {
     "id": 438,
@@ -897,7 +996,8 @@
     "name": "Liechtenstein",
     "flag": "http://localhost:3000/v1/countries/flag/LI.svg",
     "capital": "Vaduz",
-    "calling_code": "423"
+    "calling_code": "423",
+    "continent": "Europe"
   },
   {
     "id": 440,
@@ -906,7 +1006,8 @@
     "name": "Lithuania",
     "flag": "http://localhost:3000/v1/countries/flag/LT.svg",
     "capital": "Vilnius",
-    "calling_code": "370"
+    "calling_code": "370",
+    "continent": "Europe"
   },
   {
     "id": 442,
@@ -915,7 +1016,8 @@
     "name": "Luxembourg",
     "flag": "http://localhost:3000/v1/countries/flag/LU.svg",
     "capital": "Luxembourg",
-    "calling_code": "352"
+    "calling_code": "352",
+    "continent": "Europe"
   },
   {
     "id": 450,
@@ -924,7 +1026,8 @@
     "name": "Madagascar",
     "flag": "http://localhost:3000/v1/countries/flag/MG.svg",
     "capital": "Antananarivo",
-    "calling_code": "261"
+    "calling_code": "261",
+    "continent": "Africa"
   },
   {
     "id": 454,
@@ -933,7 +1036,8 @@
     "name": "Malawi",
     "flag": "http://localhost:3000/v1/countries/flag/MW.svg",
     "capital": "Lilongwe",
-    "calling_code": "265"
+    "calling_code": "265",
+    "continent": "Africa"
   },
   {
     "id": 458,
@@ -942,7 +1046,8 @@
     "name": "Malaysia",
     "flag": "http://localhost:3000/v1/countries/flag/MY.svg",
     "capital": "Kuala Lumpur",
-    "calling_code": "60"
+    "calling_code": "60",
+    "continent": "Asia"
   },
   {
     "id": 462,
@@ -951,7 +1056,8 @@
     "name": "Maldives",
     "flag": "http://localhost:3000/v1/countries/flag/MV.svg",
     "capital": "Malé",
-    "calling_code": "960"
+    "calling_code": "960",
+    "continent": "Asia"
   },
   {
     "id": 466,
@@ -960,7 +1066,8 @@
     "name": "Mali",
     "flag": "http://localhost:3000/v1/countries/flag/ML.svg",
     "capital": "Bamako",
-    "calling_code": "223"
+    "calling_code": "223",
+    "continent": "Africa"
   },
   {
     "id": 470,
@@ -969,7 +1076,8 @@
     "name": "Malta",
     "flag": "http://localhost:3000/v1/countries/flag/MT.svg",
     "capital": "Valletta",
-    "calling_code": "356"
+    "calling_code": "356",
+    "continent": "Europe"
   },
   {
     "id": 584,
@@ -978,7 +1086,8 @@
     "name": "Marshall Islands",
     "flag": "http://localhost:3000/v1/countries/flag/MH.svg",
     "capital": "Majuro",
-    "calling_code": "692"
+    "calling_code": "692",
+    "continent": "Australia"
   },
   {
     "id": 478,
@@ -987,7 +1096,8 @@
     "name": "Mauritania",
     "flag": "http://localhost:3000/v1/countries/flag/MR.svg",
     "capital": "Nouakchott",
-    "calling_code": "222"
+    "calling_code": "222",
+    "continent": "Africa"
   },
   {
     "id": 480,
@@ -996,7 +1106,8 @@
     "name": "Mauritius",
     "flag": "http://localhost:3000/v1/countries/flag/MU.svg",
     "capital": "Port Louis",
-    "calling_code": "230"
+    "calling_code": "230",
+    "continent": "Africa"
   },
   {
     "id": 484,
@@ -1005,7 +1116,8 @@
     "name": "Mexico",
     "flag": "http://localhost:3000/v1/countries/flag/MX.svg",
     "capital": "Mexico City",
-    "calling_code": "52"
+    "calling_code": "52",
+    "continent": "North America"
   },
   {
     "id": 583,
@@ -1014,16 +1126,18 @@
     "name": "Micronesia, Federated States of",
     "flag": "http://localhost:3000/v1/countries/flag/FM.svg",
     "capital": "Palikir",
-    "calling_code": "691"
+    "calling_code": "691",
+    "continent": "Australia"
   },
   {
     "id": 498,
     "iso2": "md",
     "iso3": "mda",
-    "name": "Moldova, Republic of",
+    "name": "Moldova",
     "flag": "http://localhost:3000/v1/countries/flag/MD.svg",
     "capital": "Chișinău",
-    "calling_code": "373"
+    "calling_code": "373",
+    "continent": "Europe"
   },
   {
     "id": 492,
@@ -1032,7 +1146,8 @@
     "name": "Monaco",
     "flag": "http://localhost:3000/v1/countries/flag/MC.svg",
     "capital": "Monaco",
-    "calling_code": "377"
+    "calling_code": "377",
+    "continent": "Europe"
   },
   {
     "id": 496,
@@ -1041,7 +1156,8 @@
     "name": "Mongolia",
     "flag": "http://localhost:3000/v1/countries/flag/MN.svg",
     "capital": "Ulaanbaatar",
-    "calling_code": "976"
+    "calling_code": "976",
+    "continent": "Asia"
   },
   {
     "id": 499,
@@ -1050,7 +1166,8 @@
     "name": "Montenegro",
     "flag": "http://localhost:3000/v1/countries/flag/ME.svg",
     "capital": "Podgorica",
-    "calling_code": "382"
+    "calling_code": "382",
+    "continent": "Europe"
   },
   {
     "id": 504,
@@ -1059,7 +1176,8 @@
     "name": "Morocco",
     "flag": "http://localhost:3000/v1/countries/flag/MA.svg",
     "capital": "Rabat",
-    "calling_code": "212"
+    "calling_code": "212",
+    "continent": "Africa"
   },
   {
     "id": 508,
@@ -1068,7 +1186,8 @@
     "name": "Mozambique",
     "flag": "http://localhost:3000/v1/countries/flag/MZ.svg",
     "capital": "Maputo",
-    "calling_code": "258"
+    "calling_code": "258",
+    "continent": "Africa"
   },
   {
     "id": 104,
@@ -1077,7 +1196,8 @@
     "name": "Myanmar",
     "flag": "http://localhost:3000/v1/countries/flag/MM.svg",
     "capital": "Naypyidaw",
-    "calling_code": "95"
+    "calling_code": "95",
+    "continent": "Asia"
   },
   {
     "id": 516,
@@ -1086,7 +1206,8 @@
     "name": "Namibia",
     "flag": "http://localhost:3000/v1/countries/flag/NA.svg",
     "capital": "Windhoek",
-    "calling_code": "264"
+    "calling_code": "264",
+    "continent": "Africa"
   },
   {
     "id": 520,
@@ -1095,7 +1216,8 @@
     "name": "Nauru",
     "flag": "http://localhost:3000/v1/countries/flag/NR.svg",
     "capital": "Yaren",
-    "calling_code": "674"
+    "calling_code": "674",
+    "continent": "Australia"
   },
   {
     "id": 524,
@@ -1104,7 +1226,8 @@
     "name": "Nepal",
     "flag": "http://localhost:3000/v1/countries/flag/NP.svg",
     "capital": "Kathmandu",
-    "calling_code": "977"
+    "calling_code": "977",
+    "continent": "Asia"
   },
   {
     "id": 528,
@@ -1113,7 +1236,8 @@
     "name": "Netherlands",
     "flag": "http://localhost:3000/v1/countries/flag/NL.svg",
     "capital": "Amsterdam",
-    "calling_code": "31"
+    "calling_code": "31",
+    "continent": "Europe"
   },
   {
     "id": 554,
@@ -1122,7 +1246,8 @@
     "name": "New Zealand",
     "flag": "http://localhost:3000/v1/countries/flag/NZ.svg",
     "capital": "Wellington",
-    "calling_code": "64"
+    "calling_code": "64",
+    "continent": "Australia"
   },
   {
     "id": 558,
@@ -1131,7 +1256,8 @@
     "name": "Nicaragua",
     "flag": "http://localhost:3000/v1/countries/flag/NI.svg",
     "capital": "Managua",
-    "calling_code": "505"
+    "calling_code": "505",
+    "continent": "North America"
   },
   {
     "id": 562,
@@ -1140,7 +1266,8 @@
     "name": "Niger",
     "flag": "http://localhost:3000/v1/countries/flag/NE.svg",
     "capital": "Niamey",
-    "calling_code": "227"
+    "calling_code": "227",
+    "continent": "Africa"
   },
   {
     "id": 566,
@@ -1149,7 +1276,8 @@
     "name": "Nigeria",
     "flag": "http://localhost:3000/v1/countries/flag/NG.svg",
     "capital": "Abuja",
-    "calling_code": "234"
+    "calling_code": "234",
+    "continent": "Africa"
   },
   {
     "id": 807,
@@ -1158,7 +1286,8 @@
     "name": "North Macedonia",
     "flag": "http://localhost:3000/v1/countries/flag/MK.svg",
     "capital": "Skopje",
-    "calling_code": "389"
+    "calling_code": "389",
+    "continent": "Europe"
   },
   {
     "id": 578,
@@ -1167,7 +1296,8 @@
     "name": "Norway",
     "flag": "http://localhost:3000/v1/countries/flag/NO.svg",
     "capital": "Oslo",
-    "calling_code": "47"
+    "calling_code": "47",
+    "continent": "Europe"
   },
   {
     "id": 512,
@@ -1176,7 +1306,8 @@
     "name": "Oman",
     "flag": "http://localhost:3000/v1/countries/flag/OM.svg",
     "capital": "Muscat",
-    "calling_code": "968"
+    "calling_code": "968",
+    "continent": "Asia"
   },
   {
     "id": 586,
@@ -1185,7 +1316,8 @@
     "name": "Pakistan",
     "flag": "http://localhost:3000/v1/countries/flag/PK.svg",
     "capital": "Islamabad",
-    "calling_code": "92"
+    "calling_code": "92",
+    "continent": "Asia"
   },
   {
     "id": 585,
@@ -1194,7 +1326,8 @@
     "name": "Palau",
     "flag": "http://localhost:3000/v1/countries/flag/PW.svg",
     "capital": "Ngerulmud",
-    "calling_code": "680"
+    "calling_code": "680",
+    "continent": "Australia"
   },
   {
     "id": 591,
@@ -1203,7 +1336,8 @@
     "name": "Panama",
     "flag": "http://localhost:3000/v1/countries/flag/PA.svg",
     "capital": "Panama City",
-    "calling_code": "507"
+    "calling_code": "507",
+    "continent": "North America"
   },
   {
     "id": 598,
@@ -1212,7 +1346,8 @@
     "name": "Papua New Guinea",
     "flag": "http://localhost:3000/v1/countries/flag/PG.svg",
     "capital": "Port Moresby",
-    "calling_code": "675"
+    "calling_code": "675",
+    "continent": "Australia"
   },
   {
     "id": 600,
@@ -1221,7 +1356,8 @@
     "name": "Paraguay",
     "flag": "http://localhost:3000/v1/countries/flag/PY.svg",
     "capital": "Asunción",
-    "calling_code": "595"
+    "calling_code": "595",
+    "continent": "South America"
   },
   {
     "id": 604,
@@ -1230,7 +1366,8 @@
     "name": "Peru",
     "flag": "http://localhost:3000/v1/countries/flag/PE.svg",
     "capital": "Lima",
-    "calling_code": "51"
+    "calling_code": "51",
+    "continent": "South America"
   },
   {
     "id": 608,
@@ -1239,7 +1376,8 @@
     "name": "Philippines",
     "flag": "http://localhost:3000/v1/countries/flag/PH.svg",
     "capital": "Manila",
-    "calling_code": "63"
+    "calling_code": "63",
+    "continent": "Asia"
   },
   {
     "id": 616,
@@ -1248,7 +1386,8 @@
     "name": "Poland",
     "flag": "http://localhost:3000/v1/countries/flag/PL.svg",
     "capital": "Warsaw",
-    "calling_code": "48"
+    "calling_code": "48",
+    "continent": "Europe"
   },
   {
     "id": 620,
@@ -1257,7 +1396,8 @@
     "name": "Portugal",
     "flag": "http://localhost:3000/v1/countries/flag/PT.svg",
     "capital": "Lisbon",
-    "calling_code": "351"
+    "calling_code": "351",
+    "continent": "Europe"
   },
   {
     "id": 634,
@@ -1266,7 +1406,8 @@
     "name": "Qatar",
     "flag": "http://localhost:3000/v1/countries/flag/QA.svg",
     "capital": "Doha",
-    "calling_code": "974"
+    "calling_code": "974",
+    "continent": "Asia"
   },
   {
     "id": 642,
@@ -1275,16 +1416,18 @@
     "name": "Romania",
     "flag": "http://localhost:3000/v1/countries/flag/RO.svg",
     "capital": "Bucharest",
-    "calling_code": "40"
+    "calling_code": "40",
+    "continent": "Europe"
   },
   {
     "id": 643,
     "iso2": "ru",
     "iso3": "rus",
-    "name": "Russian Federation",
+    "name": "Russia",
     "flag": "http://localhost:3000/v1/countries/flag/RU.svg",
     "capital": "Moscow",
-    "calling_code": "7"
+    "calling_code": "7",
+    "continent": "Asia"
   },
   {
     "id": 646,
@@ -1293,7 +1436,8 @@
     "name": "Rwanda",
     "flag": "http://localhost:3000/v1/countries/flag/RW.svg",
     "capital": "Kigali",
-    "calling_code": "250"
+    "calling_code": "250",
+    "continent": "Africa"
   },
   {
     "id": 659,
@@ -1302,7 +1446,8 @@
     "name": "Saint Kitts and Nevis",
     "flag": "http://localhost:3000/v1/countries/flag/KN.svg",
     "capital": "Basseterre",
-    "calling_code": "1-869"
+    "calling_code": "1-869",
+    "continent": "North America"
   },
   {
     "id": 662,
@@ -1311,7 +1456,8 @@
     "name": "Saint Lucia",
     "flag": "http://localhost:3000/v1/countries/flag/LC.svg",
     "capital": "Castries",
-    "calling_code": "1-758"
+    "calling_code": "1-758",
+    "continent": "North America"
   },
   {
     "id": 670,
@@ -1320,7 +1466,8 @@
     "name": "Saint Vincent and the Grenadines",
     "flag": "http://localhost:3000/v1/countries/flag/VC.svg",
     "capital": "Kingstown",
-    "calling_code": "1-784"
+    "calling_code": "1-784",
+    "continent": "North America"
   },
   {
     "id": 882,
@@ -1329,7 +1476,8 @@
     "name": "Samoa",
     "flag": "http://localhost:3000/v1/countries/flag/WS.svg",
     "capital": "Apia",
-    "calling_code": "685"
+    "calling_code": "685",
+    "continent": "Australia"
   },
   {
     "id": 674,
@@ -1338,7 +1486,8 @@
     "name": "San Marino",
     "flag": "http://localhost:3000/v1/countries/flag/SM.svg",
     "capital": "San Marino",
-    "calling_code": "378"
+    "calling_code": "378",
+    "continent": "Europe"
   },
   {
     "id": 678,
@@ -1347,7 +1496,8 @@
     "name": "Sao Tome and Principe",
     "flag": "http://localhost:3000/v1/countries/flag/ST.svg",
     "capital": "São Tomé",
-    "calling_code": "239"
+    "calling_code": "239",
+    "continent": "Africa"
   },
   {
     "id": 682,
@@ -1356,7 +1506,8 @@
     "name": "Saudi Arabia",
     "flag": "http://localhost:3000/v1/countries/flag/SA.svg",
     "capital": "Riyadh",
-    "calling_code": "966"
+    "calling_code": "966",
+    "continent": "Asia"
   },
   {
     "id": 686,
@@ -1365,7 +1516,8 @@
     "name": "Senegal",
     "flag": "http://localhost:3000/v1/countries/flag/SN.svg",
     "capital": "Dakar",
-    "calling_code": "221"
+    "calling_code": "221",
+    "continent": "Africa"
   },
   {
     "id": 688,
@@ -1374,7 +1526,8 @@
     "name": "Serbia",
     "flag": "http://localhost:3000/v1/countries/flag/RS.svg",
     "capital": "Belgrade",
-    "calling_code": "381"
+    "calling_code": "381",
+    "continent": "Europe"
   },
   {
     "id": 690,
@@ -1383,7 +1536,8 @@
     "name": "Seychelles",
     "flag": "http://localhost:3000/v1/countries/flag/SC.svg",
     "capital": "Victoria",
-    "calling_code": "248"
+    "calling_code": "248",
+    "continent": "Africa"
   },
   {
     "id": 694,
@@ -1392,7 +1546,8 @@
     "name": "Sierra Leone",
     "flag": "http://localhost:3000/v1/countries/flag/SL.svg",
     "capital": "Freetown",
-    "calling_code": "232"
+    "calling_code": "232",
+    "continent": "Africa"
   },
   {
     "id": 702,
@@ -1401,7 +1556,8 @@
     "name": "Singapore",
     "flag": "http://localhost:3000/v1/countries/flag/SG.svg",
     "capital": "Singapore",
-    "calling_code": "65"
+    "calling_code": "65",
+    "continent": "Asia"
   },
   {
     "id": 703,
@@ -1410,7 +1566,8 @@
     "name": "Slovakia",
     "flag": "http://localhost:3000/v1/countries/flag/SK.svg",
     "capital": "Bratislava",
-    "calling_code": "421"
+    "calling_code": "421",
+    "continent": "Europe"
   },
   {
     "id": 705,
@@ -1419,7 +1576,8 @@
     "name": "Slovenia",
     "flag": "http://localhost:3000/v1/countries/flag/SI.svg",
     "capital": "Ljubljana",
-    "calling_code": "386"
+    "calling_code": "386",
+    "continent": "Europe"
   },
   {
     "id": 90,
@@ -1428,7 +1586,8 @@
     "name": "Solomon Islands",
     "flag": "http://localhost:3000/v1/countries/flag/SB.svg",
     "capital": "Honiara",
-    "calling_code": "677"
+    "calling_code": "677",
+    "continent": "Australia"
   },
   {
     "id": 706,
@@ -1437,7 +1596,8 @@
     "name": "Somalia",
     "flag": "http://localhost:3000/v1/countries/flag/SO.svg",
     "capital": "Mogadishu",
-    "calling_code": "252"
+    "calling_code": "252",
+    "continent": "Africa"
   },
   {
     "id": 710,
@@ -1446,7 +1606,8 @@
     "name": "South Africa",
     "flag": "http://localhost:3000/v1/countries/flag/ZA.svg",
     "capital": "Pretoria",
-    "calling_code": "27"
+    "calling_code": "27",
+    "continent": "Africa"
   },
   {
     "id": 728,
@@ -1455,7 +1616,8 @@
     "name": "South Sudan",
     "flag": "http://localhost:3000/v1/countries/flag/SS.svg",
     "capital": "Juba",
-    "calling_code": "211"
+    "calling_code": "211",
+    "continent": "Africa"
   },
   {
     "id": 724,
@@ -1464,7 +1626,8 @@
     "name": "Spain",
     "flag": "http://localhost:3000/v1/countries/flag/ES.svg",
     "capital": "Madrid",
-    "calling_code": "34"
+    "calling_code": "34",
+    "continent": "Europe"
   },
   {
     "id": 144,
@@ -1473,7 +1636,8 @@
     "name": "Sri Lanka",
     "flag": "http://localhost:3000/v1/countries/flag/LK.svg",
     "capital": "Sri Jayawardenepura Kotte",
-    "calling_code": "94"
+    "calling_code": "94",
+    "continent": "Asia"
   },
   {
     "id": 729,
@@ -1482,7 +1646,8 @@
     "name": "Sudan",
     "flag": "http://localhost:3000/v1/countries/flag/SD.svg",
     "capital": "Khartoum",
-    "calling_code": "249"
+    "calling_code": "249",
+    "continent": "Africa"
   },
   {
     "id": 740,
@@ -1491,7 +1656,8 @@
     "name": "Suriname",
     "flag": "http://localhost:3000/v1/countries/flag/SR.svg",
     "capital": "Paramaribo",
-    "calling_code": "597"
+    "calling_code": "597",
+    "continent": "South America"
   },
   {
     "id": 752,
@@ -1500,7 +1666,8 @@
     "name": "Sweden",
     "flag": "http://localhost:3000/v1/countries/flag/SE.svg",
     "capital": "Stockholm",
-    "calling_code": "46"
+    "calling_code": "46",
+    "continent": "Europe"
   },
   {
     "id": 756,
@@ -1509,16 +1676,18 @@
     "name": "Switzerland",
     "flag": "http://localhost:3000/v1/countries/flag/CH.svg",
     "capital": "Bern",
-    "calling_code": "41"
+    "calling_code": "41",
+    "continent": "Europe"
   },
   {
     "id": 760,
     "iso2": "sy",
     "iso3": "syr",
-    "name": "Syrian Arab Republic",
+    "name": "Syria",
     "flag": "http://localhost:3000/v1/countries/flag/SY.svg",
     "capital": "Damascus",
-    "calling_code": "963"
+    "calling_code": "963",
+    "continent": "Asia"
   },
   {
     "id": 762,
@@ -1527,16 +1696,18 @@
     "name": "Tajikistan",
     "flag": "http://localhost:3000/v1/countries/flag/TJ.svg",
     "capital": "Dushanbe",
-    "calling_code": "992"
+    "calling_code": "992",
+    "continent": "Asia"
   },
   {
     "id": 834,
     "iso2": "tz",
     "iso3": "tza",
-    "name": "Tanzania, United Republic of",
+    "name": "Tanzania",
     "flag": "http://localhost:3000/v1/countries/flag/TZ.svg",
     "capital": "Dodoma",
-    "calling_code": "255"
+    "calling_code": "255",
+    "continent": "Africa"
   },
   {
     "id": 764,
@@ -1545,7 +1716,8 @@
     "name": "Thailand",
     "flag": "http://localhost:3000/v1/countries/flag/TH.svg",
     "capital": "Bangkok",
-    "calling_code": "66"
+    "calling_code": "66",
+    "continent": "Asia"
   },
   {
     "id": 626,
@@ -1554,7 +1726,8 @@
     "name": "Timor-Leste",
     "flag": "http://localhost:3000/v1/countries/flag/TL.svg",
     "capital": "Dili",
-    "calling_code": "670"
+    "calling_code": "670",
+    "continent": "Asia"
   },
   {
     "id": 768,
@@ -1563,7 +1736,8 @@
     "name": "Togo",
     "flag": "http://localhost:3000/v1/countries/flag/TG.svg",
     "capital": "Lomé",
-    "calling_code": "228"
+    "calling_code": "228",
+    "continent": "Africa"
   },
   {
     "id": 776,
@@ -1572,7 +1746,8 @@
     "name": "Tonga",
     "flag": "http://localhost:3000/v1/countries/flag/TO.svg",
     "capital": "Nukuʻalofa",
-    "calling_code": "676"
+    "calling_code": "676",
+    "continent": "Australia"
   },
   {
     "id": 780,
@@ -1581,7 +1756,8 @@
     "name": "Trinidad and Tobago",
     "flag": "http://localhost:3000/v1/countries/flag/TT.svg",
     "capital": "Port of Spain",
-    "calling_code": "1-868"
+    "calling_code": "1-868",
+    "continent": "North America"
   },
   {
     "id": 788,
@@ -1590,16 +1766,18 @@
     "name": "Tunisia",
     "flag": "http://localhost:3000/v1/countries/flag/TN.svg",
     "capital": "Tunis",
-    "calling_code": "216"
+    "calling_code": "216",
+    "continent": "Africa"
   },
   {
     "id": 792,
     "iso2": "tr",
     "iso3": "tur",
-    "name": "Türkiye",
+    "name": "Turkey",
     "flag": "http://localhost:3000/v1/countries/flag/TR.svg",
     "capital": "Ankara",
-    "calling_code": "90"
+    "calling_code": "90",
+    "continent": "Asia"
   },
   {
     "id": 795,
@@ -1608,7 +1786,8 @@
     "name": "Turkmenistan",
     "flag": "http://localhost:3000/v1/countries/flag/TM.svg",
     "capital": "Ashgabat",
-    "calling_code": "993"
+    "calling_code": "993",
+    "continent": "Asia"
   },
   {
     "id": 798,
@@ -1617,7 +1796,8 @@
     "name": "Tuvalu",
     "flag": "http://localhost:3000/v1/countries/flag/TV.svg",
     "capital": "Funafuti",
-    "calling_code": "688"
+    "calling_code": "688",
+    "continent": "Australia"
   },
   {
     "id": 800,
@@ -1626,7 +1806,8 @@
     "name": "Uganda",
     "flag": "http://localhost:3000/v1/countries/flag/UG.svg",
     "capital": "Kampala",
-    "calling_code": "256"
+    "calling_code": "256",
+    "continent": "Africa"
   },
   {
     "id": 804,
@@ -1635,7 +1816,8 @@
     "name": "Ukraine",
     "flag": "http://localhost:3000/v1/countries/flag/UA.svg",
     "capital": "Kyiv",
-    "calling_code": "380"
+    "calling_code": "380",
+    "continent": "Europe"
   },
   {
     "id": 784,
@@ -1644,25 +1826,28 @@
     "name": "United Arab Emirates",
     "flag": "http://localhost:3000/v1/countries/flag/AE.svg",
     "capital": "Abu Dhabi",
-    "calling_code": "971"
+    "calling_code": "971",
+    "continent": "Asia"
   },
   {
     "id": 826,
     "iso2": "gb",
     "iso3": "gbr",
-    "name": "United Kingdom of Great Britain and Northern Ireland",
+    "name": "United Kingdom",
     "flag": "http://localhost:3000/v1/countries/flag/GB.svg",
     "capital": "London",
-    "calling_code": "44"
+    "calling_code": "44",
+    "continent": "Europe"
   },
   {
     "id": 840,
     "iso2": "us",
     "iso3": "usa",
-    "name": "United States of America",
+    "name": "United States",
     "flag": "http://localhost:3000/v1/countries/flag/US.svg",
     "capital": "Washington, D.C.",
-    "calling_code": "1"
+    "calling_code": "1",
+    "continent": "North America"
   },
   {
     "id": 858,
@@ -1671,7 +1856,8 @@
     "name": "Uruguay",
     "flag": "http://localhost:3000/v1/countries/flag/UY.svg",
     "capital": "Montevideo",
-    "calling_code": "598"
+    "calling_code": "598",
+    "continent": "South America"
   },
   {
     "id": 860,
@@ -1680,7 +1866,8 @@
     "name": "Uzbekistan",
     "flag": "http://localhost:3000/v1/countries/flag/UZ.svg",
     "capital": "Tashkent",
-    "calling_code": "998"
+    "calling_code": "998",
+    "continent": "Asia"
   },
   {
     "id": 548,
@@ -1689,25 +1876,28 @@
     "name": "Vanuatu",
     "flag": "http://localhost:3000/v1/countries/flag/VU.svg",
     "capital": "Port Vila",
-    "calling_code": "678"
+    "calling_code": "678",
+    "continent": "Australia"
   },
   {
     "id": 862,
     "iso2": "ve",
     "iso3": "ven",
-    "name": "Venezuela, Bolivarian Republic of",
+    "name": "Venezuela",
     "flag": "http://localhost:3000/v1/countries/flag/VE.svg",
     "capital": "Caracas",
-    "calling_code": "58"
+    "calling_code": "58",
+    "continent": "South America"
   },
   {
     "id": 704,
     "iso2": "vn",
     "iso3": "vnm",
-    "name": "Viet Nam",
+    "name": "Vietnam",
     "flag": "http://localhost:3000/v1/countries/flag/VN.svg",
     "capital": "Hanoi",
-    "calling_code": "84"
+    "calling_code": "84",
+    "continent": "Asia"
   },
   {
     "id": 887,
@@ -1716,7 +1906,8 @@
     "name": "Yemen",
     "flag": "http://localhost:3000/v1/countries/flag/YE.svg",
     "capital": "Sana'a",
-    "calling_code": "967"
+    "calling_code": "967",
+    "continent": "Asia"
   },
   {
     "id": 894,
@@ -1725,7 +1916,8 @@
     "name": "Zambia",
     "flag": "http://localhost:3000/v1/countries/flag/ZM.svg",
     "capital": "Lusaka",
-    "calling_code": "260"
+    "calling_code": "260",
+    "continent": "Africa"
   },
   {
     "id": 716,
@@ -1734,6 +1926,7 @@
     "name": "Zimbabwe",
     "flag": "http://localhost:3000/v1/countries/flag/ZW.svg",
     "capital": "Harare",
-    "calling_code": "263"
+    "calling_code": "263",
+    "continent": "Africa"
   }
 ]

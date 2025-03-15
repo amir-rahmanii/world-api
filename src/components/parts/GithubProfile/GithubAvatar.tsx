@@ -13,7 +13,7 @@ export default function GithubAvatar({ avatar, name }: GithubAvatarProps) {
     <TooltipWrapper content="پروفایل من">
       <Button variant="outline">
         {name}
-        <div className="rounded-full w-8 h-8 overflow-hidden">
+        <div className="rounded-full w-7 h-7 overflow-hidden">
           <Image height={220} width={220} alt="profile" src={avatar} />
         </div>
       </Button>

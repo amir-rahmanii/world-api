@@ -12,8 +12,7 @@ export default function HeroText() {
         وب سرویس رایگان اطلاعات <span className="text-primary">کشورها</span>
       </h1>
       <p className="text-xl text-center font-bold">
-        دسترسی سریع به نام کشور، پرچم و کدهای ISO (ISO2, ISO3) با استفاده از
-        کلید API برای برنامه نویسان
+        دسترسی سریع به نام کشور، پرچم، کد تماس و کدهای ISO (ISO2, ISO3)  برای برنامه نویسان
       </p>
       <Button asChild variant="default">
         <Link href="/documentation">برای شروع کلیک کنید</Link>
