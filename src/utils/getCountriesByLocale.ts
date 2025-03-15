@@ -1,12 +1,10 @@
 import CountriesEn from "../../public/Countries-nationalities-en.json";
 import CountriesFa from "../../public/Countries-nationalities-fa.json";
 
-
 export enum Locale {
   FA = "fa",
   EN = "en",
 }
-
 
 export const getCountriesByLocale = (locale: Locale) => {
   switch (locale) {

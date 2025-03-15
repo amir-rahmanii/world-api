@@ -17,7 +17,7 @@ export const useSignIn = () => {
     if (data.url) {
       redirect(data.url);
     }
-  }, [supabase.auth]);
+  }, [pathname, supabase.auth]);
 
   return { signIn };
 };

@@ -705,7 +705,7 @@
     "id": 364,
     "iso2": "ir",
     "iso3": "irn",
-    "name": "Iran, Islamic Republic of",
+    "name": "Iran",
     "flag": "http://localhost:3000/v1/countries/flag/IR.svg",
     "capital": "Tehran",
     "calling_code": "98"
