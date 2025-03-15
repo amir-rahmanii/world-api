@@ -4,7 +4,9 @@ import React from "react";
 export default function APIKeyUsage() {
   return (
     <div>
-      <h3 className="text-3xl font-extrabold pb-2">نحوه استفاده از API Key</h3>
+      <h3 className="text-2xl tablet:text-3xl font-extrabold pb-2">
+        نحوه استفاده از API Key
+      </h3>
       <p>
         برای استفاده از API، شما نیاز به یک <strong>API Key</strong> دارید که
         مشابه یک <strong>رمز عبور</strong> عمل می‌کند و دسترسی شما به سرویس را
@@ -13,7 +15,7 @@ export default function APIKeyUsage() {
         انجام شوند.
       </p>
 
-      <h4 className="text-xl font-bold mt-4 pb-2">
+      <h4 className="text-lg tablet:text-xl font-bold mt-4 pb-2">
         📌 چرا از <code>X-API-Key</code> استفاده کنیم؟
       </h4>
       <p>
@@ -30,7 +32,7 @@ export default function APIKeyUsage() {
         <li>در بسیاری از APIهای مدرن توصیه می‌شود.</li>
       </ul>
 
-      <h4 className="text-xl font-bold mt-4 pb-2">
+      <h4 className="text-lg tablet:text-xl font-bold mt-4 pb-2">
         🚀 نحوه ارسال API Key در درخواست HTTP
       </h4>
       <p>
@@ -53,7 +55,7 @@ headers: {
 `}
       />
 
-      <h4 className="text-xl font-bold mt-4 pb-2">
+      <h4 className="text-lg tablet:text-xl font-bold mt-4 pb-2">
         ⚠️ نکات امنیتی مهم در استفاده از API Key
       </h4>
       <ul className="list-disc pr-5">

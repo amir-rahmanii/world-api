@@ -12,7 +12,9 @@ export async function ApiKeyDisplay() {
 
   return (
     <div className="flex gap-4 my-10 items-center">
-      <p className="text-lg">برای دریافت کلید API ابتدا وارد شوید.</p>
+      <p className="text-base tablet:text-lg">
+        برای دریافت کلید API ابتدا وارد شوید.
+      </p>
       <GithubLoginButton />
     </div>
   );

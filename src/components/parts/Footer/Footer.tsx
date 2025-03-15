@@ -32,7 +32,7 @@ export default function Footer() {
   return (
     <footer className="pt-26 mt-auto">
       <div className="flex flex-col gap-5 pb-5">
-        <h3 className="text-xl font-bold text-center">
+        <h3 className="text-base tablet:text-lg font-bold text-center">
           لینک شبکه های اجتماعی{" "}
         </h3>
         <div className="flex justify-center items-center gap-3.5">
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-accent p-6">
-        <p className="text-center text-lg font-bold">
+        <p className="text-center text-base tablet:text-lg font-bold">
           طراحی شده با ❤️ توسط امیررضا رحمانی
         </p>
       </div>

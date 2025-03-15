@@ -3,7 +3,8 @@ import LanguageSupport from "@/components/icons/languageSupport.svg";
 import UpdateIcon from "@/components/icons/updateIcon.svg";
 import React from "react";
 
-import SiteDescriptionBox from "../SiteDescriptionBox/SiteDescriptionBox";
+import SiteDescriptionBox from "./SiteDescriptionBox";
+
 
 export interface SiteDescriptions {
   title: string;
@@ -31,7 +32,7 @@ const allSiteDescription: SiteDescriptions[] = [
 
 export default function SiteDescriptions() {
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-3">
       {allSiteDescription.map((siteDesc) => (
         <SiteDescriptionBox key={siteDesc.title} {...siteDesc} />
       ))}

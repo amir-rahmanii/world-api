@@ -6,13 +6,13 @@ import DotPatternWrapper from "../DotPatternWrapper/DotPatternWrapper";
 
 export default function HeroText() {
   return (
-    <div className="flex flex-col gap-8 justify-center  items-center h-[calc(100vh-180px)]">
+    <div className="flex flex-col gap-8 justify-center  items-center h-[calc(100vh-220px)]  desktop:h-[calc(100vh-180px)]">
       <DotPatternWrapper />
-      <h1 className="text-5xl text-center font-extrabold">
+      <h1 className="text-3xl tablet:text-4xl desktop:text-5xl text-center font-extrabold">
         وب سرویس رایگان اطلاعات <span className="text-primary">کشورها</span>
       </h1>
-      <p className="text-xl text-center font-bold">
-        دسترسی سریع به نام کشور، پرچم، کد تماس و کدهای ISO (ISO2, ISO3)  برای برنامه نویسان
+      <p className="text-lg desktop:text-xl text-center font-bold">
+        دسترسی سریع به نام کشور، قاره، پرچم، کد تماس و کدهای ISO (ISO2, ISO3)  برای برنامه نویسان
       </p>
       <Button asChild variant="default">
         <Link href="/documentation">برای شروع کلیک کنید</Link>

@@ -130,6 +130,9 @@
   strong {
     @apply text-primary;
   }
+  p {
+    @apply text-justify;
+  }
 }
 
 * {
@@ -153,7 +156,5 @@
 }
 
 .shiki {
-  @apply rounded-md p-6;
+  @apply rounded-md p-6 overflow-auto;
 }
-
-
