@@ -2,7 +2,7 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import type { Nav } from "./NavigationBar";
 
@@ -16,9 +16,18 @@ interface NavLinksMobileProps {
 }
 
 export function MobileNavigation({ children, Navs }: NavLinksMobileProps) {
+  const [isOpenMobileNavigation, setIsOpenMobileNavigation] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpenMobileNavigation(false);
+  }, [pathname]);
+
   return (
-    <Sheet>
+    <Sheet
+      onOpenChange={setIsOpenMobileNavigation}
+      open={isOpenMobileNavigation}
+    >
       <SheetTrigger asChild>{children}</SheetTrigger>
       <SheetContent className="pt-24 px-4 overflow-auto" side="right">
         <Link

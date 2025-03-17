@@ -4,9 +4,7 @@ import React from "react";
 export default function APIKeyUsage() {
   return (
     <div>
-      <h3 className="text-2xl tablet:text-3xl font-extrabold pb-2">
-        نحوه استفاده از API Key
-      </h3>
+      <h4>📡 نحوه استفاده از API Key</h4>
       <p>
         برای استفاده از API، شما نیاز به یک <strong>API Key</strong> دارید که
         مشابه یک <strong>رمز عبور</strong> عمل می‌کند و دسترسی شما به سرویس را
@@ -15,7 +13,7 @@ export default function APIKeyUsage() {
         انجام شوند.
       </p>
 
-      <h4 className="text-lg tablet:text-xl font-bold mt-4 pb-2">
+      <h4>
         📌 چرا از <code>X-API-Key</code> استفاده کنیم؟
       </h4>
       <p>
@@ -27,14 +25,13 @@ export default function APIKeyUsage() {
           <strong>امن‌تر</strong> از ارسال کلید در پارامترهای URL است.
         </li>
         <li>
-          درخواست‌ها را <strong>ساده‌تر</strong> و خواناتر می‌کند.
+          درخواست‌ها را <strong>ساده‌تر</strong> و <strong>خواناتر </strong>
+          می‌کند.
         </li>
         <li>در بسیاری از APIهای مدرن توصیه می‌شود.</li>
       </ul>
 
-      <h4 className="text-lg tablet:text-xl font-bold mt-4 pb-2">
-        🚀 نحوه ارسال API Key در درخواست HTTP
-      </h4>
+      <h4>🚀 نحوه ارسال API Key در درخواست HTTP</h4>
       <p>
         برای ارسال API Key در <strong>X-API-Key</strong>، کافی است مقدار آن را
         در بخش
@@ -44,10 +41,10 @@ export default function APIKeyUsage() {
       <CodeBlock
         code={`
 fetch("http://localhost:3000/api/v1/fa/countries", {
-method: "GET",
-headers: {
+ method: "GET",
+ headers: {
   "X-API-Key": "your-api-key",  // 🔴 کلید را اینجا جایگزین کنید
-}
+ }
 })
 .then(response => response.json())
 .then(data => console.log(data))
@@ -55,9 +52,7 @@ headers: {
 `}
       />
 
-      <h4 className="text-lg tablet:text-xl font-bold mt-4 pb-2">
-        ⚠️ نکات امنیتی مهم در استفاده از API Key
-      </h4>
+      <h4>⚠️ نکات امنیتی مهم در استفاده از API Key</h4>
       <ul className="list-disc pr-5">
         <li>هرگز API Key را در کدهای عمومی (مانند GitHub) قرار ندهید.</li>
         <li>

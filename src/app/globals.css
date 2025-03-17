@@ -130,8 +130,14 @@
   strong {
     @apply text-primary;
   }
+  h1 {
+    @apply text-2xl tablet:text-3xl font-extrabold pb-4
+  }
   p {
     @apply text-justify;
+  }
+  h4 {
+    @apply text-lg tablet:text-xl font-bold pt-10 pb-2
   }
 }
 

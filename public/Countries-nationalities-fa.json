@@ -6,8 +6,10 @@
     "name": "افغانستان",
     "flag": "http://localhost:3000/v1/countries/flag/AF.svg",
     "capital": "کابل",
-    "calling_code": "93",
-    "continent": "آسیا"
+    "calling_code": 93,
+    "continent": "آسیا",
+    "lat": 33.0,
+    "long": 65.0
   },
   {
     "id": 8,
@@ -16,8 +18,10 @@
     "name": "آلبانی",
     "flag": "http://localhost:3000/v1/countries/flag/AL.svg",
     "capital": "تیرانا",
-    "calling_code": "355",
-    "continent": "اروپا"
+    "calling_code": 355,
+    "continent": "اروپا",
+    "lat": 41.0,
+    "long": 20.0
   },
   {
     "id": 12,
@@ -26,8 +30,10 @@
     "name": "الجزایر",
     "flag": "http://localhost:3000/v1/countries/flag/DZ.svg",
     "capital": "الجزیره",
-    "calling_code": "213",
-    "continent": "آفریقا"
+    "calling_code": 213,
+    "continent": "آفریقا",
+    "lat": 28.0,
+    "long": 3.0
   },
   {
     "id": 20,
@@ -36,8 +42,10 @@
     "name": "آندورا",
     "flag": "http://localhost:3000/v1/countries/flag/AD.svg",
     "capital": "آندورا لاولا",
-    "calling_code": "376",
-    "continent": "اروپا"
+    "calling_code": 376,
+    "continent": "اروپا",
+    "lat": 42.5,
+    "long": 1.6
   },
   {
     "id": 24,
@@ -46,8 +54,10 @@
     "name": "آنگولا",
     "flag": "http://localhost:3000/v1/countries/flag/AO.svg",
     "capital": "لواندا",
-    "calling_code": "244",
-    "continent": "آفریقا"
+    "calling_code": 244,
+    "continent": "آفریقا",
+    "lat": -12.5,
+    "long": 18.5
   },
   {
     "id": 28,
@@ -56,8 +66,10 @@
     "name": "آنتیگوآ و باربودا",
     "flag": "http://localhost:3000/v1/countries/flag/AG.svg",
     "capital": "سنت جانز",
-    "calling_code": "1-268",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 17.05,
+    "long": -61.8
   },
   {
     "id": 32,
@@ -66,8 +78,10 @@
     "name": "آرژانتین",
     "flag": "http://localhost:3000/v1/countries/flag/AR.svg",
     "capital": "بوئنوس آیرس",
-    "calling_code": "54",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 54,
+    "continent": "آمریکای جنوبی",
+    "lat": -34.0,
+    "long": -64.0
   },
   {
     "id": 51,
@@ -76,8 +90,10 @@
     "name": "ارمنستان",
     "flag": "http://localhost:3000/v1/countries/flag/AM.svg",
     "capital": "ایروان",
-    "calling_code": "374",
-    "continent": "آسیا"
+    "calling_code": 374,
+    "continent": "آسیا",
+    "lat": 40.0,
+    "long": 45.0
   },
   {
     "id": 36,
@@ -86,8 +102,10 @@
     "name": "استرالیا",
     "flag": "http://localhost:3000/v1/countries/flag/AU.svg",
     "capital": "کانبرا",
-    "calling_code": "61",
-    "continent": "استرالیا"
+    "calling_code": 61,
+    "continent": "استرالیا",
+    "lat": -27.0,
+    "long": 133.0
   },
   {
     "id": 40,
@@ -96,8 +114,10 @@
     "name": "اتریش",
     "flag": "http://localhost:3000/v1/countries/flag/AT.svg",
     "capital": "وین",
-    "calling_code": "43",
-    "continent": "اروپا"
+    "calling_code": 43,
+    "continent": "اروپا",
+    "lat": 47.3333,
+    "long": 13.3333
   },
   {
     "id": 31,
@@ -106,8 +126,10 @@
     "name": "جمهوری آذربایجان",
     "flag": "http://localhost:3000/v1/countries/flag/AZ.svg",
     "capital": "باکو",
-    "calling_code": "994",
-    "continent": "آسیا"
+    "calling_code": 994,
+    "continent": "آسیا",
+    "lat": 40.5,
+    "long": 47.5
   },
   {
     "id": 44,
@@ -116,8 +138,10 @@
     "name": "باهاما",
     "flag": "http://localhost:3000/v1/countries/flag/BS.svg",
     "capital": "ناساو",
-    "calling_code": "1-242",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 24.25,
+    "long": -76.0
   },
   {
     "id": 48,
@@ -126,8 +150,10 @@
     "name": "بحرین",
     "flag": "http://localhost:3000/v1/countries/flag/BH.svg",
     "capital": "منامه",
-    "calling_code": "973",
-    "continent": "آسیا"
+    "calling_code": 973,
+    "continent": "آسیا",
+    "lat": 26.0,
+    "long": 50.55
   },
   {
     "id": 50,
@@ -136,8 +162,10 @@
     "name": "بنگلادش",
     "flag": "http://localhost:3000/v1/countries/flag/BD.svg",
     "capital": "داکا",
-    "calling_code": "880",
-    "continent": "آسیا"
+    "calling_code": 880,
+    "continent": "آسیا",
+    "lat": 24.0,
+    "long": 90.0
   },
   {
     "id": 52,
@@ -146,8 +174,10 @@
     "name": "باربادوس",
     "flag": "http://localhost:3000/v1/countries/flag/BB.svg",
     "capital": "بریج‌تاون",
-    "calling_code": "1-246",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 13.1667,
+    "long": -59.5333
   },
   {
     "id": 112,
@@ -156,8 +186,10 @@
     "name": "بلاروس",
     "flag": "http://localhost:3000/v1/countries/flag/BY.svg",
     "capital": "مینسک",
-    "calling_code": "375",
-    "continent": "اروپا"
+    "calling_code": 375,
+    "continent": "اروپا",
+    "lat": 53.0,
+    "long": 28.0
   },
   {
     "id": 56,
@@ -166,8 +198,10 @@
     "name": "بلژیک",
     "flag": "http://localhost:3000/v1/countries/flag/BE.svg",
     "capital": "بروکسل",
-    "calling_code": "32",
-    "continent": "اروپا"
+    "calling_code": 32,
+    "continent": "اروپا",
+    "lat": 50.8333,
+    "long": 4.0
   },
   {
     "id": 84,
@@ -176,8 +210,10 @@
     "name": "بلیز",
     "flag": "http://localhost:3000/v1/countries/flag/BZ.svg",
     "capital": "بلموپان",
-    "calling_code": "501",
-    "continent": "آمریکای شمالی"
+    "calling_code": 501,
+    "continent": "آمریکای شمالی",
+    "lat": 17.25,
+    "long": -88.75
   },
   {
     "id": 204,
@@ -186,8 +222,10 @@
     "name": "بنین",
     "flag": "http://localhost:3000/v1/countries/flag/BJ.svg",
     "capital": "پورتو نووو",
-    "calling_code": "229",
-    "continent": "آفریقا"
+    "calling_code": 229,
+    "continent": "آفریقا",
+    "lat": 9.5,
+    "long": 2.25
   },
   {
     "id": 64,
@@ -196,8 +234,10 @@
     "name": "بوتان",
     "flag": "http://localhost:3000/v1/countries/flag/BT.svg",
     "capital": "تیمفو",
-    "calling_code": "975",
-    "continent": "آسیا"
+    "calling_code": 975,
+    "continent": "آسیا",
+    "lat": 27.5,
+    "long": 90.5
   },
   {
     "id": 68,
@@ -206,8 +246,10 @@
     "name": "بولیوی",
     "flag": "http://localhost:3000/v1/countries/flag/BO.svg",
     "capital": "سوکره",
-    "calling_code": "591",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 591,
+    "continent": "آمریکای جنوبی",
+    "lat": -17.0,
+    "long": -65.0
   },
   {
     "id": 70,
@@ -216,8 +258,10 @@
     "name": "بوسنی و هرزگوین",
     "flag": "http://localhost:3000/v1/countries/flag/BA.svg",
     "capital": "سارایوو",
-    "calling_code": "387",
-    "continent": "اروپا"
+    "calling_code": 387,
+    "continent": "اروپا",
+    "lat": 44.0,
+    "long": 18.0
   },
   {
     "id": 72,
@@ -226,8 +270,10 @@
     "name": "بوتسوانا",
     "flag": "http://localhost:3000/v1/countries/flag/BW.svg",
     "capital": "گابورون",
-    "calling_code": "267",
-    "continent": "آفریقا"
+    "calling_code": 267,
+    "continent": "آفریقا",
+    "lat": -22.0,
+    "long": 24.0
   },
   {
     "id": 76,
@@ -236,8 +282,10 @@
     "name": "برزیل",
     "flag": "http://localhost:3000/v1/countries/flag/BR.svg",
     "capital": "برازیلیا",
-    "calling_code": "55",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 55,
+    "continent": "آمریکای جنوبی",
+    "lat": -10.0,
+    "long": -55.0
   },
   {
     "id": 96,
@@ -246,8 +294,10 @@
     "name": "برونئی",
     "flag": "http://localhost:3000/v1/countries/flag/BN.svg",
     "capital": "بندر سری بگاوان",
-    "calling_code": "673",
-    "continent": "آسیا"
+    "calling_code": 673,
+    "continent": "آسیا",
+    "lat": 4.5,
+    "long": 114.6667
   },
   {
     "id": 100,
@@ -256,8 +306,10 @@
     "name": "بلغارستان",
     "flag": "http://localhost:3000/v1/countries/flag/BG.svg",
     "capital": "صوفیه",
-    "calling_code": "359",
-    "continent": "اروپا"
+    "calling_code": 359,
+    "continent": "اروپا",
+    "lat": 43.0,
+    "long": 25.0
   },
   {
     "id": 854,
@@ -266,8 +318,10 @@
     "name": "بورکینافاسو",
     "flag": "http://localhost:3000/v1/countries/flag/BF.svg",
     "capital": "واگادوگو",
-    "calling_code": "226",
-    "continent": "آفریقا"
+    "calling_code": 226,
+    "continent": "آفریقا",
+    "lat": 13.0,
+    "long": -2.0
   },
   {
     "id": 108,
@@ -276,8 +330,10 @@
     "name": "بوروندی",
     "flag": "http://localhost:3000/v1/countries/flag/BI.svg",
     "capital": "گیتگا",
-    "calling_code": "257",
-    "continent": "آفریقا"
+    "calling_code": 257,
+    "continent": "آفریقا",
+    "lat": -3.5,
+    "long": 30.0
   },
   {
     "id": 116,
@@ -286,8 +342,10 @@
     "name": "کامبوج",
     "flag": "http://localhost:3000/v1/countries/flag/KH.svg",
     "capital": "پنوم‌پن",
-    "calling_code": "855",
-    "continent": "آسیا"
+    "calling_code": 855,
+    "continent": "آسیا",
+    "lat": 13.0,
+    "long": 105.0
   },
   {
     "id": 120,
@@ -296,8 +354,10 @@
     "name": "کامرون",
     "flag": "http://localhost:3000/v1/countries/flag/CM.svg",
     "capital": "یائونده",
-    "calling_code": "237",
-    "continent": "آفریقا"
+    "calling_code": 237,
+    "continent": "آفریقا",
+    "lat": 6.0,
+    "long": 12.0
   },
   {
     "id": 124,
@@ -306,8 +366,10 @@
     "name": "کانادا",
     "flag": "http://localhost:3000/v1/countries/flag/CA.svg",
     "capital": "اتاوا",
-    "calling_code": "1",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 60.0,
+    "long": -95.0
   },
   {
     "id": 132,
@@ -316,8 +378,10 @@
     "name": "کیپ ورد",
     "flag": "http://localhost:3000/v1/countries/flag/CV.svg",
     "capital": "پرایا",
-    "calling_code": "238",
-    "continent": "آفریقا"
+    "calling_code": 238,
+    "continent": "آفریقا",
+    "lat": 16.0,
+    "long": -24.0
   },
   {
     "id": 140,
@@ -326,8 +390,10 @@
     "name": "جمهوری آفریقای مرکزی",
     "flag": "http://localhost:3000/v1/countries/flag/CF.svg",
     "capital": "بانگی",
-    "calling_code": "236",
-    "continent": "آفریقا"
+    "calling_code": 236,
+    "continent": "آفریقا",
+    "lat": 7.0,
+    "long": 21.0
   },
   {
     "id": 148,
@@ -336,8 +402,10 @@
     "name": "چاد",
     "flag": "http://localhost:3000/v1/countries/flag/TD.svg",
     "capital": "انجامنا",
-    "calling_code": "235",
-    "continent": "آفریقا"
+    "calling_code": 235,
+    "continent": "آفریقا",
+    "lat": 15.0,
+    "long": 19.0
   },
   {
     "id": 152,
@@ -346,8 +414,10 @@
     "name": "شیلی",
     "flag": "http://localhost:3000/v1/countries/flag/CL.svg",
     "capital": "سانتیاگو",
-    "calling_code": "56",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 56,
+    "continent": "آمریکای جنوبی",
+    "lat": -30.0,
+    "long": -71.0
   },
   {
     "id": 156,
@@ -356,8 +426,10 @@
     "name": "چین",
     "flag": "http://localhost:3000/v1/countries/flag/CN.svg",
     "capital": "پکن",
-    "calling_code": "86",
-    "continent": "آسیا"
+    "calling_code": 86,
+    "continent": "آسیا",
+    "lat": 35.0,
+    "long": 105.0
   },
   {
     "id": 170,
@@ -366,8 +438,10 @@
     "name": "کلمبیا",
     "flag": "http://localhost:3000/v1/countries/flag/CO.svg",
     "capital": "بوگوتا",
-    "calling_code": "57",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 57,
+    "continent": "آمریکای جنوبی",
+    "lat": 4.0,
+    "long": -72.0
   },
   {
     "id": 174,
@@ -376,8 +450,10 @@
     "name": "کومور",
     "flag": "http://localhost:3000/v1/countries/flag/KM.svg",
     "capital": "مورونی",
-    "calling_code": "269",
-    "continent": "آفریقا"
+    "calling_code": 269,
+    "continent": "آفریقا",
+    "lat": -12.1667,
+    "long": 44.25
   },
   {
     "id": 178,
@@ -386,8 +462,10 @@
     "name": "جمهوری کنگو",
     "flag": "http://localhost:3000/v1/countries/flag/CG.svg",
     "capital": "برازاویل",
-    "calling_code": "242",
-    "continent": "آفریقا"
+    "calling_code": 242,
+    "continent": "آفریقا",
+    "lat": -1.0,
+    "long": 15.0
   },
   {
     "id": 180,
@@ -396,8 +474,10 @@
     "name": "جمهوری دموکراتیک کنگو",
     "flag": "http://localhost:3000/v1/countries/flag/CD.svg",
     "capital": "کینشاسا",
-    "calling_code": "243",
-    "continent": "آفریقا"
+    "calling_code": 243,
+    "continent": "آفریقا",
+    "lat": 0.0,
+    "long": 25.0
   },
   {
     "id": 188,
@@ -406,8 +486,10 @@
     "name": "کاستاریکا",
     "flag": "http://localhost:3000/v1/countries/flag/CR.svg",
     "capital": "سن خوزه",
-    "calling_code": "506",
-    "continent": "آمریکای شمالی"
+    "calling_code": 506,
+    "continent": "آمریکای شمالی",
+    "lat": 10.0,
+    "long": -84.0
   },
   {
     "id": 384,
@@ -416,8 +498,10 @@
     "name": "ساحل عاج",
     "flag": "http://localhost:3000/v1/countries/flag/CI.svg",
     "capital": "یاموسوکرو",
-    "calling_code": "225",
-    "continent": "آفریقا"
+    "calling_code": 225,
+    "continent": "آفریقا",
+    "lat": 8.0,
+    "long": -5.0
   },
   {
     "id": 191,
@@ -426,8 +510,10 @@
     "name": "کرواسی",
     "flag": "http://localhost:3000/v1/countries/flag/HR.svg",
     "capital": "زاگرب",
-    "calling_code": "385",
-    "continent": "اروپا"
+    "calling_code": 385,
+    "continent": "اروپا",
+    "lat": 45.1667,
+    "long": 15.5
   },
   {
     "id": 192,
@@ -436,8 +522,10 @@
     "name": "کوبا",
     "flag": "http://localhost:3000/v1/countries/flag/CU.svg",
     "capital": "هاوانا",
-    "calling_code": "53",
-    "continent": "آمریکای شمالی"
+    "calling_code": 53,
+    "continent": "آمریکای شمالی",
+    "lat": 21.5,
+    "long": -80.0
   },
   {
     "id": 196,
@@ -446,8 +534,10 @@
     "name": "قبرس",
     "flag": "http://localhost:3000/v1/countries/flag/CY.svg",
     "capital": "نیکوزیا",
-    "calling_code": "357",
-    "continent": "آسیا"
+    "calling_code": 357,
+    "continent": "آسیا",
+    "lat": 35.0,
+    "long": 33.0
   },
   {
     "id": 203,
@@ -456,8 +546,10 @@
     "name": "جمهوری چک",
     "flag": "http://localhost:3000/v1/countries/flag/CZ.svg",
     "capital": "پراگ",
-    "calling_code": "420",
-    "continent": "اروپا"
+    "calling_code": 420,
+    "continent": "اروپا",
+    "lat": 49.75,
+    "long": 15.5
   },
   {
     "id": 208,
@@ -466,8 +558,10 @@
     "name": "دانمارک",
     "flag": "http://localhost:3000/v1/countries/flag/DK.svg",
     "capital": "کپنهاگ",
-    "calling_code": "45",
-    "continent": "اروپا"
+    "calling_code": 45,
+    "continent": "اروپا",
+    "lat": 56.0,
+    "long": 10.0
   },
   {
     "id": 262,
@@ -476,8 +570,10 @@
     "name": "جیبوتی",
     "flag": "http://localhost:3000/v1/countries/flag/DJ.svg",
     "capital": "جیبوتی",
-    "calling_code": "253",
-    "continent": "آفریقا"
+    "calling_code": 253,
+    "continent": "آفریقا",
+    "lat": 11.5,
+    "long": 43.0
   },
   {
     "id": 212,
@@ -486,8 +582,10 @@
     "name": "دومینیکا",
     "flag": "http://localhost:3000/v1/countries/flag/DM.svg",
     "capital": "روسو",
-    "calling_code": "1-767",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 15.4167,
+    "long": -61.3333
   },
   {
     "id": 214,
@@ -496,8 +594,10 @@
     "name": "جمهوری دومینیکن",
     "flag": "http://localhost:3000/v1/countries/flag/DO.svg",
     "capital": "سانتو دومینگو",
-    "calling_code": "1-809",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 19.0,
+    "long": -70.6667
   },
   {
     "id": 218,
@@ -506,8 +606,10 @@
     "name": "اکوادور",
     "flag": "http://localhost:3000/v1/countries/flag/EC.svg",
     "capital": "کیتو",
-    "calling_code": "593",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 593,
+    "continent": "آمریکای جنوبی",
+    "lat": -2.0,
+    "long": -77.5
   },
   {
     "id": 818,
@@ -516,8 +618,10 @@
     "name": "مصر",
     "flag": "http://localhost:3000/v1/countries/flag/EG.svg",
     "capital": "قاهره",
-    "calling_code": "20",
-    "continent": "آفریقا"
+    "calling_code": 20,
+    "continent": "آفریقا",
+    "lat": 27.0,
+    "long": 30.0
   },
   {
     "id": 222,
@@ -526,8 +630,10 @@
     "name": "السالوادور",
     "flag": "http://localhost:3000/v1/countries/flag/SV.svg",
     "capital": "سان سالوادور",
-    "calling_code": "503",
-    "continent": "آمریکای شمالی"
+    "calling_code": 503,
+    "continent": "آمریکای شمالی",
+    "lat": 13.8333,
+    "long": -88.9167
   },
   {
     "id": 226,
@@ -536,8 +642,10 @@
     "name": "گینه استوایی",
     "flag": "http://localhost:3000/v1/countries/flag/GQ.svg",
     "capital": "مالابو",
-    "calling_code": "240",
-    "continent": "آفریقا"
+    "calling_code": 240,
+    "continent": "آفریقا",
+    "lat": 2.0,
+    "long": 10.0
   },
   {
     "id": 232,
@@ -546,8 +654,10 @@
     "name": "اریتره",
     "flag": "http://localhost:3000/v1/countries/flag/ER.svg",
     "capital": "اسمره",
-    "calling_code": "291",
-    "continent": "آفریقا"
+    "calling_code": 291,
+    "continent": "آفریقا",
+    "lat": 15.0,
+    "long": 39.0
   },
   {
     "id": 233,
@@ -556,8 +666,10 @@
     "name": "استونی",
     "flag": "http://localhost:3000/v1/countries/flag/EE.svg",
     "capital": "تالین",
-    "calling_code": "372",
-    "continent": "اروپا"
+    "calling_code": 372,
+    "continent": "اروپا",
+    "lat": 59.0,
+    "long": 26.0
   },
   {
     "id": 231,
@@ -566,8 +678,10 @@
     "name": "اتیوپی",
     "flag": "http://localhost:3000/v1/countries/flag/ET.svg",
     "capital": "آدیس آبابا",
-    "calling_code": "251",
-    "continent": "آفریقا"
+    "calling_code": 251,
+    "continent": "آفریقا",
+    "lat": 8.0,
+    "long": 38.0
   },
   {
     "id": 242,
@@ -576,8 +690,10 @@
     "name": "فیجی",
     "flag": "http://localhost:3000/v1/countries/flag/FJ.svg",
     "capital": "سووا",
-    "calling_code": "679",
-    "continent": "استرالیا"
+    "calling_code": 679,
+    "continent": "استرالیا",
+    "lat": -18.0,
+    "long": 175.0
   },
   {
     "id": 246,
@@ -586,8 +702,10 @@
     "name": "فنلاند",
     "flag": "http://localhost:3000/v1/countries/flag/FI.svg",
     "capital": "هلسینکی",
-    "calling_code": "358",
-    "continent": "اروپا"
+    "calling_code": 358,
+    "continent": "اروپا",
+    "lat": 64.0,
+    "long": 26.0
   },
   {
     "id": 250,
@@ -596,8 +714,10 @@
     "name": "فرانسه",
     "flag": "http://localhost:3000/v1/countries/flag/FR.svg",
     "capital": "پاریس",
-    "calling_code": "33",
-    "continent": "اروپا"
+    "calling_code": 33,
+    "continent": "اروپا",
+    "lat": 46.0,
+    "long": 2.0
   },
   {
     "id": 266,
@@ -606,8 +726,10 @@
     "name": "گابن",
     "flag": "http://localhost:3000/v1/countries/flag/GA.svg",
     "capital": "لیبرویل",
-    "calling_code": "241",
-    "continent": "آفریقا"
+    "calling_code": 241,
+    "continent": "آفریقا",
+    "lat": -1.0,
+    "long": 11.75
   },
   {
     "id": 270,
@@ -616,8 +738,10 @@
     "name": "گامبیا",
     "flag": "http://localhost:3000/v1/countries/flag/GM.svg",
     "capital": "بانجول",
-    "calling_code": "220",
-    "continent": "آفریقا"
+    "calling_code": 220,
+    "continent": "آفریقا",
+    "lat": 13.4667,
+    "long": -16.5667
   },
   {
     "id": 268,
@@ -626,8 +750,10 @@
     "name": "گرجستان",
     "flag": "http://localhost:3000/v1/countries/flag/GE.svg",
     "capital": "تفلیس",
-    "calling_code": "995",
-    "continent": "آسیا"
+    "calling_code": 995,
+    "continent": "آسیا",
+    "lat": 42.0,
+    "long": 43.5
   },
   {
     "id": 276,
@@ -636,8 +762,10 @@
     "name": "آلمان",
     "flag": "http://localhost:3000/v1/countries/flag/DE.svg",
     "capital": "برلین",
-    "calling_code": "49",
-    "continent": "اروپا"
+    "calling_code": 49,
+    "continent": "اروپا",
+    "lat": 51.0,
+    "long": 9.0
   },
   {
     "id": 288,
@@ -646,8 +774,10 @@
     "name": "غنا",
     "flag": "http://localhost:3000/v1/countries/flag/GH.svg",
     "capital": "آکرا",
-    "calling_code": "233",
-    "continent": "آفریقا"
+    "calling_code": 233,
+    "continent": "آفریقا",
+    "lat": 8.0,
+    "long": -2.0
   },
   {
     "id": 300,
@@ -656,8 +786,10 @@
     "name": "یونان",
     "flag": "http://localhost:3000/v1/countries/flag/GR.svg",
     "capital": "آتن",
-    "calling_code": "30",
-    "continent": "اروپا"
+    "calling_code": 30,
+    "continent": "اروپا",
+    "lat": 39.0,
+    "long": 22.0
   },
   {
     "id": 308,
@@ -666,8 +798,10 @@
     "name": "گرنادا",
     "flag": "http://localhost:3000/v1/countries/flag/GD.svg",
     "capital": "سنت جورج",
-    "calling_code": "1-473",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 12.1167,
+    "long": -61.6667
   },
   {
     "id": 320,
@@ -676,8 +810,10 @@
     "name": "گواتمالا",
     "flag": "http://localhost:3000/v1/countries/flag/GT.svg",
     "capital": "گواتمالا سیتی",
-    "calling_code": "502",
-    "continent": "آمریکای شمالی"
+    "calling_code": 502,
+    "continent": "آمریکای شمالی",
+    "lat": 15.5,
+    "long": -90.25
   },
   {
     "id": 324,
@@ -686,8 +822,10 @@
     "name": "گینه",
     "flag": "http://localhost:3000/v1/countries/flag/GN.svg",
     "capital": "کوناکری",
-    "calling_code": "224",
-    "continent": "آفریقا"
+    "calling_code": 224,
+    "continent": "آفریقا",
+    "lat": 11.0,
+    "long": -10.0
   },
   {
     "id": 624,
@@ -696,8 +834,10 @@
     "name": "گینه بیسائو",
     "flag": "http://localhost:3000/v1/countries/flag/GW.svg",
     "capital": "بیسائو",
-    "calling_code": "245",
-    "continent": "آفریقا"
+    "calling_code": 245,
+    "continent": "آفریقا",
+    "lat": 12.0,
+    "long": -15.0
   },
   {
     "id": 328,
@@ -706,8 +846,10 @@
     "name": "گویان",
     "flag": "http://localhost:3000/v1/countries/flag/GY.svg",
     "capital": "جورج‌تاون",
-    "calling_code": "592",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 592,
+    "continent": "آمریکای جنوبی",
+    "lat": 5.0,
+    "long": -59.0
   },
   {
     "id": 332,
@@ -716,8 +858,10 @@
     "name": "هائیتی",
     "flag": "http://localhost:3000/v1/countries/flag/HT.svg",
     "capital": "پورتو پرنس",
-    "calling_code": "509",
-    "continent": "آمریکای شمالی"
+    "calling_code": 509,
+    "continent": "آمریکای شمالی",
+    "lat": 19.0,
+    "long": -72.4167
   },
   {
     "id": 340,
@@ -726,8 +870,10 @@
     "name": "هندوراس",
     "flag": "http://localhost:3000/v1/countries/flag/HN.svg",
     "capital": "تگوسیگالپا",
-    "calling_code": "504",
-    "continent": "آمریکای شمالی"
+    "calling_code": 504,
+    "continent": "آمریکای شمالی",
+    "lat": 15.0,
+    "long": -86.5
   },
   {
     "id": 348,
@@ -736,8 +882,10 @@
     "name": "مجارستان",
     "flag": "http://localhost:3000/v1/countries/flag/HU.svg",
     "capital": "بوداپست",
-    "calling_code": "36",
-    "continent": "اروپا"
+    "calling_code": 36,
+    "continent": "اروپا",
+    "lat": 47.0,
+    "long": 20.0
   },
   {
     "id": 352,
@@ -746,8 +894,10 @@
     "name": "ایسلند",
     "flag": "http://localhost:3000/v1/countries/flag/IS.svg",
     "capital": "ریکیاویک",
-    "calling_code": "354",
-    "continent": "اروپا"
+    "calling_code": 354,
+    "continent": "اروپا",
+    "lat": 65.0,
+    "long": -18.0
   },
   {
     "id": 356,
@@ -756,8 +906,10 @@
     "name": "هند",
     "flag": "http://localhost:3000/v1/countries/flag/IN.svg",
     "capital": "دهلی نو",
-    "calling_code": "91",
-    "continent": "آسیا"
+    "calling_code": 91,
+    "continent": "آسیا",
+    "lat": 20.0,
+    "long": 77.0
   },
   {
     "id": 360,
@@ -766,8 +918,10 @@
     "name": "اندونزی",
     "flag": "http://localhost:3000/v1/countries/flag/ID.svg",
     "capital": "جاکارتا",
-    "calling_code": "62",
-    "continent": "آسیا"
+    "calling_code": 62,
+    "continent": "آسیا",
+    "lat": -5.0,
+    "long": 120.0
   },
   {
     "id": 364,
@@ -776,8 +930,10 @@
     "name": "ایران",
     "flag": "http://localhost:3000/v1/countries/flag/IR.svg",
     "capital": "تهران",
-    "calling_code": "98",
-    "continent": "آسیا"
+    "calling_code": 98,
+    "continent": "آسیا",
+    "lat": 32.0,
+    "long": 53.0
   },
   {
     "id": 368,
@@ -786,8 +942,10 @@
     "name": "عراق",
     "flag": "http://localhost:3000/v1/countries/flag/IQ.svg",
     "capital": "بغداد",
-    "calling_code": "964",
-    "continent": "آسیا"
+    "calling_code": 964,
+    "continent": "آسیا",
+    "lat": 33.0,
+    "long": 44.0
   },
   {
     "id": 372,
@@ -796,8 +954,10 @@
     "name": "جمهوری ایرلند",
     "flag": "http://localhost:3000/v1/countries/flag/IE.svg",
     "capital": "دوبلین",
-    "calling_code": "353",
-    "continent": "اروپا"
+    "calling_code": 353,
+    "continent": "اروپا",
+    "lat": 53.0,
+    "long": -8.0
   },
   {
     "id": 376,
@@ -806,8 +966,10 @@
     "name": "اسرائیل",
     "flag": "http://localhost:3000/v1/countries/flag/IL.svg",
     "capital": "اورشلیم",
-    "calling_code": "972",
-    "continent": "آسیا"
+    "calling_code": 972,
+    "continent": "آسیا",
+    "lat": 31.5,
+    "long": 34.75
   },
   {
     "id": 380,
@@ -816,8 +978,10 @@
     "name": "ایتالیا",
     "flag": "http://localhost:3000/v1/countries/flag/IT.svg",
     "capital": "رم",
-    "calling_code": "39",
-    "continent": "اروپا"
+    "calling_code": 39,
+    "continent": "اروپا",
+    "lat": 42.8333,
+    "long": 12.8333
   },
   {
     "id": 388,
@@ -826,8 +990,10 @@
     "name": "جامائیکا",
     "flag": "http://localhost:3000/v1/countries/flag/JM.svg",
     "capital": "کینگستون",
-    "calling_code": "1-876",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 18.25,
+    "long": -77.5
   },
   {
     "id": 392,
@@ -836,8 +1002,10 @@
     "name": "ژاپن",
     "flag": "http://localhost:3000/v1/countries/flag/JP.svg",
     "capital": "توکیو",
-    "calling_code": "81",
-    "continent": "آسیا"
+    "calling_code": 81,
+    "continent": "آسیا",
+    "lat": 36.0,
+    "long": 138.0
   },
   {
     "id": 400,
@@ -846,8 +1014,10 @@
     "name": "اردن",
     "flag": "http://localhost:3000/v1/countries/flag/JO.svg",
     "capital": "عمان",
-    "calling_code": "962",
-    "continent": "آسیا"
+    "calling_code": 962,
+    "continent": "آسیا",
+    "lat": 31.0,
+    "long": 36.0
   },
   {
     "id": 398,
@@ -856,8 +1026,10 @@
     "name": "قزاقستان",
     "flag": "http://localhost:3000/v1/countries/flag/KZ.svg",
     "capital": "آستانه",
-    "calling_code": "7",
-    "continent": "آسیا"
+    "calling_code": 7,
+    "continent": "آسیا",
+    "lat": 48.0,
+    "long": 68.0
   },
   {
     "id": 404,
@@ -866,8 +1038,10 @@
     "name": "کنیا",
     "flag": "http://localhost:3000/v1/countries/flag/KE.svg",
     "capital": "نایروبی",
-    "calling_code": "254",
-    "continent": "آفریقا"
+    "calling_code": 254,
+    "continent": "آفریقا",
+    "lat": 1.0,
+    "long": 38.0
   },
   {
     "id": 296,
@@ -876,8 +1050,10 @@
     "name": "کیریباتی",
     "flag": "http://localhost:3000/v1/countries/flag/KI.svg",
     "capital": "تاراوا",
-    "calling_code": "686",
-    "continent": "استرالیا"
+    "calling_code": 686,
+    "continent": "استرالیا",
+    "lat": 1.4167,
+    "long": 173.0
   },
   {
     "id": 408,
@@ -886,8 +1062,10 @@
     "name": "کره شمالی",
     "flag": "http://localhost:3000/v1/countries/flag/KP.svg",
     "capital": "پیونگ‌یانگ",
-    "calling_code": "850",
-    "continent": "آسیا"
+    "calling_code": 850,
+    "continent": "آسیا",
+    "lat": 40.0,
+    "long": 127.0
   },
   {
     "id": 410,
@@ -896,8 +1074,10 @@
     "name": "کره جنوبی",
     "flag": "http://localhost:3000/v1/countries/flag/KR.svg",
     "capital": "سئول",
-    "calling_code": "82",
-    "continent": "آسیا"
+    "calling_code": 82,
+    "continent": "آسیا",
+    "lat": 37.0,
+    "long": 127.5
   },
   {
     "id": 414,
@@ -906,8 +1086,10 @@
     "name": "کویت",
     "flag": "http://localhost:3000/v1/countries/flag/KW.svg",
     "capital": "کویت",
-    "calling_code": "965",
-    "continent": "آسیا"
+    "calling_code": 965,
+    "continent": "آسیا",
+    "lat": 29.3375,
+    "long": 47.6581
   },
   {
     "id": 417,
@@ -916,8 +1098,10 @@
     "name": "قرقیزستان",
     "flag": "http://localhost:3000/v1/countries/flag/KG.svg",
     "capital": "بیشکک",
-    "calling_code": "996",
-    "continent": "آسیا"
+    "calling_code": 996,
+    "continent": "آسیا",
+    "lat": 41.0,
+    "long": 75.0
   },
   {
     "id": 418,
@@ -926,8 +1110,10 @@
     "name": "لائوس",
     "flag": "http://localhost:3000/v1/countries/flag/LA.svg",
     "capital": "وین‌تیان",
-    "calling_code": "856",
-    "continent": "آسیا"
+    "calling_code": 856,
+    "continent": "آسیا",
+    "lat": 18.0,
+    "long": 105.0
   },
   {
     "id": 428,
@@ -936,8 +1122,10 @@
     "name": "لتونی",
     "flag": "http://localhost:3000/v1/countries/flag/LV.svg",
     "capital": "ریگا",
-    "calling_code": "371",
-    "continent": "اروپا"
+    "calling_code": 371,
+    "continent": "اروپا",
+    "lat": 57.0,
+    "long": 25.0
   },
   {
     "id": 422,
@@ -946,8 +1134,10 @@
     "name": "لبنان",
     "flag": "http://localhost:3000/v1/countries/flag/LB.svg",
     "capital": "بیروت",
-    "calling_code": "961",
-    "continent": "آسیا"
+    "calling_code": 961,
+    "continent": "آسیا",
+    "lat": 33.8333,
+    "long": 35.8333
   },
   {
     "id": 426,
@@ -956,8 +1146,10 @@
     "name": "لسوتو",
     "flag": "http://localhost:3000/v1/countries/flag/LS.svg",
     "capital": "ماسرو",
-    "calling_code": "266",
-    "continent": "آفریقا"
+    "calling_code": 266,
+    "continent": "آفریقا",
+    "lat": -29.5,
+    "long": 28.5
   },
   {
     "id": 430,
@@ -966,8 +1158,10 @@
     "name": "لیبریا",
     "flag": "http://localhost:3000/v1/countries/flag/LR.svg",
     "capital": "مونروویا",
-    "calling_code": "231",
-    "continent": "آفریقا"
+    "calling_code": 231,
+    "continent": "آفریقا",
+    "lat": 6.5,
+    "long": -9.5
   },
   {
     "id": 434,
@@ -976,8 +1170,10 @@
     "name": "لیبی",
     "flag": "http://localhost:3000/v1/countries/flag/LY.svg",
     "capital": "طرابلس",
-    "calling_code": "218",
-    "continent": "آفریقا"
+    "calling_code": 218,
+    "continent": "آفریقا",
+    "lat": 25.0,
+    "long": 17.0
   },
   {
     "id": 438,
@@ -986,8 +1182,10 @@
     "name": "لیختن‌اشتاین",
     "flag": "http://localhost:3000/v1/countries/flag/LI.svg",
     "capital": "فادوتس",
-    "calling_code": "423",
-    "continent": "اروپا"
+    "calling_code": 423,
+    "continent": "اروپا",
+    "lat": 47.1667,
+    "long": 9.5333
   },
   {
     "id": 440,
@@ -996,8 +1194,10 @@
     "name": "لیتوانی",
     "flag": "http://localhost:3000/v1/countries/flag/LT.svg",
     "capital": "ویلنیوس",
-    "calling_code": "370",
-    "continent": "اروپا"
+    "calling_code": 370,
+    "continent": "اروپا",
+    "lat": 56.0,
+    "long": 24.0
   },
   {
     "id": 442,
@@ -1006,8 +1206,10 @@
     "name": "لوکزامبورگ",
     "flag": "http://localhost:3000/v1/countries/flag/LU.svg",
     "capital": "لوکزامبورگ",
-    "calling_code": "352",
-    "continent": "اروپا"
+    "calling_code": 352,
+    "continent": "اروپا",
+    "lat": 49.75,
+    "long": 6.1667
   },
   {
     "id": 807,
@@ -1016,8 +1218,10 @@
     "name": "مقدونیه شمالی",
     "flag": "http://localhost:3000/v1/countries/flag/MK.svg",
     "capital": "اسکوپیه",
-    "calling_code": "389",
-    "continent": "اروپا"
+    "calling_code": 389,
+    "continent": "اروپا",
+    "lat": 41.8333,
+    "long": 22.0
   },
   {
     "id": 450,
@@ -1026,8 +1230,10 @@
     "name": "ماداگاسکار",
     "flag": "http://localhost:3000/v1/countries/flag/MG.svg",
     "capital": "آنتاناناریوو",
-    "calling_code": "261",
-    "continent": "آفریقا"
+    "calling_code": 261,
+    "continent": "آفریقا",
+    "lat": -20.0,
+    "long": 47.0
   },
   {
     "id": 454,
@@ -1036,8 +1242,10 @@
     "name": "مالاوی",
     "flag": "http://localhost:3000/v1/countries/flag/MW.svg",
     "capital": "لیلانگوه",
-    "calling_code": "265",
-    "continent": "آفریقا"
+    "calling_code": 265,
+    "continent": "آفریقا",
+    "lat": -13.5,
+    "long": 34.0
   },
   {
     "id": 458,
@@ -1046,8 +1254,10 @@
     "name": "مالزی",
     "flag": "http://localhost:3000/v1/countries/flag/MY.svg",
     "capital": "کوالالامپور",
-    "calling_code": "60",
-    "continent": "آسیا"
+    "calling_code": 60,
+    "continent": "آسیا",
+    "lat": 2.5,
+    "long": 112.5
   },
   {
     "id": 462,
@@ -1056,8 +1266,10 @@
     "name": "مالدیو",
     "flag": "http://localhost:3000/v1/countries/flag/MV.svg",
     "capital": "ماله",
-    "calling_code": "960",
-    "continent": "آسیا"
+    "calling_code": 960,
+    "continent": "آسیا",
+    "lat": 3.25,
+    "long": 73.0
   },
   {
     "id": 466,
@@ -1066,8 +1278,10 @@
     "name": "مالی",
     "flag": "http://localhost:3000/v1/countries/flag/ML.svg",
     "capital": "باماکو",
-    "calling_code": "223",
-    "continent": "آفریقا"
+    "calling_code": 223,
+    "continent": "آفریقا",
+    "lat": 17.0,
+    "long": -4.0
   },
   {
     "id": 470,
@@ -1076,8 +1290,10 @@
     "name": "مالت",
     "flag": "http://localhost:3000/v1/countries/flag/MT.svg",
     "capital": "والتا",
-    "calling_code": "356",
-    "continent": "اروپا"
+    "calling_code": 356,
+    "continent": "اروپا",
+    "lat": 35.8333,
+    "long": 14.5833
   },
   {
     "id": 584,
@@ -1086,8 +1302,10 @@
     "name": "جزایر مارشال",
     "flag": "http://localhost:3000/v1/countries/flag/MH.svg",
     "capital": "ماجورو",
-    "calling_code": "692",
-    "continent": "استرالیا"
+    "calling_code": 692,
+    "continent": "استرالیا",
+    "lat": 9.0,
+    "long": 168.0
   },
   {
     "id": 478,
@@ -1096,8 +1314,10 @@
     "name": "موریتانی",
     "flag": "http://localhost:3000/v1/countries/flag/MR.svg",
     "capital": "نواکشوت",
-    "calling_code": "222",
-    "continent": "آفریقا"
+    "calling_code": 222,
+    "continent": "آفریقا",
+    "lat": 20.0,
+    "long": -12.0
   },
   {
     "id": 480,
@@ -1106,8 +1326,10 @@
     "name": "موریس",
     "flag": "http://localhost:3000/v1/countries/flag/MU.svg",
     "capital": "پورت لوئیس",
-    "calling_code": "230",
-    "continent": "آفریقا"
+    "calling_code": 230,
+    "continent": "آفریقا",
+    "lat": -20.2833,
+    "long": 57.55
   },
   {
     "id": 484,
@@ -1116,8 +1338,10 @@
     "name": "مکزیک",
     "flag": "http://localhost:3000/v1/countries/flag/MX.svg",
     "capital": "مکزیکوسیتی",
-    "calling_code": "52",
-    "continent": "آمریکای شمالی"
+    "calling_code": 52,
+    "continent": "آمریکای شمالی",
+    "lat": 23.0,
+    "long": -102.0
   },
   {
     "id": 583,
@@ -1126,8 +1350,10 @@
     "name": "ایالات فدرال میکرونزی",
     "flag": "http://localhost:3000/v1/countries/flag/FM.svg",
     "capital": "پالیكير",
-    "calling_code": "691",
-    "continent": "استرالیا"
+    "calling_code": 691,
+    "continent": "استرالیا",
+    "lat": 6.9167,
+    "long": 158.25
   },
   {
     "id": 498,
@@ -1136,8 +1362,10 @@
     "name": "مولدووا",
     "flag": "http://localhost:3000/v1/countries/flag/MD.svg",
     "capital": "کیشیناو",
-    "calling_code": "373",
-    "continent": "اروپا"
+    "calling_code": 373,
+    "continent": "اروپا",
+    "lat": 47.0,
+    "long": 29.0
   },
   {
     "id": 492,
@@ -1146,8 +1374,10 @@
     "name": "موناکو",
     "flag": "http://localhost:3000/v1/countries/flag/MC.svg",
     "capital": "موناکو",
-    "calling_code": "377",
-    "continent": "اروپا"
+    "calling_code": 377,
+    "continent": "اروپا",
+    "lat": 43.7333,
+    "long": 7.4
   },
   {
     "id": 496,
@@ -1156,8 +1386,10 @@
     "name": "مغولستان",
     "flag": "http://localhost:3000/v1/countries/flag/MN.svg",
     "capital": "اولان‌باتور",
-    "calling_code": "976",
-    "continent": "آسیا"
+    "calling_code": 976,
+    "continent": "آسیا",
+    "lat": 46.0,
+    "long": 105.0
   },
   {
     "id": 499,
@@ -1166,8 +1398,10 @@
     "name": "مونته‌نگرو",
     "flag": "http://localhost:3000/v1/countries/flag/ME.svg",
     "capital": "پودگوریتسا",
-    "calling_code": "382",
-    "continent": "اروپا"
+    "calling_code": 382,
+    "continent": "اروپا",
+    "lat": 42.0,
+    "long": 19.0
   },
   {
     "id": 504,
@@ -1176,8 +1410,10 @@
     "name": "مراکش",
     "flag": "http://localhost:3000/v1/countries/flag/MA.svg",
     "capital": "رباط",
-    "calling_code": "212",
-    "continent": "آفریقا"
+    "calling_code": 212,
+    "continent": "آفریقا",
+    "lat": 32.0,
+    "long": -5.0
   },
   {
     "id": 508,
@@ -1186,8 +1422,10 @@
     "name": "موزامبیک",
     "flag": "http://localhost:3000/v1/countries/flag/MZ.svg",
     "capital": "ماپوتو",
-    "calling_code": "258",
-    "continent": "آفریقا"
+    "calling_code": 258,
+    "continent": "آفریقا",
+    "lat": -18.25,
+    "long": 35.0
   },
   {
     "id": 104,
@@ -1196,8 +1434,10 @@
     "name": "میانمار",
     "flag": "http://localhost:3000/v1/countries/flag/MM.svg",
     "capital": "نایپیداو",
-    "calling_code": "95",
-    "continent": "آسیا"
+    "calling_code": 95,
+    "continent": "آسیا",
+    "lat": 22.0,
+    "long": 98.0
   },
   {
     "id": 516,
@@ -1206,8 +1446,10 @@
     "name": "نامیبیا",
     "flag": "http://localhost:3000/v1/countries/flag/NA.svg",
     "capital": "ویندهوک",
-    "calling_code": "264",
-    "continent": "آفریقا"
+    "calling_code": 264,
+    "continent": "آفریقا",
+    "lat": null,
+    "long": null
   },
   {
     "id": 520,
@@ -1216,8 +1458,10 @@
     "name": "نائورو",
     "flag": "http://localhost:3000/v1/countries/flag/NR.svg",
     "capital": "یارن",
-    "calling_code": "674",
-    "continent": "استرالیا"
+    "calling_code": 674,
+    "continent": "استرالیا",
+    "lat": -0.5333,
+    "long": 166.9167
   },
   {
     "id": 524,
@@ -1226,8 +1470,10 @@
     "name": "نپال",
     "flag": "http://localhost:3000/v1/countries/flag/NP.svg",
     "capital": "کاتماندو",
-    "calling_code": "977",
-    "continent": "آسیا"
+    "calling_code": 977,
+    "continent": "آسیا",
+    "lat": 28.0,
+    "long": 84.0
   },
   {
     "id": 528,
@@ -1236,8 +1482,10 @@
     "name": "هلند",
     "flag": "http://localhost:3000/v1/countries/flag/NL.svg",
     "capital": "آمستردام",
-    "calling_code": "31",
-    "continent": "اروپا"
+    "calling_code": 31,
+    "continent": "اروپا",
+    "lat": 52.5,
+    "long": 5.75
   },
   {
     "id": 554,
@@ -1246,8 +1494,10 @@
     "name": "نیوزیلند",
     "flag": "http://localhost:3000/v1/countries/flag/NZ.svg",
     "capital": "ولینگتون",
-    "calling_code": "64",
-    "continent": "استرالیا"
+    "calling_code": 64,
+    "continent": "استرالیا",
+    "lat": -41.0,
+    "long": 174.0
   },
   {
     "id": 558,
@@ -1256,8 +1506,10 @@
     "name": "نیکاراگوئه",
     "flag": "http://localhost:3000/v1/countries/flag/NI.svg",
     "capital": "ماناگوا",
-    "calling_code": "505",
-    "continent": "آمریکای شمالی"
+    "calling_code": 505,
+    "continent": "آمریکای شمالی",
+    "lat": 13.0,
+    "long": -85.0
   },
   {
     "id": 562,
@@ -1266,8 +1518,10 @@
     "name": "نیجر",
     "flag": "http://localhost:3000/v1/countries/flag/NE.svg",
     "capital": "نیامی",
-    "calling_code": "227",
-    "continent": "آفریقا"
+    "calling_code": 227,
+    "continent": "آفریقا",
+    "lat": 16.0,
+    "long": 8.0
   },
   {
     "id": 566,
@@ -1276,8 +1530,10 @@
     "name": "نیجریه",
     "flag": "http://localhost:3000/v1/countries/flag/NG.svg",
     "capital": "آبوجا",
-    "calling_code": "234",
-    "continent": "آفریقا"
+    "calling_code": 234,
+    "continent": "آفریقا",
+    "lat": 10.0,
+    "long": 8.0
   },
   {
     "id": 578,
@@ -1286,8 +1542,10 @@
     "name": "نروژ",
     "flag": "http://localhost:3000/v1/countries/flag/NO.svg",
     "capital": "اسلو",
-    "calling_code": "47",
-    "continent": "اروپا"
+    "calling_code": 47,
+    "continent": "اروپا",
+    "lat": 62.0,
+    "long": 10.0
   },
   {
     "id": 512,
@@ -1296,8 +1554,10 @@
     "name": "عمان",
     "flag": "http://localhost:3000/v1/countries/flag/OM.svg",
     "capital": "مسقط",
-    "calling_code": "968",
-    "continent": "آسیا"
+    "calling_code": 968,
+    "continent": "آسیا",
+    "lat": 21.0,
+    "long": 57.0
   },
   {
     "id": 586,
@@ -1306,8 +1566,10 @@
     "name": "پاکستان",
     "flag": "http://localhost:3000/v1/countries/flag/PK.svg",
     "capital": "اسلام‌آباد",
-    "calling_code": "92",
-    "continent": "آسیا"
+    "calling_code": 92,
+    "continent": "آسیا",
+    "lat": 30.0,
+    "long": 70.0
   },
   {
     "id": 585,
@@ -1316,8 +1578,10 @@
     "name": "پالائو",
     "flag": "http://localhost:3000/v1/countries/flag/PW.svg",
     "capital": "نگرولمود",
-    "calling_code": "680",
-    "continent": "استرالیا"
+    "calling_code": 680,
+    "continent": "استرالیا",
+    "lat": 7.5,
+    "long": 134.5
   },
   {
     "id": 591,
@@ -1326,8 +1590,10 @@
     "name": "پاناما",
     "flag": "http://localhost:3000/v1/countries/flag/PA.svg",
     "capital": "پاناماسیتی",
-    "calling_code": "507",
-    "continent": "آمریکای شمالی"
+    "calling_code": 507,
+    "continent": "آمریکای شمالی",
+    "lat": 9.0,
+    "long": -80.0
   },
   {
     "id": 598,
@@ -1336,8 +1602,10 @@
     "name": "پاپوآ گینه نو",
     "flag": "http://localhost:3000/v1/countries/flag/PG.svg",
     "capital": "پورت مورسبی",
-    "calling_code": "675",
-    "continent": "استرالیا"
+    "calling_code": 675,
+    "continent": "استرالیا",
+    "lat": -6.0,
+    "long": 147.0
   },
   {
     "id": 600,
@@ -1346,8 +1614,10 @@
     "name": "پاراگوئه",
     "flag": "http://localhost:3000/v1/countries/flag/PY.svg",
     "capital": "آسونسیون",
-    "calling_code": "595",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 595,
+    "continent": "آمریکای جنوبی",
+    "lat": -23.0,
+    "long": -58.0
   },
   {
     "id": 604,
@@ -1356,8 +1626,10 @@
     "name": "پرو",
     "flag": "http://localhost:3000/v1/countries/flag/PE.svg",
     "capital": "لیما",
-    "calling_code": "51",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 51,
+    "continent": "آمریکای جنوبی",
+    "lat": -10.0,
+    "long": -76.0
   },
   {
     "id": 608,
@@ -1366,8 +1638,10 @@
     "name": "فیلیپین",
     "flag": "http://localhost:3000/v1/countries/flag/PH.svg",
     "capital": "مانیل",
-    "calling_code": "63",
-    "continent": "آسیا"
+    "calling_code": 63,
+    "continent": "آسیا",
+    "lat": 13.0,
+    "long": 122.0
   },
   {
     "id": 616,
@@ -1376,8 +1650,10 @@
     "name": "لهستان",
     "flag": "http://localhost:3000/v1/countries/flag/PL.svg",
     "capital": "ورشو",
-    "calling_code": "48",
-    "continent": "اروپا"
+    "calling_code": 48,
+    "continent": "اروپا",
+    "lat": 52.0,
+    "long": 20.0
   },
   {
     "id": 620,
@@ -1386,8 +1662,10 @@
     "name": "پرتغال",
     "flag": "http://localhost:3000/v1/countries/flag/PT.svg",
     "capital": "لیسبون",
-    "calling_code": "351",
-    "continent": "اروپا"
+    "calling_code": 351,
+    "continent": "اروپا",
+    "lat": 39.5,
+    "long": -8.0
   },
   {
     "id": 634,
@@ -1396,8 +1674,10 @@
     "name": "قطر",
     "flag": "http://localhost:3000/v1/countries/flag/QA.svg",
     "capital": "دوحه",
-    "calling_code": "974",
-    "continent": "آسیا"
+    "calling_code": 974,
+    "continent": "آسیا",
+    "lat": 25.5,
+    "long": 51.25
   },
   {
     "id": 642,
@@ -1406,8 +1686,10 @@
     "name": "رومانی",
     "flag": "http://localhost:3000/v1/countries/flag/RO.svg",
     "capital": "بخارست",
-    "calling_code": "40",
-    "continent": "اروپا"
+    "calling_code": 40,
+    "continent": "اروپا",
+    "lat": 46.0,
+    "long": 25.0
   },
   {
     "id": 643,
@@ -1416,8 +1698,10 @@
     "name": "روسیه",
     "flag": "http://localhost:3000/v1/countries/flag/RU.svg",
     "capital": "مسکو",
-    "calling_code": "7",
-    "continent": "آسیا"
+    "calling_code": 7,
+    "continent": "آسیا",
+    "lat": 60.0,
+    "long": 100.0
   },
   {
     "id": 646,
@@ -1426,8 +1710,10 @@
     "name": "رواندا",
     "flag": "http://localhost:3000/v1/countries/flag/RW.svg",
     "capital": "کیگالی",
-    "calling_code": "250",
-    "continent": "آفریقا"
+    "calling_code": 250,
+    "continent": "آفریقا",
+    "lat": -2.0,
+    "long": 30.0
   },
   {
     "id": 659,
@@ -1436,8 +1722,10 @@
     "name": "سنت کیتس و نویس",
     "flag": "http://localhost:3000/v1/countries/flag/KN.svg",
     "capital": "باسه‌تر",
-    "calling_code": "1-869",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 17.3333,
+    "long": -62.75
   },
   {
     "id": 662,
@@ -1446,8 +1734,10 @@
     "name": "سنت لوسیا",
     "flag": "http://localhost:3000/v1/countries/flag/LC.svg",
     "capital": "کاستریس",
-    "calling_code": "1-758",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 13.8833,
+    "long": -61.1333
   },
   {
     "id": 670,
@@ -1456,8 +1746,10 @@
     "name": "سنت وینسنت و گرنادین‌ها",
     "flag": "http://localhost:3000/v1/countries/flag/VC.svg",
     "capital": "کینگزتاون",
-    "calling_code": "1-784",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 13.25,
+    "long": -61.2
   },
   {
     "id": 882,
@@ -1466,8 +1758,10 @@
     "name": "ساموآ",
     "flag": "http://localhost:3000/v1/countries/flag/WS.svg",
     "capital": "آپیا",
-    "calling_code": "685",
-    "continent": "استرالیا"
+    "calling_code": 685,
+    "continent": "استرالیا",
+    "lat": -13.5833,
+    "long": -172.3333
   },
   {
     "id": 674,
@@ -1476,8 +1770,10 @@
     "name": "سان مارینو",
     "flag": "http://localhost:3000/v1/countries/flag/SM.svg",
     "capital": "سان مارینو",
-    "calling_code": "378",
-    "continent": "اروپا"
+    "calling_code": 378,
+    "continent": "اروپا",
+    "lat": 43.7667,
+    "long": 12.4167
   },
   {
     "id": 678,
@@ -1486,8 +1782,10 @@
     "name": "سائوتومه و پرنسیپ",
     "flag": "http://localhost:3000/v1/countries/flag/ST.svg",
     "capital": "سائوتومه",
-    "calling_code": "239",
-    "continent": "آفریقا"
+    "calling_code": 239,
+    "continent": "آفریقا",
+    "lat": 1.0,
+    "long": 7.0
   },
   {
     "id": 682,
@@ -1496,8 +1794,10 @@
     "name": "عربستان سعودی",
     "flag": "http://localhost:3000/v1/countries/flag/SA.svg",
     "capital": "ریاض",
-    "calling_code": "966",
-    "continent": "آسیا"
+    "calling_code": 966,
+    "continent": "آسیا",
+    "lat": 25.0,
+    "long": 45.0
   },
   {
     "id": 686,
@@ -1506,8 +1806,10 @@
     "name": "سنگال",
     "flag": "http://localhost:3000/v1/countries/flag/SN.svg",
     "capital": "داکار",
-    "calling_code": "221",
-    "continent": "آفریقا"
+    "calling_code": 221,
+    "continent": "آفریقا",
+    "lat": 14.0,
+    "long": -14.0
   },
   {
     "id": 688,
@@ -1516,8 +1818,10 @@
     "name": "صربستان",
     "flag": "http://localhost:3000/v1/countries/flag/RS.svg",
     "capital": "بلگراد",
-    "calling_code": "381",
-    "continent": "اروپا"
+    "calling_code": 381,
+    "continent": "اروپا",
+    "lat": 44.0,
+    "long": 21.0
   },
   {
     "id": 690,
@@ -1526,8 +1830,10 @@
     "name": "سیشل",
     "flag": "http://localhost:3000/v1/countries/flag/SC.svg",
     "capital": "ویکتوریا",
-    "calling_code": "248",
-    "continent": "آفریقا"
+    "calling_code": 248,
+    "continent": "آفریقا",
+    "lat": -4.5833,
+    "long": 55.6667
   },
   {
     "id": 694,
@@ -1536,8 +1842,10 @@
     "name": "سیرالئون",
     "flag": "http://localhost:3000/v1/countries/flag/SL.svg",
     "capital": "فری‌تاون",
-    "calling_code": "232",
-    "continent": "آفریقا"
+    "calling_code": 232,
+    "continent": "آفریقا",
+    "lat": 8.5,
+    "long": -11.5
   },
   {
     "id": 702,
@@ -1546,8 +1854,10 @@
     "name": "سنگاپور",
     "flag": "http://localhost:3000/v1/countries/flag/SG.svg",
     "capital": "سنگاپور",
-    "calling_code": "65",
-    "continent": "آسیا"
+    "calling_code": 65,
+    "continent": "آسیا",
+    "lat": 1.3667,
+    "long": 103.8
   },
   {
     "id": 703,
@@ -1556,8 +1866,10 @@
     "name": "اسلواکی",
     "flag": "http://localhost:3000/v1/countries/flag/SK.svg",
     "capital": "براتیسلاوا",
-    "calling_code": "421",
-    "continent": "اروپا"
+    "calling_code": 421,
+    "continent": "اروپا",
+    "lat": 48.6667,
+    "long": 19.5
   },
   {
     "id": 705,
@@ -1566,8 +1878,10 @@
     "name": "اسلوونی",
     "flag": "http://localhost:3000/v1/countries/flag/SI.svg",
     "capital": "لیوبلیانا",
-    "calling_code": "386",
-    "continent": "اروپا"
+    "calling_code": 386,
+    "continent": "اروپا",
+    "lat": 46.0,
+    "long": 15.0
   },
   {
     "id": 90,
@@ -1576,8 +1890,10 @@
     "name": "جزایر سلیمان",
     "flag": "http://localhost:3000/v1/countries/flag/SB.svg",
     "capital": "هونیارا",
-    "calling_code": "677",
-    "continent": "استرالیا"
+    "calling_code": 677,
+    "continent": "استرالیا",
+    "lat": -8.0,
+    "long": 159.0
   },
   {
     "id": 706,
@@ -1586,8 +1902,10 @@
     "name": "سومالی",
     "flag": "http://localhost:3000/v1/countries/flag/SO.svg",
     "capital": "موگادیشو",
-    "calling_code": "252",
-    "continent": "آفریقا"
+    "calling_code": 252,
+    "continent": "آفریقا",
+    "lat": 10.0,
+    "long": 49.0
   },
   {
     "id": 710,
@@ -1596,8 +1914,10 @@
     "name": "آفریقای جنوبی",
     "flag": "http://localhost:3000/v1/countries/flag/ZA.svg",
     "capital": "پرتوریا",
-    "calling_code": "27",
-    "continent": "آفریقا"
+    "calling_code": 27,
+    "continent": "آفریقا",
+    "lat": -29.0,
+    "long": 24.0
   },
   {
     "id": 724,
@@ -1606,8 +1926,10 @@
     "name": "اسپانیا",
     "flag": "http://localhost:3000/v1/countries/flag/ES.svg",
     "capital": "مادرید",
-    "calling_code": "34",
-    "continent": "اروپا"
+    "calling_code": 34,
+    "continent": "اروپا",
+    "lat": 40.0,
+    "long": -4.0
   },
   {
     "id": 144,
@@ -1616,8 +1938,10 @@
     "name": "سری‌لانکا",
     "flag": "http://localhost:3000/v1/countries/flag/LK.svg",
     "capital": "سری جایاواردنپورا کوته",
-    "calling_code": "94",
-    "continent": "آسیا"
+    "calling_code": 94,
+    "continent": "آسیا",
+    "lat": 7.0,
+    "long": 81.0
   },
   {
     "id": 729,
@@ -1626,8 +1950,10 @@
     "name": "سودان",
     "flag": "http://localhost:3000/v1/countries/flag/SD.svg",
     "capital": "خارطوم",
-    "calling_code": "249",
-    "continent": "آفریقا"
+    "calling_code": 249,
+    "continent": "آفریقا",
+    "lat": 15.0,
+    "long": 30.0
   },
   {
     "id": 740,
@@ -1636,8 +1962,10 @@
     "name": "سورینام",
     "flag": "http://localhost:3000/v1/countries/flag/SR.svg",
     "capital": "پراماریبو",
-    "calling_code": "597",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 597,
+    "continent": "آمریکای جنوبی",
+    "lat": 4.0,
+    "long": -56.0
   },
   {
     "id": 748,
@@ -1646,8 +1974,10 @@
     "name": "اسواتینی",
     "flag": "http://localhost:3000/v1/countries/flag/SZ.svg",
     "capital": "لوبامبا",
-    "calling_code": "268",
-    "continent": "آفریقا"
+    "calling_code": 268,
+    "continent": "آفریقا",
+    "lat": -26.5,
+    "long": 31.5
   },
   {
     "id": 752,
@@ -1656,8 +1986,10 @@
     "name": "سوئد",
     "flag": "http://localhost:3000/v1/countries/flag/SE.svg",
     "capital": "استکهلم",
-    "calling_code": "46",
-    "continent": "اروپا"
+    "calling_code": 46,
+    "continent": "اروپا",
+    "lat": 62.0,
+    "long": 15.0
   },
   {
     "id": 756,
@@ -1666,8 +1998,10 @@
     "name": "سوئیس",
     "flag": "http://localhost:3000/v1/countries/flag/CH.svg",
     "capital": "برن",
-    "calling_code": "41",
-    "continent": "اروپا"
+    "calling_code": 41,
+    "continent": "اروپا",
+    "lat": 47.0,
+    "long": 8.0
   },
   {
     "id": 760,
@@ -1676,8 +2010,10 @@
     "name": "سوریه",
     "flag": "http://localhost:3000/v1/countries/flag/SY.svg",
     "capital": "دمشق",
-    "calling_code": "963",
-    "continent": "آسیا"
+    "calling_code": 963,
+    "continent": "آسیا",
+    "lat": 35.0,
+    "long": 38.0
   },
   {
     "id": 762,
@@ -1686,8 +2022,10 @@
     "name": "تاجیکستان",
     "flag": "http://localhost:3000/v1/countries/flag/TJ.svg",
     "capital": "دوشنبه",
-    "calling_code": "992",
-    "continent": "آسیا"
+    "calling_code": 992,
+    "continent": "آسیا",
+    "lat": 39.0,
+    "long": 71.0
   },
   {
     "id": 834,
@@ -1696,8 +2034,10 @@
     "name": "تانزانیا",
     "flag": "http://localhost:3000/v1/countries/flag/TZ.svg",
     "capital": "دودوما",
-    "calling_code": "255",
-    "continent": "آفریقا"
+    "calling_code": 255,
+    "continent": "آفریقا",
+    "lat": -6.0,
+    "long": 35.0
   },
   {
     "id": 764,
@@ -1706,8 +2046,10 @@
     "name": "تایلند",
     "flag": "http://localhost:3000/v1/countries/flag/TH.svg",
     "capital": "بانکوک",
-    "calling_code": "66",
-    "continent": "آسیا"
+    "calling_code": 66,
+    "continent": "آسیا",
+    "lat": 15.0,
+    "long": 100.0
   },
   {
     "id": 626,
@@ -1716,8 +2058,10 @@
     "name": "تیمور شرقی",
     "flag": "http://localhost:3000/v1/countries/flag/TL.svg",
     "capital": "دیلی",
-    "calling_code": "670",
-    "continent": "آسیا"
+    "calling_code": 670,
+    "continent": "آسیا",
+    "lat": -8.55,
+    "long": 125.5167
   },
   {
     "id": 768,
@@ -1726,8 +2070,10 @@
     "name": "توگو",
     "flag": "http://localhost:3000/v1/countries/flag/TG.svg",
     "capital": "لومه",
-    "calling_code": "228",
-    "continent": "آفریقا"
+    "calling_code": 228,
+    "continent": "آفریقا",
+    "lat": 8.0,
+    "long": 1.1667
   },
   {
     "id": 776,
@@ -1736,8 +2082,10 @@
     "name": "تونگا",
     "flag": "http://localhost:3000/v1/countries/flag/TO.svg",
     "capital": "نوکوآلوفا",
-    "calling_code": "676",
-    "continent": "استرالیا"
+    "calling_code": 676,
+    "continent": "استرالیا",
+    "lat": -20.0,
+    "long": -175.0
   },
   {
     "id": 780,
@@ -1746,8 +2094,10 @@
     "name": "ترینیداد و توباگو",
     "flag": "http://localhost:3000/v1/countries/flag/TT.svg",
     "capital": "بندر اسپانیا",
-    "calling_code": "1-868",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 11.0,
+    "long": -61.0
   },
   {
     "id": 788,
@@ -1756,8 +2106,10 @@
     "name": "تونس",
     "flag": "http://localhost:3000/v1/countries/flag/TN.svg",
     "capital": "تونس",
-    "calling_code": "216",
-    "continent": "آفریقا"
+    "calling_code": 216,
+    "continent": "آفریقا",
+    "lat": 34.0,
+    "long": 9.0
   },
   {
     "id": 792,
@@ -1766,8 +2118,10 @@
     "name": "ترکیه",
     "flag": "http://localhost:3000/v1/countries/flag/TR.svg",
     "capital": "آنکارا",
-    "calling_code": "90",
-    "continent": "آسیا"
+    "calling_code": 90,
+    "continent": "آسیا",
+    "lat": 39.0,
+    "long": 35.0
   },
   {
     "id": 795,
@@ -1776,8 +2130,10 @@
     "name": "ترکمنستان",
     "flag": "http://localhost:3000/v1/countries/flag/TM.svg",
     "capital": "عشق‌آباد",
-    "calling_code": "993",
-    "continent": "آسیا"
+    "calling_code": 993,
+    "continent": "آسیا",
+    "lat": 40.0,
+    "long": 60.0
   },
   {
     "id": 798,
@@ -1786,8 +2142,10 @@
     "name": "تووالو",
     "flag": "http://localhost:3000/v1/countries/flag/TV.svg",
     "capital": "فونافوتی",
-    "calling_code": "688",
-    "continent": "استرالیا"
+    "calling_code": 688,
+    "continent": "استرالیا",
+    "lat": -8.0,
+    "long": 178.0
   },
   {
     "id": 800,
@@ -1796,8 +2154,10 @@
     "name": "اوگاندا",
     "flag": "http://localhost:3000/v1/countries/flag/UG.svg",
     "capital": "کامپالا",
-    "calling_code": "256",
-    "continent": "آفریقا"
+    "calling_code": 256,
+    "continent": "آفریقا",
+    "lat": 1.0,
+    "long": 32.0
   },
   {
     "id": 804,
@@ -1806,8 +2166,10 @@
     "name": "اوکراین",
     "flag": "http://localhost:3000/v1/countries/flag/UA.svg",
     "capital": "کی‌یف",
-    "calling_code": "380",
-    "continent": "اروپا"
+    "calling_code": 380,
+    "continent": "اروپا",
+    "lat": 49.0,
+    "long": 32.0
   },
   {
     "id": 784,
@@ -1816,8 +2178,10 @@
     "name": "امارات متحده عربی",
     "flag": "http://localhost:3000/v1/countries/flag/AE.svg",
     "capital": "ابوظبی",
-    "calling_code": "971",
-    "continent": "آسیا"
+    "calling_code": 971,
+    "continent": "آسیا",
+    "lat": 24.0,
+    "long": 54.0
   },
   {
     "id": 826,
@@ -1826,8 +2190,10 @@
     "name": "بریتانیا",
     "flag": "http://localhost:3000/v1/countries/flag/GB.svg",
     "capital": "لندن",
-    "calling_code": "44",
-    "continent": "اروپا"
+    "calling_code": 44,
+    "continent": "اروپا",
+    "lat": 54.0,
+    "long": -2.0
   },
   {
     "id": 840,
@@ -1836,8 +2202,10 @@
     "name": "ایالات متحده آمریکا",
     "flag": "http://localhost:3000/v1/countries/flag/US.svg",
     "capital": "واشنگتن دی‌سی",
-    "calling_code": "1",
-    "continent": "آمریکای شمالی"
+    "calling_code": 1,
+    "continent": "آمریکای شمالی",
+    "lat": 38.0,
+    "long": -97.0
   },
   {
     "id": 858,
@@ -1846,8 +2214,10 @@
     "name": "اروگوئه",
     "flag": "http://localhost:3000/v1/countries/flag/UY.svg",
     "capital": "مونته‌ویدئو",
-    "calling_code": "598",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 598,
+    "continent": "آمریکای جنوبی",
+    "lat": -33.0,
+    "long": -56.0
   },
   {
     "id": 860,
@@ -1856,8 +2226,10 @@
     "name": "ازبکستان",
     "flag": "http://localhost:3000/v1/countries/flag/UZ.svg",
     "capital": "تاشکند",
-    "calling_code": "998",
-    "continent": "آسیا"
+    "calling_code": 998,
+    "continent": "آسیا",
+    "lat": 41.0,
+    "long": 64.0
   },
   {
     "id": 548,
@@ -1866,8 +2238,10 @@
     "name": "وانواتو",
     "flag": "http://localhost:3000/v1/countries/flag/VU.svg",
     "capital": "پورت ویلا",
-    "calling_code": "678",
-    "continent": "استرالیا"
+    "calling_code": 678,
+    "continent": "استرالیا",
+    "lat": -16.0,
+    "long": 167.0
   },
   {
     "id": 862,
@@ -1876,8 +2250,10 @@
     "name": "ونزوئلا",
     "flag": "http://localhost:3000/v1/countries/flag/VE.svg",
     "capital": "کاراکاس",
-    "calling_code": "58",
-    "continent": "آمریکای جنوبی"
+    "calling_code": 58,
+    "continent": "آمریکای جنوبی",
+    "lat": 8.0,
+    "long": -66.0
   },
   {
     "id": 704,
@@ -1886,8 +2262,10 @@
     "name": "ویتنام",
     "flag": "http://localhost:3000/v1/countries/flag/VN.svg",
     "capital": "هانوی",
-    "calling_code": "84",
-    "continent": "آسیا"
+    "calling_code": 84,
+    "continent": "آسیا",
+    "lat": 16.0,
+    "long": 106.0
   },
   {
     "id": 887,
@@ -1896,8 +2274,10 @@
     "name": "یمن",
     "flag": "http://localhost:3000/v1/countries/flag/YE.svg",
     "capital": "صنعا",
-    "calling_code": "967",
-    "continent": "آسیا"
+    "calling_code": 967,
+    "continent": "آسیا",
+    "lat": 15.0,
+    "long": 48.0
   },
   {
     "id": 894,
@@ -1906,8 +2286,10 @@
     "name": "زامبیا",
     "flag": "http://localhost:3000/v1/countries/flag/ZM.svg",
     "capital": "لوساکا",
-    "calling_code": "260",
-    "continent": "آفریقا"
+    "calling_code": 260,
+    "continent": "آفریقا",
+    "lat": -15.0,
+    "long": 30.0
   },
   {
     "id": 716,
@@ -1916,8 +2298,10 @@
     "name": "زیمبابوه",
     "flag": "http://localhost:3000/v1/countries/flag/ZW.svg",
     "capital": "هراره",
-    "calling_code": "263",
-    "continent": "آفریقا"
+    "calling_code": 263,
+    "continent": "آفریقا",
+    "lat": -20.0,
+    "long": 30.0
   },
   {
     "id": 728,
@@ -1926,7 +2310,9 @@
     "name": "سودان جنوبی",
     "flag": "http://localhost:3000/v1/countries/flag/SS.svg",
     "capital": "جوبا",
-    "calling_code": "211",
-    "continent": "آفریقا"
+    "calling_code": 211,
+    "continent": "آفریقا",
+    "lat": 8.0,
+    "long": 30.0
   }
 ]

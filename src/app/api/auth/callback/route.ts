@@ -16,13 +16,13 @@ export async function GET(request: Request) {
     if (!error) {
       const userId = data.user.id;
 
-      const { data: apiKeyData, error: apiKeyError } = await supabase
+      const { error: apiKeyError } = await supabase
         .from("Api_keys")
         .select("api_key")
         .eq("user_id", userId)
         .single();
 
-      if (apiKeyError || !apiKeyData) {
+      if (apiKeyError) {
         const newApiKey = crypto.randomUUID();
         await supabase
           .from("Api_keys")

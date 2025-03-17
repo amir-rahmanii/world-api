@@ -20,6 +20,8 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
+        sideBar:
+          "bg-primary/80 text-primary-foreground shadow-xs hover:bg-primary/70",
         link: "font-bold text-base text-foreground hover:bg-accent hover:text-accent-foreground",
       },
       size: {
@@ -33,7 +35,7 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
 function Button({
