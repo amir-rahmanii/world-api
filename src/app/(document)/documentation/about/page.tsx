@@ -1,11 +1,14 @@
+import type { Metadata } from "next";
+
 import React from "react";
 
 interface ApiFieldInfo {
   title: string;
   description: string;
   type: "Number" | "String";
-  example?: number | string;
+  example: number | string;
 }
+const tableHeaders: string[] = ["نام فیلد", "توضیحات", "نوع", "مثال"];
 
 const apiFieldInfos: ApiFieldInfo[] = [
   {
@@ -14,7 +17,12 @@ const apiFieldInfos: ApiFieldInfo[] = [
     type: "Number",
     example: 364,
   },
-  { title: "name", description: "نام کشور", type: "String", example: "ایران" },
+  {
+    title: "name",
+    description: "نام هر  کشور",
+    type: "String",
+    example: "ایران",
+  },
   {
     title: "iso2",
     description: "کد 2 رقمی بین المللی",
@@ -31,7 +39,7 @@ const apiFieldInfos: ApiFieldInfo[] = [
     title: "flag",
     description: "آدرس پرچم با فرمت svg",
     type: "String",
-    example: "http://localhost:3000/v1/countries/flag/IR.svg",
+    example: "IR.svg",
   },
   {
     title: "capital",
@@ -42,11 +50,22 @@ const apiFieldInfos: ApiFieldInfo[] = [
   {
     title: "calling_code",
     description: "کد تماس کشور",
-    type: "String",
-    example: "98",
+    type: "Number",
+    example: 98,
   },
-  { title: "continent", description: "قاره", type: "String", example: 364 },
+  { title: "lat", description: "عرض جغرافیایی", type: "Number", example: 32.0 },
+  {
+    title: "long",
+    description: "طول جغرافیایی",
+    type: "Number",
+    example: 53.0,
+  },
+  { title: "continent", description: "قاره", type: "String", example: "Asia" },
 ];
+
+export const metadata: Metadata = {
+  title: "وب سرویس اطلاعات کشورها | مستندات | توضیحات وب سرویس",
+};
 
 export default function AboutPage() {
   return (
@@ -83,34 +102,32 @@ export default function AboutPage() {
       </p>
 
       <h4>📌 انواع داده‌های موجود در API</h4>
-      <table className="w-full text-center border-collapse border border-accent-foreground mt-4">
-        <thead>
-          <tr className="bg-primary/80 font-bold">
-            <th className="border border-accent-foreground px-4 py-2">
-              نام فیلد
-            </th>
-            <th className="border border-accent-foreground px-4 py-2">
-              توضیحات
-            </th>
-            <th className="border border-accent-foreground px-4 py-2">Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          {apiFieldInfos.map((field) => (
-            <tr key={field.title}>
-              <td className="border border-accent-foreground px-4 py-2">
-                {field.title}
-              </td>
-              <td className="border border-accent-foreground px-4 py-2">
-                {field.description}
-              </td>
-              <td className="border border-accent-foreground px-4 py-2">
-                {field.type}
-              </td>
+      <div className="w-full overflow-auto">
+        <table className="w-full table-auto tablet:table-fixed overflow-hidden text-center rounded-xl mt-4">
+          <thead>
+            <tr className="bg-gray-700/70 font-bold">
+              {tableHeaders.map((header) => (
+                <th className="table-cell" key={header}>
+                  {header}
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {apiFieldInfos.map((field) => (
+              <tr
+                className="even:bg-gray-700/20 odd:bg-gray-700/30 hover:bg-gray-700/60"
+                key={field.title}
+              >
+                <td className="table-cell">{field.title}</td>
+                <td className="table-cell">{field.description}</td>
+                <td className="table-cell">{field.type}</td>
+                <td className="table-cell">{field.example}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

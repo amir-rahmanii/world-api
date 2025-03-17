@@ -139,6 +139,9 @@
   h4 {
     @apply text-lg tablet:text-xl font-bold pt-10 pb-2
   }
+  .table-cell {
+    @apply px-4 py-3 whitespace-nowrap
+  }
 }
 
 * {
