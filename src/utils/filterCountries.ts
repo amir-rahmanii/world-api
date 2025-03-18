@@ -1,7 +1,7 @@
 import type {
   Countries,
   SearchParams,
-} from "@/app/api/v1/[locale]/countries/route";
+} from "@/app/api/v1/countries/route";
 
 export const filterCountries = (
   countries: Countries[],

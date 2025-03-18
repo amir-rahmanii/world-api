@@ -5,6 +5,7 @@ interface SaveUserRequestParam {
   apiKey: string | null;
   status: number;
   errorMessage?: string | null;
+  locale: string | null;
 }
 
 export const saveUserRequest = async (userRequest: SaveUserRequestParam) => {
@@ -16,6 +17,7 @@ export const saveUserRequest = async (userRequest: SaveUserRequestParam) => {
       path: userRequest.path,
       status: userRequest.status,
       error_message: userRequest.errorMessage ?? null,
+      locale: userRequest.locale ?? null,
     },
   ]);
 

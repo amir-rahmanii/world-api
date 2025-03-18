@@ -14,6 +14,9 @@ export default function Documantionlayout({
       </div>
       <div className="flex flex-col border border-accent rounded-lg p-8">
         {children}
+        <div>
+          
+        </div>
       </div>
     </div>
   );

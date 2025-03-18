@@ -40,11 +40,12 @@ export default function APIKeyUsage() {
 
       <CodeBlock
         code={`
-fetch("http://localhost:3000/api/v1/fa/countries", {
- method: "GET",
- headers: {
-  "X-API-Key": "your-api-key",  // 🔴 کلید را اینجا جایگزین کنید
- }
+fetch("http://localhost:3000/api/v1/countries", { 
+  method: "GET", 
+  headers: { 
+    "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
+    "Accept-Language" : "fa" // ✅ قرار دادن این هدر اجباری است
+  } 
 })
 .then(response => response.json())
 .then(data => console.log(data))

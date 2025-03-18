@@ -65,13 +65,13 @@ const apiFieldInfos: ApiFieldInfo[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "وب سرویس اطلاعات کشورها | مستندات | توضیحات وب سرویس",
+  title: "وب سرویس اطلاعات کشورها | مستندات | تغییر زبان",
 };
 
-export default function AboutPage() {
+export default function ChangeLanguagePage() {
   return (
     <div>
-      <h1>توضیحات وب سرویس</h1>
+      <h1>تغییر زبان</h1>
       <p>
         این وب سرویس اطلاعات کشورهای مختلف را در اختیار توسعه‌دهندگان قرار
         می‌دهد. کاربران می‌توانند با دریافت یک API Key، داده‌های مربوط به کشورها
