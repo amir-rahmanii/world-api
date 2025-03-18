@@ -39,12 +39,13 @@ export default function APIKeyUsage() {
       </p>
 
       <CodeBlock
-        code={`
-fetch("http://localhost:3000/api/v1/countries", { 
+        code={` fetch("http://localhost:3000/api/v1/countries", { 
   method: "GET", 
   headers: { 
     "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
-    "Accept-Language" : "fa" // ✅ قرار دادن این هدر اجباری است
+    "Accept-Language" : "fa" // "en"
+    //  اگر زبان سیستم فارسی یا انگلیسی باشد، این هدر ارسال می‌شود
+    // برای تغییر زبان اطلاعات فقط باید این هدر را تغییر دهید 
   } 
 })
 .then(response => response.json())

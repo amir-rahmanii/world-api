@@ -4,11 +4,13 @@ import { getApiKeyRecord } from "@/supabase/getApiKeyRecord";
 import { saveUserRequest } from "@/supabase/saveUserRequest";
 import { filterCountries } from "@/utils/filterCountries";
 import { getCountriesByLocale } from "@/utils/getCountriesByLocale";
+import { getLocale } from "@/utils/getLocale";
 import { getSearchParams } from "@/utils/getSearchParams";
 
 export enum Locale {
   FA = "fa",
   EN = "en",
+  AR = "ar",
 }
 
 export interface Countries {
@@ -35,48 +37,28 @@ const defaultLanguage = Locale.FA;
 
 export async function GET(request: NextRequest) {
   const acceptLanguage = request.headers.get("Accept-Language");
-
-  const locale = Object.values(Locale).includes(acceptLanguage as Locale)
-    ? acceptLanguage
-    : null;
+  const locale = getLocale(acceptLanguage);
 
   const apiKey: string | null = request.headers.get("X-API-Key");
   const searchParams = request.nextUrl.searchParams;
   const AllSearchParams: SearchParams = getSearchParams(searchParams);
-  let apiKeyRecord = null;
-
-  console.log(locale);
+  let apiKeyRecord: { api_key: string | null } = { api_key: null };
 
   try {
     apiKeyRecord = await getApiKeyRecord(apiKey);
   } catch (err) {
-    const errorMessage = (err as Error).message || null;
-
-    await saveUserRequest({
-      apiKey: apiKeyRecord?.api_key ?? null,
-      path: request.nextUrl.toString(),
-      errorMessage,
-      status: 401,
-      locale,
-    });
-
-    return new Response(JSON.stringify({ error: errorMessage }), {
-      status: 401,
-      headers: {
-        "Content-Language": locale ?? defaultLanguage,
-      },
-    });
+    return handleError(request, err as Error, locale, apiKeyRecord, 401);
   }
 
   try {
-    const Countries: Countries[] = getCountriesByLocale(locale as Locale);
+    const Countries: Countries[] = getCountriesByLocale(locale!);
     const filteredData = filterCountries(Countries, AllSearchParams);
 
     await saveUserRequest({
       apiKey: apiKeyRecord.api_key,
       path: request.nextUrl.toString(),
       status: 200,
-      locale,
+      locale: locale ?? defaultLanguage,
     });
 
     return new Response(JSON.stringify(filteredData, null, 2), {
@@ -86,27 +68,37 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch (err) {
-    const errorMessage =
-      (err as Error).message || "Something went wrong. Please try again later.";
-
-    await saveUserRequest({
-      apiKey: apiKeyRecord.api_key,
-      path: request.nextUrl.toString(),
-      status: 400,
-      errorMessage,
-      locale,
-    });
-
-    return new Response(
-      JSON.stringify({
-        error: errorMessage,
-      }),
-      {
-        status: 400,
-        headers: {
-          "Content-Language": locale ?? defaultLanguage,
-        },
-      }
-    );
+    return handleError(request, err as Error, locale, apiKeyRecord, 400);
   }
+}
+
+async function handleError(
+  request: NextRequest,
+  err: Error,
+  locale: Locale | null,
+  apiKeyRecord: { api_key: string | null },
+  status: number
+) {
+  const errorMessage =
+    err.message || "Something went wrong. Please try again later.";
+
+  await saveUserRequest({
+    apiKey: apiKeyRecord.api_key,
+    path: request.nextUrl.toString(),
+    errorMessage,
+    status,
+    locale: locale ?? null,
+  });
+
+  return new Response(
+    JSON.stringify({
+      error: errorMessage,
+    }),
+    {
+      status,
+      headers: {
+        "Content-Language": locale ?? defaultLanguage,
+      },
+    }
+  );
 }
