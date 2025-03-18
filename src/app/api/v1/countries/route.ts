@@ -36,7 +36,8 @@ export interface SearchParams {
 const defaultLanguage = Locale.FA;
 
 export async function GET(request: NextRequest) {
-  const acceptLanguage = request.headers.get("Accept-Language");
+  const acceptLanguage =
+    request.headers.get("Accept-Language") ?? defaultLanguage;
   const locale = getLocale(acceptLanguage);
 
   const apiKey: string | null = request.headers.get("X-API-Key");
@@ -51,20 +52,20 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const Countries: Countries[] = getCountriesByLocale(locale!);
+    const Countries: Countries[] = getCountriesByLocale(locale);
     const filteredData = filterCountries(Countries, AllSearchParams);
 
     await saveUserRequest({
       apiKey: apiKeyRecord.api_key,
       path: request.nextUrl.toString(),
       status: 200,
-      locale: locale ?? defaultLanguage,
+      locale,
     });
 
     return new Response(JSON.stringify(filteredData, null, 2), {
       status: 200,
       headers: {
-        "Content-Language": locale ?? defaultLanguage,
+        "Content-Language": locale,
       },
     });
   } catch (err) {
@@ -75,7 +76,7 @@ export async function GET(request: NextRequest) {
 async function handleError(
   request: NextRequest,
   err: Error,
-  locale: Locale | null,
+  locale: Locale,
   apiKeyRecord: { api_key: string | null },
   status: number
 ) {
@@ -87,7 +88,7 @@ async function handleError(
     path: request.nextUrl.toString(),
     errorMessage,
     status,
-    locale: locale ?? null,
+    locale,
   });
 
   return new Response(
@@ -97,7 +98,7 @@ async function handleError(
     {
       status,
       headers: {
-        "Content-Language": locale ?? defaultLanguage,
+        "Content-Language": locale,
       },
     }
   );

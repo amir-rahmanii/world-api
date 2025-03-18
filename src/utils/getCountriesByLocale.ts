@@ -16,10 +16,7 @@ export const getCountriesByLocale = (locale: Locale) => {
       return CountriesAr;
     }
     default: {
-      const error = new Error(
-        "Invalid locale. Please set 'Accept-Language' header to 'fa' for Persian or 'en' for English or 'ar' for Arabic."
-      );
-      throw error;
+      return CountriesFa;
     }
   }
 };

@@ -20,7 +20,7 @@ const allSiteDescription: SiteDescriptions[] = [
   },
   {
     title: "پشتیبانی از چند زبان",
-    desc: "نمایش اطلاعات کشورها به زبان‌های مختلف از جمله انگلیسی",
+    desc: "نمایش اطلاعات کشورها به زبان‌های مختلف از جمله فارسی ، انگلیسی و عربی",
     icon: LanguageSupport,
   },
   {

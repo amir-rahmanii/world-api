@@ -1,118 +1,106 @@
 import type { Metadata } from "next";
 
+import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
+
 import Table from "../+components/Table";
 
-interface ApiFieldInfo {
-  title: string;
-  description: string;
-  type: "Number" | "String";
-  example: number | string;
-}
-const tableHeaders: string[] = ["نام فیلد", "توضیحات", "نوع", "مثال"];
+export const metadata: Metadata = {
+  title: "🌍 وب سرویس اطلاعات کشورها | مستندات | تغییر زبان",
+};
 
-const apiFieldInfos: ApiFieldInfo[] = [
-  {
-    title: "id (Numeric code)",
-    description: "شناسه مختص هر کشور",
-    type: "Number",
-    example: 364,
-  },
-  {
-    title: "name",
-    description: "نام هر  کشور",
-    type: "String",
-    example: "ایران",
-  },
-  {
-    title: "iso2",
-    description: "کد 2 رقمی بین المللی",
-    type: "String",
-    example: "ir",
-  },
-  {
-    title: "iso3",
-    description: "کد 3 رقمی بین المللی",
-    type: "String",
-    example: "irn",
-  },
-  {
-    title: "flag",
-    description: "آدرس پرچم با فرمت svg",
-    type: "String",
-    example: "IR.svg",
-  },
-  {
-    title: "capital",
-    description: "پایتخت کشور",
-    type: "String",
-    example: "تهران",
-  },
-  {
-    title: "calling_code",
-    description: "کد تماس کشور",
-    type: "Number",
-    example: 98,
-  },
-  { title: "lat", description: "عرض جغرافیایی", type: "Number", example: 32.0 },
-  {
-    title: "long",
-    description: "طول جغرافیایی",
-    type: "Number",
-    example: 53.0,
-  },
-  { title: "continent", description: "قاره", type: "String", example: "Asia" },
+interface SupportedLanguage {
+  title: string;
+  value: "ar" | "en" | "fa";
+}
+
+const supportedLanguages: SupportedLanguage[] = [
+  { title: "اطلاعات کشور‌‌ها به زبان فارسی", value: "fa" },
+  { title: "اطلاعات کشور‌‌‌‌ها به زبان انگلیسی", value: "en" },
+  { title: "اطلاعات کشورها به زبان عربی", value: "ar" },
 ];
 
-export const metadata: Metadata = {
-  title: "وب سرویس اطلاعات کشورها | مستندات | تغییر زبان",
-};
+const tableHeaders = ["عنوان", "مقدار"];
 
 export default function ChangeLanguagePage() {
   return (
     <div>
-      <h1>تغییر زبان</h1>
+      <h1>
+        تغییر زبان با استفاده از <code>Accept-Language</code>
+      </h1>
+
       <p>
-        این وب سرویس اطلاعات کشورهای مختلف را در اختیار توسعه‌دهندگان قرار
-        می‌دهد. کاربران می‌توانند با دریافت یک API Key، داده‌های مربوط به کشورها
-        را دریافت کرده و در پروژه‌های خود استفاده کنند.
+        برای تغییر زبان پاسخ‌ها از API، شما می‌توانید از هدر
+        <code> Accept-Language </code> در درخواست‌های HTTP استفاده کنید. این هدر
+        به سرور اعلام می‌کند که ترجیح شما برای زبان چیست و سرور بر اساس آن پاسخ
+        را به زبان انتخابی ارسال می‌کند.
       </p>
 
-      <h4>🚀 نحوه دریافت API Key</h4>
+      <h4>ℹ️ عدم ارسال Accept-Language:</h4>
       <p>
-        برای دریافت <strong>API Key</strong>، ابتدا باید با استفاده از حساب
-        <strong> GitHub </strong> ثبت‌نام کنید. پس از ورود به حساب کاربری خود،
-        به صفحه دریافت API Key هدایت می‌شوید که در آن می‌توانید کلید خود را
-        دریافت کنید.
+        اگر هدر <code>Accept-Language</code> ارسال نشود، زبان پاسخ به‌صورت
+        خودکار بر اساس زبان سیستم‌عامل کاربر تنظیم می‌شود. به این معنا که:
       </p>
+      <ul>
+        <li>
+          🟢 اگر زبان سیستم‌عامل فارسی باشد، پاسخ به زبان <code>"fa"</code>
+          ارسال خواهد شد.
+        </li>
+        <li>
+          🔵 اگر زبان سیستم‌عامل انگلیسی باشد، پاسخ به زبان <code>"en"</code>
+          ارسال خواهد شد.
+        </li>
+        <li>
+          🟠 اگر زبان سیستم‌عامل عربی باشد، پاسخ به زبان <code>"ar"</code> ارسال
+          خواهد شد.
+        </li>
+        <li>
+          ⚠️ اگر زبان سیستم‌عامل شناسایی نشود یا پشتیبانی نشود، پاسخ به‌طور
+          پیش‌فرض به زبان فارسی (<code>"fa"</code>) ارسال خواهد شد.
+        </li>
+      </ul>
 
-      <h4>🎯 اهداف وب سرویس</h4>
-      <p>
-        این پروژه یک <strong>پروژه متن‌باز (Open Source)</strong> است و دیگران
-        نیز می‌توانند در توسعه و بهبود آن مشارکت داشته باشند. هدف اصلی این وب
-        سرویس، فراهم کردن یک راه ساده و استاندارد برای دسترسی به اطلاعات
-        کشورهاست تا برنامه‌نویسان بتوانند به‌راحتی از آن در پروژه‌های خود
-        استفاده کنند.
-      </p>
-
-      <h4>🔄 به‌روزرسانی‌ها و ویژگی‌های جدید</h4>
-      <p>
-        این پروژه به‌طور مداوم به‌روزرسانی می‌شود و ویژگی‌های جدیدی به آن اضافه
-        می‌شود. تیم توسعه همواره در حال افزودن قابلیت‌های جدید و بهبود عملکرد
-        است تا کاربران بتوانند از جدیدترین امکانات استفاده کنند.
-      </p>
-
-      <h4>📌 انواع داده‌های موجود در API</h4>
+      <h4>🔄 تغییر زبان به‌صورت دستی:</h4>
       <Table tableHeaders={tableHeaders}>
         <tbody>
-          {apiFieldInfos.map((field) => (
-            <tr className="table-row" key={field.title}>
-              <td className="table-cell">{field.title}</td>
-              <td className="table-cell">{field.description}</td>
-              <td className="table-cell">{field.type}</td>
-              <td className="table-cell">{field.example}</td>
+          {supportedLanguages.map((language) => (
+            <tr className="table-row" key={language.value}>
+              <td className="table-cell">{language.title}</td>
+              <td className="table-cell">
+                <code>{`"Accept-Language": "${language.value}"`}</code>
+              </td>
             </tr>
           ))}
+        </tbody>
+      </Table>
+
+      <h4>📝 نمونه کد درخواست:</h4>
+      <CodeBlock
+        code={`fetch("http://localhost:3000/api/v1/countries", { 
+  method: "GET", 
+  headers: { 
+    "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
+    "Accept-Language" : "fa" // "en" or "ar"
+  } 
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error("Error:", error));`}
+      />
+
+      <h4>⚠️ در صورت وارد کردن زبان نادرست:</h4>
+      <p>
+        اگر هدر <code>Accept-Language</code> به طور اشتباه وارد شود (مثلاً زبانی
+        که پشتیبانی نمی‌شود)، پاسخ به‌طور پیش‌فرض به زبان فارسی ارسال خواهد شد.
+      </p>
+      <Table tableHeaders={tableHeaders}>
+        <tbody>
+          <tr className="table-row">
+            <td className="table-cell">زبان نامعتبر (پیش فرض فارسی)</td>
+            <td className="table-cell">
+              <code>{`"Accept-Language": "xx"`}</code>
+            </td>
+          </tr>
         </tbody>
       </Table>
     </div>
