@@ -10,40 +10,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useMemo } from "react";
 
-interface SideBarNavLink {
-  id: number;
-  title: string;
-  children: { title: string; path: string }[];
-}
+import type { SideBarNavLink } from "../../layout";
 
-const sideBarNavLinks: SideBarNavLink[] = [
-  {
-    id: 1,
-    title: "توضیحات وب سرویس",
-    children: [
-      { title: "توضیحات", path: "/documentation/about" },
-      { title: "تغییر زبان", path: "/documentation/change-language" },
-    ],
-  },
-  {
-    id: 2,
-    title: "مستندات اطلاعات کشورها",
-    children: [
-      { title: "دریافت تمام کشورها", path: "/documentation/countries" },
-      { title: "دریافت کشورها با ID", path: "/documentation/countries/id" },
-    ],
-  },
-  {
-    id: 3,
-    title: "پشتیبانی و سوالات متداول",
-    children: [
-      { title: "سوالات متداول", path: "/documentation/faq" },
-      { title: "پشتیبانی", path: "/documentation/support" },
-    ],
-  },
-];
-
-export default function SideBar() {
+export default function SideBar({
+  sideBarNavLinks,
+}: {
+  sideBarNavLinks: SideBarNavLink[];
+}) {
   const pathName = usePathname();
 
   const defaultAccordionValue = useMemo(() => {
@@ -51,7 +24,7 @@ export default function SideBar() {
       nav.children.some((child) => child.path === pathName)
     );
     return foundItem ? `item-${foundItem.id}` : "item-1";
-  }, [pathName]);
+  }, [pathName, sideBarNavLinks]);
 
   return (
     <div>
