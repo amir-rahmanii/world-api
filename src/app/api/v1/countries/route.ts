@@ -94,6 +94,7 @@ async function handleError(
   return new Response(
     JSON.stringify({
       error: errorMessage,
+      status
     }),
     {
       status,

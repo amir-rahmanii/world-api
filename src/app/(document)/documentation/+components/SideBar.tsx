@@ -6,33 +6,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { useAccordionValue } from "@/hooks/useAccordionValue";
+import { sideBarNavLinks } from "@/utils/sideBarNavLinks";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React, { useMemo } from "react";
+import React from "react";
 
-import type { SideBarNavLink } from "../../layout";
-
-export default function SideBar({
-  sideBarNavLinks,
-}: {
-  sideBarNavLinks: SideBarNavLink[];
-}) {
-  const pathName = usePathname();
-
-  const defaultAccordionValue = useMemo(() => {
-    const foundItem = sideBarNavLinks.find((nav) =>
-      nav.children.some((child) => child.path === pathName)
-    );
-    return foundItem ? `item-${foundItem.id}` : "item-1";
-  }, [pathName, sideBarNavLinks]);
+export default function SideBar() {
+  const { pathName, accordionValue, setAccordionValue } = useAccordionValue();
 
   return (
     <div>
       <ul className="w-[250px] flex flex-col border border-accent rounded-lg p-4">
         <Accordion
-          defaultValue={defaultAccordionValue}
           type="single"
+          value={accordionValue}
           collapsible
+          onValueChange={setAccordionValue}
         >
           {sideBarNavLinks.map((nav) => (
             <AccordionItem key={nav.id} value={`item-${nav.id}`}>

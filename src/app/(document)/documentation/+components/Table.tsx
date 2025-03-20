@@ -12,9 +12,7 @@ export default function Table({ tableHeaders, children }: TableProps) {
         <thead>
           <tr className="bg-gray-700/70 font-bold">
             {tableHeaders.map((header) => (
-              <th className="table-cell" key={header}>
-                {header}
-              </th>
+              <th key={header}>{header}</th>
             ))}
           </tr>
         </thead>

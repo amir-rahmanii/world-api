@@ -106,11 +106,11 @@ export default function AboutPage() {
       <Table tableHeaders={tableHeaders}>
         <tbody>
           {apiFieldInfos.map((field) => (
-            <tr className="table-row" key={field.title}>
-              <td className="table-cell">{field.title}</td>
-              <td className="table-cell">{field.description}</td>
-              <td className="table-cell">{field.type}</td>
-              <td className="table-cell">{field.example}</td>
+            <tr key={field.title}>
+              <td>{field.title}</td>
+              <td>{field.description}</td>
+              <td>{field.type}</td>
+              <td>{field.example}</td>
             </tr>
           ))}
         </tbody>

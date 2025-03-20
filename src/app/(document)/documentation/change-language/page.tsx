@@ -11,16 +11,17 @@ export const metadata: Metadata = {
 
 interface SupportedLanguage {
   title: string;
-  value: "ar" | "en" | "fa";
+  value: "ar" | "en" | "fa" | "xx";
 }
 
 const supportedLanguages: SupportedLanguage[] = [
   { title: "اطلاعات کشور‌‌ها به زبان فارسی", value: "fa" },
   { title: "اطلاعات کشور‌‌‌‌ها به زبان انگلیسی", value: "en" },
   { title: "اطلاعات کشورها به زبان عربی", value: "ar" },
+  { title: "زبان نامعتبر (اطلاعات کشورها پیش فرض به زبان فارسی)", value: "xx" },
 ];
 
-const tableHeaders = ["عنوان", "مقدار"];
+const tableHeaders: string[] = ["عنوان", "مقدار"];
 
 export default function ChangeLanguagePage() {
   return (
@@ -47,14 +48,6 @@ export default function ChangeLanguagePage() {
           ارسال خواهد شد.
         </li>
         <li>
-          🔵 اگر زبان سیستم‌عامل انگلیسی باشد، پاسخ به زبان <code>"en"</code>
-          ارسال خواهد شد.
-        </li>
-        <li>
-          🟠 اگر زبان سیستم‌عامل عربی باشد، پاسخ به زبان <code>"ar"</code> ارسال
-          خواهد شد.
-        </li>
-        <li>
           ⚠️ اگر زبان سیستم‌عامل شناسایی نشود یا پشتیبانی نشود، پاسخ به‌طور
           پیش‌فرض به زبان فارسی (<code>"fa"</code>) ارسال خواهد شد.
         </li>
@@ -64,9 +57,9 @@ export default function ChangeLanguagePage() {
       <Table tableHeaders={tableHeaders}>
         <tbody>
           {supportedLanguages.map((language) => (
-            <tr className="table-row" key={language.value}>
-              <td className="table-cell">{language.title}</td>
-              <td className="table-cell">
+            <tr key={language.value}>
+              <td>{language.title}</td>
+              <td>
                 <code>{`"Accept-Language": "${language.value}"`}</code>
               </td>
             </tr>
@@ -76,33 +69,33 @@ export default function ChangeLanguagePage() {
 
       <h4>📝 نمونه کد درخواست:</h4>
       <CodeBlock
-        code={`fetch("http://localhost:3000/api/v1/countries", { 
+        code={`fetch("http://localhost:3000/api/v1/countries?id=364", { 
   method: "GET", 
   headers: { 
     "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
-    "Accept-Language" : "fa" // "en" or "ar"
+    "Accept-Language" : "en" // "fa" or "ar"
   } 
 })
 .then(response => response.json())
 .then(data => console.log(data))
 .catch(error => console.error("Error:", error));`}
       />
-
-      <h4>⚠️ در صورت وارد کردن زبان نادرست:</h4>
-      <p>
-        اگر هدر <code>Accept-Language</code> به طور اشتباه وارد شود (مثلاً زبانی
-        که پشتیبانی نمی‌شود)، پاسخ به‌طور پیش‌فرض به زبان فارسی ارسال خواهد شد.
-      </p>
-      <Table tableHeaders={tableHeaders}>
-        <tbody>
-          <tr className="table-row">
-            <td className="table-cell">زبان نامعتبر (پیش فرض فارسی)</td>
-            <td className="table-cell">
-              <code>{`"Accept-Language": "xx"`}</code>
-            </td>
-          </tr>
-        </tbody>
-      </Table>
+      <h4>📝 نمونه پاسخ به انگلیسی:</h4>
+      <CodeBlock
+        lang="json"
+        code={`{
+"id": 364,
+"iso2": "ir",
+"iso3": "irn",
+"name": "Iran",
+"flag": "http://localhost:3000/v1/countries/flag/IR.svg",
+"capital": "Tehran",
+"calling_code": 98,
+"continent": "Asia",
+"lat": 32.0,
+"long": 53.0
+}`}
+      />
     </div>
   );
 }
