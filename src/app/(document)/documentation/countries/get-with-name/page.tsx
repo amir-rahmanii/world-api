@@ -13,11 +13,11 @@ import ApiResponseExample from "../+component/ApiResponseExample/ApiResponseExam
 import HeaderConfigs from "../+component/HeaderConfigs/HeaderConfigs";
 
 const apiHeader: ApiHeader = {
-  title: "دریافت کشورها با id",
+  title: "دریافت کشورها با name",
   description:
-    "با استفاده از شناسه اختصاصی هر کشور (id)، شما می‌توانید به اطلاعات کامل و دقیق آن کشور دسترسی پیدا کنید. این اطلاعات شامل نام کشور، کد ISO، پرچم، پایتخت، کد تماس، قاره و موقعیت جغرافیایی آن کشور می‌باشد.",
-  endpoint: "/api/v1/countries?id={id}",
-  exampleEndpoint: "/api/v1/countries?id=364",
+    "با استفاده از شناسه اختصاصی هر کشور (name)، شما می‌توانید به اطلاعات کامل و دقیق آن کشور دسترسی پیدا کنید. این اطلاعات شامل نام کشور، کد ISO، پرچم، پایتخت، کد تماس، قاره و موقعیت جغرافیایی آن کشور می‌باشد.",
+  endpoint: "/api/v1/countries?name={name}",
+  exampleEndpoint: "/api/v1/countries?name=ایران",
 };
 
 const invalidIdError: ApiError = {
@@ -28,7 +28,7 @@ const invalidIdError: ApiError = {
 export const metadata: Metadata = {
   title: "  وب سرویس اطلاعات کشورها | مستندات |  دریافت کشورها با id",
 };
-export default function CountriesGetWithIdPage() {
+export default function CountriesGetWithNamePage() {
   return (
     <div>
       <ApiHeaderSection {...apiHeader} />

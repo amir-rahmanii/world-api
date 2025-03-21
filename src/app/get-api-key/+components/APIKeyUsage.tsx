@@ -39,7 +39,7 @@ export default function APIKeyUsage() {
       </p>
 
       <CodeBlock
-        code={` fetch("http://localhost:3000/api/v1/countries", { 
+        code={` fetch("${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/api/v1/countries", { 
   method: "GET", 
   headers: { 
     "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا

@@ -1,52 +1,43 @@
 import type { Metadata } from "next";
 
-import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
+
+import ApiHeaderSection from "./+component/ApiHeaderSection/ApiHeaderSection";
+import ApiRequestExample from "./+component/ApiRequestExample/ApiRequestExample";
+import ApiResponseExample from "./+component/ApiResponseExample/ApiResponseExample";
 import HeaderConfigs from "./+component/HeaderConfigs/HeaderConfigs";
+
+export interface ApiHeader {
+  title: string;
+  description: string;
+  endpoint: string;
+  exampleEndpoint?: string;
+}
+
+const apiHeader: ApiHeader = {
+  title: "دریافت تمام کشورها",
+  description:
+    "این API به شما امکان می‌دهد اطلاعات جامع کشورها را دریافت کنید. اطلاعاتی مانند نام کشور، کد ISO، پرچم، پایتخت، کد تماس و موقعیت جغرافیایی از این طریق در دسترس است.",
+  endpoint: "/api/v1/countries",
+};
 
 export const metadata: Metadata = {
   title: " وب سرویس اطلاعات کشورها | مستندات | دریافت تمام کشورها",
 };
+
 export default function CountriesPage() {
   return (
     <div>
-      <h1>دریافت تمام کشورها</h1>
-      <p>
-        این API به شما امکان می‌دهد اطلاعات جامع کشورها را دریافت کنید. اطلاعاتی
-        مانند نام کشور، کد ISO، پرچم، پایتخت، کد تماس و موقعیت جغرافیایی از این
-        طریق در دسترس است.
-      </p>
-      <h4>🚀 درخواست دریافت تمام کشورها</h4>
-      <CodeBlock
-        lang="http"
-        code="http://localhost:3000/api/v1/countries"
-        isMethode
-      />
-
+      <ApiHeaderSection {...apiHeader} />
       <HeaderConfigs />
-
-      <h4>📝 نمونه کد درخواست:</h4>
-      <CodeBlock
-        code={`fetch("http://localhost:3000/api/v1/countries", { 
-  method: "GET", 
-  headers: { 
-    "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
-    "Accept-Language" : "fa" // "en" or "ar"
-  } 
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error("Error:", error));`}
-      />
-      <h4>📝 نمونه پاسخ:</h4>
-      <CodeBlock
-        lang="json"
-        code={`[{
+      <ApiRequestExample endpoint={apiHeader.endpoint} />
+      <ApiResponseExample
+        responseJson={`[{
 "id": 364,
 "iso2": "ir",
 "iso3": "irn",
 "name": "ایران",
-"flag": "http://localhost:3000/v1/countries/flag/IR.svg",
+"flag": "${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/v1/countries/flag/IR.svg",
 "capital": "تهران",
 "calling_code": 98,
 "continent": "آسیا",
@@ -58,7 +49,7 @@ export default function CountriesPage() {
 "iso2": "iq",
 "iso3": "irq",
 "name": "عراق",
-"flag": "http://localhost:3000/v1/countries/flag/IQ.svg",
+"flag": "${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/v1/countries/flag/IQ.svg",
 "capital": "بغداد",
 "calling_code": 964,
 "continent": "آسیا",
@@ -66,7 +57,6 @@ export default function CountriesPage() {
 "long": 44.0
   },]`}
       />
-      <h4>⚠️ ارورهای احتمالی و توضیحات</h4>
     </div>
   );
 }

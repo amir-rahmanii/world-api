@@ -10,7 +10,7 @@ export const useSignIn = () => {
     const { data } = await supabase.auth.signInWithOAuth({
       provider: "github",
       options: {
-        redirectTo: `http://localhost:3000/api/auth/callback?next=/get-api-key`,
+        redirectTo: `${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/api/auth/callback?next=/get-api-key`,
       },
     });
     if (data.url) {

@@ -1,7 +1,8 @@
 export interface SideBarNavLink {
   id: number;
   title: string;
-  children: { title: string; path: string }[];
+  children: { title: string; path: string; new?: boolean}[];
+
 }
 
 export const sideBarNavLinks: SideBarNavLink[] = [
@@ -21,6 +22,19 @@ export const sideBarNavLinks: SideBarNavLink[] = [
       {
         title: "دریافت کشورها با id",
         path: "/documentation/countries/get-with-id",
+      },
+      {
+        title: "دریافت کشورها با name",
+        path: "/documentation/countries/get-with-name",
+      },
+      {
+        title: "دریافت کشورها با iso2",
+        path: "/documentation/countries/get-with-iso2",
+      },
+      {
+        title: "دریافت کشورها با iso3",
+        path: "/documentation/countries/get-with-iso3",
+        new: true,
       },
     ],
   },

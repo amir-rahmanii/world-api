@@ -14,15 +14,17 @@ export default function NavigationLink({
   icon: Icon,
   currentPath,
 }: NavLinkProps) {
+  const isActive =
+    path === currentPath ||
+    (path === "/documentation" && currentPath.startsWith("/documentation"));
+
   return (
     <li className="w-full flex justify-center items-end" key={title}>
       <Button
         asChild
         variant="link"
         className={
-          path === currentPath
-            ? "bg-accent text-accent-foreground w-full"
-            : "w-full"
+          isActive ? "bg-accent text-accent-foreground w-full" : "w-full"
         }
       >
         <Link href={path}>

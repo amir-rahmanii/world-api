@@ -69,7 +69,7 @@ export default function ChangeLanguagePage() {
 
       <h4>📝 نمونه کد درخواست:</h4>
       <CodeBlock
-        code={`fetch("http://localhost:3000/api/v1/countries?id=364", { 
+        code={`fetch("${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/api/v1/countries?id=364", { 
   method: "GET", 
   headers: { 
     "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
@@ -88,7 +88,7 @@ export default function ChangeLanguagePage() {
 "iso2": "ir",
 "iso3": "irn",
 "name": "Iran",
-"flag": "http://localhost:3000/v1/countries/flag/IR.svg",
+"flag": "${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/v1/countries/flag/IR.svg",
 "capital": "Tehran",
 "calling_code": 98,
 "continent": "Asia",
