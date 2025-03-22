@@ -1,3 +1,4 @@
+import type { LanguageType } from "@/types/locale.types";
 import type { NextRequest } from "next/server";
 
 import { getApiKeyRecord } from "@/supabase/getApiKeyRecord";
@@ -7,11 +8,11 @@ import { getCountriesByLocale } from "@/utils/getCountriesByLocale";
 import { getLocale } from "@/utils/getLocale";
 import { getSearchParams } from "@/utils/getSearchParams";
 
-export enum Locale {
-  FA = "fa",
-  EN = "en",
-  AR = "ar",
-}
+// export enum Locale {
+//   FA = "fa",
+//   EN = "en",
+//   AR = "ar",
+// }
 
 export interface Countries {
   id: number;
@@ -33,7 +34,7 @@ export interface SearchParams {
   callingCode: string | null;
 }
 
-const defaultLanguage = Locale.FA;
+const defaultLanguage: LanguageType = "fa";
 
 export async function GET(request: NextRequest) {
   const acceptLanguage =
@@ -76,9 +77,9 @@ export async function GET(request: NextRequest) {
 async function handleError(
   request: NextRequest,
   err: Error,
-  locale: Locale,
+  locale: LanguageType,
   apiKeyRecord: { api_key: string | null },
-  status: number
+  status: number,
 ) {
   const errorMessage =
     err.message || "Something went wrong. Please try again later.";
@@ -94,13 +95,13 @@ async function handleError(
   return new Response(
     JSON.stringify({
       error: errorMessage,
-      status
+      status,
     }),
     {
       status,
       headers: {
         "Content-Language": locale,
       },
-    }
+    },
   );
 }

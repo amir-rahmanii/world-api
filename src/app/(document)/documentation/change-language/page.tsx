@@ -1,11 +1,11 @@
+import type { LanguageType } from "@/types/locale.types";
 import type { Metadata } from "next";
 
-import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
 import ApiRequestExample from "../+components/ApiRequestExample";
-import Table from "../+components/Table";
 import ApiResponseExample from "../+components/ApiResponseExample";
+import Table from "../+components/Table";
 
 export const metadata: Metadata = {
   title: "🌍 وب سرویس اطلاعات کشورها | مستندات | تغییر زبان",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 interface SupportedLanguage {
   title: string;
-  value: "ar" | "en" | "fa" | "xx";
+  value: "xx" | LanguageType;
 }
 
 const supportedLanguages: SupportedLanguage[] = [

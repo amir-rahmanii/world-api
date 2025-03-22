@@ -7,9 +7,9 @@ import type { ApiHeader } from "../page";
 
 import ApiRequestExample from "../../+components/ApiRequestExample";
 import ApiResponseExample from "../../+components/ApiResponseExample";
+import ApiErrorMessage from "../+component/ApiErrorMessage";
 import ApiHeaderSection from "../+component/ApiHeaderSection";
 import HeaderConfigs from "../+component/HeaderConfigs";
-import ApiErrorMessage from "../+component/ApiErrorMessage";
 
 const apiHeader: ApiHeader = {
   title: "دریافت کشورها با کد بین المللی 2 حرفی (iso2)",
@@ -21,8 +21,8 @@ const apiHeader: ApiHeader = {
 
 const invalidIso2Error: ApiError = {
   title: "🔴 خطای ارسال iso2 نامعتبر",
-  message:
-    "Invalid iso2 parameter. It must be exactly 2 characters long (e.g., 'IR' for Iran).",
+  message: `Invalid iso2 parameter. It must be exactly 2 
+    characters long (e.g., 'ir' for Iran).`,
 };
 
 export const metadata: Metadata = {

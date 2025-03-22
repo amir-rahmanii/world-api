@@ -1,6 +1,6 @@
 import React from "react";
-import ApiErrorMessage from "./+component/ApiErrorMessage";
 
+import ApiErrorMessage from "./+component/ApiErrorMessage";
 
 export interface ApiError {
   title: string;

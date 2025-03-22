@@ -16,7 +16,7 @@ export default function SideBar() {
 
   return (
     <div>
-      <ul className="w-[250px] flex flex-col border border-accent rounded-lg p-4">
+      <ul className="w-[280px] flex flex-col border border-accent rounded-lg p-4">
         <Accordion
           type="single"
           value={accordionValue}
@@ -29,11 +29,22 @@ export default function SideBar() {
               {nav.children.map((navChild) => (
                 <AccordionContent className="pb-2" key={navChild.title}>
                   <Button
-                    asChild
+                    asChild={!navChild.new}
                     className="justify-start text-sm text-start w-full"
+                    disabled={navChild.new}
                     variant={pathName === navChild.path ? "sideBar" : "link"}
                   >
-                    <Link href={navChild.path}>{navChild.title}</Link>
+                    <Link
+                      className="w-full flex justify-between items-center"
+                      href={navChild.path}
+                    >
+                      {navChild.title}
+                      {navChild.new && (
+                        <span className="text-[10px] text-primary">
+                          به زودی
+                        </span>
+                      )}
+                    </Link>
                   </Button>
                 </AccordionContent>
               ))}

@@ -6,9 +6,9 @@ import React from "react";
 export default function DotPatternWrapper() {
   return (
     <DotPattern
-      glow={true}
+      glow
       className={cn(
-        "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"
+        "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
       )}
     />
   );

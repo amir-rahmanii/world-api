@@ -1,3 +1,4 @@
+import type { LanguageType } from "@/types/locale.types";
 import type { Metadata } from "next";
 
 import React from "react";
@@ -11,7 +12,7 @@ import ApiHeaderSection from "../+component/ApiHeaderSection";
 import HeaderConfigs from "../+component/HeaderConfigs";
 
 interface NameMapping {
-  language: "ar" | "en" | "fa";
+  language: LanguageType;
   name: string;
 }
 

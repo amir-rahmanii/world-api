@@ -1,18 +1,18 @@
-import { Locale } from "@/app/api/v1/countries/route";
+import type { LanguageType } from "@/types/locale.types";
 
 import CountriesAr from "../../public/Countries-nationalities-ar.json";
 import CountriesEn from "../../public/Countries-nationalities-en.json";
 import CountriesFa from "../../public/Countries-nationalities-fa.json";
 
-export const getCountriesByLocale = (locale: Locale) => {
+export const getCountriesByLocale = (locale: LanguageType) => {
   switch (locale) {
-    case Locale.EN: {
+    case "en": {
       return CountriesEn;
     }
-    case Locale.FA: {
+    case "fa": {
       return CountriesFa;
     }
-    case Locale.AR: {
+    case "ar": {
       return CountriesAr;
     }
     default: {

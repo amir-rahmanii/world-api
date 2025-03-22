@@ -1,9 +1,7 @@
 import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
-import type { ApiError } from "../../layout";
-
-
+import type { ApiError } from "../layout";
 
 export default function ApiErrorMessage({
   title,

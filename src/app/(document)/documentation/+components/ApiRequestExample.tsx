@@ -1,3 +1,5 @@
+import type { LanguageType } from "@/types/locale.types";
+
 import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
@@ -6,7 +8,7 @@ export default function ApiRequestExample({
   acceptLanguage = "fa",
 }: {
   endpoint: string;
-  acceptLanguage?: "ar" | "en" | "fa";
+  acceptLanguage?: LanguageType;
 }) {
   return (
     <>
@@ -16,7 +18,7 @@ export default function ApiRequestExample({
   method: "GET", 
   headers: { 
     "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
-    "Accept-Language" : "${acceptLanguage}" // "en" or "ar"
+    "Accept-Language" : "${acceptLanguage}" // "en" , "ar" or "fa"
   } 
 })
 .then(response => response.json())

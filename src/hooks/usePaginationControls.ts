@@ -1,19 +1,20 @@
+import type { SideBarNavChild } from "@/utils/sideBarNavLinks";
+
 import { sideBarNavLinks } from "@/utils/sideBarNavLinks";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
-interface PageLink {
-  title: string;
-  path: string;
-}
-
 export const usePaginationControls = () => {
   const pathname = usePathname();
-  const [nextPage, setNextPage] = useState<PageLink | null>(null);
-  const [previousPage, setPreviousPage] = useState<PageLink | null>(null);
+  const [nextPage, setNextPage] = useState<SideBarNavChild | null>(null);
+  const [previousPage, setPreviousPage] = useState<SideBarNavChild | null>(
+    null,
+  );
 
   const updatePaginationLinks = useCallback(() => {
-    const allLinks = sideBarNavLinks.flatMap((nav) => nav.children); // Combine all child links in one array
+    const allLinks = sideBarNavLinks.flatMap((nav) =>
+      nav.children.filter((navChild) => !navChild.new),
+    ); // Combine all child links in one array
 
     const currentIndex = allLinks.findIndex((link) => pathname === link.path); // Find the current path index
 

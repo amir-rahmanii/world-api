@@ -1,7 +1,7 @@
 import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
-import type { ApiHeader } from "../../page";
+import type { ApiHeader } from "../page";
 
 export default function ApiHeaderSection({
   title,

@@ -8,7 +8,7 @@ export const useAccordionValue = () => {
 
   useEffect(() => {
     const foundItem = sideBarNavLinks.find((nav) =>
-      nav.children.some((child) => child.path === pathName)
+      nav.children.some((child) => child.path === pathName),
     );
 
     setAccordionValue(foundItem ? `item-${foundItem.id}` : "item-1");

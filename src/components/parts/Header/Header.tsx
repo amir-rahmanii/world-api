@@ -4,7 +4,6 @@ import { GithubProfile } from "../GithubProfile/GithubProfile";
 import NavigationBar from "../Navigation/NavigationBar";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
-
 export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-accent bg-card py-4">

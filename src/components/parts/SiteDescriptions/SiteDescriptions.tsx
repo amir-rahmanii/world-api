@@ -5,14 +5,13 @@ import React from "react";
 
 import SiteDescriptionBox from "./SiteDescriptionBox";
 
-
-export interface SiteDescriptions {
+export interface SiteDescriptionsType {
   title: string;
   desc: string;
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
-const allSiteDescription: SiteDescriptions[] = [
+const allSiteDescription: SiteDescriptionsType[] = [
   {
     title: "اطلاعات جامع",
     desc: "اطلاعات کامل و دقیق از کشورها",

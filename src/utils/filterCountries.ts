@@ -1,12 +1,10 @@
 import type { Countries, SearchParams } from "@/app/api/v1/countries/route";
 
-const normalizeAndCompare = (value: string | null, countryValue: string) => {
-  return value?.toLowerCase() === countryValue.toLowerCase();
-};
+import { normalizeAndCompare } from "./normalizeAndCompare";
 
 export const filterCountries = (
   countries: Countries[],
-  allSearchParams: SearchParams
+  allSearchParams: SearchParams,
 ) => {
   const { id, name, iso2, iso3, callingCode } = allSearchParams;
 
@@ -14,7 +12,7 @@ export const filterCountries = (
     const numericId = Number(id);
     if (isNaN(numericId)) {
       throw new Error(
-        "Invalid id parameter. It must be a number (e.g., 364 for Iran)."
+        "Invalid id parameter. It must be a number (e.g., 364 for Iran).",
       );
     }
     return countries.filter((country) => country.id === numericId);
@@ -22,27 +20,30 @@ export const filterCountries = (
 
   if (name) {
     return countries.filter((country) =>
-      normalizeAndCompare(name, country.name)
+      normalizeAndCompare(name, country.name),
     );
   }
 
   if (iso2) {
-    const normalizedIso2 = iso2.trim().toLowerCase();
-
-    if (normalizedIso2.length !== 2) {
+    if (iso2.trim().length !== 2) {
       throw new Error(
-        "Invalid iso2 parameter. It must be exactly 2 characters long (e.g., 'IR' for Iran)."
+        "Invalid iso2 parameter. It must be exactly 2 characters long (e.g., 'ir' for Iran).",
       );
     }
 
     return countries.filter((country) =>
-      normalizeAndCompare(normalizedIso2, country.iso2)
+      normalizeAndCompare(iso2, country.iso2),
     );
   }
 
   if (iso3) {
+    if (iso3.trim().length !== 3) {
+      throw new Error(
+        "Invalid iso3 parameter. It must be exactly 3 characters long (e.g., 'irn' for Iran).",
+      );
+    }
     return countries.filter((country) =>
-      normalizeAndCompare(iso3, country.iso3)
+      normalizeAndCompare(iso3, country.iso3),
     );
   }
 
@@ -50,11 +51,11 @@ export const filterCountries = (
     const numericCallingCode = Number(callingCode);
     if (isNaN(numericCallingCode)) {
       throw new Error(
-        "Invalid callingCode parameter. It must be a number (e.g., 98 for Iran)."
+        "Invalid callingCode parameter. It must be a number (e.g., 98 for Iran).",
       );
     }
     return countries.filter(
-      (country) => country.calling_code === numericCallingCode
+      (country) => country.calling_code === numericCallingCode,
     );
   }
 

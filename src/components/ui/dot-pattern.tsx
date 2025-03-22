@@ -63,8 +63,6 @@ interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
 export function DotPattern({
   width = 16,
   height = 16,
-  x = 0,
-  y = 0,
   cx = 1,
   cy = 1,
   cr = 1,
@@ -79,8 +77,9 @@ export function DotPattern({
   useEffect(() => {
     const updateDimensions = () => {
       if (containerRef.current) {
-        const { width, height } = containerRef.current.getBoundingClientRect();
-        setDimensions({ width, height });
+        const { width: rectWidth, height: rectHeight } =
+          containerRef.current.getBoundingClientRect();
+        setDimensions({ width: rectWidth, height: rectHeight });
       }
     };
 

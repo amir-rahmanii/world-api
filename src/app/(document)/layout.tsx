@@ -3,8 +3,6 @@ import React from "react";
 import PaginationButton from "./documentation/+components/PaginationButton";
 import SideBar from "./documentation/+components/SideBar";
 
-
-
 export default function Documantionlayout({
   children,
 }: Readonly<{

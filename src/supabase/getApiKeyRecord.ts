@@ -16,7 +16,7 @@ export const getApiKeyRecord = async (apiKey: string | null) => {
 
   if (error) {
     throw new Error(
-      "Invalid API key. Please check your API key and try again."
+      "Invalid API key. Please check your API key and try again.",
     );
   }
 

@@ -11,8 +11,8 @@ export const getUserApiKey = cache(async () => {
     if (user == null) return undefined;
 
     const { data: userApiKey } = await supabase
-      .from("Api_keys") 
-      .select("api_key") 
+      .from("Api_keys")
+      .select("api_key")
       .eq("user_id", user.id)
       .single();
 

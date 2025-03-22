@@ -1,6 +1,11 @@
-import { Locale } from "@/app/api/v1/countries/route";
+import type { LanguageType } from "@/types/locale.types";
 
-export function getLocale(acceptLanguage: string): Locale {
-  const langCode = acceptLanguage.split(",")[0].split("-")[0].trim() as Locale;
-  return Object.values(Locale).includes(langCode) ? langCode : Locale.FA;
+import { locale } from "@/constants/locale";
+
+export function getLocale(acceptLanguage: string): LanguageType {
+  const langCode = acceptLanguage
+    .split(",")[0]
+    .split("-")[0]
+    .trim() as LanguageType;
+  return Object.values(locale).includes(langCode) ? langCode : "fa";
 }

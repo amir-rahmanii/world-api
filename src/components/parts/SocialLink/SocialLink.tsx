@@ -5,7 +5,6 @@ import React from "react";
 
 import type { SocialMedia } from "../Footer/Footer";
 
-
 export default function SocialLink({ content, path, icon: Icon }: SocialMedia) {
   return (
     <TooltipWrapper content={content}>

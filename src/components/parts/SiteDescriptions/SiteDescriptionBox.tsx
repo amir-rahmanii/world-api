@@ -1,12 +1,12 @@
 import React from "react";
 
-import type { SiteDescriptions } from "../SiteDescriptions/SiteDescriptions";
+import type { SiteDescriptionsType } from "./SiteDescriptions";
 
 export default function SiteDescriptionBox({
   title,
   desc,
   icon: Icon,
-}: SiteDescriptions) {
+}: SiteDescriptionsType) {
   return (
     <div className="group pointer-events-auto rounded-xl border border-accent bg-card hover:border-primary transition-all">
       <div className="flex flex-col gap-2.5 p-8">

@@ -1,8 +1,13 @@
+export interface SideBarNavChild {
+  title: string;
+  path: string;
+  new?: boolean;
+}
+
 export interface SideBarNavLink {
   id: number;
   title: string;
-  children: { title: string; path: string; new?: boolean}[];
-
+  children: SideBarNavChild[];
 }
 
 export const sideBarNavLinks: SideBarNavLink[] = [
@@ -34,6 +39,14 @@ export const sideBarNavLinks: SideBarNavLink[] = [
       {
         title: "دریافت کشورها با iso3",
         path: "/documentation/countries/get-with-iso3",
+      },
+      {
+        title: "دریافت کشورها با پیش شماره",
+        path: "/documentation/countries/get-with-calling-code",
+      },
+      {
+        title: "دریافت کشورها با قاره",
+        path: "/documentation/countries/get-with-continent",
         new: true,
       },
     ],

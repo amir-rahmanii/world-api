@@ -50,7 +50,7 @@ export default function HeaderConfigs() {
                 <td>{required ? "بله" : "خیر"}</td>
                 <td>{defaultValue ?? <code>null</code>}</td>
               </tr>
-            )
+            ),
           )}
         </tbody>
       </Table>
