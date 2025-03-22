@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import React from "react";
+
 import Table from "../+components/Table";
 
 interface ApiFieldInfo {
@@ -77,7 +78,6 @@ export default function AboutPage() {
         می‌دهد. کاربران می‌توانند با دریافت یک API Key، داده‌های مربوط به کشورها
         را دریافت کرده و در پروژه‌های خود استفاده کنند.
       </p>
-
       <h4>🚀 نحوه دریافت API Key</h4>
       <p>
         برای دریافت <strong>API Key</strong>، ابتدا باید با استفاده از حساب
@@ -103,14 +103,20 @@ export default function AboutPage() {
       </p>
 
       <h4>📌 انواع داده‌های موجود در API</h4>
+      <p>
+        توجه داشته باشید که در فرآیند **فیلتر کردن کشورها**، سرویس به حروف بزرگ
+        و کوچک حساس نیست. به عنوان مثال، هنگام دریافت اطلاعات یک کشور بر اساس
+        **name**، مقادیری مانند "IRAN" و "iran" به صورت یکسان پردازش شده و
+        نتیجه‌ی مشابهی خواهند داشت.
+      </p>
       <Table tableHeaders={tableHeaders}>
         <tbody>
-          {apiFieldInfos.map((field) => (
-            <tr key={field.title}>
-              <td>{field.title}</td>
-              <td>{field.description}</td>
-              <td>{field.type}</td>
-              <td>{field.example}</td>
+          {apiFieldInfos.map(({ title, description, type, example }) => (
+            <tr key={title}>
+              <td>{title}</td>
+              <td>{description}</td>
+              <td>{type}</td>
+              <td>{example}</td>
             </tr>
           ))}
         </tbody>

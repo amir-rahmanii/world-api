@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
+import ApiRequestExample from "../+components/ApiRequestExample";
 import Table from "../+components/Table";
+import ApiResponseExample from "../+components/ApiResponseExample";
 
 export const metadata: Metadata = {
   title: "🌍 وب سرویس اطلاعات کشورها | مستندات | تغییر زبان",
@@ -56,34 +58,23 @@ export default function ChangeLanguagePage() {
       <h4>🔄 تغییر زبان به‌صورت دستی:</h4>
       <Table tableHeaders={tableHeaders}>
         <tbody>
-          {supportedLanguages.map((language) => (
-            <tr key={language.value}>
-              <td>{language.title}</td>
+          {supportedLanguages.map(({ value, title }) => (
+            <tr key={value}>
+              <td>{title}</td>
               <td>
-                <code>{`"Accept-Language": "${language.value}"`}</code>
+                <code>{`"Accept-Language": "${value}"`}</code>
               </td>
             </tr>
           ))}
         </tbody>
       </Table>
 
-      <h4>📝 نمونه کد درخواست:</h4>
-      <CodeBlock
-        code={`fetch("${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/api/v1/countries?id=364", { 
-  method: "GET", 
-  headers: { 
-    "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
-    "Accept-Language" : "en" // "fa" or "ar"
-  } 
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error("Error:", error));`}
+      <ApiRequestExample
+        acceptLanguage="en"
+        endpoint="/api/v1/countries?id=364"
       />
-      <h4>📝 نمونه پاسخ به انگلیسی:</h4>
-      <CodeBlock
-        lang="json"
-        code={`{
+      <ApiResponseExample
+        responseJson={`[{
 "id": 364,
 "iso2": "ir",
 "iso3": "irn",
@@ -94,7 +85,7 @@ export default function ChangeLanguagePage() {
 "continent": "Asia",
 "lat": 32.0,
 "long": 53.0
-}`}
+}]`}
       />
     </div>
   );

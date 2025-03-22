@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 
-import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
 import type { ApiError } from "../layout";
 import type { ApiHeader } from "../page";
 
-import ApiErrorMessage from "../+component/ApiErrorMessage/ApiErrorMessage";
-import ApiHeaderSection from "../+component/ApiHeaderSection/ApiHeaderSection";
-import ApiRequestExample from "../+component/ApiRequestExample/ApiRequestExample";
-import ApiResponseExample from "../+component/ApiResponseExample/ApiResponseExample";
-import HeaderConfigs from "../+component/HeaderConfigs/HeaderConfigs";
+import ApiRequestExample from "../../+components/ApiRequestExample";
+import ApiResponseExample from "../../+components/ApiResponseExample";
+import ApiErrorMessage from "../+component/ApiErrorMessage";
+import ApiHeaderSection from "../+component/ApiHeaderSection";
+import HeaderConfigs from "../+component/HeaderConfigs";
 
 const apiHeader: ApiHeader = {
   title: "دریافت کشورها با id",
@@ -22,20 +21,20 @@ const apiHeader: ApiHeader = {
 
 const invalidIdError: ApiError = {
   title: "🔴 خطای ارسال id نامعتبر",
-  message: "Invalid id parameter. It must be a number (e.g., 364).",
+  message: "Invalid id parameter. It must be a number (e.g., 364 for Iran).",
 };
 
 export const metadata: Metadata = {
-  title: "  وب سرویس اطلاعات کشورها | مستندات |  دریافت کشورها با id",
+  title: "وب سرویس اطلاعات کشورها | مستندات |  دریافت کشورها با id",
 };
 export default function CountriesGetWithIdPage() {
   return (
-    <div>
+    <>
       <ApiHeaderSection {...apiHeader} />
       <HeaderConfigs />
       <ApiRequestExample endpoint={apiHeader.exampleEndpoint!} />
       <ApiResponseExample />
       <ApiErrorMessage {...invalidIdError} />
-    </div>
+    </>
   );
 }

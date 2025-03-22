@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 
 import React from "react";
 
-import ApiHeaderSection from "./+component/ApiHeaderSection/ApiHeaderSection";
-import ApiRequestExample from "./+component/ApiRequestExample/ApiRequestExample";
-import ApiResponseExample from "./+component/ApiResponseExample/ApiResponseExample";
-import HeaderConfigs from "./+component/HeaderConfigs/HeaderConfigs";
+import ApiRequestExample from "../+components/ApiRequestExample";
+import ApiResponseExample from "../+components/ApiResponseExample";
+import ApiHeaderSection from "./+component/ApiHeaderSection";
+import HeaderConfigs from "./+component/HeaderConfigs";
 
 export interface ApiHeader {
   title: string;
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function CountriesPage() {
   return (
-    <div>
+    <>
       <ApiHeaderSection {...apiHeader} />
       <HeaderConfigs />
       <ApiRequestExample endpoint={apiHeader.endpoint} />
@@ -57,6 +57,6 @@ export default function CountriesPage() {
 "long": 44.0
   },]`}
       />
-    </div>
+    </>
   );
 }

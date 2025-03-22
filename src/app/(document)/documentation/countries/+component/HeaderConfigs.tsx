@@ -1,6 +1,6 @@
 import React from "react";
 
-import Table from "../../../+components/Table";
+import Table from "../../+components/Table";
 
 interface HeaderConfig {
   name: string;
@@ -41,15 +41,17 @@ export default function HeaderConfigs() {
       <h4>هدرهای مورد نیاز:</h4>
       <Table tableHeaders={tableHeaders}>
         <tbody>
-          {headersConfigs.map((item) => (
-            <tr key={item.name}>
-              <td>{item.name}</td>
-              <td>{item.value}</td>
-              <td>{item.description}</td>
-              <td>{item.required ? "بله" : "خیر"}</td>
-              <td>{item.defaultValue ?? <code>null</code>}</td>
-            </tr>
-          ))}
+          {headersConfigs.map(
+            ({ name, value, description, required, defaultValue }) => (
+              <tr key={name}>
+                <td>{name}</td>
+                <td>{value}</td>
+                <td>{description}</td>
+                <td>{required ? "بله" : "خیر"}</td>
+                <td>{defaultValue ?? <code>null</code>}</td>
+              </tr>
+            )
+          )}
         </tbody>
       </Table>
     </>

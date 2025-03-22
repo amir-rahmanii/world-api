@@ -1,54 +1,60 @@
-import type {
-  Countries,
-  SearchParams,
-} from "@/app/api/v1/countries/route";
+import type { Countries, SearchParams } from "@/app/api/v1/countries/route";
+
+const normalizeAndCompare = (value: string | null, countryValue: string) => {
+  return value?.toLowerCase() === countryValue.toLowerCase();
+};
 
 export const filterCountries = (
   countries: Countries[],
   allSearchParams: SearchParams
 ) => {
-  if (allSearchParams.id !== null) {
-    if (isNaN(Number(allSearchParams.id))) {
-      const error = new Error(
+  const { id, name, iso2, iso3, callingCode } = allSearchParams;
+
+  if (id) {
+    const numericId = Number(id);
+    if (isNaN(numericId)) {
+      throw new Error(
         "Invalid id parameter. It must be a number (e.g., 364 for Iran)."
       );
-      throw error;
     }
-    return countries.filter(
-      (country) => country.id === Number(allSearchParams.id)
+    return countries.filter((country) => country.id === numericId);
+  }
+
+  if (name) {
+    return countries.filter((country) =>
+      normalizeAndCompare(name, country.name)
     );
   }
 
-  if (allSearchParams.name) {
-    return countries.filter(
-      (country) =>
-        country.name.toLowerCase() === allSearchParams.name?.toLowerCase()
+  if (iso2) {
+    const normalizedIso2 = iso2.trim().toLowerCase();
+
+    if (normalizedIso2.length !== 2) {
+      throw new Error(
+        "Invalid iso2 parameter. It must be exactly 2 characters long (e.g., 'IR' for Iran)."
+      );
+    }
+
+    return countries.filter((country) =>
+      normalizeAndCompare(normalizedIso2, country.iso2)
     );
   }
 
-  if (allSearchParams.iso2) {
-    return countries.filter(
-      (country) =>
-        country.iso2.toLowerCase() === allSearchParams.iso2?.toLowerCase()
+  if (iso3) {
+    return countries.filter((country) =>
+      normalizeAndCompare(iso3, country.iso3)
     );
   }
 
-  if (allSearchParams.iso3) {
-    return countries.filter(
-      (country) =>
-        country.iso3.toLowerCase() === allSearchParams.iso3?.toLowerCase()
-    );
-  }
-
-  if (allSearchParams.callingCode) {
-    if (isNaN(Number(allSearchParams.callingCode))) {
-      const error = new Error(
+  if (callingCode) {
+    const numericCallingCode = Number(callingCode);
+    if (isNaN(numericCallingCode)) {
+      throw new Error(
         "Invalid callingCode parameter. It must be a number (e.g., 98 for Iran)."
       );
-      throw error;
     }
     return countries.filter(
-      (country) => country.calling_code === allSearchParams.callingCode
+      (country) => country.calling_code === numericCallingCode
     );
   }
 

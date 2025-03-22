@@ -1,8 +1,7 @@
 import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
-export default function ApiResponseExample({
-  responseJson = `{
+const defaultResponse =`[{
 "id": 364,
 "iso2": "ir",
 "iso3": "irn",
@@ -13,7 +12,10 @@ export default function ApiResponseExample({
 "continent": "آسیا",
 "lat": 32.0,
 "long": 53.0
-}`,
+}]`
+
+export default function ApiResponseExample({
+  responseJson = defaultResponse,
 }: {
   responseJson?: string;
 }) {

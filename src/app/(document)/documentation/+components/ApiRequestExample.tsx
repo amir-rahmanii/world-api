@@ -1,7 +1,13 @@
 import { CodeBlock } from "@/components/modules/CodeBlock";
 import React from "react";
 
-export default function ApiRequestExample({ endpoint }: { endpoint: string }) {
+export default function ApiRequestExample({
+  endpoint,
+  acceptLanguage = "fa",
+}: {
+  endpoint: string;
+  acceptLanguage?: "ar" | "en" | "fa";
+}) {
   return (
     <>
       <h4>📝 نمونه کد درخواست:</h4>
@@ -10,7 +16,7 @@ export default function ApiRequestExample({ endpoint }: { endpoint: string }) {
   method: "GET", 
   headers: { 
     "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
-    "Accept-Language" : "fa" // "en" or "ar"
+    "Accept-Language" : "${acceptLanguage}" // "en" or "ar"
   } 
 })
 .then(response => response.json())
