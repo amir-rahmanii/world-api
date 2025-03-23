@@ -1,4 +1,4 @@
-import { CodeBlock } from "@/components/modules/CodeBlock";
+import ApiRequestExample from "@/components/modules/ApiRequestExample";
 import React from "react";
 
 export default function APIKeyUsage() {
@@ -38,21 +38,7 @@ export default function APIKeyUsage() {
         <code> headers </code> قرار دهید:
       </p>
 
-      <CodeBlock
-        code={` fetch("${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/api/v1/countries", { 
-  method: "GET", 
-  headers: { 
-    "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
-    "Accept-Language" : "fa" // "en" , "ar" or "fa"
-     // این هدر به‌طور خودکار بر اساس زبان سیستم‌عامل تنظیم می‌شود
-     // در صورتی که بخواهید زبان را تغییر دهید، کافیست این هدر را تغییر دهید.
-  } 
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error("Error:", error));
-`}
-      />
+      <ApiRequestExample endpoint="/api/v1/countries" />
 
       <h4>⚠️ نکات امنیتی مهم در استفاده از API Key</h4>
       <ul className="list-disc pr-5">

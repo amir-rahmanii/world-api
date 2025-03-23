@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
+import ApiRequestExample from "@/components/modules/ApiRequestExample";
+import ApiResponseExample from "@/components/modules/ApiResponseExample";
+import { defaultResponseJsonArrayFa } from "@/constants/defaultResponse";
 import React from "react";
 
-import ApiRequestExample from "../+components/ApiRequestExample";
-import ApiResponseExample from "../+components/ApiResponseExample";
 import ApiHeaderSection from "./+component/ApiHeaderSection";
 import HeaderConfigs from "./+component/HeaderConfigs";
 
@@ -31,32 +32,7 @@ export default function CountriesPage() {
       <ApiHeaderSection {...apiHeader} />
       <HeaderConfigs />
       <ApiRequestExample endpoint={apiHeader.endpoint} />
-      <ApiResponseExample
-        responseJson={`[{
-"id": 364,
-"iso2": "ir",
-"iso3": "irn",
-"name": "ایران",
-"flag": "${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/v1/countries/flag/IR.svg",
-"capital": "تهران",
-"calling_code": 98,
-"continent": "آسیا",
-"lat": 32.0,
-"long": 53.0
-  },
-  {
-"id": 368,
-"iso2": "iq",
-"iso3": "irq",
-"name": "عراق",
-"flag": "${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/v1/countries/flag/IQ.svg",
-"capital": "بغداد",
-"calling_code": 964,
-"continent": "آسیا",
-"lat": 33.0,
-"long": 44.0
-  },]`}
-      />
+      <ApiResponseExample responseJson={defaultResponseJsonArrayFa} />
     </>
   );
 }

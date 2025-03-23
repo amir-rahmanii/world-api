@@ -5,11 +5,12 @@ import React from "react";
 
 import type { ApiHeader } from "../page";
 
-import ApiRequestExample from "../../+components/ApiRequestExample";
-import ApiResponseExample from "../../+components/ApiResponseExample";
+
 import Table from "../../+components/Table";
 import ApiHeaderSection from "../+component/ApiHeaderSection";
 import HeaderConfigs from "../+component/HeaderConfigs";
+import ApiRequestExample from "@/components/modules/ApiRequestExample";
+import ApiResponseExample from "@/components/modules/ApiResponseExample";
 
 interface NameMapping {
   language: LanguageType;
@@ -51,7 +52,6 @@ export default function CountriesGetWithNamePage() {
           ))}
         </tbody>
       </Table>
-
       <ApiRequestExample endpoint={apiHeader.exampleEndpoint!} />
       <ApiResponseExample />
     </>

@@ -5,11 +5,11 @@ import React from "react";
 import type { ApiError } from "../layout";
 import type { ApiHeader } from "../page";
 
-import ApiRequestExample from "../../+components/ApiRequestExample";
-import ApiResponseExample from "../../+components/ApiResponseExample";
 import ApiErrorMessage from "../+component/ApiErrorMessage";
 import ApiHeaderSection from "../+component/ApiHeaderSection";
 import HeaderConfigs from "../+component/HeaderConfigs";
+import ApiRequestExample from "@/components/modules/ApiRequestExample";
+import ApiResponseExample from "@/components/modules/ApiResponseExample";
 
 const apiHeader: ApiHeader = {
   title: "دریافت کشورها با id",

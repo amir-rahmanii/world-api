@@ -1,10 +1,11 @@
 import type { LanguageType } from "@/types/locale.types";
 import type { Metadata } from "next";
 
+import ApiRequestExample from "@/components/modules/ApiRequestExample";
+import ApiResponseExample from "@/components/modules/ApiResponseExample";
+import { defaultResponseJsonEn } from "@/constants/defaultResponse";
 import React from "react";
 
-import ApiRequestExample from "../+components/ApiRequestExample";
-import ApiResponseExample from "../+components/ApiResponseExample";
 import Table from "../+components/Table";
 
 export const metadata: Metadata = {
@@ -73,20 +74,7 @@ export default function ChangeLanguagePage() {
         acceptLanguage="en"
         endpoint="/api/v1/countries?id=364"
       />
-      <ApiResponseExample
-        responseJson={`[{
-"id": 364,
-"iso2": "ir",
-"iso3": "irn",
-"name": "Iran",
-"flag": "${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}/v1/countries/flag/IR.svg",
-"capital": "Tehran",
-"calling_code": 98,
-"continent": "Asia",
-"lat": 32.0,
-"long": 53.0
-}]`}
-      />
+      <ApiResponseExample responseJson={defaultResponseJsonEn} />
     </div>
   );
 }

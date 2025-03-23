@@ -1,5 +1,5 @@
-import React from "react";
+import { redirect } from "next/navigation";
 
 export default function DocumantionPage() {
-  return <div>page</div>;
+  redirect("/documentation/about");
 }
