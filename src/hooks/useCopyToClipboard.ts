@@ -11,7 +11,7 @@ export const useCopyToClipboard = (text: string) => {
     } catch (err) {
       console.error(err);
     }
-  }, [text]);
+  }, [text]); 
 
   return { copyToClipboard, copied };
 };
