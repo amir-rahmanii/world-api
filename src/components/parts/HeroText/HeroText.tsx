@@ -16,7 +16,7 @@ export default function HeroText() {
         دهندگان
       </p>
       <Button asChild variant="default">
-        <Link href="/documentation">برای شروع کلیک کنید</Link>
+        <Link href="/documentation/about">برای شروع کلیک کنید</Link>
       </Button>
     </div>
   );

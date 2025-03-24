@@ -1,16 +1,15 @@
 import type { LanguageType } from "@/types/locale.types";
 import type { Metadata } from "next";
 
+import ApiRequestExample from "@/components/modules/ApiRequestExample";
+import ApiResponseExample from "@/components/modules/ApiResponseExample";
 import React from "react";
 
 import type { ApiHeader } from "../page";
 
-
 import Table from "../../+components/Table";
 import ApiHeaderSection from "../+component/ApiHeaderSection";
 import HeaderConfigs from "../+component/HeaderConfigs";
-import ApiRequestExample from "@/components/modules/ApiRequestExample";
-import ApiResponseExample from "@/components/modules/ApiResponseExample";
 
 interface NameMapping {
   language: LanguageType;

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import Link from "next/link";
 import React from "react";
 
 interface ContactMethod {
@@ -15,20 +14,12 @@ const contactMethods: ContactMethod[] = [
   },
   {
     type: "تلگرام",
-    value: "https://t.me/AmirRahmani313",
-  },
-  {
-    type: "گیت هاب",
-    value: "https://github.com/AmirRahmani313",
-  },
-  {
-    type: "گیت هاب پروژه",
-    value: "https://github.com/AmirRahmani313/project",
+    value: "@AmirRahmani313",
   },
 ];
 
 export const metadata: Metadata = {
-  title: " وب سرویس اطلاعات کشورها | مستندات | پشتیبانی   ",
+  title: "وب سرویس اطلاعات کشورها | مستندات | پشتیبانی",
 };
 
 export default function SupportPage() {
@@ -42,11 +33,9 @@ export default function SupportPage() {
         </p>
         <ul className="list-disc pr-5 flex flex-col gap-2 mt-3">
           {contactMethods.map(({ type, value }) => (
-            <li key={type}>
-              <strong>{type}:</strong>{" "}
-              <Link href={value} target="_blank">
-                {value}
-              </Link>
+            <li className="flex items-center gap-2" key={type}>
+              <strong>{type}:</strong>
+              <p dir="ltr">{value}</p>
             </li>
           ))}
         </ul>

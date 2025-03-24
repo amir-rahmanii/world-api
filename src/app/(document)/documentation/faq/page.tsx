@@ -8,7 +8,12 @@ import {
 } from "@/components/ui/accordion";
 import React from "react";
 
-export const faqData = [
+interface FaqData {
+  question: string;
+  answer: string;
+}
+
+export const faqData: FaqData[] = [
   {
     question: "چگونه می‌توانم از این API استفاده کنم؟",
     answer:

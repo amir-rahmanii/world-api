@@ -27,8 +27,8 @@ export default function NavigationLink({
           isActive ? "bg-accent text-accent-foreground w-full" : "w-full"
         }
       >
-        <Link href={path}>
-          <Icon className="size-6" />
+        <Link href={path} target={title === "گیت هاب" ? "_blank" : "_self"}>
+          <Icon className="size-5" />
           {title}
         </Link>
       </Button>

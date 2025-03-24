@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import ApiRequestExample from "@/components/modules/ApiRequestExample";
+import ApiResponseExample from "@/components/modules/ApiResponseExample";
 import React from "react";
 
 import type { ApiError } from "../layout";
@@ -8,8 +10,6 @@ import type { ApiHeader } from "../page";
 import ApiErrorMessage from "../+component/ApiErrorMessage";
 import ApiHeaderSection from "../+component/ApiHeaderSection";
 import HeaderConfigs from "../+component/HeaderConfigs";
-import ApiRequestExample from "@/components/modules/ApiRequestExample";
-import ApiResponseExample from "@/components/modules/ApiResponseExample";
 
 const apiHeader: ApiHeader = {
   title: "دریافت کشورها با id",

@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Copy } from "lucide-react";
-import { useState } from "react";
+import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
+import { ClipboardCheck, Copy } from "lucide-react";
 
 interface CopyButtonProps {
   text: string;
@@ -9,21 +9,15 @@ interface CopyButtonProps {
 }
 
 export function CopyButton({ text, className }: CopyButtonProps) {
-  const [copied, setCopied] = useState(false);
-
-  const copyToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  const { copyToClipboard, copied } = useCopyToClipboard(text);
 
   return (
     <Button className={className} variant="default" onClick={copyToClipboard}>
-      <Copy className="size-4" />
+      {copied ? (
+        <ClipboardCheck className="size-4" />
+      ) : (
+        <Copy className="size-4" />
+      )}
       <span className="hidden desktop:block">
         {copied ? "کپی شد!" : "کپی در کلیپ‌بورد"}
       </span>
