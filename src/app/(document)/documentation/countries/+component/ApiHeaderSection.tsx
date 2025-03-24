@@ -15,8 +15,7 @@ export default function ApiHeaderSection({
       <h4>🚀 درخواست {title} </h4>
       <CodeBlock
         lang="http"
-        code={`${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}${endpoint}`}
-        isMethode
+        code={`GET ${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}${endpoint}`}
       />
     </>
   );

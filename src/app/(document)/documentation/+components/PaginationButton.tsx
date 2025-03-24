@@ -10,7 +10,7 @@ import ArrowRight from "./arrowRight.svg";
 export default function PaginationControls() {
   const { nextPage, previousPage } = usePaginationControls();
   return (
-    <div className="flex items-center justify-between mt-12">
+    <div className="flex flex-row flex-wrap items-center justify-between mt-12">
       {nextPage && (
         <Button asChild variant="link">
           <Link href={nextPage.path}>

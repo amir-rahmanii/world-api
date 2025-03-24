@@ -8,28 +8,32 @@
   --background: oklch(100% 0 0);
   --foreground: oklch(24.37% 0.0877 271.06);
   --heading-foreground: oklch(27.68% 0.1059 270.48);
-  --card: oklch(100% 0 0);
-  --card-foreground: oklch(24.37% 0.0877 271.06);
-  --popover: oklch(100% 0 0);
-  --popover-foreground: oklch(24.37% 0.0877 271.06);
   --primary: oklch(58.76% 0.309 262.51);
   --primary-foreground: oklch(98% 0 0);
   --secondary: oklch(98.17% 0.0057 264.53);
-  --secondary-foreground: oklch(30.31% 0 0);
-  --muted: oklch(98.17% 0.0057 264.53);
   --muted-foreground: oklch(61.85% 0.0673 266.47);
   --accent: oklch(98.17% 0.0057 264.53);
   --accent-foreground: oklch(30.31% 0 0);
   --destructive: oklch(64.37% 0.257 29.23);
-  --destructive-foreground: oklch(98% 0 0);
   --border: oklch(92.19% 0 0);
   --input: oklch(92.19% 0 0);
   --ring: oklch(58.76% 0.309 262.51);
-  --chart-1: oklch(63.24% 0.26 33.49);
-  --chart-2: oklch(52.08% 0.187 195.97);
-  --chart-3: oklch(35.54% 0.103 230.17);
-  --chart-4: oklch(74.23% 0.207 84.69);
-  --chart-5: oklch(69.12% 0.246 62.07);
+}
+
+.dark {
+  --background: oklch(18.39% 0.0025 247.95);
+  --foreground: oklch(90.03% 0.0187 261.33);
+  --heading-foreground: oklch(100% 0 0);
+  --primary: oklch(71.3% 0.1595 38.31);
+  --primary-foreground: oklch(10% 0.002 262);
+  --secondary: oklch(28.39% 0.0025 247.95);
+  --muted-foreground: oklch(90.03% 0.0187 261.33);
+  --accent: oklch(28.39% 0.0025 247.95);
+  --accent-foreground: oklch(98% 0 0);
+  --destructive: oklch(30.6% 0.174 27);
+  --border: oklch(30.13% 0.0056 271.23);
+  --input: oklch(30.13% 0.0056 271.23);
+  --ring: oklch(83.9% 0.01 262);
 }
 
 @utility container {
@@ -45,37 +49,15 @@
   }
 
   @variant desktop {
+    padding-inline: 80px;
+  }
+
+  @variant wide {
     padding-inline: 120px;
   }
 }
 
-.dark {
-  --background: oklch(18.39% 0.0025 247.95);
-  --foreground: oklch(90.03% 0.0187 261.33);
-  --heading-foreground: oklch(100% 0 0);
-  --card: oklch(18.39% 0.0025 247.95);
-  --card-foreground: oklch(98% 0 0);
-  --popover: oklch(28.39% 0.0025 247.95);
-  --popover-foreground: oklch(98% 0 0);
-  --primary: oklch(71.3% 0.1595 38.31);
-  --primary-foreground: oklch(10% 0.002 262);
-  --secondary: oklch(28.39% 0.0025 247.95);
-  --secondary-foreground: oklch(90.03% 0.0187 261.33);
-  --muted: oklch(28.39% 0.0025 247.95);
-  --muted-foreground: oklch(90.03% 0.0187 261.33);
-  --accent: oklch(28.39% 0.0025 247.95);
-  --accent-foreground: oklch(98% 0 0);
-  --destructive: oklch(30.6% 0.174 27);
-  --destructive-foreground: oklch(98% 0 0);
-  --border: oklch(30.13% 0.0056 271.23);
-  --input: oklch(30.13% 0.0056 271.23);
-  --ring: oklch(83.9% 0.01 262);
-  --chart-1: oklch(50% 0.181 259);
-  --chart-2: oklch(45% 0.136 175);
-  --chart-3: oklch(55% 0.214 69);
-  --chart-4: oklch(60% 0.196 310);
-  --chart-5: oklch(55% 0.223 10);
-}
+
 
 @theme inline {
   --font-*: initial;
@@ -91,36 +73,16 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
@@ -167,6 +129,6 @@
   color: var(--foreground);
 }
 
-/* .shiki {
-  @apply rounded-md p-6 overflow-auto;
-} */
+.shiki {
+  @apply rounded-md py-9 px-6 overflow-auto;
+}

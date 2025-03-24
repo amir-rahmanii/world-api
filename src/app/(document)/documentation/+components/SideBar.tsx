@@ -16,7 +16,7 @@ export default function SideBar() {
 
   return (
     <div>
-      <ul className="w-[280px] flex flex-col border border-accent rounded-lg p-4">
+      <ul className="w-full tablet:w-full desktop:w-[220px] wide:w-[280px] flex flex-col border border-accent rounded-lg p-4">
         <Accordion
           type="single"
           value={accordionValue}
@@ -35,7 +35,7 @@ export default function SideBar() {
                     variant={pathName === navChild.path ? "sideBar" : "link"}
                   >
                     <Link
-                      className="w-full flex justify-between items-center"
+                      className="w-full flex flex-wrap justify-between items-center"
                       href={navChild.path}
                     >
                       {navChild.title}

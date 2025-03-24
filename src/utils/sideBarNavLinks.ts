@@ -53,6 +53,18 @@ export const sideBarNavLinks: SideBarNavLink[] = [
   },
   {
     id: 3,
+    title: "مستندات اطلاعات شهرها",
+    children: [
+      { title: "دریافت تمام شهرها", path: "/documentation/cities", new: true },
+      {
+        title: "دریافت شهرها با id کشور",
+        path: "/documentation/cities/get-cities-with-countryId",
+        new: true,
+      },
+    ],
+  },
+  {
+    id: 4,
     title: "پشتیبانی و سوالات متداول",
     children: [
       { title: "سوالات متداول", path: "/documentation/faq" },
