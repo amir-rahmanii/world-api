@@ -7,6 +7,7 @@ import "./globals.css";
 import Header from "@/components/parts/Header/Header";
 import { ThemeProvider } from "@/store/theme-provider";
 import { SupabaseProvider } from "@/supabase/SupabaseProvider";
+import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 
 const yekanMedium = localFont({
@@ -79,7 +80,10 @@ export default function RootLayout({
         <SupabaseProvider>
           <ThemeProvider enableSystem attribute="class" defaultTheme="system">
             <Header />
-            <div className="my-16 container">{children}</div>
+            <div className="my-16 container">
+              {children}
+              <Analytics />
+            </div>
             <Footer />
           </ThemeProvider>
         </SupabaseProvider>

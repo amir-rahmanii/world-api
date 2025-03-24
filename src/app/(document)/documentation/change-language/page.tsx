@@ -8,7 +8,6 @@ import React from "react";
 
 import Table from "../+components/Table";
 
-
 interface SupportedLanguage {
   title: string;
   value: "xx" | LanguageType;
