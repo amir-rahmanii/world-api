@@ -9,98 +9,98 @@ importers:
   .:
     dependencies:
       '@fullstacksjs/config':
-        specifier: ^1.1.0
+        specifier: 1.1.0
         version: 1.1.0
       '@radix-ui/react-accordion':
-        specifier: ^1.2.3
+        specifier: 1.2.3
         version: 1.2.3(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@radix-ui/react-dialog':
-        specifier: ^1.1.6
+        specifier: 1.1.6
         version: 1.1.6(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@radix-ui/react-slot':
-        specifier: ^1.1.2
+        specifier: 1.1.2
         version: 1.1.2(@types/react@19.0.10)(react@19.0.0)
       '@radix-ui/react-tooltip':
-        specifier: ^1.1.8
+        specifier: 1.1.8
         version: 1.1.8(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@supabase/ssr':
-        specifier: ^0.5.2
+        specifier: 0.5.2
         version: 0.5.2(@supabase/supabase-js@2.49.1)
       '@supabase/supabase-js':
-        specifier: ^2.49.1
+        specifier: 2.49.1
         version: 2.49.1
       class-variance-authority:
-        specifier: ^0.7.1
+        specifier: 0.7.1
         version: 0.7.1
       clsx:
-        specifier: ^2.1.1
+        specifier: 2.1.1
         version: 2.1.1
       framer-motion:
-        specifier: ^12.4.11
+        specifier: 12.4.11
         version: 12.4.11(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       lucide-react:
-        specifier: ^0.479.0
+        specifier: 0.479.0
         version: 0.479.0(react@19.0.0)
       next:
         specifier: 15.2.1
         version: 15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-themes:
-        specifier: ^0.4.4
+        specifier: 0.4.4
         version: 0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: 19.0.0
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
       tailwind-merge:
-        specifier: ^3.0.2
+        specifier: 3.0.2
         version: 3.0.2
       tailwindcss-animate:
-        specifier: ^1.0.7
+        specifier: 1.0.7
         version: 1.0.7(tailwindcss@4.0.12)
     devDependencies:
       '@eslint/eslintrc':
-        specifier: ^3
+        specifier: '3'
         version: 3.3.0
       '@fullstacksjs/eslint-config':
-        specifier: ^11.7.1
+        specifier: 11.7.1
         version: 11.7.1(@typescript-eslint/eslint-plugin@8.26.0(@typescript-eslint/parser@8.26.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-typescript@3.8.3)(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.3)(react@19.0.0)(tailwindcss@4.0.12)(ts-api-utils@2.0.1(typescript@5.8.2))(typescript@5.8.2)
       '@svgr/webpack':
-        specifier: ^8.1.0
+        specifier: 8.1.0
         version: 8.1.0(typescript@5.8.2)
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: '4'
         version: 4.0.12
       '@types/node':
-        specifier: ^20
+        specifier: '20'
         version: 20.17.23
       '@types/react':
-        specifier: ^19
+        specifier: '19'
         version: 19.0.10
       '@types/react-dom':
-        specifier: ^19
+        specifier: '19'
         version: 19.0.4(@types/react@19.0.10)
       eslint:
-        specifier: ^9.21.0
+        specifier: 9.21.0
         version: 9.21.0(jiti@2.4.2)
       eslint-config-next:
         specifier: 15.2.1
         version: 15.2.1(eslint-plugin-import-x@4.6.1(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2)
       husky:
-        specifier: ^9.1.7
+        specifier: 9.1.7
         version: 9.1.7
       prettier:
-        specifier: ^3.5.3
+        specifier: 3.5.3
         version: 3.5.3
       shiki:
-        specifier: ^3.2.1
+        specifier: 3.2.1
         version: 3.2.1
       tailwindcss:
-        specifier: ^4
+        specifier: '4'
         version: 4.0.12
       typescript:
-        specifier: ^5
+        specifier: '5'
         version: 5.8.2
 
 packages:
