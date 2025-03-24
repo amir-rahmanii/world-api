@@ -8,9 +8,6 @@ import React from "react";
 
 import Table from "../+components/Table";
 
-export const metadata: Metadata = {
-  title: "🌍 وب سرویس اطلاعات کشورها | مستندات | تغییر زبان",
-};
 
 interface SupportedLanguage {
   title: string;
@@ -23,6 +20,10 @@ const supportedLanguages: SupportedLanguage[] = [
   { title: "اطلاعات کشورها به زبان عربی", value: "ar" },
   { title: "زبان نامعتبر (اطلاعات کشورها پیش فرض به زبان فارسی)", value: "xx" },
 ];
+
+export const metadata: Metadata = {
+  title: "وب سرویس اطلاعات کشورها | مستندات | تغییر زبان",
+};
 
 const tableHeaders: string[] = ["عنوان", "مقدار"];
 
