@@ -16,7 +16,7 @@ export default function SideBar() {
 
   return (
     <div>
-      <ul className="w-full tablet:w-full desktop:w-[220px] wide:w-[280px] flex flex-col border border-accent rounded-lg p-4">
+      <ul className="w-full wide:w-[280px] flex flex-col border border-accent rounded-lg p-4">
         <Accordion
           type="single"
           value={accordionValue}

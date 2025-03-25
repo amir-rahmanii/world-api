@@ -16,7 +16,8 @@ export default function NavigationLink({
 }: NavLinkProps) {
   const isActive =
     path === currentPath ||
-    (path === "/documentation" && currentPath.startsWith("/documentation"));
+    (path === "/documentation/about" &&
+      currentPath.startsWith("/documentation"));
 
   return (
     <li className="w-full flex justify-center items-end" key={title}>

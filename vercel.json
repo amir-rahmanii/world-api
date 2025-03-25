@@ -1,0 +1,15 @@
+{
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET" },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-Api-Key, Accept-Language, Content-Type"
+        }
+      ]
+    }
+  ]
+}
