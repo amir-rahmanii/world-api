@@ -6,8 +6,6 @@ import { createBrowserClient } from "@supabase/ssr";
 import { useRouter } from "next/navigation";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
-import { clientConfig } from "../config/clientConfig";
-
 interface SupabaseContext {
   supabase: SupabaseClient;
 }
@@ -21,8 +19,8 @@ interface Props {
 export function SupabaseProvider({ children }: Props) {
   const [supabase] = useState(() =>
     createBrowserClient(
-      clientConfig.get("supabase.url"),
-      clientConfig.get("supabase.key"),
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     ),
   );
   const router = useRouter();

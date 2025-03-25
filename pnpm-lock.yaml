@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@fullstacksjs/config':
-        specifier: 1.1.0
-        version: 1.1.0
       '@radix-ui/react-accordion':
         specifier: 1.2.3
         version: 1.2.3(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -746,10 +743,6 @@ packages:
 
   '@floating-ui/utils@0.2.9':
     resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
-
-  '@fullstacksjs/config@1.1.0':
-    resolution: {integrity: sha512-fOLzRRYFEQHJbhhGIro9DNqqhWejL0/Ah5ag2p9Y89knFI6p8awIAwoao782e95ASsdLmV/b1QcUuGtGAtZYTA==}
-    engines: {node: '>=16'}
 
   '@fullstacksjs/eslint-config@11.7.1':
     resolution: {integrity: sha512-dZ6Ylevny+gUfgr3JZh4P+0rwWWASslp9DR4fA4lDNdNYS+hIFDhF412dLENxjqXAfuhlEjdYq2Lr9AxxlKLpg==}
@@ -4482,8 +4475,6 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
 
   '@floating-ui/utils@0.2.9': {}
-
-  '@fullstacksjs/config@1.1.0': {}
 
   '@fullstacksjs/eslint-config@11.7.1(@typescript-eslint/eslint-plugin@8.26.0(@typescript-eslint/parser@8.26.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-typescript@3.8.3)(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(prettier@3.5.3)(react@19.0.0)(tailwindcss@4.0.12)(ts-api-utils@2.0.1(typescript@5.8.2))(typescript@5.8.2)':
     dependencies:
