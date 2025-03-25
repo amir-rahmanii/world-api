@@ -3,14 +3,19 @@
 import TooltipWrapper from "@/components/modules/TooltipWrapper";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Button } from "../../ui/button";
 
 export default function ThemeSwitcher() {
   const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
+  const currentTheme = theme === "system" ? (systemTheme ?? "light") : theme;
 
   const toggleTheme = () => {
     setTheme(currentTheme === "light" ? "dark" : "light");
