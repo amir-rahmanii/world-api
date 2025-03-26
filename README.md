@@ -33,7 +33,7 @@ Example response:
   "iso2": "ir",
   "iso3": "irn",
   "name": "Iran",
-  "flag": "http://localhost:3000/v1/countries/flag/IR.svg",
+  "flag": "https://www.world-api.ir/v1/countries/flag/IR.svg",
   "capital": "Tehran",
   "calling_code": 98,
   "continent": "Asia",
