@@ -13,7 +13,6 @@ export const getUser = cache(async (): Promise<Profile | undefined> => {
 
   try {
     const { data } = await supabase.auth.getUser();
-    console.log(data);
 
     if (data.user == null) return undefined;
 
