@@ -1,7 +1,7 @@
 import React from "react";
 
-import { GithubProfile } from "../GithubProfile/GithubProfile";
 import NavigationBar from "../Navigation/NavigationBar";
+import { Profile } from "../Profile/Profile";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 export default function Header() {
@@ -11,7 +11,7 @@ export default function Header() {
         <NavigationBar />
         <div className="flex items-center gap-3 wide:gap-5">
           <ThemeSwitcher />
-          <GithubProfile />
+          <Profile />
         </div>
       </nav>
     </header>

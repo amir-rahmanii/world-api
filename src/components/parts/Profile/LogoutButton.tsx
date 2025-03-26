@@ -6,7 +6,7 @@ import React from "react";
 
 import Logout from "../../icons/logout.svg";
 
-export default function GithubLogoutButton() {
+export default function LogoutButton() {
   const { supabase } = useSupabase();
   return (
     <TooltipWrapper content="خروج">

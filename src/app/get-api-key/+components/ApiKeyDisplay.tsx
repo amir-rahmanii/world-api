@@ -1,5 +1,5 @@
 import { CodeBlock } from "@/components/modules/CodeBlock";
-import GithubLoginButton from "@/components/parts/GithubProfile/GithubLoginButton";
+import GithubLoginButton from "@/components/parts/Profile/LoginButton";
 import { getUserApiKey } from "@/supabase/getUserApiKey";
 import React from "react";
 

@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 
-interface GithubAvatarProps {
+interface AvatarProps {
   avatar: string;
   name: string;
 }
 
-export default function GithubAvatar({ avatar, name }: GithubAvatarProps) {
+export default function Avatar({ avatar, name }: AvatarProps) {
   return (
     <TooltipWrapper content="پروفایل من">
       <Button
@@ -17,7 +17,12 @@ export default function GithubAvatar({ avatar, name }: GithubAvatarProps) {
       >
         <span className="hidden tablet:block">{name}</span>
         <div className="rounded-full w-7 h-7 overflow-hidden">
-          <Image height={220} width={220} alt="profile" src={avatar} />
+          <Image
+            height={220}
+            width={220}
+            alt="profile"
+            src={avatar || "/default-avatar.jpg"}
+          />
         </div>
       </Button>
     </TooltipWrapper>
