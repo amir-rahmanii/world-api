@@ -35,11 +35,11 @@ export async function GET(request: NextRequest) {
   const acceptLanguage =
     request.headers.get("Accept-Language") ?? defaultLanguage;
   const locale = getLocale(acceptLanguage);
-
-  const apiKey: string | null = request.headers.get("X-API-Key");
   const searchParams = request.nextUrl.searchParams;
   const AllSearchParams: SearchParams = getSearchParams(searchParams);
-  let apiKeyRecord: { api_key: string | null } = { api_key: null };
+
+  const apiKey: string | null = request.headers.get("X-API-Key");
+  let apiKeyRecord: string | null = null;
 
   try {
     apiKeyRecord = await getApiKeyRecord(apiKey);
@@ -52,7 +52,7 @@ export async function GET(request: NextRequest) {
     const filteredData = filterCountries(Countries, AllSearchParams);
 
     await saveUserRequest({
-      apiKey: apiKeyRecord.api_key,
+      apiKey: apiKeyRecord,
       path: request.nextUrl.toString(),
       status: 200,
       locale,

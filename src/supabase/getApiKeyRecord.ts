@@ -2,7 +2,8 @@ import { createServerSupabaseClient } from "./SupabaseServer";
 
 export const getApiKeyRecord = async (apiKey: string | null) => {
   if (!apiKey) {
-    const error = "API key is missing. Please provide a valid API key.";
+    const error =
+      "API key is missing or invalid. Please provide a valid API key.";
     throw new Error(error);
   }
 
@@ -20,5 +21,5 @@ export const getApiKeyRecord = async (apiKey: string | null) => {
     );
   }
 
-  return apiKeyRecord;
+  return apiKeyRecord.api_key as string;
 };

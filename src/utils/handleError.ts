@@ -7,14 +7,14 @@ async function handleError(
   request: NextRequest,
   err: Error,
   locale: LanguageType,
-  apiKeyRecord: { api_key: string | null },
+  apiKeyRecord: string | null,
   status: number,
 ) {
   const errorMessage =
     err.message || "Something went wrong. Please try again later.";
 
   await saveUserRequest({
-    apiKey: apiKeyRecord.api_key,
+    apiKey: apiKeyRecord,
     path: request.nextUrl.toString(),
     errorMessage,
     status,

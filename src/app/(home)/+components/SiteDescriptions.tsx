@@ -1,9 +1,9 @@
-import CompleteInformation from "@/components/icons/completeInformation.svg";
-import LanguageSupport from "@/components/icons/languageSupport.svg";
-import UpdateIcon from "@/components/icons/updateIcon.svg";
 import React from "react";
 
+import CompleteInformation from "./completeInformation.svg";
+import LanguageSupport from "./languageSupport.svg";
 import SiteDescriptionBox from "./SiteDescriptionBox";
+import UpdateIcon from "./updateIcon.svg";
 
 export interface SiteDescriptionsType {
   title: string;
