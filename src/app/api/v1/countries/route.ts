@@ -7,12 +7,7 @@ import { filterCountries } from "@/utils/filterCountries";
 import { getCountriesByLocale } from "@/utils/getCountriesByLocale";
 import { getLocale } from "@/utils/getLocale";
 import { getSearchParams } from "@/utils/getSearchParams";
-
-// export enum Locale {
-//   FA = "fa",
-//   EN = "en",
-//   AR = "ar",
-// }
+import handleError from "@/utils/handleError";
 
 export interface Countries {
   id: number;
@@ -72,36 +67,4 @@ export async function GET(request: NextRequest) {
   } catch (err) {
     return handleError(request, err as Error, locale, apiKeyRecord, 400);
   }
-}
-
-async function handleError(
-  request: NextRequest,
-  err: Error,
-  locale: LanguageType,
-  apiKeyRecord: { api_key: string | null },
-  status: number,
-) {
-  const errorMessage =
-    err.message || "Something went wrong. Please try again later.";
-
-  await saveUserRequest({
-    apiKey: apiKeyRecord.api_key,
-    path: request.nextUrl.toString(),
-    errorMessage,
-    status,
-    locale,
-  });
-
-  return new Response(
-    JSON.stringify({
-      error: errorMessage,
-      status,
-    }),
-    {
-      status,
-      headers: {
-        "Content-Language": locale,
-      },
-    },
-  );
 }
