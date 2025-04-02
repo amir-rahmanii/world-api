@@ -15,21 +15,29 @@ export default function ThemeSwitcher() {
 
   if (!mounted) return null;
 
-  const currentTheme = theme === "system" ? (systemTheme ?? "light") : theme;
-
-  const toggleTheme = () => {
-    setTheme(currentTheme === "light" ? "dark" : "light");
-  };
-
   return (
-    <TooltipWrapper content={currentTheme === "light" ? "تم تاریک" : "تم روشن"}>
-      <Button size="icon" variant="outline" onClick={toggleTheme}>
-        {currentTheme === "light" ? (
-          <Moon className="h-[1.2rem] w-[1.2rem] " />
-        ) : (
-          <Sun className="h-[1.2rem] w-[1.2rem]" />
-        )}
-      </Button>
-    </TooltipWrapper>
+    <>
+      {systemTheme === "light" || theme === "light" ? (
+        <TooltipWrapper content="تم تاریک">
+          <Button
+            size="icon"
+            variant="outline"
+            onClick={() => setTheme("dark")}
+          >
+            <Moon className="h-[1.2rem] w-[1.2rem] " />
+          </Button>
+        </TooltipWrapper>
+      ) : (
+        <TooltipWrapper content="تم روشن">
+          <Button
+            size="icon"
+            variant="outline"
+            onClick={() => setTheme("light")}
+          >
+            <Sun className="h-[1.2rem] w-[1.2rem]" />
+          </Button>
+        </TooltipWrapper>
+      )}
+    </>
   );
 }
