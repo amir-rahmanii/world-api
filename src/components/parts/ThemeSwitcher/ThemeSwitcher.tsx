@@ -15,9 +15,11 @@ export default function ThemeSwitcher() {
 
   if (!mounted) return null;
 
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
   return (
     <>
-      {systemTheme === "light" || theme === "light" ? (
+      {currentTheme === "light" ? (
         <TooltipWrapper content="تم تاریک">
           <Button
             size="icon"
