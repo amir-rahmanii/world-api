@@ -1,4 +1,4 @@
-import type { BundledLanguage, BundledTheme } from "shiki";
+import type { BundledLanguage } from "shiki";
 
 import React from "react";
 import { codeToHtml } from "shiki";
@@ -8,17 +8,12 @@ import { CopyButton } from "./CopyButton";
 interface CodeBlockProps {
   code: string;
   lang?: BundledLanguage;
-  theme?: BundledTheme;
 }
 
-export async function CodeBlock({
-  code,
-  lang = "javascript",
-  theme = "catppuccin-mocha",
-}: CodeBlockProps) {
+export async function CodeBlock({ code, lang = "javascript" }: CodeBlockProps) {
   const html = await codeToHtml(code, {
     lang,
-    theme,
+    theme: "catppuccin-mocha",
   });
 
   return (

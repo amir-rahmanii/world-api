@@ -28,7 +28,7 @@
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
-    "@fullstacksjs/eslint-config": "11.7.1",
+    "@fullstacksjs/eslint-config": "11.10.1",
     "@svgr/webpack": "8.1.0",
     "@tailwindcss/postcss": "4",
     "@types/node": "20",
