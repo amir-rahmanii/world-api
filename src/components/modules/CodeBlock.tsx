@@ -23,7 +23,7 @@ export async function CodeBlock({
 
   return (
     <div className="relative my-7">
-      <CopyButton className="absolute top-auto right-0" text={code} />
+      <CopyButton text={code} />
       <div dir="ltr" dangerouslySetInnerHTML={{ __html: html }}></div>
     </div>
   );

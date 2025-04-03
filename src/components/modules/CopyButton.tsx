@@ -5,14 +5,17 @@ import { ClipboardCheck, Copy } from "lucide-react";
 
 interface CopyButtonProps {
   text: string;
-  className?: string;
 }
 
-export function CopyButton({ text, className }: CopyButtonProps) {
+export function CopyButton({ text }: CopyButtonProps) {
   const { copyToClipboard, copied } = useCopyToClipboard(text);
 
   return (
-    <Button className={className} variant="default" onClick={copyToClipboard}>
+    <Button
+      className="absolute top-auto right-0"
+      variant="default"
+      onClick={copyToClipboard}
+    >
       {copied ? (
         <ClipboardCheck className="size-4" />
       ) : (
