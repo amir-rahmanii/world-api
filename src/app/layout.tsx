@@ -5,6 +5,7 @@ import Footer from "@/components/parts/Footer/Footer";
 import "./globals.css";
 
 import Header from "@/components/parts/Header/Header";
+import ScrollToTop from "@/components/parts/ScrollToTop/ScrollToTop";
 import { ThemeProvider } from "@/store/theme-provider";
 import { SupabaseProvider } from "@/supabase/SupabaseProvider";
 import { Analytics } from "@vercel/analytics/react";
@@ -80,10 +81,9 @@ export default function RootLayout({
         <SupabaseProvider>
           <ThemeProvider enableSystem attribute="class" defaultTheme="system">
             <Header />
-            <div className="my-16 container">
-              {children}
-              <Analytics />
-            </div>
+            <main className="my-16 container">{children}</main>
+            <Analytics />
+            <ScrollToTop />
             <Footer />
           </ThemeProvider>
         </SupabaseProvider>

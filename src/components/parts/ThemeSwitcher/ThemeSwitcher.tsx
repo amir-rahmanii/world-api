@@ -26,7 +26,7 @@ export default function ThemeSwitcher() {
             variant="outline"
             onClick={() => setTheme("dark")}
           >
-            <Moon className="h-[1.2rem] w-[1.2rem] " />
+            <Moon />
           </Button>
         </TooltipWrapper>
       ) : (
@@ -36,7 +36,7 @@ export default function ThemeSwitcher() {
             variant="outline"
             onClick={() => setTheme("light")}
           >
-            <Sun className="h-[1.2rem] w-[1.2rem]" />
+            <Sun />
           </Button>
         </TooltipWrapper>
       )}
