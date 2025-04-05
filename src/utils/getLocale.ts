@@ -1,11 +1,13 @@
-import type { LanguageType } from "@/types/locale.types";
+import type { APILocaleType } from "@/constants/apilocales";
 
-import { locale } from "@/constants/locale";
+import { API_LOCALES } from "@/constants/apilocales";
 
-export function getLocale(acceptLanguage: string): LanguageType {
+export function getLocale(acceptLanguage: string): APILocaleType {
   const langCode = acceptLanguage
     .split(",")[0]
     .split("-")[0]
-    .trim() as LanguageType;
-  return Object.values(locale).includes(langCode) ? langCode : "fa";
+    .trim() as APILocaleType;
+  return Object.values(API_LOCALES).includes(langCode)
+    ? langCode
+    : API_LOCALES.Persian;
 }

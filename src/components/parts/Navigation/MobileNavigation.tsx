@@ -1,13 +1,14 @@
 "use client";
 import SocialAndSupport from "@/components/modules/SocialAndSupport";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { usePathname } from "@/i18n/navigation";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import type { Nav } from "./NavigationBar";
 
 import WorldIcon from "../../icons/world.svg";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import NavigationLink from "./NavigationLink";
 
 interface NavLinksMobileProps {
@@ -41,6 +42,9 @@ export function MobileNavigation({ children, Navs }: NavLinksMobileProps) {
             <NavigationLink key={nav.path} {...nav} currentPath={pathname} />
           ))}
         </ul>
+        <div className="w-full pt-6">
+          <LanguageSwitcher />
+        </div>
         <div className="mt-auto">
           <SocialAndSupport />
         </div>

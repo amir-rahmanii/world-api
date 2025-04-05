@@ -1,0 +1,29 @@
+{
+  "LocaleSwitcher": {
+    "label": "انتخاب زبان",
+    "locale": {
+      "fa": "فارسی",
+      "en": "انگلیسی"
+    }
+  },
+  "Navs": {
+    "home": "خانه",
+    "documentation": "مستندات",
+    "get-api-key": "دریافت API Key",
+    "github": "گیت هاب"
+  },
+  "Theme": {
+    "dark": "تم تاریک",
+    "light": "تم روشن"
+  },
+  "Auth": {
+    "signUpAndLogin": "ثبت‌نام / ورود",
+    "logOut": "خروج",
+    "github": "گیت‌هاب",
+    "google": "گوگل",
+    "myProfile": "پروفایل من"
+  },
+  "HomePage": {
+    "countries": "کشورها"
+  }
+}

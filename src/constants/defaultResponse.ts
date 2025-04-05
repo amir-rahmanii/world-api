@@ -9,7 +9,7 @@ export const defaultResponseJsonFa = `[{
 "continent": "آسیا",
 "lat": 32.0,
 "long": 53.0
-}]`;
+}]` as const satisfies string;
 
 export const defaultResponseJsonEn = `[{
 "id": 364,
@@ -22,7 +22,7 @@ export const defaultResponseJsonEn = `[{
 "continent": "Asia",
 "lat": 32.0,
 "long": 53.0
-}]`;
+}]` as const satisfies string;
 
 export const defaultResponseJsonArrayFa = `[{
 "id": 364,
@@ -47,4 +47,4 @@ export const defaultResponseJsonArrayFa = `[{
 "continent": "آسیا",
 "lat": 33.0,
 "long": 44.0
-  }]`;
+  }]` as const satisfies string;

@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import createNextIntlPlugin from "next-intl/plugin";
+
 const nextConfig: NextConfig = {
   experimental: {
     // turbo: {
@@ -36,4 +38,5 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);

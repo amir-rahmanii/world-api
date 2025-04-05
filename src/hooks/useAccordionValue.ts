@@ -1,5 +1,5 @@
+import { usePathname } from "@/i18n/navigation";
 import { sideBarNavLinks } from "@/utils/sideBarNavLinks";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export const useAccordionValue = () => {

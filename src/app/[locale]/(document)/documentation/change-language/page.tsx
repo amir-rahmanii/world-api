@@ -1,8 +1,9 @@
-import type { LanguageType } from "@/types/locale.types";
+import type { APILocaleType } from "@/constants/apilocales";
 import type { Metadata } from "next";
 
 import ApiRequestExample from "@/components/modules/ApiRequestExample";
 import ApiResponseExample from "@/components/modules/ApiResponseExample";
+import { API_LOCALES } from "@/constants/apilocales";
 import { defaultResponseJsonEn } from "@/constants/defaultResponse";
 import React from "react";
 
@@ -10,13 +11,13 @@ import Table from "../+components/Table";
 
 interface SupportedLanguage {
   title: string;
-  value: "xx" | LanguageType;
+  value: "xx" | APILocaleType;
 }
 
 const supportedLanguages: SupportedLanguage[] = [
-  { title: "اطلاعات کشور‌‌ها به زبان فارسی", value: "fa" },
-  { title: "اطلاعات کشور‌‌‌‌ها به زبان انگلیسی", value: "en" },
-  { title: "اطلاعات کشورها به زبان عربی", value: "ar" },
+  { title: "اطلاعات کشور‌‌ها به زبان فارسی", value: API_LOCALES.Persian },
+  { title: "اطلاعات کشور‌‌‌‌ها به زبان انگلیسی", value: API_LOCALES.English },
+  { title: "اطلاعات کشورها به زبان عربی", value: API_LOCALES.Arabic },
   { title: "زبان نامعتبر (اطلاعات کشورها پیش فرض به زبان فارسی)", value: "xx" },
 ];
 
@@ -47,12 +48,13 @@ export default function ChangeLanguagePage() {
       </p>
       <ul>
         <li>
-          🟢 اگر زبان سیستم‌عامل فارسی باشد، پاسخ به زبان <code>"fa"</code>
+          🟢 اگر زبان سیستم‌عامل فارسی باشد، پاسخ به زبان{" "}
+          <code>"{API_LOCALES.Persian}"</code>
           ارسال خواهد شد.
         </li>
         <li>
           ⚠️ اگر زبان سیستم‌عامل شناسایی نشود یا پشتیبانی نشود، پاسخ به‌طور
-          پیش‌فرض به زبان فارسی (<code>"fa"</code>) ارسال خواهد شد.
+          پیش‌فرض به زبان فارسی (<code>"{API_LOCALES.Persian}"</code>) ارسال شد.
         </li>
       </ul>
 

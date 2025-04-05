@@ -1,18 +1,20 @@
-import type { LanguageType } from "@/types/locale.types";
+import type { APILocaleType } from "@/constants/apilocales";
+
+import { API_LOCALES } from "@/constants/apilocales";
 
 import CountriesAr from "../../public/Countries-nationalities-ar.json";
 import CountriesEn from "../../public/Countries-nationalities-en.json";
 import CountriesFa from "../../public/Countries-nationalities-fa.json";
 
-export const getCountriesByLocale = (locale: LanguageType) => {
+export const getCountriesByLocale = (locale: APILocaleType) => {
   switch (locale) {
-    case "en": {
+    case API_LOCALES.English: {
       return CountriesEn;
     }
-    case "fa": {
+    case API_LOCALES.Persian: {
       return CountriesFa;
     }
-    case "ar": {
+    case API_LOCALES.Arabic: {
       return CountriesAr;
     }
     default: {

@@ -14,18 +14,28 @@ import GithubIcon from "../../icons/github.svg";
 import GoogleIcon from "../../icons/google.svg";
 import { Button } from "../../ui/button";
 
-export default function LoginButton() {
+interface LoginButtonProps {
+  githubLabel: string;
+  mainLabel: string;
+  googleLabel: string;
+}
+
+export default function LoginButton({
+  githubLabel,
+  mainLabel,
+  googleLabel,
+}: LoginButtonProps) {
   const { signInGithub } = useSignInGithub();
   const { signInGoogle } = useSignInGoogle();
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="default">ثبت نام / ورود</Button>
+        <Button variant="default">{mainLabel}</Button>
       </DialogTrigger>
       <DialogContent className="tablet:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>ثبت نام / ورود</DialogTitle>
+          <DialogTitle>{mainLabel}</DialogTitle>
           <div className="flex flex-col gap-6 mt-6">
             <Button
               size="lg"
@@ -33,7 +43,8 @@ export default function LoginButton() {
               variant="default"
               onClick={signInGithub}
             >
-              گیت هاب
+              <span className="translate-y-0.5">{githubLabel}</span>
+
               <GithubIcon />
             </Button>
             <Button
@@ -42,7 +53,7 @@ export default function LoginButton() {
               variant="default"
               onClick={signInGoogle}
             >
-              گوگل
+              <span className="translate-y-0.5">{googleLabel}</span>
               <GoogleIcon />
             </Button>
           </div>

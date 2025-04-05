@@ -1,4 +1,4 @@
-import type { LanguageType } from "@/types/locale.types";
+import type { APILocaleType } from "@/constants/apilocales";
 import type { NextRequest } from "next/server";
 
 import { saveUserRequest } from "@/supabase/saveUserRequest";
@@ -6,7 +6,7 @@ import { saveUserRequest } from "@/supabase/saveUserRequest";
 async function handleError(
   request: NextRequest,
   err: Error,
-  locale: LanguageType,
+  locale: APILocaleType,
   apiKeyRecord: string | null,
   status: number,
 ) {

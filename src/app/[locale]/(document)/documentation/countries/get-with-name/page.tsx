@@ -1,8 +1,9 @@
-import type { LanguageType } from "@/types/locale.types";
+import type { APILocaleType } from "@/constants/apilocales";
 import type { Metadata } from "next";
 
 import ApiRequestExample from "@/components/modules/ApiRequestExample";
 import ApiResponseExample from "@/components/modules/ApiResponseExample";
+import { API_LOCALES } from "@/constants/apilocales";
 import React from "react";
 
 import type { ApiHeader } from "../page";
@@ -12,7 +13,7 @@ import ApiHeaderSection from "../+component/ApiHeaderSection";
 import HeaderConfigs from "../+component/HeaderConfigs";
 
 interface NameMapping {
-  language: LanguageType;
+  language: APILocaleType;
   name: string;
 }
 
@@ -25,9 +26,9 @@ const apiHeader: ApiHeader = {
 };
 
 const nameMappings: NameMapping[] = [
-  { language: "fa", name: "ایران" },
-  { language: "en", name: "Iran" },
-  { language: "ar", name: "إيران" },
+  { language: API_LOCALES.Persian, name: "ایران" },
+  { language: API_LOCALES.English, name: "Iran" },
+  { language: API_LOCALES.Arabic, name: "إيران" },
 ];
 
 const tableHeaders: string[] = ["Accept-Language", "نام کشور (name)"];

@@ -1,14 +1,15 @@
-import type { LanguageType } from "@/types/locale.types";
+import type { APILocaleType } from "@/constants/apilocales";
 
 import { CodeBlock } from "@/components/modules/CodeBlock";
+import { API_LOCALES } from "@/constants/apilocales";
 import React from "react";
 
 export default function ApiRequestExample({
   endpoint,
-  acceptLanguage = "fa",
+  acceptLanguage = API_LOCALES.Persian,
 }: {
   endpoint: string;
-  acceptLanguage?: LanguageType;
+  acceptLanguage?: APILocaleType;
 }) {
   return (
     <>
@@ -18,7 +19,7 @@ export default function ApiRequestExample({
   method: "GET", 
   headers: { 
     "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
-    "Accept-Language" : "${acceptLanguage}" // "en" , "ar" or "fa"
+    "Accept-Language" : "${acceptLanguage}" // ${API_LOCALES.English} , ${API_LOCALES.Arabic} or ${API_LOCALES.Persian}
   } 
 })
 .then(response => response.json())

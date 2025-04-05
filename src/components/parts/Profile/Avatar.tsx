@@ -4,13 +4,14 @@ import Image from "next/image";
 import React from "react";
 
 interface AvatarProps {
-  avatar: string;
+  avatarUrl: string;
   name: string;
+  tooltip: string;
 }
 
-export default function Avatar({ avatar, name }: AvatarProps) {
+export default function Avatar({ avatarUrl, name, tooltip }: AvatarProps) {
   return (
-    <TooltipWrapper content="پروفایل من">
+    <TooltipWrapper content={tooltip}>
       <Button
         className="rounded-full p-1  tablet:rounded-md tablet:py-2 tablet:px-4"
         variant="outline"
@@ -21,7 +22,7 @@ export default function Avatar({ avatar, name }: AvatarProps) {
             height={220}
             width={220}
             alt="profile"
-            src={avatar || "/default-avatar.jpg"}
+            src={avatarUrl || "/default-avatar.jpg"}
           />
         </div>
       </Button>

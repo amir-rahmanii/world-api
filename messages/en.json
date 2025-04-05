@@ -1,0 +1,29 @@
+{
+  "LocaleSwitcher": {
+    "label": "Select language",
+    "locale": {
+      "fa": "Persian",
+      "en": "English"
+    }
+  },
+  "Navs": {
+    "home": "Home",
+    "documentation": "Documentation",
+    "get-api-key": "Get API Key",
+    "github": "GitHub"
+  },
+  "Theme": {
+    "dark": "Dark theme",
+    "light": "Light theme"
+  },
+  "Auth": {
+    "signUpAndLogin": "Sign Up / Login",
+    "logOut": "LogOut",
+    "github": "GitHub",
+    "google": "Google",
+    "myProfile": "My Profile"
+  },
+  "HomePage": {
+    "countries": "Countries"
+  }
+}

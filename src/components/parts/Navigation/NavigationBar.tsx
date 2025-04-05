@@ -5,8 +5,8 @@ import Github from "@/components/icons/githubMini.svg";
 import Home from "@/components/icons/home.svg";
 import Key from "@/components/icons/key.svg";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "@/i18n/navigation";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
 
 import WorldIcon from "../../icons/world.svg";
@@ -20,11 +20,11 @@ export interface Nav {
 }
 
 const Navs: Nav[] = [
-  { title: "خانه", path: "/", icon: Home },
-  { title: "مستندات", path: "/documentation/about", icon: Document },
-  { title: "دریافت API Key", path: "/get-api-key", icon: Key },
+  { title: "home", path: "/", icon: Home },
+  { title: "documentation", path: "/documentation/about", icon: Document },
+  { title: "get-api-key", path: "/get-api-key", icon: Key },
   {
-    title: "گیت هاب",
+    title: "github",
     path: "https://github.com/amir-rahmanii/world-api",
     icon: Github,
   },

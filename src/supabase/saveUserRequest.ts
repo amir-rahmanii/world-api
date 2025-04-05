@@ -1,4 +1,4 @@
-import type { LanguageType } from "@/types/locale.types";
+import type { APILocaleType } from "@/constants/apilocales";
 
 import { createServerSupabaseClient } from "./SupabaseServer";
 
@@ -7,7 +7,7 @@ interface SaveUserRequestParam {
   apiKey: string | null;
   status: number;
   errorMessage?: string | null;
-  locale: LanguageType | null;
+  locale: APILocaleType | null;
 }
 
 export const saveUserRequest = async (userRequest: SaveUserRequestParam) => {

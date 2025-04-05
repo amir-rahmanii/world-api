@@ -1,6 +1,6 @@
-import type { LanguageType } from "@/types/locale.types";
 import type { NextRequest } from "next/server";
 
+import { API_LOCALES } from "@/constants/apilocales";
 import { getApiKeyRecord } from "@/supabase/getApiKeyRecord";
 import { saveUserRequest } from "@/supabase/saveUserRequest";
 import { filterCountries } from "@/utils/filterCountries";
@@ -29,11 +29,9 @@ export interface SearchParams {
   callingCode: string | null;
 }
 
-const defaultLanguage: LanguageType = "fa";
-
 export async function GET(request: NextRequest) {
   const acceptLanguage =
-    request.headers.get("Accept-Language") ?? defaultLanguage;
+    request.headers.get("Accept-Language") ?? API_LOCALES.Persian;
   const locale = getLocale(acceptLanguage);
   const searchParams = request.nextUrl.searchParams;
   const AllSearchParams: SearchParams = getSearchParams(searchParams);

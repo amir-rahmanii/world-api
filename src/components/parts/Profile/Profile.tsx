@@ -1,4 +1,5 @@
 import { getUser } from "@/supabase/getUser";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
 import Avatar from "./Avatar";
@@ -7,15 +8,26 @@ import LogoutButton from "./LogoutButton";
 
 export async function Profile() {
   const profile = await getUser();
+  const t = await getTranslations("Auth");
 
   if (profile) {
     return (
       <>
-        <Avatar avatar={profile.avatar} name={profile.name} />
-        <LogoutButton />
+        <Avatar
+          avatarUrl={profile.avatar}
+          name={profile.name}
+          tooltip={t("myProfile")}
+        />
+        <LogoutButton tooltip={t("logOut")} />
       </>
     );
   }
 
-  return <LoginButton />;
+  return (
+    <LoginButton
+      githubLabel={t("github")}
+      mainLabel={t("signUpAndLogin")}
+      googleLabel={t("google")}
+    />
+  );
 }

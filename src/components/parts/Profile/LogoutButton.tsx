@@ -6,10 +6,10 @@ import React from "react";
 
 import Logout from "../../icons/logout.svg";
 
-export default function LogoutButton() {
+export default function LogoutButton({ tooltip }: { tooltip: string }) {
   const { supabase } = useSupabase();
   return (
-    <TooltipWrapper content="خروج">
+    <TooltipWrapper content={tooltip}>
       <Button
         size="icon"
         variant="outline"
