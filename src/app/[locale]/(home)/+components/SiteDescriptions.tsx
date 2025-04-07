@@ -10,21 +10,20 @@ export interface SiteDescriptionsType {
   desc: string;
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
-
 const allSiteDescription: SiteDescriptionsType[] = [
   {
-    title: "اطلاعات جامع",
-    desc: "اطلاعات کامل و دقیق از کشورها",
+    title: "completeInfoTitle",
+    desc: "completeInfoDesc",
     icon: CompleteInformation,
   },
   {
-    title: "پشتیبانی از چند زبان",
-    desc: "نمایش اطلاعات کشورها به زبان‌های مختلف از جمله فارسی ، انگلیسی و عربی",
+    title: "multiLanguageTitle",
+    desc: "multiLanguageDesc",
     icon: LanguageSupport,
   },
   {
-    title: "به‌روزرسانی مداوم",
-    desc: "اطلاعات کشورها به‌صورت منظم به‌روزرسانی می‌شود",
+    title: "upToDateTitle",
+    desc: "upToDateDesc",
     icon: UpdateIcon,
   },
 ];

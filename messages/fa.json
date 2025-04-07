@@ -9,8 +9,7 @@
   "Navs": {
     "home": "خانه",
     "documentation": "مستندات",
-    "get-api-key": "دریافت API Key",
-    "github": "گیت هاب"
+    "get-api-key": "دریافت API Key"
   },
   "Theme": {
     "dark": "تم تاریک",
@@ -24,6 +23,33 @@
     "myProfile": "پروفایل من"
   },
   "HomePage": {
-    "countries": "کشورها"
-  }
+    "heroText": {
+      "mainTitle": "وب سرویس رایگان اطلاعات",
+      "countries": "کشورها",
+      "description": "دسترسی سریع به اطلاعات کشورها(نام کشور، پایتخت، پرچم و ...) برای توسعه‌دهندگان",
+      "startButton": "برای شروع کلیک کنید"
+    },
+    "SiteDescriptions": {
+      "completeInfoTitle": "اطلاعات جامع",
+      "completeInfoDesc": "اطلاعات کامل و دقیق از کشورها",
+
+      "multiLanguageTitle": "پشتیبانی از چند زبان",
+      "multiLanguageDesc": "نمایش اطلاعات کشورها به زبان‌های مختلف از جمله فارسی ، انگلیسی و عربی",
+
+      "upToDateTitle": "به‌روزرسانی مداوم",
+      "upToDateDesc": "اطلاعات کشورها به‌صورت منظم به‌روزرسانی می‌شود"
+    }
+  },
+  "Footer": {
+    "SocialMedia": {
+      "label": "لینک شبکه های اجتماعی",
+      "github": "گیت هاب",
+      "telegram": "تلگرام",
+      "linkedin": "لینکدین"
+    },
+    "designedBy": "طراحی شده با ❤️ توسط امیررضا رحمانی"
+  },
+  "BackToTop":{
+    "tooltip" : "بازگشت به بالا"
+  } 
 }

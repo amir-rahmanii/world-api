@@ -9,8 +9,7 @@
   "Navs": {
     "home": "Home",
     "documentation": "Documentation",
-    "get-api-key": "Get API Key",
-    "github": "GitHub"
+    "get-api-key": "Get API Key"
   },
   "Theme": {
     "dark": "Dark theme",
@@ -24,6 +23,33 @@
     "myProfile": "My Profile"
   },
   "HomePage": {
-    "countries": "Countries"
-  }
+    "heroText": {
+      "mainTitle": "Free Information Web Service",
+      "countries": "Countries",
+      "description": "Quick access to country information (name, capital, flag, etc.) for developers",
+      "startButton": "Click to get started"
+    },
+    "SiteDescriptions": {
+      "completeInfoTitle": "Comprehensive Information",
+      "completeInfoDesc": "Complete and accurate information about countries",
+
+      "multiLanguageTitle": "Multilingual Support",
+      "multiLanguageDesc": "Display country information in multiple languages including Persian, English, and Arabic",
+
+      "upToDateTitle": "Regular Updates",
+      "upToDateDesc": "Country information is regularly updated"
+    }
+  },
+  "Footer": {
+    "SocialMedia": {
+      "label": "Social Media Links",
+      "github": "GitHub",
+      "telegram": "Telegram",
+      "linkedin": "Linkedin"
+    },
+    "designedBy": "Crafted with ❤️ by Amirreza Rahmani"
+  },
+  "BackToTop":{
+    "tooltip" : "Scroll to Top"
+  } 
 }

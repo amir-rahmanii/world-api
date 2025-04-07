@@ -1,7 +1,6 @@
 "use client";
 import Burger from "@/components/icons/burger.svg";
 import Document from "@/components/icons/document.svg";
-import Github from "@/components/icons/githubMini.svg";
 import Home from "@/components/icons/home.svg";
 import Key from "@/components/icons/key.svg";
 import { Button } from "@/components/ui/button";
@@ -23,11 +22,6 @@ const Navs: Nav[] = [
   { title: "home", path: "/", icon: Home },
   { title: "documentation", path: "/documentation/about", icon: Document },
   { title: "get-api-key", path: "/get-api-key", icon: Key },
-  {
-    title: "github",
-    path: "https://github.com/amir-rahmanii/world-api",
-    icon: Github,
-  },
 ];
 
 export default function NavigationBar() {

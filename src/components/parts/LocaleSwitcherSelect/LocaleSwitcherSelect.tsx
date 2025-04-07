@@ -52,7 +52,7 @@ export default function LocaleSwitcherSelect({
       disabled={isPending}
       onValueChange={onSelectChange}
     >
-      <SelectTrigger className="w-full tablet:w-[140px]">
+      <SelectTrigger className="w-full desktop:w-[140px]">
         <SelectValue placeholder={label} />
       </SelectTrigger>
       <SelectContent>

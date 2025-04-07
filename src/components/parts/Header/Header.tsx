@@ -11,7 +11,7 @@ export default function Header() {
       <nav className="desktop:container px-3 tablet:px-4 desktop:px-0 flex items-center justify-between">
         <NavigationBar />
         <div className="flex items-center gap-3 wide:gap-5">
-          <div className="hidden tablet:block">
+          <div className="hidden desktop:block">
             <LanguageSwitcher />
           </div>
           <ThemeSwitcher />
