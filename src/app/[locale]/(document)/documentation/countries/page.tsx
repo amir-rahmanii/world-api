@@ -5,8 +5,8 @@ import ApiResponseExample from "@/components/modules/ApiResponseExample";
 import { defaultResponseJsonArrayFa } from "@/constants/defaultResponse";
 import React from "react";
 
-import ApiHeaderSection from "./+component/ApiHeaderSection";
-import HeaderConfigs from "./+component/HeaderConfigs";
+import ApiHeaderSection from "./_components/ApiHeaderSection";
+import HeaderConfigs from "./_components/HeaderConfigs";
 
 export interface ApiHeader {
   title: string;

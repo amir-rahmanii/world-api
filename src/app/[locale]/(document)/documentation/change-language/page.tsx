@@ -7,7 +7,7 @@ import { API_LOCALES } from "@/constants/apilocales";
 import { defaultResponseJsonEn } from "@/constants/defaultResponse";
 import React from "react";
 
-import Table from "../+components/Table";
+import Table from "../_components/Table";
 
 interface SupportedLanguage {
   title: string;

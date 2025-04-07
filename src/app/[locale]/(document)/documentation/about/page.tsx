@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import React from "react";
 
-import Table from "../+components/Table";
+import Table from "../_components/Table";
 
 interface ApiFieldInfo {
   title: string;

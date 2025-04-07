@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import React from "react";
 
-import AccordionFaq from "./+components/AccordionFaq";
+import AccordionFaq from "./_components/AccordionFaq";
 
 export const metadata: Metadata = {
   title: " وب سرویس اطلاعات کشورها | مستندات | سوالات متداول  ",

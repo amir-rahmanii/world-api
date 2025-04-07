@@ -1,9 +1,9 @@
 import { CodeBlock } from "@/components/modules/CodeBlock";
-import GithubLoginButton from "@/components/parts/Profile/LoginButton";
+import LoginButton from "@/components/parts/Profile/LoginButton";
 import { getUserApiKey } from "@/supabase/getUserApiKey";
 import React from "react";
 
-export async function ApiKeyDisplay() {
+export async function ApiKeyDisplay({ title }: { title: string }) {
   const userApiKey = await getUserApiKey();
 
   if (userApiKey) {
@@ -12,10 +12,8 @@ export async function ApiKeyDisplay() {
 
   return (
     <div className="flex gap-4 my-10 items-center">
-      <p className="text-base tablet:text-lg">
-        برای دریافت کلید API ابتدا وارد شوید.
-      </p>
-      <GithubLoginButton />
+      <p className="text-base tablet:text-lg">{title}</p>
+      <LoginButton />
     </div>
   );
 }

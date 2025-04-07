@@ -24,7 +24,7 @@
   },
   "HomePage": {
     "heroText": {
-      "mainTitle": "Free Information Web Service",
+      "title": "Free Information Web Service",
       "countries": "Countries",
       "description": "Quick access to country information (name, capital, flag, etc.) for developers",
       "startButton": "Click to get started"
@@ -39,6 +39,10 @@
       "upToDateTitle": "Regular Updates",
       "upToDateDesc": "Country information is regularly updated"
     }
+  },
+  "GetApiKeyPage":{
+    "title" : "Get API Key",
+    "loginPrompt" : "To get the API key, please log in first."
   },
   "Footer": {
     "SocialMedia": {

@@ -23,11 +23,5 @@ export async function Profile() {
     );
   }
 
-  return (
-    <LoginButton
-      githubLabel={t("github")}
-      mainLabel={t("signUpAndLogin")}
-      googleLabel={t("google")}
-    />
-  );
+  return <LoginButton />;
 }

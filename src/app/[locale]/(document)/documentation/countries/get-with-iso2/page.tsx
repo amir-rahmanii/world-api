@@ -7,9 +7,9 @@ import React from "react";
 import type { ApiError } from "../layout";
 import type { ApiHeader } from "../page";
 
-import ApiErrorMessage from "../+component/ApiErrorMessage";
-import ApiHeaderSection from "../+component/ApiHeaderSection";
-import HeaderConfigs from "../+component/HeaderConfigs";
+import ApiErrorMessage from "../_components/ApiErrorMessage";
+import ApiHeaderSection from "../_components/ApiHeaderSection";
+import HeaderConfigs from "../_components/HeaderConfigs";
 
 const apiHeader: ApiHeader = {
   title: "دریافت کشورها با کد بین المللی 2 حرفی (iso2)",

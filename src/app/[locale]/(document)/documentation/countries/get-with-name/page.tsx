@@ -8,9 +8,9 @@ import React from "react";
 
 import type { ApiHeader } from "../page";
 
-import Table from "../../+components/Table";
-import ApiHeaderSection from "../+component/ApiHeaderSection";
-import HeaderConfigs from "../+component/HeaderConfigs";
+import Table from "../../_components/Table";
+import ApiHeaderSection from "../_components/ApiHeaderSection";
+import HeaderConfigs from "../_components/HeaderConfigs";
 
 interface NameMapping {
   language: APILocaleType;
