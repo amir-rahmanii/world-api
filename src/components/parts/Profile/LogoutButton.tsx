@@ -1,10 +1,9 @@
 "use client";
-import TooltipWrapper from "@/components/modules/TooltipWrapper";
+import Logout from "@/assets/icons/shared/logout.svg";
+import TooltipWrapper from "@/components/shared/TooltipWrapper/TooltipWrapper";
 import { Button } from "@/components/ui/button";
 import { useSupabase } from "@/supabase/SupabaseProvider";
 import React from "react";
-
-import Logout from "../../icons/logout.svg";
 
 export default function LogoutButton({ tooltip }: { tooltip: string }) {
   const { supabase } = useSupabase();

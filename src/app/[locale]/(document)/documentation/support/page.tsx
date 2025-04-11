@@ -1,40 +1,27 @@
 import type { Metadata } from "next";
 
+import { CONTACT_METHODS } from "@/constants/contactMethods.constant";
+import { useTranslations } from "next-intl";
 import React from "react";
-
-interface ContactMethod {
-  type: string;
-  value: string;
-}
-
-const contactMethods: ContactMethod[] = [
-  {
-    type: "ایمیل",
-    value: "rahmaniamirreza182@gmail.com",
-  },
-  {
-    type: "تلگرام",
-    value: "@AmirRahmani313",
-  },
-];
 
 export const metadata: Metadata = {
   title: "وب سرویس اطلاعات کشورها | مستندات | پشتیبانی",
 };
 
 export default function SupportPage() {
+  const t = useTranslations("documentationPage.supportPage");
+  const tContactMethod = useTranslations(
+    "documentationPage.supportPage.contactMethod",
+  );
   return (
     <>
-      <h1>پشتیبانی</h1>
+      <h1>{t("title")}</h1>
       <section>
-        <p>
-          برای هرگونه سوال یا مشکل، می‌توانید با استفاده از یکی از روش‌های زیر
-          با ما تماس بگیرید:
-        </p>
+        <p>{t("description")}</p>
         <ul className="list-disc pr-5 flex flex-col gap-2 mt-3">
-          {contactMethods.map(({ type, value }) => (
+          {CONTACT_METHODS.map(({ type, value }) => (
             <li className="flex items-center gap-2" key={type}>
-              <strong>{type}:</strong>
+              <strong>{tContactMethod(type)}:</strong>
               <p dir="ltr">{value}</p>
             </li>
           ))}

@@ -1,9 +1,9 @@
-import SocialAndSupport from "@/components/modules/SocialAndSupport";
+import SocialAndSupport from "@/components/shared/SocialAndSupport/SocialAndSupport";
 import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function Footer() {
-  const t = useTranslations("Footer");
+  const t = useTranslations("footer");
   return (
     <footer className="pt-26 mt-auto">
       <SocialAndSupport />

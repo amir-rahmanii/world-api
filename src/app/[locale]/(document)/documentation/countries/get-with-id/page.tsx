@@ -1,26 +1,24 @@
+import type { ApiHeader } from "@/types/apiHeader.types";
 import type { Metadata } from "next";
 
-import ApiRequestExample from "@/components/modules/ApiRequestExample";
-import ApiResponseExample from "@/components/modules/ApiResponseExample";
+import ApiRequestExample from "@/components/shared/ApiRequestExample/ApiRequestExample";
+import ApiResponseExample from "@/components/shared/ApiResponseExample/ApiResponseExample";
 import React from "react";
 
 import type { ApiError } from "../layout";
-import type { ApiHeader } from "../page";
 
 import ApiErrorMessage from "../_components/ApiErrorMessage";
 import ApiHeaderSection from "../_components/ApiHeaderSection";
 import HeaderConfigs from "../_components/HeaderConfigs";
 
 const apiHeader: ApiHeader = {
-  title: "دریافت کشورها با id",
-  description:
-    "با استفاده از شناسه اختصاصی هر کشور (id)، شما می‌توانید به اطلاعات کامل و دقیق آن کشور دسترسی پیدا کنید. این اطلاعات شامل نام کشور، کد ISO، پرچم، پایتخت، کد تماس، قاره و موقعیت جغرافیایی آن کشور می‌باشد.",
+  translationKey: "getWithId",
   endpoint: "/api/v1/countries?id={id}",
   exampleEndpoint: "/api/v1/countries?id=364",
 };
 
 const invalidIdError: ApiError = {
-  title: "🔴 خطای ارسال id نامعتبر",
+  title: "invalidID",
   message: "Invalid id parameter. It must be a number (e.g., 364 for Iran).",
 };
 

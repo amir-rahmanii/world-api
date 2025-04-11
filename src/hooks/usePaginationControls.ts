@@ -1,7 +1,7 @@
-import type { SideBarNavChild } from "@/utils/sideBarNavLinks";
+import type { SideBarNavChild } from "@/constants/sideBar.constant";
 
-import { sideBarNavLinks } from "@/utils/sideBarNavLinks";
-import { usePathname } from "next/navigation";
+import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
+import { usePathname } from "@/i18n/navigation";
 import { useCallback, useEffect, useState } from "react";
 
 export const usePaginationControls = () => {
@@ -12,14 +12,13 @@ export const usePaginationControls = () => {
   );
 
   const updatePaginationLinks = useCallback(() => {
-    const allLinks = sideBarNavLinks.flatMap((nav) =>
+    const allLinks = SIDEBAR_NAV_LINKS.flatMap((nav) =>
       nav.children.filter((navChild) => !navChild.new),
-    ); // Combine all child links in one array
+    );
 
-    const currentIndex = allLinks.findIndex((link) => pathname === link.path); // Find the current path index
+    const currentIndex = allLinks.findIndex((link) => pathname === link.path);
 
     if (currentIndex !== -1) {
-      // Set the next and previous pages based on the current index
       setNextPage(allLinks[currentIndex + 1] || null);
       setPreviousPage(allLinks[currentIndex - 1] || null);
     }

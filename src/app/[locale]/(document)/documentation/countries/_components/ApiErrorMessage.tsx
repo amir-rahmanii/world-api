@@ -1,4 +1,5 @@
-import { CodeBlock } from "@/components/modules/CodeBlock";
+import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 import type { ApiError } from "../layout";
@@ -8,9 +9,10 @@ export default function ApiErrorMessage({
   message,
   status = 400,
 }: ApiError) {
+  const t = useTranslations("documentationPage.error");
   return (
     <>
-      <h4>{title}</h4>
+      <h4>{t(title)}</h4>
       <CodeBlock
         lang="json"
         code={`{

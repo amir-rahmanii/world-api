@@ -1,4 +1,4 @@
-export const defaultResponseJsonFa = `[{
+export const DEFAULT_RESPONSE_JSON_FA = `[{
 "id": 364,
 "iso2": "ir",
 "iso3": "irn",
@@ -11,7 +11,7 @@ export const defaultResponseJsonFa = `[{
 "long": 53.0
 }]` as const satisfies string;
 
-export const defaultResponseJsonEn = `[{
+export const DEFAULT_RESPONSE_JSON_EN = `[{
 "id": 364,
 "iso2": "ir",
 "iso3": "irn",
@@ -24,7 +24,7 @@ export const defaultResponseJsonEn = `[{
 "long": 53.0
 }]` as const satisfies string;
 
-export const defaultResponseJsonArrayFa = `[{
+export const DEFAULT_RESPONSE_JSON_ARRAY_FA = `[{
 "id": 364,
 "iso2": "ir",
 "iso3": "irn",

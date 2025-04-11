@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 
-import { API_LOCALES } from "@/constants/apilocales";
+import { API_LOCALES } from "@/constants/apilocales.constant";
 import { getApiKeyRecord } from "@/supabase/getApiKeyRecord";
 import { saveUserRequest } from "@/supabase/saveUserRequest";
 import { filterCountries } from "@/utils/filterCountries";

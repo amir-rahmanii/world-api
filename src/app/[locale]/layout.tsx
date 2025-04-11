@@ -6,30 +6,28 @@ import Header from "@/components/parts/Header/Header";
 import ScrollToTop from "@/components/parts/ScrollToTop/ScrollToTop";
 import { getDirection } from "@/i18n/getDirection";
 import { routing } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/store/theme-provider";
 import { SupabaseProvider } from "@/supabase/SupabaseProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 
 const yekanMedium = localFont({
-  src: "../../../src/fonts/iranyekanwebmediumfanum.woff",
+  src: "../../../src/assets/fonts/iranyekanwebmediumfanum.woff",
   variable: "--font-medium",
   display: "swap",
 });
 
-const yekanBold = localFont({
-  src: "../../../src/fonts/iranyekanwebboldfanum.woff",
-  variable: "--font-bold",
+const roboto = Roboto({
+  weight: ["400", "700", "900"],
+  style: ["normal"],
+  subsets: ["latin"],
   display: "swap",
-});
-
-const yekanExtraBold = localFont({
-  src: "../../../src/fonts/iranyekanwebextraboldfanum.woff",
-  variable: "--font-extrabold",
-  display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -88,14 +86,18 @@ export default async function RootLayout({
     <html
       dir={direction}
       lang={locale}
-      className={`${yekanMedium.variable} ${yekanBold.variable} ${yekanExtraBold.variable}`}
+      className={`${roboto.variable} ${yekanMedium.variable}`}
     >
       <head>
         <link href="/logo.svg" rel="icon" type="image/svg+xml" />
       </head>
       <body
-        className="flex flex-col min-h-dvh justify-between text-base/loose"
         suppressHydrationWarning
+        className={cn(
+          "flex flex-col min-h-dvh justify-between text-base/loose",
+          locale === "fa" && "font-YekanMedium",
+          locale !== "fa" && "font-roboto",
+        )}
       >
         <SupabaseProvider>
           <NextIntlClientProvider>

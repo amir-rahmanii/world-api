@@ -1,22 +1,20 @@
 "use client";
-import SocialAndSupport from "@/components/modules/SocialAndSupport";
+import WorldIcon from "@/assets/icons/shared/world.svg";
+import SocialAndSupport from "@/components/shared/SocialAndSupport/SocialAndSupport";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "@/i18n/navigation";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-import type { Nav } from "./NavigationBar";
-
-import WorldIcon from "../../icons/world.svg";
+import { NAVS } from "../../../constants/navs.constant";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import NavigationLink from "./NavigationLink";
 
 interface NavLinksMobileProps {
   children: React.ReactNode;
-  Navs: Nav[];
 }
 
-export function MobileNavigation({ children, Navs }: NavLinksMobileProps) {
+export function MobileNavigation({ children }: NavLinksMobileProps) {
   const [isOpenMobileNavigation, setIsOpenMobileNavigation] = useState(false);
   const pathname = usePathname();
 
@@ -38,7 +36,7 @@ export function MobileNavigation({ children, Navs }: NavLinksMobileProps) {
           <WorldIcon className="size-10 hover:text-primary transition-all duration-200" />
         </Link>
         <ul className="flex flex-col items-center gap-10">
-          {Navs.map((nav) => (
+          {NAVS.map((nav) => (
             <NavigationLink key={nav.path} {...nav} currentPath={pathname} />
           ))}
         </ul>

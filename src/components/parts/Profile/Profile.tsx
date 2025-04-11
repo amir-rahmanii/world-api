@@ -8,7 +8,7 @@ import LogoutButton from "./LogoutButton";
 
 export async function Profile() {
   const profile = await getUser();
-  const t = await getTranslations("Auth");
+  const t = await getTranslations("auth");
 
   if (profile) {
     return (

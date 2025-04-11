@@ -19,8 +19,8 @@ const buttonVariants = cva(
           "border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         sideBar:
-          "bg-primary/80 text-primary-foreground shadow-xs hover:bg-primary/70",
-        link: "font-bold text-base text-foreground hover:bg-accent hover:text-accent-foreground",
+          "font-light bg-primary/80 text-primary-foreground shadow-xs hover:bg-primary/70",
+        link: "font-light text-base text-foreground hover:bg-accent hover:text-accent-foreground",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

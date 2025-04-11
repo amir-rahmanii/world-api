@@ -1,6 +1,6 @@
-import type { APILocaleType } from "@/constants/apilocales";
+import type { APILocaleType } from "@/constants/apilocales.constant";
 
-import { API_LOCALES } from "@/constants/apilocales";
+import { API_LOCALES } from "@/constants/apilocales.constant";
 
 export function getLocale(acceptLanguage: string): APILocaleType {
   const langCode = acceptLanguage

@@ -1,59 +1,262 @@
 {
-  "LocaleSwitcher": {
+  "localeSwitcher": {
     "label": "Select language",
     "locale": {
       "fa": "Persian",
       "en": "English"
     }
   },
-  "Navs": {
+  "navs": {
     "home": "Home",
     "documentation": "Documentation",
-    "get-api-key": "Get API Key"
+    "getApiKey": "Get API Key"
   },
-  "Theme": {
+  "theme": {
     "dark": "Dark theme",
     "light": "Light theme"
   },
-  "Auth": {
+  "auth": {
     "signUpAndLogin": "Sign Up / Login",
     "logOut": "LogOut",
     "github": "GitHub",
     "google": "Google",
     "myProfile": "My Profile"
   },
-  "HomePage": {
+  "socialAndSupport": {
+    "title": "Social Media Links",
+    "socialMedia": {
+      "github": "GitHub",
+      "telegram": "Telegram",
+      "linkedin": "Linkedin"
+    }
+  },
+  "footer": {
+    "designedBy": "Crafted with ❤️ by Amirreza Rahmani"
+  },
+  "backToTop": {
+    "tooltip": "Scroll to Top"
+  },
+  "codeBlock": {
+    "codeSampleTitle": "📝 Request Code Sample:",
+    "insertKeyPlaceholder": "🔴 Replace your key here",
+    "responseSampleTitle": "📝 Response sample:",
+    "copy": {
+      "copied": "Copied!",
+      "copyToClipboard": "Copy to clipboard"
+    }
+  },
+  "notFoundPage": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for does not exist.",
+    "backToHome": "Back to Home"
+  },
+  "homePage": {
     "heroText": {
       "title": "Free Information Web Service",
       "countries": "Countries",
       "description": "Quick access to country information (name, capital, flag, etc.) for developers",
       "startButton": "Click to get started"
     },
-    "SiteDescriptions": {
-      "completeInfoTitle": "Comprehensive Information",
-      "completeInfoDesc": "Complete and accurate information about countries",
-
-      "multiLanguageTitle": "Multilingual Support",
-      "multiLanguageDesc": "Display country information in multiple languages including Persian, English, and Arabic",
-
-      "upToDateTitle": "Regular Updates",
-      "upToDateDesc": "Country information is regularly updated"
+    "siteDescriptions": {
+      "completeInfo": {
+        "title": "Comprehensive Information",
+        "desc": "Complete and accurate information about countries"
+      },
+      "multiLanguage": {
+        "title": "Multilingual Support",
+        "desc": "Display country information in multiple languages including Persian, English, and Arabic"
+      },
+      "upToDate": {
+        "title": "Regular Updates",
+        "desc": "Country information is regularly updated"
+      }
     }
   },
-  "GetApiKeyPage":{
-    "title" : "Get API Key",
-    "loginPrompt" : "To get the API key, please log in first."
+  "getApiKeyPage": {
+    "title": "Get API Key",
+    "loginPrompt": "To get the API key, please log in first.",
+    "apiKeyUsage": {
+      "title": "📡 How to Use the API Key",
+      "description": "To use the API, you need an API Key which works like a password and verifies your access to the service. This key allows you to access various features and data of the service, and all requests must be made using it.",
+      "whyTitle": "📌 Why use X-API-Key?",
+      "whyDescription": "X-API-Key is a standard way to send authentication keys supported by many APIs. This method:",
+      "whyList": {
+        "secure": "Is more secure than sending the key in URL parameters.",
+        "simpleReadable": "Makes requests simpler and more readable.",
+        "recommended": "Is recommended by many modern APIs."
+      },
+      "howTitle": "🚀 How to Send the API Key in an HTTP Request",
+      "howDescription": "To send the API Key using X-API-Key, just place its value in the headers section:",
+      "securityTitle": "⚠️ Important Security Tips for Using an API Key",
+      "securityList": {
+        "noPublicCode": "Never put your API Key in public code (like GitHub).",
+        "useEnv": "Use environment variables (.env) to store your key."
+      }
+    }
   },
-  "Footer": {
-    "SocialMedia": {
-      "label": "Social Media Links",
-      "github": "GitHub",
-      "telegram": "Telegram",
-      "linkedin": "Linkedin"
+  "documentationPage": {
+    "sideBar": {
+      "comingSoon": "Coming Soon",
+      "sideBarNavLink": {
+        "titles": {
+          "serviceDescription": "Service Description",
+          "countryInfoDocumentation": "Country Information",
+          "cityInfoDocumentation": "City Information",
+          "supportAndFAQ": "Support & FAQ"
+        },
+        "links": {
+          "about": "About Us",
+          "changeLanguage": "Change Language",
+          "getAllCountries": "Get All Countries",
+          "getById": "Get by ID",
+          "getByName": "Get by Name",
+          "getByIso2": "Get by ISO2",
+          "getByIso3": "Get by ISO3",
+          "getByCallingCode": "Get by Calling Code",
+          "getByContinent": "Get by Continent",
+          "getAllCities": "Get All Cities",
+          "getCitiesByCountryId": "Get Cities by Country ID",
+          "frequentlyAskedQuestions": "FAQ",
+          "support": "Support"
+        }
+      }
     },
-    "designedBy": "Crafted with ❤️ by Amirreza Rahmani"
-  },
-  "BackToTop":{
-    "tooltip" : "Scroll to Top"
-  } 
+    "tableHeaders": {
+      "fieldName": "Field Name",
+      "description": "Description",
+      "type": "Type",
+      "example": "Example",
+      "title": "Title",
+      "value": "Value",
+      "required": "Required",
+      "default": "Default",
+      "acceptLanguage": "Accept-Language",
+      "countryName": "Country Name(name)"
+    },
+    "headerConfigs": {
+      "title": "Required Headers:",
+      "headerConfigsDesc": {
+        "x-api-key": "Your valid API key",
+        "accept-language": "Specify response language"
+      }
+    },
+    "error": {
+      "apiKey": "🔴 API Key Missing or Invalid Error :",
+      "invalidID": "🔴 Invalid id submission error :",
+      "invalidIso2": "🔴 Invalid ISO2 submission error :",
+      "invalidIso3": "🔴 Invalid ISO3 submission error :",
+      "invalidCallingCode": "🔴 Invalid callingCode submission error :"
+    },
+    "aboutPage": {
+      "title": "Web Service Description",
+      "intro": "This web service provides country information for developers. Users can obtain an API Key to access country-related data and use it in their projects.",
+      "apiKeyTitle": "🚀 How to Get an API Key",
+      "apiKeyDescription": "To get an API Key, you need to sign up using your GitHub or Google account. After logging in, you will be redirected to the API Key page where you can receive your key.",
+      "goalsTitle": "🎯 Service Goals",
+      "goalsDescription": "This is an open-source project, and others are welcome to contribute to its development and improvement. The main goal of this service is to provide a simple and standard way to access country information so developers can easily integrate it into their projects.",
+      "updatesTitle": "🔄 Updates and New Features",
+      "updatesDescription": "This project is continuously updated with new features being added. The development team is always working on enhancing functionality and providing the latest features to users.",
+      "dataTypesTitle": "📌 Available Data Types in the API",
+      "dataTypesDescription": "Note that during the filtering process, the API is case-insensitive. For example, when requesting a country by name, values like \"IRAN\" and \"iran\" will be processed equally and return the same result.",
+      "apiFieldInfos": {
+        "id": "Unique ID for each country",
+        "name": "Country name",
+        "iso2": "2-letter ISO code",
+        "iso3": "3-letter ISO code",
+        "flag": "Flag URL in SVG format",
+        "capital": "Capital city",
+        "calling_code": "Country calling code",
+        "lat": "Latitude",
+        "long": "Longitude",
+        "continent": "Continent"
+      }
+    },
+    "changeLanguagePage": {
+      "title": "Change language using Accept-Language",
+      "description": "To change the language of API responses, you can use the Accept-Language header in your HTTP requests. This header informs the server about your preferred language, and the server will return the response in the selected language.",
+      "noAcceptLanguageTitle": "ℹ️ If Accept-Language is not sent:",
+      "noAcceptLanguageDescription": "If the Accept-Language header is not sent, the response language will be automatically set based on the user's system language. This means that:",
+      "osLangFa": "🟢 If the system language is Persian, the response will be sent in \"fa\".",
+      "osLangNotFound": "⚠️ If the system language is not recognized or supported, the response will be sent in Persian by default (\"fa\").",
+      "manualChange": "🔄 Change language manually:",
+      "supported-languages": {
+        "persian": "Country information in Persian",
+        "english": "Country information in English",
+        "arabic": "Country information in Arabic",
+        "invalid": "Invalid language (default country information in Persian)"
+      }
+    },
+    "countriesPage": {
+      "getAllCountries": {
+        "title": "Get All Countries",
+        "request": "🚀 Request to get all countries",
+        "description": "This API allows you to retrieve comprehensive information about countries. Details such as the country name, ISO code, flag, capital, dialing code, and geographical location are available through this endpoint."
+      },
+      "getWithId": {
+        "title": "Get Country by id",
+        "request": "🚀 Request to get country by id",
+        "description": "By using the unique id of a country, you can access its detailed information. This information includes the country name, ISO code, flag, capital, dialing code, continent, and geographical location."
+      },
+      "getWithName": {
+        "title": "Get Country by name",
+        "request": "🚀 Request to get country by name",
+        "description": "By using the name of a country (name), you can access its complete and accurate information. This information includes the country name, ISO code, flag, capital, dialing code, continent, and geographical location."
+      },
+      "getWithIso2": {
+        "title": "Get Country by ISO2",
+        "request": "🚀 Request to get country by ISO2",
+        "description": "By using the 2-letter international code (ISO2) of a country, you can access its complete and accurate information. This information includes the country name, flag, capital, dialing code, continent, and geographical location."
+      },
+      "getWithIso3": {
+        "title": "Get Country by ISO3",
+        "request": "🚀 Request to get country by ISO3",
+        "description": "By using the 3-letter international code (ISO3) of a country, you can access its complete and accurate information. This information includes the country name, flag, capital, dialing code, continent, and geographical location."
+      },
+      "getWithCallingCode": {
+        "title": "Get Countries by Calling Code",
+        "request": "🚀 Request to Get Countries by Calling Code",
+        "description": "Using each country's calling code (callingCode), you can access complete and accurate information about that country. This includes the country's name, ISO code, flag, capital, continent, and geographical location."
+      }
+    },
+    "getWithNamePage": {
+      "nameMappingsTitleTable": "Change the value of name based on Accept-Language : "
+    },
+    "faqPage": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "howToUseApi": {
+          "question": "How can I use this API?",
+          "answer": "To use the API, you must first sign up on our website using your GitHub or Google account. After registration, you will receive a unique API key required to make requests to the API."
+        },
+        "howToGetApiKey": {
+          "question": "How can I get an API Key?",
+          "answer": "After signing up with GitHub or Google, you will be redirected to the get-api-key page, where you can access your API key."
+        },
+        "isFree": {
+          "question": "Is this API free to use?",
+          "answer": "Yes, this web service is completely free to use."
+        },
+        "getCountriesInEnglish": {
+          "question": "Is it possible to get the list of all countries in English?",
+          "answer": "Yes, you can get the list of all countries in English."
+        },
+        "dataUpToDate": {
+          "question": "Are the data in this web service up-to-date?",
+          "answer": "Yes, the data in this web service are constantly being updated and enriched with more country information."
+        },
+        "reportOrContribute": {
+          "question": "How can I report issues or contribute to the API development?",
+          "answer": "You can report issues on the project's GitHub repository or submit a pull request."
+        }
+      }
+    },
+    "supportPage": {
+      "title": "Support",
+      "description": "For any questions or issues, you can contact us using one of the following methods:",
+      "contactMethod" : {
+        "email" : "Email",
+        "telegram" : "Telegram"
+      }
+    }
+  }
 }

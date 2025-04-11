@@ -1,7 +1,8 @@
-import type { APILocaleType } from "@/constants/apilocales";
+import type { APILocaleType } from "@/constants/apilocales.constant";
 
-import { CodeBlock } from "@/components/modules/CodeBlock";
-import { API_LOCALES } from "@/constants/apilocales";
+import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
+import { API_LOCALES } from "@/constants/apilocales.constant";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function ApiRequestExample({
@@ -11,14 +12,15 @@ export default function ApiRequestExample({
   endpoint: string;
   acceptLanguage?: APILocaleType;
 }) {
+  const t = useTranslations("codeBlock");
   return (
     <>
-      <h4>📝 نمونه کد درخواست:</h4>
+      <h4>{t("codeSampleTitle")}</h4>
       <CodeBlock
         code={`fetch("${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}${endpoint}", { 
   method: "GET", 
   headers: { 
-    "X-API-Key": "your-api-key",  // 🔴 جایگزینی کلید شما در اینجا
+    "X-API-Key": "your-api-key",  // ${t("insertKeyPlaceholder")}
     "Accept-Language" : "${acceptLanguage}" // ${API_LOCALES.English} , ${API_LOCALES.Arabic} or ${API_LOCALES.Persian}
   } 
 })

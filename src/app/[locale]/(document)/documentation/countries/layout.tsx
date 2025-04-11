@@ -1,15 +1,17 @@
+import type { ApiErrorMessageType } from "@/types/apiErrorMessage.types";
+
 import React from "react";
 
 import ApiErrorMessage from "./_components/ApiErrorMessage";
 
 export interface ApiError {
-  title: string;
+  title: ApiErrorMessageType;
   message: string;
   status?: number;
 }
 
 const errorData: ApiError = {
-  title: "🔴 خطای عدم ارسال یا نامعتبر بودن API key",
+  title: "apiKey",
   message: "API key is missing or invalid. Please provide a valid API key.",
   status: 401,
 };

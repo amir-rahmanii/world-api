@@ -1,26 +1,24 @@
+import type { ApiHeader } from "@/types/apiHeader.types";
 import type { Metadata } from "next";
 
-import ApiRequestExample from "@/components/modules/ApiRequestExample";
-import ApiResponseExample from "@/components/modules/ApiResponseExample";
+import ApiRequestExample from "@/components/shared/ApiRequestExample/ApiRequestExample";
+import ApiResponseExample from "@/components/shared/ApiResponseExample/ApiResponseExample";
 import React from "react";
 
 import type { ApiError } from "../layout";
-import type { ApiHeader } from "../page";
 
 import ApiErrorMessage from "../_components/ApiErrorMessage";
 import ApiHeaderSection from "../_components/ApiHeaderSection";
 import HeaderConfigs from "../_components/HeaderConfigs";
 
 const apiHeader: ApiHeader = {
-  title: "دریافت کشورها با کد بین المللی 2 حرفی (iso2)",
-  description:
-    "با استفاده از کد بین المللی 2 حرفی هر کشور (iso2)، شما می‌توانید به اطلاعات کامل و دقیق آن کشور دسترسی پیدا کنید. این اطلاعات شامل نام کشور پرچم، پایتخت، کد تماس، قاره و موقعیت جغرافیایی آن کشور می‌باشد.",
+  translationKey: "getWithIso2",
   endpoint: "/api/v1/countries?iso2={iso2}",
   exampleEndpoint: "/api/v1/countries?iso2=ir",
 };
 
 const invalidIso2Error: ApiError = {
-  title: "🔴 خطای ارسال iso2 نامعتبر",
+  title: "invalidIso2",
   message: `Invalid iso2 parameter. It must be exactly 2 
     characters long (e.g., 'ir' for Iran).`,
 };

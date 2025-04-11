@@ -1,9 +1,8 @@
 import type { BundledLanguage } from "shiki";
 
+import { CopyButton } from "@/components/shared/CopyButton/CopyButton";
 import React from "react";
 import { codeToHtml } from "shiki";
-
-import { CopyButton } from "./CopyButton";
 
 interface CodeBlockProps {
   code: string;

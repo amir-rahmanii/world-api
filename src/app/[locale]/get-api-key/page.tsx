@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function GetApiKeyPage() {
-  const t = useTranslations("GetApiKeyPage");
+  const t = useTranslations("getApiKeyPage");
   return (
     <>
       <h1>{t("title")}</h1>

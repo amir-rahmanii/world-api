@@ -1,4 +1,4 @@
-import type { APILocaleType } from "@/constants/apilocales";
+import type { APILocaleType } from "@/constants/apilocales.constant";
 
 import { createServerSupabaseClient } from "./SupabaseServer";
 

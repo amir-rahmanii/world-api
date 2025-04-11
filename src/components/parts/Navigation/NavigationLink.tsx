@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
-import type { Nav } from "./NavigationBar";
+import type { Nav } from "../../../constants/navs.constant";
 
 interface NavLinkProps extends Nav {
   currentPath: string;
@@ -16,7 +16,7 @@ export default function NavigationLink({
   icon: Icon,
   currentPath,
 }: NavLinkProps) {
-  const t = useTranslations("Navs");
+  const t = useTranslations("navs");
   const isActive =
     path === currentPath ||
     (path === "/documentation/about" &&

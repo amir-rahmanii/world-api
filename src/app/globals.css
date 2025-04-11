@@ -59,9 +59,8 @@
 
 @theme inline {
   --font-*: initial;
-  --font-medium: var(--font-medium);
-  --font-bold: var(--font-bold);
-  --font-extrabold: var(--font-extrabold);
+  --font-roboto: var(--font-roboto);
+  --font-YekanMedium: var(--font-medium);
 
   --breakpoint-*: initial;
   --breakpoint-mobile: 560px;
@@ -85,19 +84,19 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground font-medium;
+    @apply bg-background text-foreground;
   }
   strong {
     @apply text-primary;
   }
   h1 {
-    @apply text-2xl tablet:text-3xl font-extrabold pb-4;
+    @apply text-2xl tablet:text-3xl font-bold pb-4;
   }
   p {
     @apply text-justify;
   }
   h4 {
-    @apply text-lg tablet:text-xl font-bold pt-10 pb-2;
+    @apply text-lg tablet:text-xl pt-10 pb-2;
   }
   table td,
   table th {

@@ -1,51 +1,30 @@
-import ApiRequestExample from "@/components/modules/ApiRequestExample";
+import ApiRequestExample from "@/components/shared/ApiRequestExample/ApiRequestExample";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function APIKeyUsage() {
+  const t = useTranslations("getApiKeyPage.apiKeyUsage");
   return (
     <div>
-      <h4>📡 نحوه استفاده از API Key</h4>
-      <p>
-        برای استفاده از API، شما نیاز به یک <strong>API Key</strong> دارید که
-        مشابه یک <strong>رمز عبور</strong> عمل می‌کند و دسترسی شما به سرویس را
-        تأیید می‌کند. این کلید به شما اجازه می‌دهد که به داده‌ها و ویژگی‌های
-        مختلف سرویس دسترسی پیدا کنید و تمامی درخواست‌ها باید با استفاده از آن
-        انجام شوند.
-      </p>
-
-      <h4>
-        📌 چرا از <code>X-API-Key</code> استفاده کنیم؟
-      </h4>
-      <p>
-        <code>X-API-Key</code> یک روش استاندارد برای ارسال کلید احراز هویت است
-        که بسیاری از APIها از آن پشتیبانی می‌کنند. این روش:
-      </p>
-      <ul className="list-disc pr-5">
-        <li>
-          <strong>امن‌تر</strong> از ارسال کلید در پارامترهای URL است.
-        </li>
-        <li>
-          درخواست‌ها را <strong>ساده‌تر</strong> و <strong>خواناتر </strong>
-          می‌کند.
-        </li>
-        <li>در بسیاری از APIهای مدرن توصیه می‌شود.</li>
+      <h4>{t("title")}</h4>
+      <p>{t("description")}</p>
+      <h4>{t("whyTitle")}</h4>
+      <p>{t("whyDescription")}</p>
+      <ul className="list-disc ps-5">
+        <li>{t("whyList.secure")}</li>
+        <li>{t("whyList.simpleReadable")}</li>
+        <li>{t("whyList.recommended")}</li>
       </ul>
 
-      <h4>🚀 نحوه ارسال API Key در درخواست HTTP</h4>
-      <p>
-        برای ارسال API Key در <strong>X-API-Key</strong>، کافی است مقدار آن را
-        در بخش
-        <code> headers </code> قرار دهید:
-      </p>
+      <h4>{t("howTitle")}</h4>
+      <p>{t("howDescription")}</p>
 
       <ApiRequestExample endpoint="/api/v1/countries" />
 
-      <h4>⚠️ نکات امنیتی مهم در استفاده از API Key</h4>
-      <ul className="list-disc pr-5">
-        <li>هرگز API Key را در کدهای عمومی (مانند GitHub) قرار ندهید.</li>
-        <li>
-          از متغیرهای محیطی (<code>.env</code>) برای نگهداری کلید استفاده کنید.
-        </li>
+      <h4>{t("securityTitle")}</h4>
+      <ul className="list-disc ps-5">
+        <li>{t("securityList.noPublicCode")}</li>
+        <li>{t("securityList.useEnv")}</li>
       </ul>
     </div>
   );

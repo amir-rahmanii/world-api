@@ -5,19 +5,21 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqData } from "@/utils/faqData";
+import { faqData } from "@/constants/faq.constant";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function AccordionFaq() {
+  const t = useTranslations("documentationPage.faqPage.questions");
   return (
     <Accordion className="w-full" type="single" collapsible>
-      {faqData.map(({ question, answer, id }) => (
-        <AccordionItem className="pb-4" key={id} value={`item-${id}`}>
+      {faqData.map((item) => (
+        <AccordionItem className="pb-4" key={item} value={item}>
           <AccordionTrigger className="font-bold text-lg px-4 py-3 transition-all">
-            {question}
+            {t(`${item}.question`)}
           </AccordionTrigger>
           <AccordionContent className="px-4 py-3 text-base leading-relaxed">
-            {answer}
+            {t(`${item}.answer`)}
           </AccordionContent>
         </AccordionItem>
       ))}

@@ -1,5 +1,7 @@
 "use client";
 
+import GithubIcon from "@/assets/icons/shared/github.svg";
+import GoogleIcon from "@/assets/icons/shared/google.svg";
 import {
   Dialog,
   DialogContent,
@@ -11,12 +13,10 @@ import { useSignInGithub, useSignInGoogle } from "@/supabase/useSignIn";
 import { useTranslations } from "next-intl";
 import React from "react";
 
-import GithubIcon from "../../icons/github.svg";
-import GoogleIcon from "../../icons/google.svg";
 import { Button } from "../../ui/button";
 
 export default function LoginButton() {
-  const t = useTranslations("Auth");
+  const t = useTranslations("auth");
   const { signInGithub } = useSignInGithub();
   const { signInGoogle } = useSignInGoogle();
 

@@ -1,6 +1,6 @@
 "use client";
 
-import TooltipWrapper from "@/components/modules/TooltipWrapper";
+import TooltipWrapper from "@/components/shared/TooltipWrapper/TooltipWrapper";
 import { Moon, Sun } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
@@ -11,7 +11,7 @@ import { Button } from "../../ui/button";
 export default function ThemeSwitcher() {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const t = useTranslations("Theme");
+  const t = useTranslations("theme");
 
   useEffect(() => setMounted(true), []);
 

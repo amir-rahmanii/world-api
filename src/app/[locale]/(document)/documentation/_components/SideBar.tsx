@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Accordion,
   AccordionContent,
@@ -6,14 +7,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
 import { useAccordionValue } from "@/hooks/useAccordionValue";
-import { sideBarNavLinks } from "@/utils/sideBarNavLinks";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
 export default function SideBar() {
+  const t = useTranslations("documentationPage.sideBar");
   const { pathName, accordionValue, setAccordionValue } = useAccordionValue();
-
   return (
     <div>
       <ul className="w-full wide:w-[280px] flex flex-col border border-accent rounded-lg p-4">
@@ -23,9 +25,11 @@ export default function SideBar() {
           collapsible
           onValueChange={setAccordionValue}
         >
-          {sideBarNavLinks.map((nav) => (
+          {SIDEBAR_NAV_LINKS.map((nav) => (
             <AccordionItem key={nav.id} value={`item-${nav.id}`}>
-              <AccordionTrigger>{nav.title}</AccordionTrigger>
+              <AccordionTrigger>
+                {t(`sideBarNavLink.titles.${nav.title}`)}
+              </AccordionTrigger>
               {nav.children.map((navChild) => (
                 <AccordionContent className="pb-2" key={navChild.title}>
                   <Button
@@ -38,10 +42,10 @@ export default function SideBar() {
                       className="w-full flex flex-wrap justify-between items-center"
                       href={navChild.path}
                     >
-                      {navChild.title}
+                      {t(`sideBarNavLink.links.${navChild.title}`)}
                       {navChild.new && (
                         <span className="text-[10px] text-primary">
-                          به زودی
+                          {t("comingSoon")}
                         </span>
                       )}
                     </Link>

@@ -1,5 +1,5 @@
-import { CodeBlock } from "@/components/modules/CodeBlock";
 import LoginButton from "@/components/parts/Profile/LoginButton";
+import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
 import { getUserApiKey } from "@/supabase/getUserApiKey";
 import React from "react";
 

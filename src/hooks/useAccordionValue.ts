@@ -1,5 +1,5 @@
+import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
 import { usePathname } from "@/i18n/navigation";
-import { sideBarNavLinks } from "@/utils/sideBarNavLinks";
 import { useEffect, useState } from "react";
 
 export const useAccordionValue = () => {
@@ -7,7 +7,7 @@ export const useAccordionValue = () => {
   const [accordionValue, setAccordionValue] = useState("item-1");
 
   useEffect(() => {
-    const foundItem = sideBarNavLinks.find((nav) =>
+    const foundItem = SIDEBAR_NAV_LINKS.find((nav) =>
       nav.children.some((child) => child.path === pathName),
     );
 
