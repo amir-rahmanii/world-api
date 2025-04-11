@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
 import type { Nav } from "../../../constants/navs.constant";
@@ -21,6 +21,7 @@ export default function NavigationLink({
     path === currentPath ||
     (path === "/documentation/about" &&
       currentPath.startsWith("/documentation"));
+  const locale = useLocale();
 
   return (
     <li className="w-full flex justify-center items-end" key={title}>
@@ -29,7 +30,7 @@ export default function NavigationLink({
         className={cn("w-full", isActive && "bg-accent text-accent-foreground")}
         variant="link"
       >
-        <Link href={path}>
+        <Link href={path} locale={locale}>
           <Icon className="size-5" />
           <span className="translate-y-0.5">{t(title)}</span>
         </Link>

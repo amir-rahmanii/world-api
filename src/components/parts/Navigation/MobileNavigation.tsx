@@ -2,8 +2,7 @@
 import WorldIcon from "@/assets/icons/shared/world.svg";
 import SocialAndSupport from "@/components/shared/SocialAndSupport/SocialAndSupport";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { usePathname } from "@/i18n/navigation";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
 import React, { useEffect, useState } from "react";
 
 import { NAVS } from "../../../constants/navs.constant";

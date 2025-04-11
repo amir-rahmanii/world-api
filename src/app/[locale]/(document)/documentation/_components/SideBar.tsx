@@ -9,8 +9,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
 import { useAccordionValue } from "@/hooks/useAccordionValue";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import React from "react";
 
 export default function SideBar() {
