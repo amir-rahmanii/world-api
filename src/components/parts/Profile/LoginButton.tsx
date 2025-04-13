@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { useSignInGithub, useSignInGoogle } from "@/supabase/useSignIn";
+import { useSignIn } from "@/supabase/useSignIn";
 import { useTranslations } from "next-intl";
 import React from "react";
 
@@ -17,8 +17,7 @@ import { Button } from "../../ui/button";
 
 export default function LoginButton() {
   const t = useTranslations("auth");
-  const { signInGithub } = useSignInGithub();
-  const { signInGoogle } = useSignInGoogle();
+  const { signIn } = useSignIn();
 
   return (
     <Dialog>
@@ -33,7 +32,7 @@ export default function LoginButton() {
               size="lg"
               className="w-full"
               variant="default"
-              onClick={signInGithub}
+              onClick={() => signIn("github")}
             >
               <span className="translate-y-0.5">{t("github")}</span>
 
@@ -43,7 +42,7 @@ export default function LoginButton() {
               size="lg"
               className="w-full"
               variant="default"
-              onClick={signInGoogle}
+              onClick={() => signIn("google")}
             >
               <span className="translate-y-0.5">{t("google")}</span>
               <GoogleIcon />

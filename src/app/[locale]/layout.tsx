@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: Readonly<{
@@ -113,8 +113,4 @@ export default async function RootLayout({
       </body>
     </html>
   );
-}
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
 }
