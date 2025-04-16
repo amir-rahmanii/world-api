@@ -23,19 +23,21 @@ export default function DataTablePagination<TData>({
     useTablePagination(table);
 
   return (
-    <div className="flex items-center justify-end gap-2 py-6">
-      <Button disabled={!canPrev} onClick={() => goToPage(0)}>
-        {"<<"}
-      </Button>
-      <Button disabled={!canPrev} onClick={() => goToPage(pageIndex - 1)}>
-        {"<"}
-      </Button>
-      <Button disabled={!canNext} onClick={() => goToPage(pageIndex + 1)}>
-        {">"}
-      </Button>
-      <Button disabled={!canNext} onClick={() => goToPage(pageCount - 1)}>
-        {">>"}
-      </Button>
+    <div className="flex items-center flex-wrap justify-center tablet:justify-end gap-5 tablet:gap-4 py-6">
+      <div className="flex items-center gap-2">
+        <Button disabled={!canPrev} onClick={() => goToPage(0)}>
+          {"<<"}
+        </Button>
+        <Button disabled={!canPrev} onClick={() => goToPage(pageIndex - 1)}>
+          {"<"}
+        </Button>
+        <Button disabled={!canNext} onClick={() => goToPage(pageIndex + 1)}>
+          {">"}
+        </Button>
+        <Button disabled={!canNext} onClick={() => goToPage(pageCount - 1)}>
+          {">>"}
+        </Button>
+      </div>
 
       <span className="flex items-center gap-1">
         <div>Page</div>

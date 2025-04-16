@@ -64,9 +64,9 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="py-4">
-      <div className="flex items-center gap-4 pb-8">
+      <div className="flex flex-wrap items-center gap-4 pb-8">
         <SearchBar
-          className="w-[350px]"
+          className="w-full desktop:w-[350px]"
           queryKey={queryKeySearchBar}
           tableFirstPage={() => table.setPageIndex(0)}
           debounce={500}
