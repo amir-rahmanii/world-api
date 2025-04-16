@@ -2,13 +2,6 @@
 
 import type { ColumnDef, ColumnFiltersState } from "@tanstack/react-table";
 
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import {
   Table,
   TableBody,
@@ -25,16 +18,18 @@ import {
 } from "@tanstack/react-table";
 import { useState } from "react";
 
+import { DataTableColumnToggle } from "./DataTableColumnToggle";
 import DataTablePagination from "./DataTablePagination";
-import { DebouncedInput } from "./DebouncedInput";
 import { SearchBar } from "./SearchBar";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
-  page: number; // Add limit property
-  limit: number; // Add limit property
+  page: number;
+  limit: number;
   rowCount: number;
+  queryKeySearchBar: string;
+  placeholderSearchBar: string;
 }
 
 export function DataTable<TData, TValue>({
@@ -43,10 +38,12 @@ export function DataTable<TData, TValue>({
   page,
   limit,
   rowCount,
+  queryKeySearchBar,
+  placeholderSearchBar,
 }: DataTableProps<TData, TValue>) {
   const [pagination, setPagination] = useState({
-    pageIndex: page - 1, //initial page index
-    pageSize: limit, //default page size
+    pageIndex: page - 1,
+    pageSize: limit,
   });
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
 
@@ -54,8 +51,7 @@ export function DataTable<TData, TValue>({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-    // getPaginationRowModel: getPaginationRowModel(),
-    onPaginationChange: setPagination, //update the pagination state when internal APIs mutate the pagination state
+    onPaginationChange: setPagination,
     manualPagination: true,
     rowCount,
     onColumnFiltersChange: setColumnFilters,
@@ -69,44 +65,29 @@ export function DataTable<TData, TValue>({
   return (
     <div className="py-4">
       <div className="flex items-center gap-4 pb-8">
-        <SearchBar />
-        <p>
-          Showing{" "}
-          <strong>
-            {pagination.pageIndex * pagination.pageSize + 1}–
-            {Math.min(
-              (pagination.pageIndex + 1) * pagination.pageSize,
-              rowCount
-            )}
-          </strong>{" "}
-          of <strong>{rowCount}</strong> entries.
-        </p>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button className="ml-auto" variant="outline">
-              Columns
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            {table
-              .getAllColumns()
-              .filter((column) => column.getCanHide())
-              .map((column) => {
-                return (
-                  <DropdownMenuCheckboxItem
-                    checked={column.getIsVisible()}
-                    className="capitalize"
-                    key={column.id}
-                    onCheckedChange={(value) =>
-                      column.toggleVisibility(!!value)
-                    }
-                  >
-                    {column.id}
-                  </DropdownMenuCheckboxItem>
-                );
-              })}
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <SearchBar
+          className="w-[350px]"
+          queryKey={queryKeySearchBar}
+          tableFirstPage={() => table.setPageIndex(0)}
+          debounce={500}
+          placeholder={placeholderSearchBar}
+        />
+        {rowCount > 0 ? (
+          <p>
+            Showing{" "}
+            <strong>
+              {pagination.pageIndex * pagination.pageSize + 1}–
+              {Math.min(
+                (pagination.pageIndex + 1) * pagination.pageSize,
+                rowCount,
+              )}
+            </strong>{" "}
+            of <strong>{rowCount}</strong> entries.
+          </p>
+        ) : (
+          <p>No entries found.</p>
+        )}
+        <DataTableColumnToggle table={table} />
       </div>
       <Table>
         <TableHeader>
@@ -122,7 +103,7 @@ export function DataTable<TData, TValue>({
                       ? null
                       : flexRender(
                           header.column.columnDef.header,
-                          header.getContext()
+                          header.getContext(),
                         )}
                   </TableHead>
                 );

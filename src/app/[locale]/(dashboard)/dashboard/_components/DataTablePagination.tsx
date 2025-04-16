@@ -1,5 +1,7 @@
 "use client";
 
+import type { Table } from "@tanstack/react-table";
+
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -10,86 +12,28 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { useSearchParams } from "next/navigation";
-import { useCallback } from "react";
+import { useTablePagination } from "@/hooks/useTablePagination";
 
-interface TableLib {
-  setPageIndex: (page: number) => void;
-  getPageCount: () => number;
-  getCanPreviousPage: () => boolean;
-  getCanNextPage: () => boolean;
-  previousPage: () => void;
-  nextPage: () => void;
-  getState: () => {
-    pagination: {
-      pageIndex: number;
-      pageSize: number;
-    };
-  };
-  setPageSize: (size: number) => void;
-}
-
-export default function DataTablePagination({ table }: { table: TableLib }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value);
-      return params.toString();
-    },
-    [searchParams],
-  );
-
-  const goToPage = (zeroBasedPage: number) => {
-    const max = table.getPageCount() - 1;
-    const validPage = Math.max(0, Math.min(zeroBasedPage, max));
-    table.setPageIndex(validPage);
-    router.push(
-      `${pathname}?${createQueryString("page", String(validPage + 1))}`,
-    );
-  };
-
-  const changePageSize = (value: string) => {
-    const size = Number(value);
-    table.setPageSize(size);
-    table.setPageIndex(0); // reset to first page
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("limit", String(size));
-    params.set("page", "1");
-    router.push(`${pathname}?${params.toString()}`);
-  };
-
-  const pageIndex = table.getState().pagination.pageIndex;
-  const pageCount = table.getPageCount();
+export default function DataTablePagination<TData>({
+  table,
+}: {
+  table: Table<TData>;
+}) {
+  const { pageIndex, pageCount, goToPage, changePageSize, canNext, canPrev } =
+    useTablePagination(table);
 
   return (
     <div className="flex items-center justify-end gap-2 py-6">
-      <Button
-        disabled={!table.getCanPreviousPage()}
-        onClick={() => goToPage(0)}
-      >
+      <Button disabled={!canPrev} onClick={() => goToPage(0)}>
         {"<<"}
       </Button>
-      <Button
-        disabled={!table.getCanPreviousPage()}
-        onClick={() => goToPage(pageIndex - 1)}
-      >
+      <Button disabled={!canPrev} onClick={() => goToPage(pageIndex - 1)}>
         {"<"}
       </Button>
-      <Button
-        disabled={!table.getCanNextPage()}
-        onClick={() => goToPage(pageIndex + 1)}
-      >
+      <Button disabled={!canNext} onClick={() => goToPage(pageIndex + 1)}>
         {">"}
       </Button>
-      <Button
-        disabled={!table.getCanNextPage()}
-        onClick={() => goToPage(pageCount - 1)}
-      >
+      <Button disabled={!canNext} onClick={() => goToPage(pageCount - 1)}>
         {">>"}
       </Button>
 

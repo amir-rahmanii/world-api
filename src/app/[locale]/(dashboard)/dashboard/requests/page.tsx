@@ -1,20 +1,29 @@
+import type { Metadata } from "next";
+
 import { getUserRequests } from "@/supabase/getUserRequests";
 import React from "react";
 
-import { Columns } from "../_components/columns";
+import { Columns } from "../_components/Columns";
 import { DataTable } from "../_components/DataTable";
 
-export default async function Requestpage({
-  searchParams,
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-  const page = Number(searchParams?.page) || 1;
-  const limit = Number(searchParams?.limit) || 10;
-  const q = typeof searchParams?.q === "string" ? searchParams.q : undefined;
-  const userRequests = await getUserRequests(page, limit, q);
+interface Props {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
 
-  console.log(userRequests);
+export const metadata: Metadata = {
+  title: "وب سرویس اطلاعات کشورها | ادمین پنل | درخواست های کاربران API",
+};
+
+export default async function Requestpage({ searchParams }: Props) {
+  const currSearchParams = await searchParams;
+
+  const page = Number(currSearchParams.page) || 1;
+  const limit = Number(currSearchParams.limit) || 10;
+  const apiKey =
+    typeof currSearchParams.apiKey === "string"
+      ? currSearchParams.apiKey
+      : undefined;
+  const userRequests = await getUserRequests(page, limit, apiKey);
 
   return (
     <div dir="ltr">
@@ -23,7 +32,9 @@ export default async function Requestpage({
         data={userRequests?.data ?? []}
         limit={limit}
         page={page}
+        queryKeySearchBar="apiKey"
         columns={Columns}
+        placeholderSearchBar="Api key Search..."
         rowCount={userRequests?.count ?? 0}
       />
     </div>

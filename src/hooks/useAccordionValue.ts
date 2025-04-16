@@ -1,3 +1,4 @@
+"use client";
 import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
 import { usePathname } from "@/i18n/navigation";
 import { useEffect, useState } from "react";

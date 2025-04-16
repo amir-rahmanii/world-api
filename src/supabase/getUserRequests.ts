@@ -1,4 +1,4 @@
-import type { UserRequest } from "@/app/[locale]/(dashboard)/dashboard/_components/columns";
+import type { UserRequest } from "@/app/[locale]/(dashboard)/dashboard/_components/Columns";
 
 import { cache } from "react";
 
@@ -12,7 +12,7 @@ type GetUserRequest =
   | undefined;
 
 export const getUserRequests = cache(
-  async (page = 1, limit = 20, q?: string): Promise<GetUserRequest> => {
+  async (page = 1, limit = 20, apiKey?: string): Promise<GetUserRequest> => {
     const supabase = await createServerSupabaseClient();
 
     const from = (page - 1) * limit;
@@ -25,8 +25,8 @@ export const getUserRequests = cache(
         .range(from, to)
         .order("created_at", { ascending: false });
 
-      if (q) {
-        query = query.ilike("api_key", `%${q}%`);
+      if (apiKey) {
+        query = query.ilike("api_key", `%${apiKey}%`);
       }
 
       const { data, count } = await query;

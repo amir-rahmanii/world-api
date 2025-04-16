@@ -6,35 +6,55 @@ import { useState } from "react";
 
 import { DebouncedInput } from "./DebouncedInput";
 
-export function SearchBar() {
+interface SearchBarProps {
+  queryKey: string;
+  placeholder: string;
+  debounce?: number;
+  tableFirstPage: () => void;
+  className?: string;
+}
+
+export function SearchBar({
+  queryKey,
+  placeholder = "Search...",
+  debounce = 500,
+  tableFirstPage,
+  className,
+}: SearchBarProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const [input, setInput] = useState(searchParams.get("q") ?? "");
+  const [input, setInput] = useState(searchParams.get(queryKey) ?? "");
 
   const updateQuery = (value: string) => {
+    const trimmedValue = value.trim();
     const params = new URLSearchParams(searchParams.toString());
-    if (value) {
-      params.set("q", value);
-    } else {
-      params.delete("q");
-    }
 
-    router.push(`${pathname}?${params.toString()}`);
+    if (trimmedValue) {
+      params.set(queryKey, trimmedValue);
+    } else {
+      params.delete(queryKey);
+    }
+    params.set("page", "1");
+    tableFirstPage();
+
+    if (params.toString() !== searchParams.toString()) {
+      router.push(`${pathname}?${params.toString()}`);
+    }
   };
 
   return (
     <DebouncedInput
-      className="w-[300px]"
+      className={className}
       value={input}
-      debounce={500}
+      debounce={debounce}
       onChange={(value) => {
         const val = String(value);
         setInput(val);
         updateQuery(val);
       }}
-      placeholder="Search Api-key"
+      placeholder={placeholder}
     />
   );
 }

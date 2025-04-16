@@ -1,3 +1,4 @@
+"use client";
 import type { SideBarNavChild } from "@/constants/sideBar.constant";
 
 import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
