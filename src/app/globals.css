@@ -98,11 +98,11 @@
   h4 {
     @apply text-lg tablet:text-xl pt-10 pb-2;
   }
-  table td,
-  table th {
+  .table_docs td,
+  .table_docs th {
     @apply px-4 py-3 whitespace-nowrap;
   }
-  table tr {
+  .table_docs tr {
     @apply even:bg-gray-700/20 odd:bg-gray-700/30 hover:bg-gray-700/60;
   }
 }
