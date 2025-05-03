@@ -41,5 +41,5 @@ export const getUserRequests = cache(
       console.error("Error fetching user requests:", error);
       return undefined;
     }
-  }
+  },
 );
