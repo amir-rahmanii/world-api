@@ -53,6 +53,7 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
     onPaginationChange: setPagination,
     manualPagination: true,
+    manualSorting: true,
     rowCount,
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),

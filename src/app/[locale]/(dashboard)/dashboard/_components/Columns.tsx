@@ -8,6 +8,7 @@ import { API_LOCALES } from "@/constants/apilocales.constant";
 import IrLogo from "../../../../../../public/v1/countries/flag/IR.svg";
 import SaLogo from "../../../../../../public/v1/countries/flag/SA.svg";
 import UsLogo from "../../../../../../public/v1/countries/flag/US.svg";
+import { SortableHeader } from "./SortableHeader";
 
 export interface UserRequest {
   id: number;
@@ -95,7 +96,9 @@ export const Columns: ColumnDef<UserRequest>[] = [
   },
   {
     accessorKey: "created_at",
-    header: "CreatedAt",
+    header: () => {
+      return <SortableHeader />;
+    },
     cell: ({ row }) => {
       const createdAt = row.original.created_at;
       const date = new Date(createdAt);

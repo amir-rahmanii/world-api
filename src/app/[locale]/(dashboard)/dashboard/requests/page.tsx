@@ -23,7 +23,11 @@ export default async function Requestpage({ searchParams }: Props) {
     typeof currSearchParams.apiKey === "string"
       ? currSearchParams.apiKey
       : undefined;
-  const userRequests = await getUserRequests(page, limit, apiKey);
+  const order =
+    currSearchParams.order === "asc" || currSearchParams.order === "desc"
+      ? currSearchParams.order
+      : undefined;
+  const userRequests = await getUserRequests(page, limit, apiKey, order);
 
   return (
     <div dir="ltr">

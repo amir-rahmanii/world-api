@@ -12,7 +12,12 @@ type GetUserRequest =
   | undefined;
 
 export const getUserRequests = cache(
-  async (page = 1, limit = 20, apiKey?: string): Promise<GetUserRequest> => {
+  async (
+    page = 1,
+    limit = 20,
+    apiKey?: string,
+    order?: "asc" | "desc",
+  ): Promise<GetUserRequest> => {
     const supabase = await createServerSupabaseClient();
 
     const from = (page - 1) * limit;
@@ -23,7 +28,7 @@ export const getUserRequests = cache(
         .from("User_requests")
         .select("*", { count: "exact" })
         .range(from, to)
-        .order("created_at", { ascending: false });
+        .order("created_at", { ascending: order === "asc" });
 
       if (apiKey) {
         query = query.ilike("api_key", `%${apiKey}%`);
@@ -36,5 +41,5 @@ export const getUserRequests = cache(
       console.error("Error fetching user requests:", error);
       return undefined;
     }
-  },
+  }
 );

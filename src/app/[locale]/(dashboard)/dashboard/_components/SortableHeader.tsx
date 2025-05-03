@@ -1,0 +1,29 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { ArrowUpDown } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+
+export const SortableHeader = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const handleSort = () => {
+    const currentOrder = searchParams.get("order");
+    const newOrder = currentOrder === "asc" ? "desc" : "asc";
+
+    const params = new URLSearchParams(searchParams);
+    params.set("order", newOrder);
+
+    router.push(`${pathname}?${params.toString()}`);
+  };
+
+  return (
+    <Button className="bg-accent" variant="ghost" onClick={handleSort}>
+      Created_at
+      <ArrowUpDown className="ml-2 h-4 w-4" />
+    </Button>
+  );
+};
