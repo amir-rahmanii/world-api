@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-[ -d .git/ ] && pnpm exec husky configs/husky
-exit 0

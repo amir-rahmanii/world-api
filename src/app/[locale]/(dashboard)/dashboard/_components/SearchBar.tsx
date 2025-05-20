@@ -1,6 +1,9 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { useCreateQueryStrings } from "@/hooks/useCreateQueryStrings";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { XIcon } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
@@ -24,37 +27,59 @@ export function SearchBar({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const createParams = useCreateQueryStrings();
 
   const [input, setInput] = useState(searchParams.get(queryKey) ?? "");
 
   const updateQuery = (value: string) => {
     const trimmedValue = value.trim();
-    const params = new URLSearchParams(searchParams.toString());
-
-    if (trimmedValue) {
-      params.set(queryKey, trimmedValue);
-    } else {
-      params.delete(queryKey);
-    }
-    params.set("page", "1");
     tableFirstPage();
+    createParams({
+      router,
+      pathname,
+      params: [
+        { name: queryKey, value: trimmedValue },
+        { name: "page", value: "1" },
+      ],
+    });
+  };
 
-    if (params.toString() !== searchParams.toString()) {
-      router.push(`${pathname}?${params.toString()}`);
-    }
+  const searchCancel = () => {
+    setInput("");
+    tableFirstPage();
+    createParams({
+      router,
+      pathname,
+      params: [
+        { name: queryKey, value: "" },
+        { name: "page", value: "1" },
+      ],
+    });
   };
 
   return (
-    <DebouncedInput
-      className={className}
-      value={input}
-      debounce={debounce}
-      onChange={(value) => {
-        const val = String(value);
-        setInput(val);
-        updateQuery(val);
-      }}
-      placeholder={placeholder}
-    />
+    <div className=" relative focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]">
+      <DebouncedInput
+        className={className}
+        value={input}
+        debounce={debounce}
+        onChange={(value) => {
+          const val = String(value);
+          setInput(val);
+          updateQuery(val);
+        }}
+        placeholder={placeholder}
+      />
+      <Button
+        size="icon"
+        className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+        type="button"
+        variant="ghost"
+        onClick={searchCancel}
+      >
+        <XIcon className="size-4" />
+        <span className="sr-only">Clear</span>
+      </Button>
+    </div>
   );
 }

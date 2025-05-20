@@ -1,11 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { useCreateQueryStrings } from "@/hooks/useCreateQueryStrings";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { ArrowUpDown } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
 export const SortableHeader = () => {
+  const createParams = useCreateQueryStrings();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -13,11 +15,11 @@ export const SortableHeader = () => {
   const handleSort = () => {
     const currentOrder = searchParams.get("order");
     const newOrder = currentOrder === "asc" ? "desc" : "asc";
-
-    const params = new URLSearchParams(searchParams);
-    params.set("order", newOrder);
-
-    router.push(`${pathname}?${params.toString()}`);
+    createParams({
+      router,
+      pathname,
+      params: [{ name: "order", value: newOrder }],
+    });
   };
 
   return (

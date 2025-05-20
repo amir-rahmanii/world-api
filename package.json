@@ -7,18 +7,29 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "bash ./scripts/prepare"
+    "prepare": "husky install",
+    "commit": "cz"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json}": [
+      "pnpm lint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "@radix-ui/react-accordion": "1.2.3",
     "@radix-ui/react-dialog": "1.1.6",
-    "@radix-ui/react-dropdown-menu": "^2.1.7",
-    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-dropdown-menu": "2.1.7",
+    "@radix-ui/react-select": "2.1.6",
     "@radix-ui/react-slot": "1.1.2",
     "@radix-ui/react-tooltip": "1.1.8",
     "@supabase/ssr": "0.5.2",
     "@supabase/supabase-js": "2.49.1",
-    "@tanstack/react-table": "^8.21.3",
+    "@tanstack/react-table": "8.21.3",
     "@vercel/analytics": "1.5.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
@@ -38,8 +49,11 @@
     "@types/node": "20",
     "@types/react": "19",
     "@types/react-dom": "19",
+    "commitizen": "4.3.1",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "9.22.0",
-    "husky": "9.1.7",
+    "husky": "8.0.0",
+    "lint-staged": "16.0.0",
     "prettier": "3.5.3",
     "shiki": "3.2.1",
     "tailwindcss": "4",
