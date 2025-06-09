@@ -117,7 +117,8 @@
           "getAllCities": "Get All Cities",
           "getCitiesByCountryId": "Get Cities by Country ID",
           "frequentlyAskedQuestions": "FAQ",
-          "support": "Support"
+          "support": "Support",
+          "feedback": "Feedback"
         }
       }
     },
@@ -253,9 +254,31 @@
     "supportPage": {
       "title": "Support",
       "description": "For any questions or issues, you can contact us using one of the following methods:",
-      "contactMethod" : {
-        "email" : "Email",
-        "telegram" : "Telegram"
+      "contactMethod": {
+        "email": "Email",
+        "telegram": "Telegram"
+      }
+    },
+    "feedbackPage": {
+      "title": "Feedback",
+      "intro": "Your feedback is very important to us. Please share your thoughts with us.",
+      "loginPrompt": "Please log in or sign up to submit feedback.",
+      "feedbackLabel": "Your feedback",
+      "feedbackPlaceholder": "Write your feedback here...",
+      "submit": "Submit Feedback",
+      "submitting": "Submitting...",
+      "error": {
+        "userNotFound": "User not found.",
+        "alreadySubmitted": "You have already submitted feedback today.",
+        "feedbackSaveError": "Error saving feedback.",
+        "emailSendError": "Error sending email.",
+        "feedbackSuccess": "Feedback successfully submitted.",
+        "validation": {
+          "empty": "Feedback cannot be empty.",
+          "invalid": "Feedback must be at least 10 characters long and contain no invalid characters.",
+          "bannedWords": "Please avoid using inappropriate words.",
+          "valid": "Feedback is valid."
+        }
       }
     }
   }

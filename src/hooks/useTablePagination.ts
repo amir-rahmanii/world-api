@@ -11,15 +11,6 @@ export function useTablePagination<TData>(table: Table<TData>) {
   const router = useRouter();
   const pathname = usePathname();
 
-  // const createQueryString = useCallback(
-  //   (name: string, value: string) => {
-  //     const params = new URLSearchParams(searchParams.toString());
-  //     params.set(name, value);
-  //     return params.toString();
-  //   },
-  //   [searchParams],
-  // );
-
   const goToPage = (zeroBasedPage: number) => {
     const max = table.getPageCount() - 1;
     const validPage = Math.max(0, Math.min(zeroBasedPage, max));

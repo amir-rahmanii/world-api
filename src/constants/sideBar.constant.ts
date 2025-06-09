@@ -64,6 +64,7 @@ export const SIDEBAR_NAV_LINKS: SideBarNavLink[] = [
     title: "supportAndFAQ",
     children: [
       { title: "frequentlyAskedQuestions", path: "/documentation/faq" },
+      { title: "feedback", path: "/documentation/feedback" },
       { title: "support", path: "/documentation/support" },
     ],
   },
