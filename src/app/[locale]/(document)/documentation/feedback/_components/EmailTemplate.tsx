@@ -8,7 +8,11 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   username,
 }) => (
   <div
-    style={{ backgroundColor: "#1b1a1a", color: "#ffffff", padding: "20px" }}
+    style={{
+      backgroundColor: "#1b1a1a",
+      color: "#ffffff !important",
+      padding: "20px",
+    }}
   >
     <div dir="rtl">
       <h1>سلام {username} عزیز،</h1>
