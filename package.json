@@ -12,7 +12,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json}": [
-      "pnpm lint"
+    "pnpm lint",
+    "cspell --no-progress --no-summary"
     ]
   },
   "config": {
@@ -44,6 +45,7 @@
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
+    "@cspell/dict-fa-ir": "^4.0.3",
     "@fullstacksjs/eslint-config": "11.10.1",
     "@svgr/webpack": "8.1.0",
     "@tailwindcss/postcss": "4",
@@ -51,6 +53,7 @@
     "@types/react": "19",
     "@types/react-dom": "19",
     "commitizen": "4.3.1",
+    "cspell": "9.0.2",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "9.22.0",
     "husky": "8.0.0",

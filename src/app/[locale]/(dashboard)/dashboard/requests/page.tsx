@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "وب سرویس اطلاعات کشورها | ادمین پنل | درخواست های کاربران API",
 };
 
-export default async function Requestpage({ searchParams }: Props) {
+export default async function RequestsPage({ searchParams }: Props) {
   const currSearchParams = await searchParams;
 
   const page = Number(currSearchParams.page) || 1;

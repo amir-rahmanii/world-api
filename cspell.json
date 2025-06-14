@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "language": "en,fa",
+  "useGitignore": true,
+  "import": ["@cspell/dict-fa-ir/cspell-ext.json"],
+  "dictionaryDefinitions": [
+    {
+      "name": "world-api",
+      "path": "./configs/words.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["world-api"],
+  "ignorePaths": [
+    "src/supabase",
+    "src/constants/bannedWord.constant.ts",
+    "public",
+    "node_modules",
+    "/configs/words.txt",
+    "**/*.svg",
+    "**/pnpm-lock.yaml"
+  ]
+}
