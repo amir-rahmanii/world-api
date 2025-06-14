@@ -1,26 +1,12 @@
 import { redirect } from "@/i18n/navigation";
-import { createServerSupabaseClient } from "@/supabase/SupabaseServer";
+import { checkIfAdmin } from "@/supabase/checkIfAdmin";
 
 export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const supabase = await createServerSupabaseClient();
+  const user = await checkIfAdmin();
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    return redirect({ href: "/", locale: "en" });
-  }
-
-  const adminUserId = process.env.ADMIN_USER_ID;
-
-  if (user.id !== adminUserId) {
-    return redirect({ href: "/", locale: "en" });
-  }
-
-  return children;
+  return user ? children : redirect({ href: "/", locale: "en" });
 }

@@ -6,7 +6,7 @@ import * as React from "react";
 function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
     <div
-      className="relative w-full overflow-x-auto border border-accent rounded-xl"
+      className="relative h-96 w-full overflow-x-auto border border-accent rounded-xl"
       data-slot="table-container"
     >
       <table
