@@ -1,5 +1,6 @@
-import type { TableHeader } from "@/types/tableHeaders.types";
 import type { Messages } from "next-intl";
+
+import type { TableHeader } from "@/types/tableHeaders.types";
 
 import type { APILocaleType } from "./apilocales.constant";
 

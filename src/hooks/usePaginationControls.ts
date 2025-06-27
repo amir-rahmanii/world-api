@@ -1,9 +1,10 @@
 "use client";
+import { useCallback, useEffect, useState } from "react";
+
 import type { SideBarNavChild } from "@/constants/sideBar.constant";
 
 import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
 import { usePathname } from "@/i18n/navigation";
-import { useCallback, useEffect, useState } from "react";
 
 export const usePaginationControls = () => {
   const pathname = usePathname();

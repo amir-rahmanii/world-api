@@ -1,7 +1,8 @@
 "use client";
+import { useEffect, useState } from "react";
+
 import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
 import { usePathname } from "@/i18n/navigation";
-import { useEffect, useState } from "react";
 
 export const useAccordionValue = () => {
   const pathName = usePathname();

@@ -1,6 +1,7 @@
-import ApiRequestExample from "@/components/shared/ApiRequestExample/ApiRequestExample";
 import { useTranslations } from "next-intl";
 import React from "react";
+
+import ApiRequestExample from "@/components/shared/ApiRequestExample/ApiRequestExample";
 
 export default function APIKeyUsage() {
   const t = useTranslations("getApiKeyPage.apiKeyUsage");

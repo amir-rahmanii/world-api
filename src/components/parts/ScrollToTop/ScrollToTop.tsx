@@ -1,10 +1,11 @@
 "use client";
-import TooltipWrapper from "@/components/shared/TooltipWrapper/TooltipWrapper";
-import { Button } from "@/components/ui/button";
-import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { ArrowUp } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React from "react";
+
+import TooltipWrapper from "@/components/shared/TooltipWrapper/TooltipWrapper";
+import { Button } from "@/components/ui/button";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 function ScrollToTop() {
   const t = useTranslations("backToTop");

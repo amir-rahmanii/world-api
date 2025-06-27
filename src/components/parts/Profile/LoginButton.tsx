@@ -1,5 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import GithubIcon from "@/assets/icons/shared/github.svg";
 import GoogleIcon from "@/assets/icons/shared/google.svg";
 import {
@@ -10,8 +13,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useSignIn } from "@/supabase/useSignIn";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 import { Button } from "../../ui/button";
 

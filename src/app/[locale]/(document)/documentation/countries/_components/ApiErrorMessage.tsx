@@ -1,6 +1,7 @@
-import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
 import { useTranslations } from "next-intl";
 import React from "react";
+
+import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
 
 import type { ApiError } from "../layout";
 

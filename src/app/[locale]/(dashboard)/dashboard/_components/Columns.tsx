@@ -1,7 +1,8 @@
 "use client";
 
-import type { APILocaleType } from "@/constants/apilocales.constant";
 import type { ColumnDef } from "@tanstack/react-table";
+
+import type { APILocaleType } from "@/constants/apilocales.constant";
 
 import { API_LOCALES } from "@/constants/apilocales.constant";
 

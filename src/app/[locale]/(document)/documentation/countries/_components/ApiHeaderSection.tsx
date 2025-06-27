@@ -1,8 +1,9 @@
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import type { ApiHeader } from "@/types/apiHeader.types";
 
 import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 export default function ApiHeaderSection({
   translationKey,

@@ -20,7 +20,7 @@
     "logOut": "LogOut",
     "github": "GitHub",
     "google": "Google",
-    "myProfile": "My Profile"
+    "myProfile": "My Profile ({{ name }})"
   },
   "socialAndSupport": {
     "title": "Social Media Links",

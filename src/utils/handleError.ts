@@ -1,5 +1,6 @@
-import type { APILocaleType } from "@/constants/apilocales.constant";
 import type { NextRequest } from "next/server";
+
+import type { APILocaleType } from "@/constants/apilocales.constant";
 
 import { saveUserRequest } from "@/supabase/saveUserRequest";
 

@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import React from "react";
+
+import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 
 export default function HeroText() {
   const t = useTranslations("homePage.heroText");

@@ -1,8 +1,9 @@
+import { useLocale, useTranslations } from "next-intl";
+import React from "react";
+
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
-import { useLocale, useTranslations } from "next-intl";
-import React from "react";
 
 import type { Nav } from "../../../constants/navs.constant";
 

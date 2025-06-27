@@ -1,10 +1,11 @@
 "use client";
 
-import TooltipWrapper from "@/components/shared/TooltipWrapper/TooltipWrapper";
 import { Moon, Sun } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
+
+import TooltipWrapper from "@/components/shared/TooltipWrapper/TooltipWrapper";
 
 import { Button } from "../../ui/button";
 

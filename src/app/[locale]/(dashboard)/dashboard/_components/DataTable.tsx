@@ -3,6 +3,14 @@
 import type { ColumnDef, ColumnFiltersState } from "@tanstack/react-table";
 
 import {
+  flexRender,
+  getCoreRowModel,
+  getFilteredRowModel,
+  useReactTable,
+} from "@tanstack/react-table";
+import { useState } from "react";
+
+import {
   Table,
   TableBody,
   TableCell,
@@ -10,13 +18,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
-import { useState } from "react";
 
 import { DataTableColumnToggle } from "./DataTableColumnToggle";
 import DataTablePagination from "./DataTablePagination";

@@ -1,9 +1,10 @@
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import type { APILocaleType } from "@/constants/apilocales.constant";
 
 import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
 import { API_LOCALES } from "@/constants/apilocales.constant";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 export default function ApiRequestExample({
   endpoint,

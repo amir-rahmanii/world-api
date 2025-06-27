@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import type { Locale } from "next-intl";
 
+import { Analytics } from "@vercel/analytics/react";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { Roboto } from "next/font/google";
+import localFont from "next/font/local";
+import { notFound } from "next/navigation";
+
 import Footer from "@/components/parts/Footer/Footer";
 import Header from "@/components/parts/Header/Header";
 import ScrollToTop from "@/components/parts/ScrollToTop/ScrollToTop";
@@ -9,12 +16,6 @@ import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/store/theme-provider";
 import { SupabaseProvider } from "@/supabase/SupabaseProvider";
-import { Analytics } from "@vercel/analytics/react";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
-import { Roboto } from "next/font/google";
-import localFont from "next/font/local";
-import { notFound } from "next/navigation";
 
 const yekanMedium = localFont({
   src: "../../../src/assets/fonts/iranyekanwebmediumfanum.woff",

@@ -1,11 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { useCreateQueryStrings } from "@/hooks/useCreateQueryStrings";
-import { usePathname, useRouter } from "@/i18n/navigation";
 import { XIcon } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+
+import { Button } from "@/components/ui/button";
+import { useCreateQueryStrings } from "@/hooks/useCreateQueryStrings";
+import { usePathname, useRouter } from "@/i18n/navigation";
 
 import { DebouncedInput } from "./DebouncedInput";
 

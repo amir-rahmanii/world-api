@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
-import LoginButton from "@/components/parts/Profile/LoginButton";
-import { getUser } from "@/supabase/getUser";
 import { getTranslations } from "next-intl/server";
 import React from "react";
+
+import LoginButton from "@/components/parts/Profile/LoginButton";
+import { getUser } from "@/supabase/getUser";
 
 import FeedbackForm from "./_components/FeedbackForm";
 

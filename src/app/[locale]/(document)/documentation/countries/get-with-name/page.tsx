@@ -1,5 +1,9 @@
-import type { ApiHeader } from "@/types/apiHeader.types";
 import type { Metadata } from "next";
+
+import { useTranslations } from "next-intl";
+import React from "react";
+
+import type { ApiHeader } from "@/types/apiHeader.types";
 
 import ApiRequestExample from "@/components/shared/ApiRequestExample/ApiRequestExample";
 import ApiResponseExample from "@/components/shared/ApiResponseExample/ApiResponseExample";
@@ -7,8 +11,6 @@ import {
   NAME_MAPPINGS,
   TABLE_HEADERS_NAME_MAPPINGS,
 } from "@/constants/nameMappings.constant";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 import ApiHeaderSection from "../_components/ApiHeaderSection";
 import HeaderConfigs from "../_components/HeaderConfigs";

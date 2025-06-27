@@ -1,6 +1,6 @@
-import type { UserRequest } from "@/app/[locale]/(dashboard)/dashboard/_components/Columns";
-
 import { cache } from "react";
+
+import type { UserRequest } from "@/app/[locale]/(dashboard)/dashboard/_components/Columns";
 
 import { createServerSupabaseClient } from "./SupabaseServer";
 

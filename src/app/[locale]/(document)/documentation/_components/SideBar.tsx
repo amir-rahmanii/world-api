@@ -1,5 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import {
   Accordion,
   AccordionContent,
@@ -10,8 +13,6 @@ import { Button } from "@/components/ui/button";
 import { SIDEBAR_NAV_LINKS } from "@/constants/sideBar.constant";
 import { useAccordionValue } from "@/hooks/useAccordionValue";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 export default function SideBar() {
   const t = useTranslations("documentationPage.sideBar");

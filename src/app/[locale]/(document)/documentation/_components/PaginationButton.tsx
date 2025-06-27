@@ -1,11 +1,12 @@
 "use client";
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import ArrowLeft from "@/assets/icons/documentation/arrowLeft.svg";
 import ArrowRight from "@/assets/icons/documentation/arrowRight.svg";
 import { Button } from "@/components/ui/button";
 import { usePaginationControls } from "@/hooks/usePaginationControls";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 export default function PaginationControls() {
   const t = useTranslations("documentationPage.sideBar.sideBarNavLink");

@@ -1,9 +1,10 @@
 "use client";
+import React, { useEffect, useState } from "react";
+
 import WorldIcon from "@/assets/icons/shared/world.svg";
 import SocialAndSupport from "@/components/shared/SocialAndSupport/SocialAndSupport";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, usePathname } from "@/i18n/navigation";
-import React, { useEffect, useState } from "react";
 
 import { NAVS } from "../../../constants/navs.constant";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";

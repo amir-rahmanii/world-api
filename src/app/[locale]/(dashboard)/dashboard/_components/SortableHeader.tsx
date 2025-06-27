@@ -1,10 +1,11 @@
 "use client";
 
+import { ArrowUpDown } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+
 import { Button } from "@/components/ui/button";
 import { useCreateQueryStrings } from "@/hooks/useCreateQueryStrings";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { ArrowUpDown } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 
 export const SortableHeader = () => {
   const createParams = useCreateQueryStrings();

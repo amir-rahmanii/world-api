@@ -1,7 +1,8 @@
+import React from "react";
+
 import LoginButton from "@/components/parts/Profile/LoginButton";
 import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
 import { getUserApiKey } from "@/supabase/getUserApiKey";
-import React from "react";
 
 export async function ApiKeyDisplay({ title }: { title: string }) {
   const userApiKey = await getUserApiKey();

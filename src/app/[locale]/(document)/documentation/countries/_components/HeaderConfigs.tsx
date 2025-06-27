@@ -1,9 +1,10 @@
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import {
   HEADER_CONFIGS,
   TABLE_HEADERS_HEADER_CONFIGS,
 } from "@/constants/headerConfigs.constant";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 import Table from "../../_components/Table";
 

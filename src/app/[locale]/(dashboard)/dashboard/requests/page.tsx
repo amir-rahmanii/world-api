@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
-import { getUserRequests } from "@/supabase/getUserRequests";
 import React from "react";
+
+import { getUserRequests } from "@/supabase/getUserRequests";
 
 import { Columns } from "../_components/Columns";
 import { DataTable } from "../_components/DataTable";

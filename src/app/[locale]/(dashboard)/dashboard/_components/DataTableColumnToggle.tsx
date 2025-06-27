@@ -29,7 +29,7 @@ export function DataTableColumnToggle<TData>({
               checked={column.getIsVisible()}
               className="capitalize"
               key={column.id}
-              onCheckedChange={(value) => column.toggleVisibility(!!value)}
+              onCheckedChange={(value) => column.toggleVisibility(value)}
             >
               {column.id}
             </DropdownMenuCheckboxItem>

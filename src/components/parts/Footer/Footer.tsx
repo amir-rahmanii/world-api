@@ -1,6 +1,7 @@
-import SocialAndSupport from "@/components/shared/SocialAndSupport/SocialAndSupport";
 import { useTranslations } from "next-intl";
 import React from "react";
+
+import SocialAndSupport from "@/components/shared/SocialAndSupport/SocialAndSupport";
 
 export default function Footer() {
   const t = useTranslations("footer");

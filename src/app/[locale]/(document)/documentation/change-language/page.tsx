@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import ApiRequestExample from "@/components/shared/ApiRequestExample/ApiRequestExample";
 import ApiResponseExample from "@/components/shared/ApiResponseExample/ApiResponseExample";
 import { DEFAULT_RESPONSE_JSON_EN } from "@/constants/defaultResponse.constant";
@@ -7,8 +10,6 @@ import {
   SUPPORTED_LANGUAGES,
   TABLE_HEADERS_SUPPORTED_LANGUAGES,
 } from "@/constants/supportedLanguages.constant";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 import Table from "../_components/Table";
 

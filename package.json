@@ -7,13 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky install",
-    "commit": "cz"
+    "prepare": "husky",
+    "commit": "cz",
+    "ncu": "npx ncu"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json}": [
-    "pnpm lint",
-    "cspell --no-progress --no-summary"
+      "pnpm lint",
+      "cspell --no-progress --no-summary"
     ]
   },
   "config": {
@@ -28,7 +29,7 @@
     "@radix-ui/react-select": "2.1.6",
     "@radix-ui/react-slot": "1.1.2",
     "@radix-ui/react-tooltip": "1.1.8",
-    "@supabase/ssr": "0.5.2",
+    "@supabase/ssr": "0.6.1",
     "@supabase/supabase-js": "2.49.1",
     "@tanstack/react-table": "8.21.3",
     "@vercel/analytics": "1.5.0",
@@ -45,19 +46,21 @@
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
-    "@cspell/dict-fa-ir": "^4.0.3",
-    "@fullstacksjs/eslint-config": "11.10.1",
+    "@cspell/dict-fa-ir": "4.0.3",
+    "@fullstacksjs/eslint-config": "12.3.0",
     "@svgr/webpack": "8.1.0",
     "@tailwindcss/postcss": "4",
-    "@types/node": "20",
+    "@types/node": "24.0.3",
     "@types/react": "19",
     "@types/react-dom": "19",
     "commitizen": "4.3.1",
     "cspell": "9.0.2",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "9.22.0",
-    "husky": "8.0.0",
+    "eslint-plugin-regexp": "^2.9.0",
+    "husky": "9.1.7",
     "lint-staged": "16.0.0",
+    "npm-check-updates": "18.0.1",
     "prettier": "3.5.3",
     "shiki": "3.2.1",
     "tailwindcss": "4",

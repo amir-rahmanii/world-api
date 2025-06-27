@@ -1,6 +1,6 @@
-import type { ApiErrorMessageType } from "@/types/apiErrorMessage.types";
-
 import React from "react";
+
+import type { ApiErrorMessageType } from "@/types/apiErrorMessage.types";
 
 import ApiErrorMessage from "./_components/ApiErrorMessage";
 
@@ -16,7 +16,7 @@ const errorData: ApiError = {
   status: 401,
 };
 
-export default function Countrieslayout({
+export default function CountriesLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

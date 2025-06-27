@@ -1,9 +1,10 @@
 "use server";
 
+import { getTranslations } from "next-intl/server";
+
 import { hasSubmittedFeedbackToday } from "@/supabase/getHasSubmittedFeedbackToday";
 import { getUser } from "@/supabase/getUser";
 import { saveFeedback } from "@/supabase/saveFeedback";
-import { getTranslations } from "next-intl/server";
 
 import type { ValidationResult } from "./validateFeedback";
 

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
-import { CONTACT_METHODS } from "@/constants/contactMethods.constant";
 import { useTranslations } from "next-intl";
 import React from "react";
+
+import { CONTACT_METHODS } from "@/constants/contactMethods.constant";
 
 export const metadata: Metadata = {
   title: "وب سرویس اطلاعات کشورها | مستندات | پشتیبانی",

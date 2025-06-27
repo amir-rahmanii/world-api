@@ -1,8 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import React, { useActionState } from "react";
+
+import { cn } from "@/lib/utils";
 
 import { createFeedback } from "../actions";
 import { SubmitButton } from "./SubmitButton";
@@ -21,7 +22,10 @@ export default function FeedbackForm() {
         required
         className="w-full outline outline-accent focus:outline-foreground rounded-xl py-2 px-3"
         id="feedback"
+        maxLength={500}
+        minLength={10}
         name="feedback"
+        inputMode="text"
         placeholder={t("feedbackPlaceholder")}
         rows={4}
       />

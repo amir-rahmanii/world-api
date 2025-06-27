@@ -1,7 +1,7 @@
-import type { TableHeader } from "@/types/tableHeaders.types";
-
 import { useTranslations } from "next-intl";
 import React from "react";
+
+import type { TableHeader } from "@/types/tableHeaders.types";
 
 interface TableProps {
   children: React.ReactNode;

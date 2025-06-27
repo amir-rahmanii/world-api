@@ -1,10 +1,11 @@
 "use client";
 
+import React from "react";
+
 import Burger from "@/assets/icons/shared/burger.svg";
 import WorldIcon from "@/assets/icons/shared/world.svg";
 import { Button } from "@/components/ui/button";
 import { Link, usePathname } from "@/i18n/navigation";
-import React from "react";
 
 import { NAVS } from "../../../constants/navs.constant";
 import { MobileNavigation } from "./MobileNavigation";

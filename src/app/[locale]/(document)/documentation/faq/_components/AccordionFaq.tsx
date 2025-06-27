@@ -1,4 +1,7 @@
 "use client";
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import {
   Accordion,
   AccordionContent,
@@ -6,8 +9,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqData } from "@/constants/faq.constant";
-import { useTranslations } from "next-intl";
-import React from "react";
 
 export default function AccordionFaq() {
   const t = useTranslations("documentationPage.faqPage.questions");

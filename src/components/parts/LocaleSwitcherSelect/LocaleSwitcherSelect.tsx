@@ -1,7 +1,11 @@
 "use client";
 
-import type { Direction } from "@/i18n/getDirection";
 import type { ReactNode } from "react";
+
+import { useParams } from "next/navigation";
+import { useTransition } from "react";
+
+import type { Direction } from "@/i18n/getDirection";
 
 import {
   Select,
@@ -12,8 +16,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { useParams } from "next/navigation";
-import { useTransition } from "react";
 
 interface Props {
   children: ReactNode;
