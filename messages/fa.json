@@ -20,7 +20,7 @@
     "logOut": "خروج",
     "github": "گیت‌هاب",
     "google": "گوگل",
-    "myProfile": "({{ name }}) پروفایل من"
+    "myProfile": "({name}) پروفایل من"
   },
   "socialAndSupport": {
     "title": "لینک شبکه های اجتماعی",

@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "prepare": "husky",
-    "commit": "cz",
-    "ncu": "npx ncu"
+    "commit": "cz"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json}": [
@@ -57,7 +56,6 @@
     "cspell": "9.0.2",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "9.22.0",
-    "eslint-plugin-regexp": "^2.9.0",
     "husky": "9.1.7",
     "lint-staged": "16.0.0",
     "npm-check-updates": "18.0.1",
