@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { XIcon } from "lucide-react";
-import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { XIcon } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 
-import { Button } from "@/components/ui/button";
-import { useCreateQueryStrings } from "@/hooks/useCreateQueryStrings";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { Button } from '@/components/ui/button';
+import { useCreateQueryStrings } from '@/hooks/useCreateQueryStrings';
+import { usePathname, useRouter } from '@/i18n/navigation';
 
-import { DebouncedInput } from "./DebouncedInput";
+import { DebouncedInput } from './DebouncedInput';
 
 interface SearchBarProps {
   queryKey: string;
@@ -20,7 +20,7 @@ interface SearchBarProps {
 
 export function SearchBar({
   queryKey,
-  placeholder = "Search...",
+  placeholder = 'Search...',
   debounce = 500,
   tableFirstPage,
   className,
@@ -30,7 +30,7 @@ export function SearchBar({
   const searchParams = useSearchParams();
   const createParams = useCreateQueryStrings();
 
-  const [input, setInput] = useState(searchParams.get(queryKey) ?? "");
+  const [input, setInput] = useState(searchParams.get(queryKey) ?? '');
 
   const updateQuery = (value: string) => {
     const trimmedValue = value.trim();
@@ -40,26 +40,26 @@ export function SearchBar({
       pathname,
       params: [
         { name: queryKey, value: trimmedValue },
-        { name: "page", value: "1" },
+        { name: 'page', value: '1' },
       ],
     });
   };
 
   const searchCancel = () => {
-    setInput("");
+    setInput('');
     tableFirstPage();
     createParams({
       router,
       pathname,
       params: [
-        { name: queryKey, value: "" },
-        { name: "page", value: "1" },
+        { name: queryKey, value: '' },
+        { name: 'page', value: '1' },
       ],
     });
   };
 
   return (
-    <div className=" relative focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]">
+    <div className="focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] relative">
       <DebouncedInput
         className={className}
         value={input}
@@ -73,7 +73,7 @@ export function SearchBar({
       />
       <Button
         size="icon"
-        className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+        className="absolute top-1/2 right-1 h-7 w-7 -translate-y-1/2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
         type="button"
         variant="ghost"
         onClick={searchCancel}

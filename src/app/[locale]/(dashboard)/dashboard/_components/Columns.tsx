@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import type { ColumnDef } from "@tanstack/react-table";
+import type { ColumnDef } from '@tanstack/react-table';
 
-import type { APILocaleType } from "@/constants/apilocales.constant";
+import type { APILocaleType } from '@/constants/apilocales.constant';
 
-import { API_LOCALES } from "@/constants/apilocales.constant";
+import { API_LOCALES } from '@/constants/apilocales.constant';
 
-import IrLogo from "../../../../../../public/v1/countries/flag/IR.svg";
-import SaLogo from "../../../../../../public/v1/countries/flag/SA.svg";
-import UsLogo from "../../../../../../public/v1/countries/flag/US.svg";
-import { SortableHeader } from "./SortableHeader";
+import IrLogo from '../../../../../../public/v1/countries/flag/IR.svg';
+import SaLogo from '../../../../../../public/v1/countries/flag/SA.svg';
+import UsLogo from '../../../../../../public/v1/countries/flag/US.svg';
+import { SortableHeader } from './SortableHeader';
 
 export interface UserRequest {
   id: number;
@@ -23,8 +23,8 @@ export interface UserRequest {
 
 export const Columns: ColumnDef<UserRequest>[] = [
   {
-    accessorKey: "api_key",
-    header: "ApiKey",
+    accessorKey: 'api_key',
+    header: 'ApiKey',
     cell: ({ row }) => {
       const apiKey = row.original.api_key;
       return apiKey ? (
@@ -35,8 +35,8 @@ export const Columns: ColumnDef<UserRequest>[] = [
     },
   },
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: 'status',
+    header: 'Status',
     cell: ({ row }) => {
       const status = row.original.status;
       return status === 200 ? (
@@ -47,45 +47,45 @@ export const Columns: ColumnDef<UserRequest>[] = [
     },
   },
   {
-    accessorKey: "path",
-    header: "Path",
+    accessorKey: 'path',
+    header: 'Path',
   },
   {
-    accessorKey: "locale",
-    header: "Locale",
+    accessorKey: 'locale',
+    header: 'Locale',
     cell: ({ row }) => {
       const locale = row.original.locale;
       switch (locale) {
         case API_LOCALES.Persian: {
           return (
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               <IrLogo className="size-7" />
             </div>
           );
         }
         case API_LOCALES.Arabic: {
           return (
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               <SaLogo className="size-7" />
             </div>
           );
         }
         case API_LOCALES.English: {
           return (
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               <UsLogo className="size-7" />
             </div>
           );
         }
         default: {
-          return "No Locale";
+          return 'No Locale';
         }
       }
     },
   },
   {
-    accessorKey: "error_message",
-    header: "ErrorMessage",
+    accessorKey: 'error_message',
+    header: 'ErrorMessage',
     cell: ({ row }) => {
       const errorMessage = row.original.error_message;
       return errorMessage ? (
@@ -96,7 +96,7 @@ export const Columns: ColumnDef<UserRequest>[] = [
     },
   },
   {
-    accessorKey: "created_at",
+    accessorKey: 'created_at',
     header: () => {
       return <SortableHeader />;
     },
@@ -104,12 +104,12 @@ export const Columns: ColumnDef<UserRequest>[] = [
       const createdAt = row.original.created_at;
       const date = new Date(createdAt);
 
-      return date.toLocaleString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
+      return date.toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
         hour12: false,
       });
     },

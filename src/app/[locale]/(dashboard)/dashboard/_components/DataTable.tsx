@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import type { ColumnDef, ColumnFiltersState } from "@tanstack/react-table";
+import type { ColumnDef, ColumnFiltersState } from '@tanstack/react-table';
 
 import {
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   useReactTable,
-} from "@tanstack/react-table";
-import { useState } from "react";
+} from '@tanstack/react-table';
+import { useState } from 'react';
 
 import {
   Table,
@@ -17,11 +17,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from '@/components/ui/table';
 
-import { DataTableColumnToggle } from "./DataTableColumnToggle";
-import DataTablePagination from "./DataTablePagination";
-import { SearchBar } from "./SearchBar";
+import { DataTableColumnToggle } from './DataTableColumnToggle';
+import DataTablePagination from './DataTablePagination';
+import { SearchBar } from './SearchBar';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -68,7 +68,7 @@ export function DataTable<TData, TValue>({
     <div className="py-4">
       <div className="flex flex-wrap items-center gap-4 pb-8">
         <SearchBar
-          className="w-full desktop:w-[350px]"
+          className="desktop:w-[350px] w-full"
           queryKey={queryKeySearchBar}
           tableFirstPage={() => table.setPageIndex(0)}
           debounce={500}
@@ -76,14 +76,14 @@ export function DataTable<TData, TValue>({
         />
         {rowCount > 0 ? (
           <p>
-            Showing{" "}
+            Showing{' '}
             <strong>
               {pagination.pageIndex * pagination.pageSize + 1}–
               {Math.min(
                 (pagination.pageIndex + 1) * pagination.pageSize,
                 rowCount,
               )}
-            </strong>{" "}
+            </strong>{' '}
             of <strong>{rowCount}</strong> entries.
           </p>
         ) : (
@@ -98,7 +98,7 @@ export function DataTable<TData, TValue>({
               {headerGroup.headers.map((header) => {
                 return (
                   <TableHead
-                    className="text-center py-3 text-base font-bold"
+                    className="py-3 text-center text-base font-bold"
                     key={header.id}
                   >
                     {header.isPlaceholder
@@ -117,12 +117,12 @@ export function DataTable<TData, TValue>({
           {table.getRowModel().rows.length ? (
             table.getRowModel().rows.map((row) => (
               <TableRow
-                data-state={row.getIsSelected() && "selected"}
+                data-state={row.getIsSelected() && 'selected'}
                 key={row.id}
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell
-                    className="text-center text-xs whitespace-normal break-words p-3"
+                    className="p-3 text-center text-xs break-words whitespace-normal"
                     key={cell.id}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}

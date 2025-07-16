@@ -1,6 +1,6 @@
-import type { APILocaleType } from "@/constants/apilocales.constant";
+import type { APILocaleType } from '@/constants/apilocales.constant';
 
-import { createServerSupabaseClient } from "./SupabaseServer";
+import { createServerSupabaseClient } from './SupabaseServer';
 
 interface SaveUserRequestParam {
   path: string;
@@ -13,7 +13,7 @@ interface SaveUserRequestParam {
 export const saveUserRequest = async (userRequest: SaveUserRequestParam) => {
   const supabase = await createServerSupabaseClient();
 
-  const { error } = await supabase.from("User_requests").insert([
+  const { error } = await supabase.from('User_requests').insert([
     {
       api_key: userRequest.apiKey,
       path: userRequest.path,
@@ -24,6 +24,6 @@ export const saveUserRequest = async (userRequest: SaveUserRequestParam) => {
   ]);
 
   if (error) {
-    throw new Error("Failed to save request user to database.");
+    throw new Error('Failed to save request user to database.');
   }
 };

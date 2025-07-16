@@ -13,7 +13,6 @@
   "dictionaries": ["world-api"],
   "ignorePaths": [
     "src/supabase",
-    "src/constants/bannedWord.constant.ts",
     "public",
     "node_modules",
     "/configs/words.txt",

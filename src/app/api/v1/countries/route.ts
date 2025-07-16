@@ -1,13 +1,13 @@
-import type { NextRequest } from "next/server";
+import type { NextRequest } from 'next/server';
 
-import { API_LOCALES } from "@/constants/apilocales.constant";
-import { getApiKeyRecord } from "@/supabase/getApiKeyRecord";
-import { saveUserRequest } from "@/supabase/saveUserRequest";
-import { filterCountries } from "@/utils/filterCountries";
-import { getCountriesByLocale } from "@/utils/getCountriesByLocale";
-import { getLocale } from "@/utils/getLocale";
-import { getSearchParams } from "@/utils/getSearchParams";
-import handleError from "@/utils/handleError";
+import { API_LOCALES } from '@/constants/apilocales.constant';
+import { getApiKeyRecord } from '@/supabase/getApiKeyRecord';
+import { saveUserRequest } from '@/supabase/saveUserRequest';
+import { filterCountries } from '@/utils/filterCountries';
+import { getCountriesByLocale } from '@/utils/getCountriesByLocale';
+import { getLocale } from '@/utils/getLocale';
+import { getSearchParams } from '@/utils/getSearchParams';
+import handleError from '@/utils/handleError';
 
 export interface Countries {
   id: number;
@@ -31,12 +31,12 @@ export interface SearchParams {
 
 export async function GET(request: NextRequest) {
   const acceptLanguage =
-    request.headers.get("Accept-Language") ?? API_LOCALES.Persian;
+    request.headers.get('Accept-Language') ?? API_LOCALES.Persian;
   const locale = getLocale(acceptLanguage);
   const searchParams = request.nextUrl.searchParams;
   const AllSearchParams: SearchParams = getSearchParams(searchParams);
 
-  const apiKey: string | null = request.headers.get("X-API-Key");
+  const apiKey: string | null = request.headers.get('X-API-Key');
   let apiKeyRecord: string | null = null;
 
   try {
@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
     return new Response(JSON.stringify(filteredData, null, 2), {
       status: 200,
       headers: {
-        "Content-Language": locale,
+        'Content-Language': locale,
       },
     });
   } catch (err) {

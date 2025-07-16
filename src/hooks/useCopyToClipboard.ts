@@ -1,5 +1,5 @@
-"use client";
-import { useCallback, useState } from "react";
+'use client';
+import { useCallback, useState } from 'react';
 
 export const useCopyToClipboard = (text: string) => {
   const [copied, setCopied] = useState(false);

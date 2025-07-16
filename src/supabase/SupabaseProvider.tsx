@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import type { SupabaseClient } from "@supabase/supabase-js";
+import type { SupabaseClient } from '@supabase/supabase-js';
 
-import { createBrowserClient } from "@supabase/ssr";
-import { useRouter } from "next/navigation";
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createBrowserClient } from '@supabase/ssr';
+import { useRouter } from 'next/navigation';
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 interface SupabaseContext {
   supabase: SupabaseClient;
@@ -27,7 +27,7 @@ export function SupabaseProvider({ children }: Props) {
 
   useEffect(() => {
     const { data } = supabase.auth.onAuthStateChange((event) => {
-      if (event === "SIGNED_IN" || event === "SIGNED_OUT") router.refresh();
+      if (event === 'SIGNED_IN' || event === 'SIGNED_OUT') router.refresh();
     });
 
     return () => {
@@ -44,7 +44,7 @@ export const useSupabase = () => {
   const context = useContext(Context);
 
   if (context === undefined)
-    throw new Error("useSupabase must be used inside SupabaseProvider");
+    throw new Error('useSupabase must be used inside SupabaseProvider');
 
   return context;
 };

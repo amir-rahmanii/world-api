@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import React from "react";
+import React from 'react';
 
-import { getUserRequests } from "@/supabase/getUserRequests";
+import { getUserRequests } from '@/supabase/getUserRequests';
 
-import { Columns } from "../_components/Columns";
-import { DataTable } from "../_components/DataTable";
+import { Columns } from '../_components/Columns';
+import { DataTable } from '../_components/DataTable';
 
 interface Props {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 export const metadata: Metadata = {
-  title: "وب سرویس اطلاعات کشورها | ادمین پنل | درخواست های کاربران API",
+  title: 'وب سرویس اطلاعات کشورها | ادمین پنل | درخواست های کاربران API',
 };
 
 export default async function RequestsPage({ searchParams }: Props) {
@@ -21,11 +21,11 @@ export default async function RequestsPage({ searchParams }: Props) {
   const page = Number(currSearchParams.page) || 1;
   const limit = Number(currSearchParams.limit) || 10;
   const apiKey =
-    typeof currSearchParams.apiKey === "string"
+    typeof currSearchParams.apiKey === 'string'
       ? currSearchParams.apiKey
       : undefined;
   const order =
-    currSearchParams.order === "asc" || currSearchParams.order === "desc"
+    currSearchParams.order === 'asc' || currSearchParams.order === 'desc'
       ? currSearchParams.order
       : undefined;
   const userRequests = await getUserRequests(page, limit, apiKey, order);

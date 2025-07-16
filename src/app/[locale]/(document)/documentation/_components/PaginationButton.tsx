@@ -1,21 +1,21 @@
-"use client";
-import { useTranslations } from "next-intl";
-import React from "react";
+'use client';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import ArrowLeft from "@/assets/icons/documentation/arrowLeft.svg";
-import ArrowRight from "@/assets/icons/documentation/arrowRight.svg";
-import { Button } from "@/components/ui/button";
-import { usePaginationControls } from "@/hooks/usePaginationControls";
-import { Link } from "@/i18n/navigation";
+import ArrowLeft from '@/assets/icons/documentation/arrowLeft.svg';
+import ArrowRight from '@/assets/icons/documentation/arrowRight.svg';
+import { Button } from '@/components/ui/button';
+import { usePaginationControls } from '@/hooks/usePaginationControls';
+import { Link } from '@/i18n/navigation';
 
 export default function PaginationControls() {
-  const t = useTranslations("documentationPage.sideBar.sideBarNavLink");
+  const t = useTranslations('documentationPage.sideBar.sideBarNavLink');
   const { nextPage, previousPage } = usePaginationControls();
 
   return (
     <div
       dir="rtl"
-      className="flex flex-row flex-wrap items-center justify-between mt-12"
+      className="mt-12 flex flex-row flex-wrap items-center justify-between"
     >
       {nextPage && (
         <Button asChild variant="link">

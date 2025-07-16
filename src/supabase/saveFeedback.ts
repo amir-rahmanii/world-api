@@ -1,4 +1,4 @@
-import { createServerSupabaseClient } from "./SupabaseServer";
+import { createServerSupabaseClient } from './SupabaseServer';
 
 interface SaveFeedbackParam {
   feedback: string;
@@ -8,7 +8,7 @@ interface SaveFeedbackParam {
 export const saveFeedback = async (userFeedback: SaveFeedbackParam) => {
   const supabase = await createServerSupabaseClient();
 
-  const { data, error } = await supabase.from("Feedbacks").insert([
+  const { data, error } = await supabase.from('Feedbacks').insert([
     {
       email: userFeedback.email,
       feedback: userFeedback.feedback,

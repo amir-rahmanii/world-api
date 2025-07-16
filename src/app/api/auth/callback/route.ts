@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
-import { createServerSupabaseClient } from "@/supabase/SupabaseServer";
+import { createServerSupabaseClient } from '@/supabase/SupabaseServer';
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
-  const code = searchParams.get("code");
-  const next = searchParams.get("next") ?? "/";
+  const code = searchParams.get('code');
+  const next = searchParams.get('next') ?? '/';
 
   if (code) {
     const supabase = await createServerSupabaseClient();
@@ -15,21 +15,21 @@ export async function GET(request: Request) {
       const userId = data.user.id;
 
       const { error: apiKeyError } = await supabase
-        .from("Api_keys")
-        .select("api_key")
-        .eq("user_id", userId)
+        .from('Api_keys')
+        .select('api_key')
+        .eq('user_id', userId)
         .single();
 
       if (apiKeyError) {
         const newApiKey = crypto.randomUUID();
         await supabase
-          .from("Api_keys")
+          .from('Api_keys')
           .insert({ user_id: userId, api_key: newApiKey });
       }
 
-      const forwardedHost = request.headers.get("x-forwarded-host");
+      const forwardedHost = request.headers.get('x-forwarded-host');
 
-      const isLocalEnv = process.env.NODE_ENV === "development";
+      const isLocalEnv = process.env.NODE_ENV === 'development';
       if (isLocalEnv) {
         return NextResponse.redirect(`${origin}${next}`);
       } else if (forwardedHost) {

@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import type { Table } from "@tanstack/react-table";
+import type { Table } from '@tanstack/react-table';
 
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { usePathname, useRouter } from '@/i18n/navigation';
 
-import { useCreateQueryStrings } from "./useCreateQueryStrings";
+import { useCreateQueryStrings } from './useCreateQueryStrings';
 
 export function useTablePagination<TData>(table: Table<TData>) {
   const createParams = useCreateQueryStrings();
@@ -18,7 +18,7 @@ export function useTablePagination<TData>(table: Table<TData>) {
     createParams({
       router,
       pathname,
-      params: [{ name: "page", value: String(validPage + 1) }],
+      params: [{ name: 'page', value: String(validPage + 1) }],
     });
   };
 
@@ -30,8 +30,8 @@ export function useTablePagination<TData>(table: Table<TData>) {
       router,
       pathname,
       params: [
-        { name: "limit", value: String(size) },
-        { name: "page", value: "1" },
+        { name: 'limit', value: String(size) },
+        { name: 'page', value: '1' },
       ],
     });
   };

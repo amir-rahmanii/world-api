@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../../ui/tooltip";
+} from '../../ui/tooltip';
 
 interface TooltipWrapperProps {
   children: React.ReactNode;

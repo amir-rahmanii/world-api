@@ -1,21 +1,21 @@
-import { useTranslations } from "next-intl";
-import React from "react";
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
 import {
   HEADER_CONFIGS,
   TABLE_HEADERS_HEADER_CONFIGS,
-} from "@/constants/headerConfigs.constant";
+} from '@/constants/headerConfigs.constant';
 
-import Table from "../../_components/Table";
+import Table from '../../_components/Table';
 
 export default function HeaderConfigs() {
   const tHeaderConfigsDesc = useTranslations(
-    "documentationPage.headerConfigs.headerConfigsDesc",
+    'documentationPage.headerConfigs.headerConfigsDesc',
   );
-  const tHeaderConfigs = useTranslations("documentationPage.headerConfigs");
+  const tHeaderConfigs = useTranslations('documentationPage.headerConfigs');
   return (
     <>
-      <h4>{tHeaderConfigs("title")}</h4>
+      <h4>{tHeaderConfigs('title')}</h4>
       <Table tableHeaders={TABLE_HEADERS_HEADER_CONFIGS}>
         <tbody>
           {HEADER_CONFIGS.map(
@@ -24,7 +24,7 @@ export default function HeaderConfigs() {
                 <td>{name}</td>
                 <td>{value}</td>
                 <td>{tHeaderConfigsDesc(description)}</td>
-                <td>{required ? "✅" : "❌"}</td>
+                <td>{required ? '✅' : '❌'}</td>
                 <td>{defaultValue ?? <code>null</code>}</td>
               </tr>
             ),

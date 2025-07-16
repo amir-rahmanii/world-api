@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
-import React from "react";
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import type { TableHeader } from "@/types/tableHeaders.types";
+import type { TableHeader } from '@/types/tableHeaders.types';
 
 interface TableProps {
   children: React.ReactNode;
@@ -9,10 +9,10 @@ interface TableProps {
 }
 
 export default function Table({ tableHeaders, children }: TableProps) {
-  const t = useTranslations("documentationPage.tableHeaders");
+  const t = useTranslations('documentationPage.tableHeaders');
   return (
     <div className="w-full overflow-auto">
-      <table className="table_docs w-full table-auto overflow-hidden text-center rounded-xl mt-4">
+      <table className="table_docs mt-4 w-full table-auto overflow-hidden rounded-xl text-center">
         <thead>
           <tr className="bg-gray-700/70 font-bold">
             {tableHeaders.map((header) => (

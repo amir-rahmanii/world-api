@@ -1,14 +1,14 @@
-"use client";
-import React, { useEffect, useState } from "react";
+'use client';
+import React, { useEffect, useState } from 'react';
 
-import WorldIcon from "@/assets/icons/shared/world.svg";
-import SocialAndSupport from "@/components/shared/SocialAndSupport/SocialAndSupport";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Link, usePathname } from "@/i18n/navigation";
+import WorldIcon from '@/assets/icons/shared/world.svg';
+import SocialAndSupport from '@/components/shared/SocialAndSupport/SocialAndSupport';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Link, usePathname } from '@/i18n/navigation';
 
-import { NAVS } from "../../../constants/navs.constant";
-import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import NavigationLink from "./NavigationLink";
+import { NAVS } from '../../../constants/navs.constant';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import NavigationLink from './NavigationLink';
 
 interface NavLinksMobileProps {
   children: React.ReactNode;
@@ -28,12 +28,12 @@ export function MobileNavigation({ children }: NavLinksMobileProps) {
       open={isOpenMobileNavigation}
     >
       <SheetTrigger asChild>{children}</SheetTrigger>
-      <SheetContent className="pt-24 px-4 overflow-auto" side="right">
+      <SheetContent className="overflow-auto px-4 pt-24" side="right">
         <Link
-          className="absolute top-2 right-2 flex gap-2 justify-center items-center"
+          className="absolute top-2 right-2 flex items-center justify-center gap-2"
           href="/"
         >
-          <WorldIcon className="size-10 hover:text-primary transition-all duration-200" />
+          <WorldIcon className="hover:text-primary size-10 transition-all duration-200" />
         </Link>
         <ul className="flex flex-col items-center gap-10">
           {NAVS.map((nav) => (

@@ -1,10 +1,10 @@
-import type { Messages } from "next-intl";
+import type { Messages } from 'next-intl';
 
 type SideBarNavTitlesKey =
-  keyof Messages["documentationPage"]["sideBar"]["sideBarNavLink"]["titles"];
+  keyof Messages['documentationPage']['sideBar']['sideBarNavLink']['titles'];
 
 type SideBarNavLinkChildKey =
-  keyof Messages["documentationPage"]["sideBar"]["sideBarNavLink"]["links"];
+  keyof Messages['documentationPage']['sideBar']['sideBarNavLink']['links'];
 
 export interface SideBarNavChild {
   title: SideBarNavLinkChildKey;
@@ -21,51 +21,51 @@ export interface SideBarNavLink {
 export const SIDEBAR_NAV_LINKS: SideBarNavLink[] = [
   {
     id: 1,
-    title: "serviceDescription",
+    title: 'serviceDescription',
     children: [
-      { title: "about", path: "/documentation/about" },
-      { title: "changeLanguage", path: "/documentation/change-language" },
+      { title: 'about', path: '/documentation/about' },
+      { title: 'changeLanguage', path: '/documentation/change-language' },
     ],
   },
   {
     id: 2,
-    title: "countryInfoDocumentation",
+    title: 'countryInfoDocumentation',
     children: [
-      { title: "getAllCountries", path: "/documentation/countries" },
-      { title: "getById", path: "/documentation/countries/get-with-id" },
-      { title: "getByName", path: "/documentation/countries/get-with-name" },
-      { title: "getByIso2", path: "/documentation/countries/get-with-iso2" },
-      { title: "getByIso3", path: "/documentation/countries/get-with-iso3" },
+      { title: 'getAllCountries', path: '/documentation/countries' },
+      { title: 'getById', path: '/documentation/countries/get-with-id' },
+      { title: 'getByName', path: '/documentation/countries/get-with-name' },
+      { title: 'getByIso2', path: '/documentation/countries/get-with-iso2' },
+      { title: 'getByIso3', path: '/documentation/countries/get-with-iso3' },
       {
-        title: "getByCallingCode",
-        path: "/documentation/countries/get-with-calling-code",
+        title: 'getByCallingCode',
+        path: '/documentation/countries/get-with-calling-code',
       },
       {
-        title: "getByContinent",
-        path: "/documentation/countries/get-with-continent",
+        title: 'getByContinent',
+        path: '/documentation/countries/get-with-continent',
         new: true,
       },
     ],
   },
   {
     id: 3,
-    title: "cityInfoDocumentation",
+    title: 'cityInfoDocumentation',
     children: [
-      { title: "getAllCities", path: "/documentation/cities", new: true },
+      { title: 'getAllCities', path: '/documentation/cities', new: true },
       {
-        title: "getCitiesByCountryId",
-        path: "/documentation/cities/get-cities-with-countryId",
+        title: 'getCitiesByCountryId',
+        path: '/documentation/cities/get-cities-with-countryId',
         new: true,
       },
     ],
   },
   {
     id: 4,
-    title: "supportAndFAQ",
+    title: 'supportAndFAQ',
     children: [
-      { title: "frequentlyAskedQuestions", path: "/documentation/faq" },
-      { title: "feedback", path: "/documentation/feedback" },
-      { title: "support", path: "/documentation/support" },
+      { title: 'frequentlyAskedQuestions', path: '/documentation/faq' },
+      { title: 'feedback', path: '/documentation/feedback' },
+      { title: 'support', path: '/documentation/support' },
     ],
   },
 ];

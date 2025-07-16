@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { ArrowUpDown } from "lucide-react";
-import { useSearchParams } from "next/navigation";
+import { ArrowUpDown } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
 
-import { Button } from "@/components/ui/button";
-import { useCreateQueryStrings } from "@/hooks/useCreateQueryStrings";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { Button } from '@/components/ui/button';
+import { useCreateQueryStrings } from '@/hooks/useCreateQueryStrings';
+import { usePathname, useRouter } from '@/i18n/navigation';
 
 export const SortableHeader = () => {
   const createParams = useCreateQueryStrings();
@@ -14,12 +14,12 @@ export const SortableHeader = () => {
   const searchParams = useSearchParams();
 
   const handleSort = () => {
-    const currentOrder = searchParams.get("order");
-    const newOrder = currentOrder === "asc" ? "desc" : "asc";
+    const currentOrder = searchParams.get('order');
+    const newOrder = currentOrder === 'asc' ? 'desc' : 'asc';
     createParams({
       router,
       pathname,
-      params: [{ name: "order", value: newOrder }],
+      params: [{ name: 'order', value: newOrder }],
     });
   };
 

@@ -1,16 +1,16 @@
-import { useTranslations } from "next-intl";
-import React from "react";
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import SocialAndSupport from "@/components/shared/SocialAndSupport/SocialAndSupport";
+import SocialAndSupport from '@/components/shared/SocialAndSupport/SocialAndSupport';
 
 export default function Footer() {
-  const t = useTranslations("footer");
+  const t = useTranslations('footer');
   return (
-    <footer className="pt-26 mt-auto">
+    <footer className="mt-auto pt-26">
       <SocialAndSupport />
-      <div className="border-t border-accent p-6">
-        <p className="text-center text-base tablet:text-lg font-bold">
-          {t("designedBy")}
+      <div className="border-accent border-t p-6">
+        <p className="tablet:text-lg text-center text-base font-bold">
+          {t('designedBy')}
         </p>
       </div>
     </footer>

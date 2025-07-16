@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 interface EmailTemplateProps {
   username: string;
@@ -9,9 +9,9 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 }) => (
   <div
     style={{
-      backgroundColor: "#1b1a1a",
-      color: "#ffffff !important",
-      padding: "20px",
+      backgroundColor: '#1b1a1a',
+      color: '#ffffff !important',
+      padding: '20px',
     }}
   >
     <div dir="rtl">

@@ -1,6 +1,6 @@
-import { cache } from "react";
+import { cache } from 'react';
 
-import { createServerSupabaseClient } from "./SupabaseServer";
+import { createServerSupabaseClient } from './SupabaseServer';
 
 export interface Profile {
   id: string;
@@ -19,12 +19,12 @@ export const getUser = cache(async (): Promise<Profile | undefined> => {
 
     return {
       id: data.user.id,
-      avatar: data.user.user_metadata["avatar_url"],
-      name: data.user.user_metadata["name"],
-      email: data.user.user_metadata["email"],
+      avatar: data.user.user_metadata['avatar_url'],
+      name: data.user.user_metadata['name'],
+      email: data.user.user_metadata['email'],
     };
   } catch (error) {
-    console.error("Error:", error);
+    console.error('Error:', error);
     return undefined;
   }
 });

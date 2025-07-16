@@ -1,8 +1,8 @@
-import { cache } from "react";
+import { cache } from 'react';
 
-import type { UserRequest } from "@/app/[locale]/(dashboard)/dashboard/_components/Columns";
+import type { UserRequest } from '@/app/[locale]/(dashboard)/dashboard/_components/Columns';
 
-import { createServerSupabaseClient } from "./SupabaseServer";
+import { createServerSupabaseClient } from './SupabaseServer';
 
 type GetUserRequest =
   | {
@@ -16,7 +16,7 @@ export const getUserRequests = cache(
     page = 1,
     limit = 20,
     apiKey?: string,
-    order?: "asc" | "desc",
+    order?: 'asc' | 'desc',
   ): Promise<GetUserRequest> => {
     const supabase = await createServerSupabaseClient();
 
@@ -25,20 +25,20 @@ export const getUserRequests = cache(
 
     try {
       let query = supabase
-        .from("User_requests")
-        .select("*", { count: "exact" })
+        .from('User_requests')
+        .select('*', { count: 'exact' })
         .range(from, to)
-        .order("created_at", { ascending: order === "asc" });
+        .order('created_at', { ascending: order === 'asc' });
 
       if (apiKey) {
-        query = query.ilike("api_key", `%${apiKey}%`);
+        query = query.ilike('api_key', `%${apiKey}%`);
       }
 
       const { data, count } = await query;
 
       return { data, count };
     } catch (error) {
-      console.error("Error fetching user requests:", error);
+      console.error('Error fetching user requests:', error);
       return undefined;
     }
   },

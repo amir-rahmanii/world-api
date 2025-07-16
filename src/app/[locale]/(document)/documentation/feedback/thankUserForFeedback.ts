@@ -1,22 +1,22 @@
-import { Resend } from "resend";
+import { Resend } from 'resend';
 
-import { EmailTemplate } from "@/app/[locale]/(document)/documentation/feedback/_components/EmailTemplate";
+import { EmailTemplate } from '@/app/[locale]/(document)/documentation/feedback/_components/EmailTemplate';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendThankYouEmail(email: string, username: string) {
   try {
     await resend.emails.send({
-      from: "World-Api <no-reply@world-api.ir>",
+      from: 'World-Api <no-reply@world-api.ir>',
       to: email,
-      subject: "با تشکر از بازخورد شما",
+      subject: 'با تشکر از بازخورد شما',
       react: EmailTemplate({ username }) as React.ReactElement,
     });
   } catch (error) {
     if (error instanceof Error) {
       throw new Error(error.message);
     } else {
-      throw new Error("An unknown error occurred");
+      throw new Error('An unknown error occurred');
     }
   }
 }

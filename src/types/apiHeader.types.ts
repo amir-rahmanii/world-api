@@ -1,6 +1,6 @@
-import type { Messages } from "next-intl";
+import type { Messages } from 'next-intl';
 
-type ApiHeaderType = keyof Messages["documentationPage"]["countriesPage"];
+type ApiHeaderType = keyof Messages['documentationPage']['countriesPage'];
 
 export interface ApiHeader {
   translationKey: ApiHeaderType;

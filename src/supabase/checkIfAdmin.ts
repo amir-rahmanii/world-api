@@ -1,4 +1,4 @@
-import { createServerSupabaseClient } from "./SupabaseServer";
+import { createServerSupabaseClient } from './SupabaseServer';
 
 export async function checkIfAdmin() {
   const supabase = await createServerSupabaseClient();

@@ -1,11 +1,11 @@
-import { useLocale, useTranslations } from "next-intl";
-import React from "react";
+import { useLocale, useTranslations } from 'next-intl';
+import React from 'react';
 
-import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
+import { Button } from '@/components/ui/button';
+import { Link } from '@/i18n/navigation';
+import { cn } from '@/lib/utils';
 
-import type { Nav } from "../../../constants/navs.constant";
+import type { Nav } from '../../../constants/navs.constant';
 
 interface NavLinkProps extends Nav {
   currentPath: string;
@@ -17,18 +17,18 @@ export default function NavigationLink({
   icon: Icon,
   currentPath,
 }: NavLinkProps) {
-  const t = useTranslations("navs");
+  const t = useTranslations('navs');
   const isActive =
     path === currentPath ||
-    (path === "/documentation/about" &&
-      currentPath.startsWith("/documentation"));
+    (path === '/documentation/about' &&
+      currentPath.startsWith('/documentation'));
   const locale = useLocale();
 
   return (
-    <li className="w-full flex justify-center items-end" key={title}>
+    <li className="flex w-full items-end justify-center" key={title}>
       <Button
         asChild
-        className={cn("w-full", isActive && "bg-accent text-accent-foreground")}
+        className={cn('w-full', isActive && 'bg-accent text-accent-foreground')}
         variant="link"
       >
         <Link href={path} locale={locale}>

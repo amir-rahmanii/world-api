@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import type { Table } from "@tanstack/react-table";
+import type { Table } from '@tanstack/react-table';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Select,
   SelectContent,
@@ -11,8 +11,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { useTablePagination } from "@/hooks/useTablePagination";
+} from '@/components/ui/select';
+import { useTablePagination } from '@/hooks/useTablePagination';
 
 export default function DataTablePagination<TData>({
   table,
@@ -23,19 +23,19 @@ export default function DataTablePagination<TData>({
     useTablePagination(table);
 
   return (
-    <div className="flex items-center flex-wrap justify-center tablet:justify-end gap-5 tablet:gap-4 py-6">
+    <div className="tablet:justify-end tablet:gap-4 flex flex-wrap items-center justify-center gap-5 py-6">
       <div className="flex items-center gap-2">
         <Button disabled={!canPrev} onClick={() => goToPage(0)}>
-          {"<<"}
+          {'<<'}
         </Button>
         <Button disabled={!canPrev} onClick={() => goToPage(pageIndex - 1)}>
-          {"<"}
+          {'<'}
         </Button>
         <Button disabled={!canNext} onClick={() => goToPage(pageIndex + 1)}>
-          {">"}
+          {'>'}
         </Button>
         <Button disabled={!canNext} onClick={() => goToPage(pageCount - 1)}>
-          {">>"}
+          {'>>'}
         </Button>
       </div>
 
@@ -50,7 +50,7 @@ export default function DataTablePagination<TData>({
         value={String(table.getState().pagination.pageSize)}
         onValueChange={changePageSize}
       >
-        <SelectTrigger className="w-full desktop:w-[140px]">
+        <SelectTrigger className="desktop:w-[140px] w-full">
           <SelectValue placeholder="Rows per page" />
         </SelectTrigger>
         <SelectContent>

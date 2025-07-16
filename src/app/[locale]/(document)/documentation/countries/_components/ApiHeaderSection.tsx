@@ -1,15 +1,15 @@
-import { useTranslations } from "next-intl";
-import React from "react";
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-import type { ApiHeader } from "@/types/apiHeader.types";
+import type { ApiHeader } from '@/types/apiHeader.types';
 
-import { CodeBlock } from "@/components/shared/CodeBlock/CodeBlock";
+import { CodeBlock } from '@/components/shared/CodeBlock/CodeBlock';
 
 export default function ApiHeaderSection({
   translationKey,
   endpoint,
 }: ApiHeader) {
-  const t = useTranslations("documentationPage.countriesPage");
+  const t = useTranslations('documentationPage.countriesPage');
   return (
     <>
       <h1>{t(`${translationKey}.title`)}</h1>
@@ -17,7 +17,7 @@ export default function ApiHeaderSection({
       <h4>{t(`${translationKey}.request`)} </h4>
       <CodeBlock
         lang="http"
-        code={`GET ${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ""}${endpoint}`}
+        code={`GET ${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ''}${endpoint}`}
       />
     </>
   );

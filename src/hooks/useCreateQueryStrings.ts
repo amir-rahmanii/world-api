@@ -1,6 +1,6 @@
-import type { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import type { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
-import { useCallback } from "react";
+import { useCallback } from 'react';
 
 interface Param {
   name: string;

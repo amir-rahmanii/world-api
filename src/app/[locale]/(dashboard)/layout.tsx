@@ -1,5 +1,5 @@
-import { redirect } from "@/i18n/navigation";
-import { checkIfAdmin } from "@/supabase/checkIfAdmin";
+import { redirect } from '@/i18n/navigation';
+import { checkIfAdmin } from '@/supabase/checkIfAdmin';
 
 export default async function DashboardLayout({
   children,
@@ -8,5 +8,5 @@ export default async function DashboardLayout({
 }) {
   const user = await checkIfAdmin();
 
-  return user ? children : redirect({ href: "/", locale: "en" });
+  return user ? children : redirect({ href: '/', locale: 'en' });
 }

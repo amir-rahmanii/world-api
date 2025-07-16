@@ -1,16 +1,16 @@
-"use client";
-import type { InputHTMLAttributes } from "react";
+'use client';
+import type { InputHTMLAttributes } from 'react';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { Input } from "@/components/ui/input";
+import { Input } from '@/components/ui/input';
 
 export function DebouncedInput({
   value: initialValue,
   onChange,
   debounce = 200,
   ...props
-}: Omit<InputHTMLAttributes<HTMLInputElement>, "onChange"> & {
+}: Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> & {
   value: number | string;
   onChange: (value: number | string) => void;
   debounce?: number;
@@ -33,11 +33,10 @@ export function DebouncedInput({
   return (
     <Input
       {...props}
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-      value={value ?? ""}
+      value={value ?? ''}
       onChange={(e) => {
-        if (e.target.value === "") return setValue("");
-        if (props.type === "number") {
+        if (e.target.value === '') return setValue('');
+        if (props.type === 'number') {
           setValue(e.target.valueAsNumber);
         } else {
           setValue(e.target.value);

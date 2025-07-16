@@ -1,23 +1,23 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import React from "react";
+import React from 'react';
 
-import type { ApiHeader } from "@/types/apiHeader.types";
+import type { ApiHeader } from '@/types/apiHeader.types';
 
-import ApiRequestExample from "@/components/shared/ApiRequestExample/ApiRequestExample";
-import ApiResponseExample from "@/components/shared/ApiResponseExample/ApiResponseExample";
-import { DEFAULT_RESPONSE_JSON_ARRAY_FA } from "@/constants/defaultResponse.constant";
+import ApiRequestExample from '@/components/shared/ApiRequestExample/ApiRequestExample';
+import ApiResponseExample from '@/components/shared/ApiResponseExample/ApiResponseExample';
+import { DEFAULT_RESPONSE_JSON_ARRAY_FA } from '@/constants/defaultResponse.constant';
 
-import ApiHeaderSection from "./_components/ApiHeaderSection";
-import HeaderConfigs from "./_components/HeaderConfigs";
+import ApiHeaderSection from './_components/ApiHeaderSection';
+import HeaderConfigs from './_components/HeaderConfigs';
 
 const apiHeader: ApiHeader = {
-  translationKey: "getAllCountries",
-  endpoint: "/api/v1/countries",
+  translationKey: 'getAllCountries',
+  endpoint: '/api/v1/countries',
 };
 
 export const metadata: Metadata = {
-  title: " وب سرویس اطلاعات کشورها | مستندات | دریافت تمام کشورها",
+  title: ' وب سرویس اطلاعات کشورها | مستندات | دریافت تمام کشورها',
 };
 
 export default function CountriesPage() {

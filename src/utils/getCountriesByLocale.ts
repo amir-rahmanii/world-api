@@ -1,10 +1,10 @@
-import type { APILocaleType } from "@/constants/apilocales.constant";
+import type { APILocaleType } from '@/constants/apilocales.constant';
 
-import { API_LOCALES } from "@/constants/apilocales.constant";
+import { API_LOCALES } from '@/constants/apilocales.constant';
 
-import CountriesAr from "../../public/Countries-nationalities-ar.json";
-import CountriesEn from "../../public/Countries-nationalities-en.json";
-import CountriesFa from "../../public/Countries-nationalities-fa.json";
+import CountriesAr from '../../public/Countries-nationalities-ar.json';
+import CountriesEn from '../../public/Countries-nationalities-en.json';
+import CountriesFa from '../../public/Countries-nationalities-fa.json';
 
 export const getCountriesByLocale = (locale: APILocaleType) => {
   switch (locale) {

@@ -1,8 +1,8 @@
-import type { NextRequest } from "next/server";
+import type { NextRequest } from 'next/server';
 
-import type { APILocaleType } from "@/constants/apilocales.constant";
+import type { APILocaleType } from '@/constants/apilocales.constant';
 
-import { saveUserRequest } from "@/supabase/saveUserRequest";
+import { saveUserRequest } from '@/supabase/saveUserRequest';
 
 async function handleError(
   request: NextRequest,
@@ -12,7 +12,7 @@ async function handleError(
   status: number,
 ) {
   const errorMessage =
-    err.message || "Something went wrong. Please try again later.";
+    err.message || 'Something went wrong. Please try again later.';
 
   await saveUserRequest({
     apiKey: apiKeyRecord,
@@ -30,7 +30,7 @@ async function handleError(
     {
       status,
       headers: {
-        "Content-Language": locale,
+        'Content-Language': locale,
       },
     },
   );

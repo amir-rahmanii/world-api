@@ -276,7 +276,6 @@
         "validation": {
           "empty": "Feedback cannot be empty.",
           "invalid": "Feedback must be at least 10 characters long and contain no invalid characters.",
-          "bannedWords": "Please avoid using inappropriate words.",
           "valid": "Feedback is valid."
         }
       }

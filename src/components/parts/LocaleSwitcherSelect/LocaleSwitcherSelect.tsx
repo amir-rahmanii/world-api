@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import { useParams } from "next/navigation";
-import { useTransition } from "react";
+import { useParams } from 'next/navigation';
+import { useTransition } from 'react';
 
-import type { Direction } from "@/i18n/getDirection";
+import type { Direction } from '@/i18n/getDirection';
 
 import {
   Select,
@@ -14,8 +14,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { usePathname, useRouter } from "@/i18n/navigation";
+} from '@/components/ui/select';
+import { usePathname, useRouter } from '@/i18n/navigation';
 
 interface Props {
   children: ReactNode;
@@ -54,7 +54,7 @@ export default function LocaleSwitcherSelect({
       disabled={isPending}
       onValueChange={onSelectChange}
     >
-      <SelectTrigger className="w-full desktop:w-[140px]">
+      <SelectTrigger className="desktop:w-[140px] w-full">
         <SelectValue placeholder={label} />
       </SelectTrigger>
       <SelectContent>

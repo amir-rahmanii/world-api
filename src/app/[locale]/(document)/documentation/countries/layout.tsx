@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import type { ApiErrorMessageType } from "@/types/apiErrorMessage.types";
+import type { ApiErrorMessageType } from '@/types/apiErrorMessage.types';
 
-import ApiErrorMessage from "./_components/ApiErrorMessage";
+import ApiErrorMessage from './_components/ApiErrorMessage';
 
 export interface ApiError {
   title: ApiErrorMessageType;
@@ -11,8 +11,8 @@ export interface ApiError {
 }
 
 const errorData: ApiError = {
-  title: "apiKey",
-  message: "API key is missing or invalid. Please provide a valid API key.",
+  title: 'apiKey',
+  message: 'API key is missing or invalid. Please provide a valid API key.',
   status: 401,
 };
 

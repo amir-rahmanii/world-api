@@ -1,6 +1,4 @@
-import { getTranslations } from "next-intl/server";
-
-import { bannedWords } from "@/constants/bannedWord.constant";
+import { getTranslations } from 'next-intl/server';
 
 export interface ValidationResult {
   ok: boolean;
@@ -13,27 +11,20 @@ export async function validateFeedback(
   feedback: string,
 ): Promise<ValidationResult> {
   const t = await getTranslations(
-    "documentationPage.feedbackPage.error.validation",
+    'documentationPage.feedbackPage.error.validation',
   );
   const trimmed = feedback.trim();
 
   if (!trimmed) {
-    return { ok: false, message: t("empty") };
+    return { ok: false, message: t('empty') };
   }
 
   if (!regex.test(trimmed)) {
     return {
       ok: false,
-      message: t("invalid"),
+      message: t('invalid'),
     };
   }
 
-  if (bannedWords.some((word) => trimmed.toLowerCase().includes(word))) {
-    return {
-      ok: false,
-      message: t("bannedWords"),
-    };
-  }
-
-  return { ok: true, message: t("valid") };
+  return { ok: true, message: t('valid') };
 }

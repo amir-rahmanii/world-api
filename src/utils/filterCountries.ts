@@ -1,6 +1,6 @@
-import type { Countries, SearchParams } from "@/app/api/v1/countries/route";
+import type { Countries, SearchParams } from '@/app/api/v1/countries/route';
 
-import { normalizeAndCompare } from "./normalizeAndCompare";
+import { normalizeAndCompare } from './normalizeAndCompare';
 
 export const filterCountries = (
   countries: Countries[],
@@ -12,7 +12,7 @@ export const filterCountries = (
     const numericId = Number(id);
     if (isNaN(numericId)) {
       throw new Error(
-        "Invalid id parameter. It must be a number (e.g., 364 for Iran).",
+        'Invalid id parameter. It must be a number (e.g., 364 for Iran).',
       );
     }
     return countries.filter((country) => country.id === numericId);
@@ -51,7 +51,7 @@ export const filterCountries = (
     const numericCallingCode = Number(callingCode);
     if (isNaN(numericCallingCode)) {
       throw new Error(
-        "Invalid callingCode parameter. It must be a number (e.g., 98 for Iran).",
+        'Invalid callingCode parameter. It must be a number (e.g., 98 for Iran).',
       );
     }
     return countries.filter(

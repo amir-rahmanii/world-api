@@ -1,3 +1,3 @@
-import type { Messages } from "next-intl";
+import type { Messages } from 'next-intl';
 
-export type ApiErrorMessageType = keyof Messages["documentationPage"]["error"];
+export type ApiErrorMessageType = keyof Messages['documentationPage']['error'];
