@@ -24,7 +24,7 @@ export function CopyButton({ text }: CopyButtonProps) {
       ) : (
         <Copy className="size-4" />
       )}
-      <span className="desktop:block hidden">
+      <span className="hidden desktop:block">
         {copied ? t('copied') : t('copyToClipboard')}
       </span>
     </Button>

@@ -8,9 +8,17 @@ import { getUser } from '@/supabase/getUser';
 
 import FeedbackForm from './_components/FeedbackForm';
 
-export const metadata: Metadata = {
-  title: ' وب سرویس اطلاعات کشورها | مستندات | بازخورد',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('documentationPage.feedbackPage.title', {
+      mainTitle: t('mainTitle'),
+      documentTitle: t('documentationPage.documentTitle'),
+    }),
+  };
+}
 
 export default async function FeedbackPage() {
   const t = await getTranslations('documentationPage.feedbackPage');

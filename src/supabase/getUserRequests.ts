@@ -1,6 +1,6 @@
 import { cache } from 'react';
 
-import type { UserRequest } from '@/app/[locale]/(dashboard)/dashboard/_components/Columns';
+import type { UserRequest } from '@/app/[locale]/dashboard/_components/Columns';
 
 import { createServerSupabaseClient } from './SupabaseServer';
 
@@ -31,7 +31,7 @@ export const getUserRequests = cache(
         .order('created_at', { ascending: order === 'asc' });
 
       if (apiKey) {
-        query = query.ilike('api_key', `%${apiKey}%`);
+        query = query.eq('api_key', apiKey);
       }
 
       const { data, count } = await query;

@@ -1,13 +1,22 @@
 import type { Metadata } from 'next';
 
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
 import { CONTACT_METHODS } from '@/constants/contactMethods.constant';
 
-export const metadata: Metadata = {
-  title: 'وب سرویس اطلاعات کشورها | مستندات | پشتیبانی',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('documentationPage.supportPage.title', {
+      mainTitle: t('mainTitle'),
+      documentTitle: t('documentationPage.documentTitle'),
+    }),
+  };
+}
 
 export default function SupportPage() {
   const t = useTranslations('documentationPage.supportPage');

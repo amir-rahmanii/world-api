@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer className="mt-auto pt-26">
       <SocialAndSupport />
-      <div className="border-accent border-t p-6">
-        <p className="tablet:text-lg text-center text-base font-bold">
+      <div className="border-t border-accent p-6">
+        <p className="text-center text-base font-bold tablet:text-lg">
           {t('designedBy')}
         </p>
       </div>

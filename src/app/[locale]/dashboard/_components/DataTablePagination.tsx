@@ -23,7 +23,7 @@ export default function DataTablePagination<TData>({
     useTablePagination(table);
 
   return (
-    <div className="tablet:justify-end tablet:gap-4 flex flex-wrap items-center justify-center gap-5 py-6">
+    <div className="flex flex-wrap items-center justify-center gap-5 py-6 tablet:justify-end tablet:gap-4">
       <div className="flex items-center gap-2">
         <Button disabled={!canPrev} onClick={() => goToPage(0)}>
           {'<<'}
@@ -50,7 +50,7 @@ export default function DataTablePagination<TData>({
         value={String(table.getState().pagination.pageSize)}
         onValueChange={changePageSize}
       >
-        <SelectTrigger className="desktop:w-[140px] w-full">
+        <SelectTrigger className="w-full desktop:w-[140px]">
           <SelectValue placeholder="Rows per page" />
         </SelectTrigger>
         <SelectContent>

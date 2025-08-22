@@ -1,4 +1,66 @@
 {
+  "metadata": {
+    "mainTitle": "Country Information Web Service",
+    "layout": {
+      "title": "{mainTitle}",
+      "description": "Get comprehensive information about countries and their cities in multiple languages, including Persian and English, featuring names, flags, ISO2 and ISO3 codes.",
+      "openGraph": {
+        "title": "{mainTitle}",
+        "description": "Access country and city data in multiple languages, including Persian and English, featuring names, flags, and ISO2/ISO3 codes.",
+        "siteName": "Country Info Website",
+        "imageAlt": "Open Graph image of the country info web service"
+      },
+      "keywords": "Web service, Countries API, Country information, Country flags, ISO2, ISO3, Countries, Cities, Multilingual, Persian, English"
+    },
+    "homePage": {
+      "title": "{mainTitle} | Home Page"
+    },
+    "notFoundPage": {
+      "title": "{mainTitle} | 404 Page"
+    },
+    "getApiKeyPage": {
+      "title": "{mainTitle} | Get API Key"
+    },
+    "documentationPage": {
+      "documentTitle": "Documentation",
+      "aboutPage": {
+        "title": "{mainTitle} | {documentTitle} | Description"
+      },
+      "changeLanguagePage": {
+        "title": "{mainTitle} | {documentTitle} | Change Language"
+      },
+      "getWithCallingCodePage": {
+        "title": "{mainTitle} | {documentTitle} | Get Country by Calling Code"
+      },
+      "getWithIdPage": {
+        "title": "{mainTitle} | {documentTitle} | Get Country by Id"
+      },
+      "getWithNamePage": {
+        "title": "{mainTitle} | {documentTitle} | Get Country by Name"
+      },
+      "getWithIso2Page": {
+        "title": "{mainTitle} | {documentTitle} | Get Country by ISO2"
+      },
+      "getWithIso3Page": {
+        "title": "{mainTitle} | {documentTitle} | Get Country by ISO3"
+      },
+      "getAllCountriesPage": {
+        "title": "{mainTitle} | {documentTitle} | Get All Countries"
+      },
+      "faqPage": {
+        "title": "{mainTitle} | {documentTitle} | Frequently Asked Questions"
+      },
+      "feedbackPage": {
+        "title": "{mainTitle} | {documentTitle} | Feedback"
+      },
+      "supportPage": {
+        "title": "{mainTitle} | {documentTitle} | Support"
+      }
+    },
+    "requestPage": {
+      "title": "{mainTitle} | Panel | Your Requests"
+    }
+  },
   "localeSwitcher": {
     "label": "Select language",
     "locale": {
@@ -214,8 +276,8 @@
         "description": "By using the 3-letter international code (ISO3) of a country, you can access its complete and accurate information. This information includes the country name, flag, capital, dialing code, continent, and geographical location."
       },
       "getWithCallingCode": {
-        "title": "Get Countries by Calling Code",
-        "request": "🚀 Request to Get Countries by Calling Code",
+        "title": "Get Country by Calling Code",
+        "request": "🚀 Request to Get Country by Calling Code",
         "description": "Using each country's calling code (callingCode), you can access complete and accurate information about that country. This includes the country's name, ISO code, flag, capital, continent, and geographical location."
       }
     },
@@ -280,5 +342,8 @@
         }
       }
     }
+  },
+  "requestPage": {
+    "title": "Your Requests"
   }
 }

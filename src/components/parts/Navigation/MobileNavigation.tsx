@@ -33,7 +33,7 @@ export function MobileNavigation({ children }: NavLinksMobileProps) {
           className="absolute top-2 right-2 flex items-center justify-center gap-2"
           href="/"
         >
-          <WorldIcon className="hover:text-primary size-10 transition-all duration-200" />
+          <WorldIcon className="size-10 transition-all duration-200 hover:text-primary" />
         </Link>
         <ul className="flex flex-col items-center gap-10">
           {NAVS.map((nav) => (

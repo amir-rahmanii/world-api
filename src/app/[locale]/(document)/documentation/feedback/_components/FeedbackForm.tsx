@@ -20,7 +20,7 @@ export default function FeedbackForm() {
       <label htmlFor="feedback">{t('feedbackLabel')}</label>
       <textarea
         required
-        className="outline-accent w-full rounded-xl px-3 py-2 outline focus:outline-foreground"
+        className="w-full rounded-xl px-3 py-2 outline outline-accent focus:outline-foreground"
         id="feedback"
         maxLength={500}
         minLength={10}

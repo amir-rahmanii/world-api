@@ -8,6 +8,7 @@ interface SaveUserRequestParam {
   status: number;
   errorMessage?: string | null;
   locale: APILocaleType | null;
+  ip: string;
 }
 
 export const saveUserRequest = async (userRequest: SaveUserRequestParam) => {
@@ -20,6 +21,7 @@ export const saveUserRequest = async (userRequest: SaveUserRequestParam) => {
       status: userRequest.status,
       error_message: userRequest.errorMessage ?? null,
       locale: userRequest.locale ?? null,
+      ip: userRequest.ip,
     },
   ]);
 

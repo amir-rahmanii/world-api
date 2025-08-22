@@ -29,8 +29,8 @@ interface DataTableProps<TData, TValue> {
   page: number;
   limit: number;
   rowCount: number;
-  queryKeySearchBar: string;
-  placeholderSearchBar: string;
+  queryKeySearchBar?: string;
+  placeholderSearchBar?: string;
 }
 
 export function DataTable<TData, TValue>({
@@ -67,13 +67,15 @@ export function DataTable<TData, TValue>({
   return (
     <div className="py-4">
       <div className="flex flex-wrap items-center gap-4 pb-8">
-        <SearchBar
-          className="desktop:w-[350px] w-full"
-          queryKey={queryKeySearchBar}
-          tableFirstPage={() => table.setPageIndex(0)}
-          debounce={500}
-          placeholder={placeholderSearchBar}
-        />
+        {queryKeySearchBar && placeholderSearchBar && (
+          <SearchBar
+            className="w-full desktop:w-[350px]"
+            queryKey={queryKeySearchBar}
+            tableFirstPage={() => table.setPageIndex(0)}
+            debounce={500}
+            placeholder={placeholderSearchBar}
+          />
+        )}
         {rowCount > 0 ? (
           <p>
             Showing{' '}

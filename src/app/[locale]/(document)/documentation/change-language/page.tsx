@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
 import ApiRequestExample from '@/components/shared/ApiRequestExample/ApiRequestExample';
@@ -13,9 +14,17 @@ import {
 
 import Table from '../_components/Table';
 
-export const metadata: Metadata = {
-  title: 'وب سرویس اطلاعات کشورها | مستندات | تغییر زبان',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('documentationPage.changeLanguagePage.title', {
+      mainTitle: t('mainTitle'),
+      documentTitle: t('documentationPage.documentTitle'),
+    }),
+  };
+}
 
 export default function ChangeLanguagePage() {
   const t = useTranslations('documentationPage.changeLanguagePage');

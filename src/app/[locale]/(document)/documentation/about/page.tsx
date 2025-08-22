@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
 import Table from '../_components/Table';
@@ -9,9 +10,17 @@ import {
   TABLE_HEADERS_API_FIELD_INFOS,
 } from '../../../../../constants/apiFieldInfos.constant';
 
-export const metadata: Metadata = {
-  title: 'وب سرویس اطلاعات کشورها | مستندات | توضیحات وب سرویس',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('documentationPage.aboutPage.title', {
+      mainTitle: t('mainTitle'),
+      documentTitle: t('documentationPage.documentTitle'),
+    }),
+  };
+}
 
 export default function AboutPage() {
   const t = useTranslations('documentationPage.aboutPage');

@@ -10,6 +10,7 @@ async function handleError(
   locale: APILocaleType,
   apiKeyRecord: string | null,
   status: number,
+  ip: string,
 ) {
   const errorMessage =
     err.message || 'Something went wrong. Please try again later.';
@@ -20,6 +21,7 @@ async function handleError(
     errorMessage,
     status,
     locale,
+    ip,
   });
 
   return new Response(

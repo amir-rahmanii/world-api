@@ -35,6 +35,7 @@ export async function GET(request: NextRequest) {
   const locale = getLocale(acceptLanguage);
   const searchParams = request.nextUrl.searchParams;
   const AllSearchParams: SearchParams = getSearchParams(searchParams);
+  const ip = request.headers.get('X-Forwarded-For') ?? 'unknown';
 
   const apiKey: string | null = request.headers.get('X-API-Key');
   let apiKeyRecord: string | null = null;
@@ -42,7 +43,7 @@ export async function GET(request: NextRequest) {
   try {
     apiKeyRecord = await getApiKeyRecord(apiKey);
   } catch (err) {
-    return handleError(request, err as Error, locale, apiKeyRecord, 401);
+    return handleError(request, err as Error, locale, apiKeyRecord, 401, ip);
   }
 
   try {
@@ -54,6 +55,7 @@ export async function GET(request: NextRequest) {
       path: request.nextUrl.toString(),
       status: 200,
       locale,
+      ip,
     });
 
     return new Response(JSON.stringify(filteredData, null, 2), {
@@ -63,6 +65,6 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch (err) {
-    return handleError(request, err as Error, locale, apiKeyRecord, 400);
+    return handleError(request, err as Error, locale, apiKeyRecord, 400, ip);
   }
 }

@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 function Table({ className, ...props }: React.ComponentProps<'table'>) {
   return (
     <div
-      className="border-accent relative h-96 w-full overflow-x-auto rounded-xl border"
+      className="relative h-96 w-full overflow-x-auto rounded-xl border border-accent"
       data-slot="table-container"
     >
       <table
@@ -22,7 +22,7 @@ function Table({ className, ...props }: React.ComponentProps<'table'>) {
 function TableHeader({ className, ...props }: React.ComponentProps<'thead'>) {
   return (
     <thead
-      className={cn('[&_tr]:border-b-accent [&_tr]:border-b', className)}
+      className={cn('[&_tr]:border-b [&_tr]:border-b-accent', className)}
       data-slot="table-header"
       {...props}
     />
@@ -57,7 +57,7 @@ function TableRow({ className, ...props }: React.ComponentProps<'tr'>) {
     <tr
       data-slot="table-row"
       className={cn(
-        'hover:bg-muted/50 data-[state=selected]:bg-muted border-b-accent border-b transition-colors',
+        'hover:bg-muted/50 data-[state=selected]:bg-muted border-b border-b-accent transition-colors',
         className,
       )}
       {...props}
@@ -70,7 +70,7 @@ function TableHead({ className, ...props }: React.ComponentProps<'th'>) {
     <th
       data-slot="table-head"
       className={cn(
-        'text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
+        'h-10 px-2 text-left align-middle font-medium whitespace-nowrap text-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
         className,
       )}
       {...props}
@@ -97,7 +97,7 @@ function TableCaption({
 }: React.ComponentProps<'caption'>) {
   return (
     <caption
-      className={cn('text-muted-foreground mt-4 text-sm', className)}
+      className={cn('mt-4 text-sm text-muted-foreground', className)}
       data-slot="table-caption"
       {...props}
     />

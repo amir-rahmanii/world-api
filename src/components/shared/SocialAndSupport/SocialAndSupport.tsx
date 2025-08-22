@@ -10,7 +10,7 @@ export default function SocialAndSupport() {
   const t = useTranslations('socialAndSupport');
   return (
     <div className="flex flex-col gap-5 pb-5">
-      <h3 className="tablet:text-lg text-center text-base font-bold">
+      <h3 className="text-center text-base font-bold tablet:text-lg">
         {t('title')}
       </h3>
       <div className="flex items-center justify-center gap-3.5">

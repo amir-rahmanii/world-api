@@ -19,7 +19,7 @@ export default function SideBar() {
   const { pathName, accordionValue, setAccordionValue } = useAccordionValue();
   return (
     <div>
-      <ul className="wide:w-[280px] border-accent flex w-full flex-col rounded-lg border p-4">
+      <ul className="flex w-full flex-col rounded-lg border border-accent p-4 wide:w-[280px]">
         <Accordion
           type="single"
           value={accordionValue}
@@ -45,7 +45,7 @@ export default function SideBar() {
                     >
                       {t(`sideBarNavLink.links.${navChild.title}`)}
                       {navChild.new && (
-                        <span className="text-primary text-[10px]">
+                        <span className="text-[10px] text-primary">
                           {t('comingSoon')}
                         </span>
                       )}

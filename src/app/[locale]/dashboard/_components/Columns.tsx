@@ -6,14 +6,11 @@ import type { APILocaleType } from '@/constants/apilocales.constant';
 
 import { API_LOCALES } from '@/constants/apilocales.constant';
 
-import IrLogo from '../../../../../../public/v1/countries/flag/IR.svg';
-import SaLogo from '../../../../../../public/v1/countries/flag/SA.svg';
-import UsLogo from '../../../../../../public/v1/countries/flag/US.svg';
 import { SortableHeader } from './SortableHeader';
 
 export interface UserRequest {
   id: number;
-  api_key: string;
+  ip: string;
   status: 200 | 400 | 401;
   path: string;
   locale: APILocaleType;
@@ -23,14 +20,14 @@ export interface UserRequest {
 
 export const Columns: ColumnDef<UserRequest>[] = [
   {
-    accessorKey: 'api_key',
-    header: 'ApiKey',
+    accessorKey: 'ip',
+    header: 'IP',
     cell: ({ row }) => {
-      const apiKey = row.original.api_key;
-      return apiKey ? (
-        <span>{apiKey}</span>
+      const ip = row.original.ip;
+      return ip ? (
+        <span>{ip}</span>
       ) : (
-        <span className="text-red-400">Anonymous</span>
+        <span className="text-red-400">Unknown</span>
       );
     },
   },
@@ -55,32 +52,7 @@ export const Columns: ColumnDef<UserRequest>[] = [
     header: 'Locale',
     cell: ({ row }) => {
       const locale = row.original.locale;
-      switch (locale) {
-        case API_LOCALES.Persian: {
-          return (
-            <div className="flex items-center justify-center">
-              <IrLogo className="size-7" />
-            </div>
-          );
-        }
-        case API_LOCALES.Arabic: {
-          return (
-            <div className="flex items-center justify-center">
-              <SaLogo className="size-7" />
-            </div>
-          );
-        }
-        case API_LOCALES.English: {
-          return (
-            <div className="flex items-center justify-center">
-              <UsLogo className="size-7" />
-            </div>
-          );
-        }
-        default: {
-          return 'No Locale';
-        }
-      }
+      return locale ? <span>{locale}</span> : <span>No Locale</span>;
     },
   },
   {

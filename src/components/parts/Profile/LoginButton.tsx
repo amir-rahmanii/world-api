@@ -31,7 +31,7 @@ export default function LoginButton() {
           <div className="mt-6 flex flex-col gap-6">
             <Button
               size="lg"
-              className="w-full"
+              className="w-full font-bold"
               variant="default"
               onClick={() => signIn('github')}
             >
@@ -41,7 +41,7 @@ export default function LoginButton() {
             </Button>
             <Button
               size="lg"
-              className="w-full"
+              className="w-full font-bold"
               variant="default"
               onClick={() => signIn('google')}
             >

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
 import type { ApiHeader } from '@/types/apiHeader.types';
@@ -24,9 +25,18 @@ const invalidIdError: ApiError = {
   message: 'Invalid id parameter. It must be a number (e.g., 364 for Iran).',
 };
 
-export const metadata: Metadata = {
-  title: 'وب سرویس اطلاعات کشورها | مستندات |  دریافت کشورها با id',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('documentationPage.getWithIdPage.title', {
+      mainTitle: t('mainTitle'),
+      documentTitle: t('documentationPage.documentTitle'),
+    }),
+  };
+}
+
 export default function CountriesGetWithIdPage() {
   return (
     <>

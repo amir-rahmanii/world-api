@@ -9,13 +9,13 @@ export default function SiteDescriptionBox({
 }: SiteDescriptionsType) {
   const t = useTranslations('homePage.siteDescriptions');
   return (
-    <div className="group border-accent bg-background pointer-events-auto rounded-xl border transition-all hover:border-primary">
+    <div className="group pointer-events-auto rounded-xl border border-accent bg-background transition-all hover:border-primary">
       <div className="flex flex-col gap-2.5 p-8">
-        <Icon className="text-foreground size-10 transition-all group-hover:text-primary" />
+        <Icon className="size-10 text-foreground transition-all group-hover:text-primary" />
         <h2 className="text-heading-foreground text-lg">
           {t(`${featureKey}.title`)}
         </h2>
-        <p className="text-foreground/80 text-start text-sm leading-6">
+        <p className="text-start text-sm leading-6 text-foreground/80">
           {t(`${featureKey}.desc`)}
         </p>
       </div>

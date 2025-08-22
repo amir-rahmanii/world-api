@@ -59,7 +59,7 @@ export function SearchBar({
   };
 
   return (
-    <div className="focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] relative">
+    <div className="relative focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50">
       <DebouncedInput
         className={className}
         value={input}

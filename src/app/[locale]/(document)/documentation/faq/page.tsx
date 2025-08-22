@@ -1,13 +1,22 @@
 import type { Metadata } from 'next';
 
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
 import AccordionFaq from './_components/AccordionFaq';
 
-export const metadata: Metadata = {
-  title: ' وب سرویس اطلاعات کشورها | مستندات | سوالات متداول  ',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('documentationPage.faqPage.title', {
+      mainTitle: t('mainTitle'),
+      documentTitle: t('documentationPage.documentTitle'),
+    }),
+  };
+}
 
 export default function FaqPage() {
   const t = useTranslations('documentationPage.faqPage');

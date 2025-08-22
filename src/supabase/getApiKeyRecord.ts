@@ -21,5 +21,5 @@ export const getApiKeyRecord = async (apiKey: string | null) => {
     );
   }
 
-  return apiKeyRecord.api_key as string;
+  return apiKeyRecord?.api_key as string;
 };

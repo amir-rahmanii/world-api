@@ -15,18 +15,18 @@ export default function NavigationBar() {
   const pathname = usePathname();
 
   return (
-    <div className="wide:gap-5 flex items-center gap-3">
+    <div className="flex items-center gap-3 wide:gap-5">
       <Link href="/">
-        <WorldIcon className="hover:text-primary size-12 transition-all duration-200" />
+        <WorldIcon className="size-12 transition-all duration-200 hover:text-primary" />
       </Link>
-      <div className="desktop:hidden flex items-center">
+      <div className="flex items-center desktop:hidden">
         <MobileNavigation>
           <Button size="icon" variant="outline">
             <Burger />
           </Button>
         </MobileNavigation>
       </div>
-      <ul className="desktop:flex wide:gap-5 hidden items-center gap-3">
+      <ul className="hidden items-center gap-3 desktop:flex wide:gap-5">
         {NAVS.map((nav) => (
           <NavigationLink key={nav.path} {...nav} currentPath={pathname} />
         ))}

@@ -3,7 +3,7 @@ import type { Locale } from 'next-intl';
 
 import { Analytics } from '@vercel/analytics/react';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 import { notFound } from 'next/navigation';
@@ -18,54 +18,61 @@ import { ThemeProvider } from '@/store/theme-provider';
 import { SupabaseProvider } from '@/supabase/SupabaseProvider';
 
 const yekanMedium = localFont({
-  src: '../../../src/assets/fonts/iranyekanwebmediumfanum.woff',
-  variable: '--font-medium',
+  src: [
+    {
+      path: '../../../src/assets/fonts/iranyekanwebregularfanum.woff',
+      weight: '400',
+    },
+    {
+      path: '../../../src/assets/fonts/iranyekanwebmediumfanum.woff',
+      weight: '500',
+    },
+    {
+      path: '../../../src/assets/fonts/iranyekanwebboldfanum.woff',
+      weight: '700',
+    },
+    {
+      path: '../../../src/assets/fonts/iranyekanwebblackfanum.woff',
+      weight: '900',
+    },
+  ],
   display: 'swap',
+  variable: '--font-yekan',
 });
 
 const roboto = Roboto({
-  weight: ['400', '700', '900'],
+  weight: ['400', '500', '700', '900'],
   style: ['normal'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-roboto',
 });
 
-export const metadata: Metadata = {
-  title: 'وب سرویس اطلاعات کشورها',
-  description:
-    'دریافت اطلاعات جامع از کشورها و شهرهای آن‌ها به صورت چندزبانه از جمله فارسی و انگلیسی، شامل نام، پرچم، کدهای ISO2 و ISO3.',
-  openGraph: {
-    title: 'وب سرویس اطلاعات کشورها',
-    description:
-      'دریافت اطلاعات کشورها و شهرها به صورت چندزبانه از جمله فارسی و انگلیسی، شامل نام، پرچم، کدهای ISO2 و ISO3.',
-    url: process.env.NEXT_PUBLIC_DOMAIN_URL ?? '',
-    siteName: 'وبسایت اطلاعات کشورها',
-    images: [
-      {
-        url: `${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ''}/world-logo.png`,
-        width: 1200,
-        height: 630,
-        alt: 'تصویر اوپن گراف وب سرویس کشورها',
-      },
-    ],
-    locale: 'fa_IR',
-    type: 'website',
-  },
-  keywords: [
-    'وب سرویس',
-    'API کشورها',
-    'اطلاعات کشورها',
-    'پرچم کشورها',
-    'ISO2',
-    'ISO3',
-    'کشورها',
-    'شهرها',
-    'چندزبانه',
-    'فارسی',
-    'انگلیسی',
-  ],
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('mainTitle'),
+    description: t('layout.description'),
+    openGraph: {
+      title: t('mainTitle'),
+      description: t('layout.openGraph.description'),
+      siteName: t('layout.openGraph.siteName'),
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_DOMAIN_URL ?? ''}/world-logo.png`,
+          width: 1200,
+          height: 630,
+          alt: t('layout.openGraph.imageAlt'),
+        },
+      ],
+      locale: locale === 'fa' ? 'fa_IR' : 'en_US',
+      type: 'website',
+    },
+    keywords: t('layout.keywords').split(','),
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -81,8 +88,6 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  setRequestLocale(locale);
-
   return (
     <html
       dir={direction}
@@ -96,7 +101,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning
         className={cn(
           'flex min-h-dvh flex-col justify-between text-base/loose',
-          locale === 'fa' && 'font-YekanMedium',
+          locale === 'fa' && 'font-yekan',
           locale !== 'fa' && 'font-roboto',
         )}
       >
@@ -114,4 +119,8 @@ export default async function LocaleLayout({
       </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }
