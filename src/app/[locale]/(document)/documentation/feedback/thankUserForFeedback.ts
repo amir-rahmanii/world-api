@@ -14,7 +14,6 @@ export async function sendThankYouEmail(email: string, username: string) {
     });
   } catch (error) {
     if (error instanceof Error) {
-      console.log(error);
       throw new Error(error.message);
     } else {
       throw new Error('An unknown error occurred');
