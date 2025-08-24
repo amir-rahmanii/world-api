@@ -17,7 +17,7 @@
     "**/*.{js,jsx,ts,tsx,json}": [
       "pnpm lint:fix",
       "pnpm format:fix",
-      "cspell --no-progress --no-summary"
+      "cspell lint --no-progress --no-summary"
     ]
   },
   "config": {

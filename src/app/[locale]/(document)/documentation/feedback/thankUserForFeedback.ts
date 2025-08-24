@@ -8,12 +8,13 @@ export async function sendThankYouEmail(email: string, username: string) {
   try {
     await resend.emails.send({
       from: 'World-Api <no-reply@world-api.ir>',
-      to: email,
+      to: [email],
       subject: 'با تشکر از بازخورد شما',
       react: EmailTemplate({ username }) as React.ReactElement,
     });
   } catch (error) {
     if (error instanceof Error) {
+      console.log(error);
       throw new Error(error.message);
     } else {
       throw new Error('An unknown error occurred');

@@ -39,8 +39,11 @@ export async function createFeedback(
 
   try {
     await sendThankYouEmail(user.email, user.name);
-  } catch (_error) {
-    return { ok: false, message: t('emailSendError') };
+  } catch (error) {
+    return {
+      ok: false,
+      message: error instanceof Error ? error.message : 'Unknown error',
+    };
   }
 
   return { ok: true, message: t('feedbackSuccess') };
